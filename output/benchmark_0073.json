@@ -1,0 +1,145 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "customer": {
+      "external_id": "19248",
+      "customer_name": "Nimbus Stream Labs",
+      "email": "iris.miller@nimbusstreamlabs.com",
+      "address": {
+        "line1": "9527 R111 St",
+        "city": "Seattle",
+        "state": "HA",
+        "zipCode": "98104"
+      }
+    },
+    "phases": [
+      {
+        "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+        "start_date": "2026-02-21",
+        "pricings": [
+          {
+            "description": "Commercial Amount",
+            "product": {
+              "name": "Product / Service",
+              "description": "Shipping Order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Comasreial Amount: £16,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 16000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order IB: 19248"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Stream Labs"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.type",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    }
+  ]
+}

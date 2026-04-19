@@ -1,0 +1,114 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "customer": {
+      "external_id": "300083",
+      "customer_name": "Delta Path Networks",
+      "email": "cole@deltapathnetworks.com",
+      "phone_number": "814 Cole"
+    },
+    "phases": [
+      {
+        "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+        "start_date": "2026-03-25",
+        "pricings": [
+          {
+            "description": "Commercial Amount stated for the purchase requisition.",
+            "product": {
+              "name": "Purchase Requisition",
+              "description": "Product / Service listed as Purchase Requisition",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $8,500.00",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 8500,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300083"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Delta Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "cole@deltapathnetworks.com"
+    },
+    {
+      "field": "customer.phone_number",
+      "quote_or_span": "Primary Contact: 814 Cole fell cole@deltapathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - February 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition"
+    }
+  ]
+}

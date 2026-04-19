@@ -1,0 +1,1154 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:26:56Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0032_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:26:56Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:56:56 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf
+2026-04-20T03:56:56 | INFO | src.parsers.pdf_parser |   Page 1/6
+2026-04-20T03:56:59 | INFO | src.parsers.pdf_parser |   Page 2/6
+2026-04-20T03:57:02 | INFO | src.parsers.pdf_parser |   Page 3/6
+2026-04-20T03:57:08 | INFO | src.parsers.pdf_parser |   Page 4/6
+2026-04-20T03:57:12 | INFO | src.parsers.pdf_parser |   Page 5/6
+2026-04-20T03:57:16 | INFO | src.parsers.pdf_parser |   Page 6/6
+2026-04-20T03:57:19 | INFO | src.parsers.pdf_parser | Done: 6 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 6, 'llm_vision': 0, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:27:19Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:27:19Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)"
+}
+
+2026-04-20T03:57:21 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:27:21Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:57:23 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:27:23Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:57:26 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:27:26Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule",
+      "start_date": "2026-02-07",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+          "product": {
+            "name": "Mixed Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 213000,
+              "currency": null,
+              "billing_cadence": "month"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule",
+      "start_date": "2026-02-07",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+          "product": {
+            "name": "Mixed Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 213000,
+              "currency": null,
+              "billing_cadence": "month"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:57:31 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:27:31Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule",
+      "start_date": "2026-02-07",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+          "product": {
+            "name": "Mixed Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 213000,
+              "currency": null,
+              "billing_cadence": "month"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300127"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Vector Anchor Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Procucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule",
+      "start_date": "2026-02-07",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+          "product": {
+            "name": "Mixed Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 213000,
+              "currency": null,
+              "billing_cadence": "month"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300127"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Vector Anchor Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Procucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:27:31Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule",
+      "start_date": "2026-02-07",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+          "product": {
+            "name": "Mixed Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 213000,
+              "currency": null,
+              "billing_cadence": "month"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300127"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Vector Anchor Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Procucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "start_date": "2026-02-07T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "300127",
+      "customer_name": "Vector Anchor Technologies",
+      "email": "zara.miller@vectoranchorrechnala, cam"
+    },
+    "phases": [
+      {
+        "description": "Commercial Schedule",
+        "start_date": "2026-02-07",
+        "pricings": [
+          {
+            "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+            "product": {
+              "name": "Mixed Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 213000,
+                "billing_cadence": "month"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300127"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Vector Anchor Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Procucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 6,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amau... [truncated, 3721 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0032.pdf\n\n--- Page 1 [ocr] ---\nACCELIO.\nCOMCTERCIAL SCHEDULE |\nReference: 300127 Jo\nCounterparty: Vector Anchor “featecniit sqvececncc\n7 Pb Sesey Contact: Zara Miler {rara.ntllerdvectoranchortechnolo.cea)\n| Effective Date: 2026-02-07 :\nCommercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn\nThis schedule rust ba reconelled wlth ény later amendsents and references.\n|\n|\nPDF Rootsnark Sanals Peooicl4\n|\nI\n\n\n--- Page 2 [ocr] ---\nOO\nACCELIO.\nSample Data Fife Sample Bookmark File\n: Srafarmat brune [invaices]\n| symbolsek WIMLATIAL Inveices By Date=D\n“fleld trans date brans_daterl, i\nZ2DDD-D1-1L reyoe |\n“field descriptian | Inveiees by [bem Type=B\nDeseriatien far item #1 Beans bypeel, a\nSEield trang type [amount]\n| TYPEL | [aveiess By Transaction Amaunt-D\n“field Lrans_amounk Erans amaunt=1,o |\nMe 1 ,\n“field trans dete\n20DD-01-2 |\nSField desériotian\nDeserintion far item #2\nseield trans tyne\nTYPEZ. oe\n‘field trans _samount\n121.00\nwage. 1\n200D-D1—3\n| spflald deseriptian\nDeseription far item fs\n“field trans_tipe\nTYPE3 | 7\nThe exannple bookmark file includes three distinct sections:\n> Invoices sorted, ascending, by date.\n« Invoices sorted, ascending, by Item type. |\n« Invoices sorted, descending, by transaction’ amount. |\nPOF Bookmark Sample Page 2otd\n\n\n--- Page 3 [ocr] ---\nOT\n|\n=\nAOOCE LIO..\n| sample Files\n| ‘This sample package contains:\n‘Filename Description |\nap bookmark (FE The template design.\nap_bookmark.mdf The template targeted for PDF output. |\nap_bookmark.dat A sample data file in DAT format. .\n-ap_bookmark betk A sample bookmark file | |\n| ap_bookmark.pdf Sample PDF output. :\nap_bookmark_doc.pdi \\ document describing the sample.\n| Denloying the Sample\nTo deploy this sample in your environment:\n| 1. ‘Open the template design ap_bookma rk.IFD in Gutput Designer and recompile the\nternplate for the appropriate pres entment target.\n2. IMadify the -z option in the “fob corarand in-the data tle ap_bookmark.dat ta:\n« Identify the Larget output device.\n& Identify the bookmark file using the -abmk command.\na Ida ntify the section for which.ta generate bookmarks, if dasired, using the -abms\ncommand.\nFor example,\nTo bookmark by... | Use the command line parameter ... |\nInvoices -shmkap bookmark nk ~abmsinvaices\nBDF Bockmerk Semple Gage aofd\na\n\n\n--- Page 4 [ocr] ---\nI\n=\na\nACCELIO,\n| 3. Place the accampanying files in directories consistant with your impiamentatian:\n® Place ap_bookmaricIFB in the Oasigns subdirectory for Output Designer.\n° Place ap_hookmaricmef in the forms subdiractory accessible fo Central. |\n¢ Place ap_bookmarichmk in an addrassable directory.\nRunning the Sample\n« Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPDF Bookmark Sample Page ¢ of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Veetor Anchor Technologies |\n\nCommercial Gontact: Zara Miller f{zara.miller@vectoranchorrechnala, cam)\n\nEquivalent. fee formats include $10,000/month, $10000/month, and 510,000. 00,/me.\n\norhexr commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. | | |\n| Ifa referenced exhibit or schedule is missing, ita contents should remain\n\nunresolved rather than invented: .\n\nPayment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears.\n\n\n--- Page 6 [ocr] ---\nOO\n|\nCounterparty: Vector Anchor Technologies\nCommercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam) |\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit or schedule is miasing, its contents shovld remain\nunresolved rather than invented.\nPe\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-02-07T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule",
+      "start_date": "2026-02-07",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+          "product": {
+            "name": "Mixed Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 213000,
+              "currency": null,
+              "billing_cadence": "month"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300127"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Vector Anchor Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Procucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "start_date": "2026-02-07T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "300127",
+      "customer_name": "Vector Anchor Technologies",
+      "email": "zara.miller@vectoranchorrechnala, cam"
+    },
+    "phases": [
+      {
+        "description": "Commercial Schedule",
+        "start_date": "2026-02-07",
+        "pricings": [
+          {
+            "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+            "product": {
+              "name": "Mixed Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 213000,
+                "billing_cadence": "month"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:27:31Z

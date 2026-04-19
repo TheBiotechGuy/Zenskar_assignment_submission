@@ -1,0 +1,1712 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:18:15Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/pack_005_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:18:15Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:48:16 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf
+2026-04-20T03:48:16 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T03:48:18 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T03:48:22 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T03:48:26 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T03:48:29 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:48:30 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:48:30 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf
+2026-04-20T03:48:30 | INFO | src.parsers.pdf_parser |   Page 1/2
+2026-04-20T03:48:31 | INFO | src.parsers.pdf_parser |   Page 2/2
+2026-04-20T03:48:31 | INFO | src.parsers.pdf_parser | Done: 2 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:48:31 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf
+2026-04-20T03:48:31 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:48:41 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=37.1)
+2026-04-20T03:48:44 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:48:44 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:18:44Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:18:44Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)"
+}
+
+2026-04-20T03:48:46 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:18:46Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:48:49 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:18:49Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:48:53 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:18:53Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Trial",
+      "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-24",
+      "phase_type": "trial",
+      "pricings": []
+    },
+    {
+      "name": "Paid Phase",
+      "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+      "start_date": "2026-02-25",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial amount for paid phase",
+          "product": {
+            "name": "Paid Services",
+            "description": "Order Form commercial amount",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Trial",
+      "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-24",
+      "phase_type": "trial",
+      "pricings": []
+    },
+    {
+      "name": "Paid Phase",
+      "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+      "start_date": "2026-02-25",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial amount for paid phase",
+          "product": {
+            "name": "Paid Services",
+            "description": "Order Form commercial amount",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:49:00 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:19:00Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Trial",
+      "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-24",
+      "phase_type": "trial",
+      "pricings": []
+    },
+    {
+      "name": "Paid Phase",
+      "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+      "start_date": "2026-02-25",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial amount for paid phase",
+          "product": {
+            "name": "Paid Services",
+            "description": "Order Form commercial amount",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Prime Peak Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Sara Morris (sara.morris@primepeaknetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "The customer receives a time-limited trial period before paia servines hegin."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
+    },
+    {
+      "field": "phases[1].start_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.description",
+      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "/mo."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "time-limited trial period"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Master Agreement\nCustomer: Prime Peak Networks"
+    },
+    {
+      "field": "phases[1].pricings[0].product.description",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Trial",
+      "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-24",
+      "phase_type": "trial",
+      "pricings": []
+    },
+    {
+      "name": "Paid Phase",
+      "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+      "start_date": "2026-02-25",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial amount for paid phase",
+          "product": {
+            "name": "Paid Services",
+            "description": "Order Form commercial amount",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Prime Peak Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Sara Morris (sara.morris@primepeaknetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "The customer receives a time-limited trial period before paia servines hegin."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
+    },
+    {
+      "field": "phases[1].start_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.description",
+      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "/mo."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "time-limited trial period"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Master Agreement\nCustomer: Prime Peak Networks"
+    },
+    {
+      "field": "phases[1].pricings[0].product.description",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:19:00Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Trial",
+      "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-24",
+      "phase_type": "trial",
+      "pricings": []
+    },
+    {
+      "name": "Paid Phase",
+      "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+      "start_date": "2026-02-25",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial amount for paid phase",
+          "product": {
+            "name": "Paid Services",
+            "description": "Order Form commercial amount",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Prime Peak Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Sara Morris (sara.morris@primepeaknetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "The customer receives a time-limited trial period before paia servines hegin."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
+    },
+    {
+      "field": "phases[1].start_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.description",
+      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "/mo."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "time-limited trial period"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Master Agreement\nCustomer: Prime Peak Networks"
+    },
+    {
+      "field": "phases[1].pricings[0].product.description",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Prime Peak Networks",
+      "email": "sara.morris@primepeaknetworks.com"
+    },
+    "phases": [
+      {
+        "name": "Trial",
+        "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+        "start_date": "2026-01-26",
+        "end_date": "2026-02-24",
+        "phase_type": "trial",
+        "pricings": []
+      },
+      {
+        "name": "Paid Phase",
+        "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+        "start_date": "2026-02-25",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial amount for paid phase",
+            "product": {
+              "name": "Paid Services",
+              "description": "Order Form commercial amount",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Prime Peak Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Sara Morris (sara.morris@primepeaknetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "The customer receives a time-limited trial period before paia servines hegin."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
+    },
+    {
+      "field": "phases[1].start_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.description",
+      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "/mo."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "time-limited trial period"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Master Agreement\nCustomer: Prime Peak Networks"
+    },
+    {
+      "field": "phases[1].pricings[0].product.description",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount... [truncated, 2555 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\nae\nnich\nMaster Agreement\nCustomer: Prime Peak Networks\nVendnrt Apex Peak Analytics\nPrimary Gantect? Quen Das (quen,dasdprimenesknetworks, com)\nEffective Data: 2028-01-28\nThe customer receives a time-limited trial period before paia servines hegin,\nPDF Boclanark Ramps Paga 1 of 6.\nTT eee\n\n\n--- Page 2 [ocr] ---\n——*\nans\nACCELIO,. |\nSample Data File Sample Bookmark File\nSreformat brung a invoices]\n“field trans_date trans _datew1, i\nZDDD-Dl-2 Tkype]\n“fleld description Invaices by Item TypenD\nDeserintion for item #1 trans _tyner1, dk\n“fleld trans type [emeount]\nTYPEL Invoices by Transaction Amount=D\n“Field Ersns_Amount trans _amonun te] 2D\n11.00 | |\n“page 1\n“field brans_date\n2000-S1L-2\n“field descriptian\nDescription far Ltrem #2\n“field trans _type\nTYPE2\n‘field trans _smount\nLi.00\n“nage 1\n. Sfleld trans_date\n2000~01~3\n“field déescriptian |\nDeserintion for Ltem #3\n“Field trans_tyne\n| TYPES\n‘The exampte bookmark file includes three distinct sections:\n| e Invoices sorted, ascending, by date.\n: « Invoices sorted, ascanding, by Itom type.\n| Invoices sorted, descending, by transaction amount. |\n|\n| |\n| |\n|\n|\nPOF Bookmark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO.,\nSample Files |\nThis sample package contains:\nThe template design.\nap_bookmark.mdf The tamplate targeted for POF output.\nap_bookmark.dat A sample data filo in DAT format.\n: ap_bookmark.omk A sampla bookmark file. |\nap_bookmark.pdf Samplo POF output.\n| ap_bookmark_doc.pdf A document describing the sample,\nDeploying the Sample\nTo deploy this Sample in your environment:\n7. Open the tempfate design ap_bookmark.IED in Output Designer and recompile the\niemplate for the appropriate presentment target.\n2. Modify the -z option in tho “Job command in the data filo ap_bookmark.dst fo:\n¢ Identify the target output dovica.\n* Identify tho bookmark file Using the -abmk command.\n* {Identify the section for which to gencrate bookmarks, if desired, using tho -abms\ncommand,\nFor example,\nInvoices ~abnaken_bookmack bm “abmsinvolces\na\nPOF Bookmark Sample Paga sofa\n\n\n--- Page 4 [ocr] ---\nss 3989895090000\n| =\nal\n| ACCELIO.\n3. Place tho accompanying filas in directories consistent with your implementation:\n| e Place ap_bookmari. [FD in tha Dasigns subdirectory for Output Designer.\n| s Place ap_bookmaricmdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addrassabte directory. |\noe Running the Sample ]\ne Torun this sample, place ap_bookmark.dat in tha collector directory scanned by Genirai. / ——\nPDF Bookmark Sample Page 4 of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nOrder ID: 10248\nOrder Form\nCommercial Amount: £42,000.00\nQuantity: 1\nFinance Contact: Sara Morris (sara.morris@primepeaknetworks.com)\nTrial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo.\n\n\n--- Page 2 [ocr] ---\nUnit Price: 34.8\nTotal: 174.0\nTotal Price:\nTotal Price: 440.0\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-03-12\n\nThe paid phase does not inherit zero-priced trial treatment.\n\n1\n9\n9\n9\n\nTOTAL $154.06\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Prime Peak Networks",
+    "email": "sara.morris@primepeaknetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Trial",
+      "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+      "start_date": "2026-01-26",
+      "end_date": "2026-02-24",
+      "phase_type": "trial",
+      "pricings": []
+    },
+    {
+      "name": "Paid Phase",
+      "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+      "start_date": "2026-02-25",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial amount for paid phase",
+          "product": {
+            "name": "Paid Services",
+            "description": "Order Form commercial amount",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Prime Peak Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Sara Morris (sara.morris@primepeaknetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "The customer receives a time-limited trial period before paia servines hegin."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Trial begins 2026-01-26"
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
+    },
+    {
+      "field": "phases[1].start_date",
+      "quote_or_span": "converts to 4 paid phase on 2026-02-25"
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.description",
+      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "/mo."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "time-limited trial period"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Master Agreement\nCustomer: Prime Peak Networks"
+    },
+    {
+      "field": "phases[1].pricings[0].product.description",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-26T12:00:00Z",
+    "anchor_date": "2026-02-25T12:00:00Z",
+    "tags": [
+      "trial",
+      "order form",
+      "amendment"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Prime Peak Networks",
+      "email": "sara.morris@primepeaknetworks.com"
+    },
+    "phases": [
+      {
+        "name": "Trial",
+        "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+        "start_date": "2026-01-26",
+        "end_date": "2026-02-24",
+        "phase_type": "trial",
+        "pricings": []
+      },
+      {
+        "name": "Paid Phase",
+        "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+        "start_date": "2026-02-25",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial amount for paid phase",
+            "product": {
+              "name": "Paid Services",
+              "description": "Order Form commercial amount",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_005/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:19:00Z

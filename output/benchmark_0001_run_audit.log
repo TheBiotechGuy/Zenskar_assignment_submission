@@ -1,0 +1,443 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:23:29Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0001_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:23:29Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:53:29 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf
+2026-04-20T03:53:29 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:53:31 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:53:32 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "corpus": "",
+  "corpus_meta": ""
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "corpus": "",
+  "corpus_meta": ""
+}
+
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {}
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "customer": {}
+}
+
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {}
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "commercial_core": {}
+}
+
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": []
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "phases": []
+}
+
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": []
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "extraction_notes": []
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:23:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "extraction_notes": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {},
+  "missing_fields": [
+    "error:All PDFs were rejected as non-contract documents or failed to parse."
+  ],
+  "extraction_notes": []
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0001.pdf",
+      "accepted": false,
+      "reject_reason": "This is a bank chequing account statement, not a contract, order form, or license.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n< | FIRST BANK OF WIKI\n: :) 1425 JAMES ST. PO GOX 4000 © | CHEQUING ACCOUNT STATEMENT\nAW a4) VICTORIABC V8X3X4 1-800-555-5555 Page :1 of 1\nBak Statement\n; | Prepared for: Urban Canvas Labs |\n| Owner: Nora Srooks (nora. brooks@ucbencanvaslabs.com) aan\n| Date: 2026-03-15 mi\nSe f\nThis packet conteing business /finenciel/operational information.\n| It may resemble commercial paperwork but does not itself st ce!\n[_feomtract ofr order senedule. | ; | [I\nv Reviewers should decide whether this should be rejected of exsecealated instead af\n2O0extrected. > |\n200 5\n200\n200 (|\n200 i |\n200 }\n200 :\n200, ,\n200 1 |\n200 5\n200 5 |\n200. r\n200 |\n200 ?\n209 r |\n200. ,\n200 |\n200 ,\nv= Totals ™** 1.519.63 1,442.61\n"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "extraction_notes": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "validated_json": {},
+  "missing_fields": [
+    "error:All PDFs were rejected as non-contract documents or failed to parse."
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:23:32Z

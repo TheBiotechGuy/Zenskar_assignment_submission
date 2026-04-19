@@ -1,0 +1,156 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "tags": [
+      "shipping order"
+    ],
+    "customer": {
+      "external_id": "10268",
+      "customer_name": "Apex Harbor Analytics",
+      "email": "maya.turner@apexharboranalytics.com",
+      "address": {
+        "line1": "6249 Market St",
+        "city": "Boston",
+        "state": "MA",
+        "zipCode": "02108"
+      }
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+        "start_date": "2026-03-13",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Shipping Order",
+            "product": {
+              "name": "Shipping Order",
+              "description": "Product / Service",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated in order summary.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 24000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10268"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Apex Harbor Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Maya Turner (maya.turner@apexharboranalytics.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY\nReference: 300071"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    }
+  ]
+}

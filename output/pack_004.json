@@ -1,0 +1,166 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Bright Path Networks",
+    "email": "sara.khan@brightpathnetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+    "status": "active",
+    "start_date": "2026-01-21T12:00:00Z",
+    "tags": [
+      "master_agreement.pdf",
+      "order_form.pdf",
+      "exhibit_b.pdf"
+    ],
+    "customer": {
+      "customer_name": "Bright Path Networks",
+      "email": "sara.khan@brightpathnetworks.com"
+    },
+    "phases": [
+      {
+        "name": "Subscription Services",
+        "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+        "start_date": "2026-01-21",
+        "phase_type": "recurring",
+        "pricings": [
+          {
+            "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+            "product": {
+              "name": "Subscription",
+              "description": "Annual subscription",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 242000,
+                "billing_cadence": "monthly",
+                "quantity": 10
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Implementation Services",
+        "description": "One-time onboarding services under separate commercial table.",
+        "start_date": "2026-01-21",
+        "phase_type": "one_time",
+        "pricings": [
+          {
+            "description": "One-time onboarding 23000.00.",
+            "product": {
+              "name": "Onboarding",
+              "description": "One-time onboarding",
+              "type": "product"
+            },
+            "pricing": {
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 23000
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Bright Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Sara Khan (sara.khan@brightpathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 10"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "One-time onboarding 23000.00."
+    },
+    {
+      "field": "phases[1].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "One-time onboarding 23000.00."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "### SOURCE FILE: order_form.pdf"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Bright Path Networks\nVendor: North Orbit Systems"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
+    },
+    {
+      "field": "rejected_pdf:amendment_1.pdf",
+      "quote_or_span": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms."
+    }
+  ]
+}

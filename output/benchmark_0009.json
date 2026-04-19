@@ -1,0 +1,89 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "customer": {
+      "external_id": "300146",
+      "customer_name": "Blue Stream Works",
+      "email": "owen.reed@bluestreamworks.com"
+    },
+    "phases": [
+      {
+        "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-03-01",
+        "pricings": []
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id",
+    "name"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300146"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@bluestreamworks.com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "East Repair Inc.                                                INVOICE"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL                                               $154.06"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    }
+  ]
+}

@@ -1,0 +1,1585 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:20:04Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/pack_007_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:20:04Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:50:04 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf
+2026-04-20T03:50:04 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T03:50:07 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=56.5)
+2026-04-20T03:50:10 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:50:10 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T03:50:14 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T03:50:17 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T03:50:20 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 1, 'empty': 0}
+2026-04-20T03:50:20 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf
+2026-04-20T03:50:20 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:50:20 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:50:20 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf
+2026-04-20T03:50:21 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:50:25 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:50:26 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:20:26Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:20:26Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)"
+}
+
+2026-04-20T03:50:28 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:20:28Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:50:30 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:20:30Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:50:33 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:20:33Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Order Form Commercial Phase",
+      "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+      "start_date": "2026-02-05",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+          "product": {
+            "name": "Commercial Amount",
+            "description": "Order Form commercial fee",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial fee £15,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Order Form Commercial Phase",
+      "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+      "start_date": "2026-02-05",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+          "product": {
+            "name": "Commercial Amount",
+            "description": "Order Form commercial fee",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial fee £15,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:50:39 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:20:39Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order Form Commercial Phase",
+      "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+      "start_date": "2026-02-05",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+          "product": {
+            "name": "Commercial Amount",
+            "description": "Order Form commercial fee",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial fee £15,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Invoice Number: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Silver Oxptic Systems"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order Form Commercial Phase",
+      "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+      "start_date": "2026-02-05",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+          "product": {
+            "name": "Commercial Amount",
+            "description": "Order Form commercial fee",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial fee £15,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Invoice Number: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Silver Oxptic Systems"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:20:39Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order Form Commercial Phase",
+      "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+      "start_date": "2026-02-05",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+          "product": {
+            "name": "Commercial Amount",
+            "description": "Order Form commercial fee",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial fee £15,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Invoice Number: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Silver Oxptic Systems"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Cedar Canvas Software",
+      "email": "owen.reed@cedarcanvassoftware.com"
+    },
+    "phases": [
+      {
+        "name": "Order Form Commercial Phase",
+        "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+        "start_date": "2026-02-05",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+            "product": {
+              "name": "Commercial Amount",
+              "description": "Order Form commercial fee",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial fee £15,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 15000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Invoice Number: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Silver Oxptic Systems"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "rejected_pdf:amendment_1.pdf",
+      "quote_or_span": "This appears to be an invoice, which is a non-contract billing document."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Fie... [truncated, 2326 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/amendment_1.pdf",
+      "accepted": false,
+      "reject_reason": "This appears to be an invoice, which is a non-contract billing document.",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nleast Reoair Ine: INVOICE\nBrendmené 1\nAnendnient Dake: 2026-03-22\nStandatd-policy feferences dao not distlase Rhee policy contents by Ehemselres.\na\nTOTAL | G184.06 |\n| |\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Cedar Canvas Software\nVendor: Silver Oxptic Systems\nPrimary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)\nEffective Date: 2026-02-05\n\nThe standard SLA applies to the services.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [ocr] ---\na |\nACCELIO.\nSample Data File Sample Bookmark File |\n“cea formst trune — finvoices]\n“symbalset WINLATINI Invoices by DatesD\n“Field krone date Krans_dsate=l,aA\n| 200D-D1~1 [type]\n“field deseription [Invaices oy Tkem Typenf\n| Description for item #1 trans_typeel, A\n“field trans_type [4mounk ]\nTYPEL Invaices HY Transaction Amount=D\n“field trans_amount ‘trans_samaunteL,5\n11.00\n“page L\n“Field trans _date\n2D0D~01~z\n: “Field deseription |\nDeseriokion for Ltem p2\n“field krans_type |\nTYPES ;\n“Field trans_smount\n: 11.00\npage 1\n“field trans date\n200D-01-3\n“Field degsesiotion\nHeseciokion for ltem #3\n“field trans_tyoe\nTYPES:\n| The example bookmark file includas three distinct sections: | ——\n—  f a tnvaices sortad, ascending, by date.\n| ° Invoices sorted, ascending, by item type.\n* Invoices sorted, descending, by transaction amount.\n|\nPOF Bookmark Sample Page 2of4\nTN\n\n\n--- Page 3 [ocr] ---\n=\nACCELIO..\nSample Files\nThis sample package contains:\n‘The template targeted for PDF output.\nDeploying the Sample\nTo deploy this sample in your environment: |\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Madify the -z option in the “Job command in the data filo ap_bookmark.dat to:\na Identify the target output dovice.\n* {dentify tho bookmark file using the -abmk commana. |\ne Identify the section for véhich to generate bookmarks, if desired, using the -abms .\n. command.\nFor example, |\n|\n| Invoices ~abmkap_bookmark.omk -shmsinvoices\nPDF Bookmark Sample Page 3 of d\n\n\n--- Page 4 [ocr] ---\na\n|\n=\ney\nAl\nACCELIO.\n3. Place the accompanying files In directories consistent with your implementation: |\n* Place ap_bookmariclFD in tha Daalgns subdirectory for Output Designer. |\n¢ Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmari.bmk in an addressabte directory.\nRunning the Sample\ne Torunthis sample, place ap_bookmark.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page doaf4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins at alenale Chevalier\nOrder Form\nCommercial Amount: £15,000/month\nQuantity: 10\nFinance Contact: Milo Turner (milo.turnerG@cedarcanvassoftwar.com)\nCommercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order Form Commercial Phase",
+      "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+      "start_date": "2026-02-05",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+          "product": {
+            "name": "Commercial Amount",
+            "description": "Order Form commercial fee",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial fee £15,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Invoice Number: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Silver Oxptic Systems"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "rejected_pdf:amendment_1.pdf",
+      "quote_or_span": "This appears to be an invoice, which is a non-contract billing document."
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Cedar Canvas Software",
+      "email": "owen.reed@cedarcanvassoftware.com"
+    },
+    "phases": [
+      {
+        "name": "Order Form Commercial Phase",
+        "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+        "start_date": "2026-02-05",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+            "product": {
+              "name": "Commercial Amount",
+              "description": "Order Form commercial fee",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial fee £15,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 15000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:20:39Z

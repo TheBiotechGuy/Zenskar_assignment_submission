@@ -1,0 +1,134 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Apex Bridge Holdings",
+    "email": "noah.turner@apexbridgeholdings.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-20T12:00:00Z",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "customer": {
+      "customer_name": "Apex Bridge Holdings",
+      "email": "noah.turner@apexbridgeholdings.com"
+    },
+    "phases": [
+      {
+        "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+        "start_date": "2026-02-20",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount",
+            "product": {
+              "name": "Commercial Amount",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Amount appears as equivalent textual monthly formats across documents.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Apex Bridge Holdings"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-20"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-20"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £42,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: £42,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £42,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: £42,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
+      "field": "commercial_core.status",
+      "quote_or_span": "Effective Date: 2026-02-20"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
+    },
+    {
+      "field": "amendment_1.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-06"
+    },
+    {
+      "field": "vendor.name",
+      "quote_or_span": "Vendor: Golden Ledger Works"
+    }
+  ]
+}

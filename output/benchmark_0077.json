@@ -1,0 +1,157 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "start_date": "2026-03-08T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "customer": {
+      "external_id": "300067",
+      "customer_name": "Bright Stream Works",
+      "email": "zara.morris@brightstreamworks.com",
+      "address": {
+        "line1": "3157 Lake St",
+        "city": "Portland",
+        "state": "OR",
+        "zipCode": "87204"
+      }
+    },
+    "phases": [
+      {
+        "name": "Order",
+        "description": "Shipping / Order Summary",
+        "start_date": "2026-03-08",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount listed as 39,500 / month",
+            "product": {
+              "name": "Shipping order",
+              "type": "product"
+            },
+            "pricing": {
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 39500,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Total Price listed separately on page 2",
+            "product": {
+              "name": "Shipping order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Total Price: 724.5",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 724.5
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference? 300067"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Morris (zara.morris@brightstreamworks .com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order [Ds 10264"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may diseuss continuation before expiry, but no automatic renewal is guaranteed by thig clause alone."
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product ¢ Service: Shipping order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "Total Price: 724.5"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Total Price: 724.5"
+    }
+  ]
+}

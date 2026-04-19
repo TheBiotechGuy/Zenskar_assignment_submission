@@ -1,0 +1,112 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300099",
+    "customer_name": "Nimbus Orbit Commerce",
+    "email": "arjun.gupta@nimbusorbitcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly Stock Report for Nimbus Orbit Commerce, reference 300099.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2025-01-10T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "customer": {
+      "external_id": "300099",
+      "customer_name": "Nimbus Orbit Commerce",
+      "email": "arjun.gupta@nimbusorbitcommerce.com"
+    },
+    "phases": [
+      {
+        "name": "Stock Report for 2016-07",
+        "description": "Monthly Stock Report. Reference: 300099. Counterparty: Nimbus Orbit Commerce. Effective Date: 2025-01-10.",
+        "start_date": "2025-01-10",
+        "pricings": [
+          {
+            "description": "Commercial Amount: $7,000.00/mo; Quantity: 1. Product / Service: Stock Report.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Monthly stock report service",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Unit Price listed as $7,000.00/mo. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "USD",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0088.pdf (2 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300099"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Orbit Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Arjun Gupta (arjun.gupta@nimbusorbitcommerce.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2025-01-10"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, but no automatiecemewal is [\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2025-01-10"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $7,000.00/mo\nQuantity: 1"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: $7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears."
+    }
+  ]
+}

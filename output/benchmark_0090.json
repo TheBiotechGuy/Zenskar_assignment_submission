@@ -1,0 +1,159 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "start_date": "2026-01-13T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "customer": {
+      "external_id": "300102",
+      "customer_name": "Cedar Orbit Technologies",
+      "email": "iris.das@cedarorbittechnologi.com"
+    },
+    "phases": [
+      {
+        "name": "Monthly Stock Report",
+        "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-01-13",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Fixed monthly commitment for Stock Report.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Product / Service: Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Fixed monthly commitment",
+              "description": "Commercial Amount: 78,500.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 78500,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Usage above included threshold",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Usage charges",
+              "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+              "pricing_data": {
+                "pricing_type": "per_unit"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference#: 300102"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Cedar Orbit Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Iris Das (iris.das@cedarorbittechnologi.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].pricings[1].product.description",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].custom_attributes.quantity",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "| Stock Report | 1200 | 360 | 78,500.00/mo |"
+    }
+  ]
+}

@@ -1,0 +1,1237 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:32:14Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0065_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:32:14Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:02:14 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf
+2026-04-20T04:02:14 | INFO | src.parsers.pdf_parser |   Page 1/3
+2026-04-20T04:02:18 | INFO | src.parsers.pdf_parser |   Page 2/3
+2026-04-20T04:02:21 | INFO | src.parsers.pdf_parser |   Page 3/3
+2026-04-20T04:02:25 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 0, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:32:25Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:32:25Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)"
+}
+
+2026-04-20T04:02:27 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:32:27Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:02:29 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:32:29Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:02:32 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:32:32Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Purchase Requisition",
+      "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+          "product": {
+            "name": "Purchase Requisition 101",
+            "description": "Product / Service: Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Billing begins on the first day of the month following the Effective Date.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 710000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Purchase Requisition",
+      "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+          "product": {
+            "name": "Purchase Requisition 101",
+            "description": "Product / Service: Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Billing begins on the first day of the month following the Effective Date.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 710000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:02:37 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:32:37Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Purchase Requisition",
+      "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+          "product": {
+            "name": "Purchase Requisition 101",
+            "description": "Product / Service: Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Billing begins on the first day of the month following the Effective Date.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 710000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: FOOUEZ"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Frame Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "noah.qupta@brightframenetworks.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - January 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment nete: fixed platfoxm fees may be billed in advance while wariable usage is billed in arreara."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Purchase Requisition 101"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product f Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Purchase Requisition",
+      "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+          "product": {
+            "name": "Purchase Requisition 101",
+            "description": "Product / Service: Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Billing begins on the first day of the month following the Effective Date.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 710000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: FOOUEZ"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Frame Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "noah.qupta@brightframenetworks.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - January 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment nete: fixed platfoxm fees may be billed in advance while wariable usage is billed in arreara."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Purchase Requisition 101"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product f Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:32:37Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Purchase Requisition",
+      "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+          "product": {
+            "name": "Purchase Requisition 101",
+            "description": "Product / Service: Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Billing begins on the first day of the month following the Effective Date.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 710000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: FOOUEZ"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Frame Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "noah.qupta@brightframenetworks.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - January 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment nete: fixed platfoxm fees may be billed in advance while wariable usage is billed in arreara."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Purchase Requisition 101"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product f Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "start_date": "2026-03-24T12:00:00Z",
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "customer": {
+      "external_id": "FOOUEZ",
+      "customer_name": "Bright Frame Networks",
+      "email": "noah.qupta@brightframenetworks.com"
+    },
+    "phases": [
+      {
+        "name": "Purchase Requisition",
+        "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-03-24",
+        "pricings": [
+          {
+            "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+            "product": {
+              "name": "Purchase Requisition 101",
+              "description": "Product / Service: Purchase Requisition",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Billing begins on the first day of the month following the Effective Date.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 710000,
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: FOOUEZ"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Frame Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "noah.qupta@brightframenetworks.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - January 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment nete: fixed platfoxm fees may be billed in advance while wariable usage is billed in arreara."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Purchase Requisition 101"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product f Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the p... [truncated, 1505 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0065.pdf\n\n--- Page 1 [ocr] ---\n| company name: POR Corp\nPurchase Requisitions - January 2017\n| Created By: Sarah Lee\nPURCHASE REQUISITION\nReference: FOOUEZ |\nCounterparty: Beight Frame Networks\nPrimary Contact: Moats Gupta (noah.qupte@brightframenetworks.com)\nB&féctive Date: 2026-03-24\n| Commercial Amount: 710, G00/morntts\nQbenktiby: Leo\nProduct f Service: Purchase Requisition |\n| Line Den  Beoduet ID Quantity |\nPurchase Requisition 101 120 |\nWLS UG Wado ae ag y 7\nJack’s New England Clam Chowder at |\n|) Singaporean Hokkien Fried Mee—}——* 4g | SA\n\n\n--- Page 2 [ocr] ---\nCounterparty: Bright Frame Networks\ncommercial Contact: Noah Gupta {noah, quptatbrightframenetworks.cam)\nBilling begins on the £iret day af the month following the Bifective Hate,\nUther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\nff a referenced exhibit or schedule is missing, ite contents should remain\nunresolved rather than invented,\n\n\n--- Page 3 [ocr] ---\n| cee nnn EEE EEE EIEnnS nnn gn |\n\nCounterparty: Bright Frame Networks\n\nCommercial Contact: Moah Gupta {noah.qupta@bright framenetworks.com)\n\nBilling beging on the first day of the month following the Effective Date.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefuliy.\n\nif a referenced exhihit or schedule is missing, its contents should remain\n\nnnresolvyed rather than invented.\n\nPayment nete: fixed platfoxm fees may be billed in advance while wariable usage\n\nis billed in arreara. |\na\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-24T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Purchase Requisition",
+      "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+          "product": {
+            "name": "Purchase Requisition 101",
+            "description": "Product / Service: Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Billing begins on the first day of the month following the Effective Date.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 710000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: FOOUEZ"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Frame Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "noah.qupta@brightframenetworks.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - January 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment nete: fixed platfoxm fees may be billed in advance while wariable usage is billed in arreara."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Purchase Requisition 101"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product f Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "start_date": "2026-03-24T12:00:00Z",
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "customer": {
+      "external_id": "FOOUEZ",
+      "customer_name": "Bright Frame Networks",
+      "email": "noah.qupta@brightframenetworks.com"
+    },
+    "phases": [
+      {
+        "name": "Purchase Requisition",
+        "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-03-24",
+        "pricings": [
+          {
+            "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+            "product": {
+              "name": "Purchase Requisition 101",
+              "description": "Product / Service: Purchase Requisition",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Billing begins on the first day of the month following the Effective Date.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 710000,
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:32:37Z

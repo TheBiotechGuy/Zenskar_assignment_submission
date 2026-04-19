@@ -1,0 +1,1178 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:31:19Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0061_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:31:19Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:01:19 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf
+2026-04-20T04:01:19 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T04:01:22 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T04:01:24 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T04:01:28 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T04:01:31 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:31:31Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:31:31Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)"
+}
+
+2026-04-20T04:01:33 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:31:33Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:01:36 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:31:36Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:01:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:31:40Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": null,
+      "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+      "start_date": "2026-03-25",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated for the purchase requisition.",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Product / Service listed as Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $8,500.00",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 8500,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": null,
+      "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+      "start_date": "2026-03-25",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated for the purchase requisition.",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Product / Service listed as Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $8,500.00",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 8500,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:01:46 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:31:48Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+      "start_date": "2026-03-25",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated for the purchase requisition.",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Product / Service listed as Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $8,500.00",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 8500,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300083"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Delta Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "cole@deltapathnetworks.com"
+    },
+    {
+      "field": "customer.phone_number",
+      "quote_or_span": "Primary Contact: 814 Cole fell cole@deltapathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - February 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+      "start_date": "2026-03-25",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated for the purchase requisition.",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Product / Service listed as Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $8,500.00",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 8500,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300083"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Delta Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "cole@deltapathnetworks.com"
+    },
+    {
+      "field": "customer.phone_number",
+      "quote_or_span": "Primary Contact: 814 Cole fell cole@deltapathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - February 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:31:48Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+      "start_date": "2026-03-25",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated for the purchase requisition.",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Product / Service listed as Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $8,500.00",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 8500,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300083"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Delta Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "cole@deltapathnetworks.com"
+    },
+    {
+      "field": "customer.phone_number",
+      "quote_or_span": "Primary Contact: 814 Cole fell cole@deltapathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - February 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "customer": {
+      "external_id": "300083",
+      "customer_name": "Delta Path Networks",
+      "email": "cole@deltapathnetworks.com",
+      "phone_number": "814 Cole"
+    },
+    "phases": [
+      {
+        "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+        "start_date": "2026-03-25",
+        "pricings": [
+          {
+            "description": "Commercial Amount stated for the purchase requisition.",
+            "product": {
+              "name": "Purchase Requisition",
+              "description": "Product / Service listed as Purchase Requisition",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $8,500.00",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 8500,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300083"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Delta Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "cole@deltapathnetworks.com"
+    },
+    {
+      "field": "customer.phone_number",
+      "quote_or_span": "Primary Contact: 814 Cole fell cole@deltapathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - February 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear else... [truncated, 2115 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0061.pdf\n\n--- Page 1 [ocr] ---\ncompany name: XYZ industries -————____ —\nPurchase Requisitions - February 2017 |\nCreated By: Sarah Lee\nPURCHASE REQUISITION\n| Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition\nLine Item Product ID Quantity\nPurchase Requisition as\n| Vvawe Ulay wicat . ou . “ev |\nJack's New England Clam Chowder a\n= | Gitta Mataeeg —_ 0 AAT 400\n\n\n--- Page 2 [ocr] ---\nCounterparty: Delta Path Networks |\nCommercial Contact: Eli Cole (eli.colefdeltapathnetworks.com)\nThe parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone.\n| Other commercial wording may appear elsewhere in the packet and must. be\nreconciled carefully.\n| 1f a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage :\nis billed in arrears. |\n\n\n--- Page 3 [ocr] ---\n: | ee\n. a\ncounterparty: Delta Path Netrorks\n| Commerejal Contact: BHli Cole (ali.colefideltapathnetworks.com}\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\n— Ather commexcial wording may appear alsewhere in the packet and must be\nreconciled carefuliy. |\ntf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within\nthe same pacxet.\n| : — - - - ~ _ _ ~ —_ ~ _ — — — — — —— —\n\n\n--- Page 4 [ocr] ---\nOO\n| fountexparty: Oelta Path Metworks |\nCammercial Contact: Eli Cole {eli.colefdeltapathnetworke. com}\nThe parties may discuas continuation hefore expiry, Hut na automatic renewal is\nguaranteed by this clause alone.\n| Other commercial wording may appear elpewhere in the packet and must be\nreconelled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nre\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300083",
+    "customer_name": "Delta Path Networks",
+    "email": "cole@deltapathnetworks.com",
+    "phone_number": "814 Cole",
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+      "start_date": "2026-03-25",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount stated for the purchase requisition.",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Product / Service listed as Purchase Requisition",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $8,500.00",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 8500,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300083"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Delta Path Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "cole@deltapathnetworks.com"
+    },
+    {
+      "field": "customer.phone_number",
+      "quote_or_span": "Primary Contact: 814 Cole fell cole@deltapathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - February 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefare expiry, but no automatic renewal is !\nguaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026~03-25"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: $8,500.00"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Reference: 300083\nCounterparty: Delta Path Networks\n_ Primary Contact: 814 Cole fell cole@deltapathnetworks.com)\nEffective Date: 2026~03-25\n_ Commercial Amount: $8,500.00\nQuantity: 2\nProduct / Service: Purchase Requisition"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Purchase Requisitions - February 2017",
+    "description": "Purchase requisition for Delta Path Networks, reference 300083, commercial amount $8,500.00, quantity 2, product/service: Purchase Requisition.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-25T12:00:00Z",
+    "renewal_policy": "No automatic renewal guaranteed; parties may discuss continuation before expiry.",
+    "tags": [
+      "purchase requisition"
+    ],
+    "customer": {
+      "external_id": "300083",
+      "customer_name": "Delta Path Networks",
+      "email": "cole@deltapathnetworks.com",
+      "phone_number": "814 Cole"
+    },
+    "phases": [
+      {
+        "description": "Purchase Requisition Reference 300083. Effective Date: 2026-03-25. Commercial Amount: $8,500.00. Quantity: 2. No explicit phase structure stated in the contract text.",
+        "start_date": "2026-03-25",
+        "pricings": [
+          {
+            "description": "Commercial Amount stated for the purchase requisition.",
+            "product": {
+              "name": "Purchase Requisition",
+              "description": "Product / Service listed as Purchase Requisition",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $8,500.00",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 8500,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0061.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:31:48Z

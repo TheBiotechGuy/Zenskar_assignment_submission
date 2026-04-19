@@ -1,0 +1,110 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "S00D35",
+    "customer_name": "Silver Vista Systems",
+    "email": "zara.chen@silvervistasystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Purchase Order - S00D35",
+    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "purchase order"
+    ],
+    "customer": {
+      "external_id": "S00D35",
+      "customer_name": "Silver Vista Systems",
+      "email": "zara.chen@silvervistasystems.com"
+    },
+    "phases": [
+      {
+        "name": "Purchase Order",
+        "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+        "start_date": "2026-02-05",
+        "pricings": [
+          {
+            "description": "Commercial amount for the purchase order.",
+            "product": {
+              "name": "Purchase Order",
+              "description": "Product / Service: Purchase Order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount explicitly stated on Page 1.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "GBP"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: S00D35"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Vista Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
+    }
+  ]
+}

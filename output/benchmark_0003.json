@@ -1,0 +1,8 @@
+{
+  "customer": {},
+  "validated_json": {},
+  "missing_fields": [
+    "error:All PDFs were rejected as non-contract documents or failed to parse."
+  ],
+  "extraction_notes": []
+}

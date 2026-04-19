@@ -1,0 +1,1115 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:28:10Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0036_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:28:10Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:58:11 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf
+2026-04-20T03:58:11 | INFO | src.parsers.pdf_parser |   Page 1/7
+2026-04-20T03:58:15 | INFO | src.parsers.pdf_parser |   Page 2/7
+2026-04-20T03:58:19 | INFO | src.parsers.pdf_parser |   Page 3/7
+2026-04-20T03:58:23 | INFO | src.parsers.pdf_parser |   Page 4/7
+2026-04-20T03:58:27 | INFO | src.parsers.pdf_parser |   Page 5/7
+2026-04-20T03:58:31 | INFO | src.parsers.pdf_parser |   Page 6/7
+2026-04-20T03:58:37 | INFO | src.parsers.pdf_parser |   Page 7/7
+2026-04-20T03:58:41 | INFO | src.parsers.pdf_parser | Done: 7 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 7, 'llm_vision': 0, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:28:41Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:28:41Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)"
+}
+
+2026-04-20T03:58:43 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:28:43Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:58:45 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:28:45Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:58:48 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:28:48Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+      "start_date": "2075-02-02",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+          "product": {
+            "name": "Mined Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $18,000,600",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 18000600,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+      "start_date": "2075-02-02",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+          "product": {
+            "name": "Mined Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $18,000,600",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 18000600,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:58:51 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:28:51Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+      "start_date": "2075-02-02",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+          "product": {
+            "name": "Mined Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $18,000,600",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 18000600,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "ReFereneet SOCLS2"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analyties"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Noah Shah {noah. shah@silverorbitanalytics. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product f Serviee: Mined Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+      "start_date": "2075-02-02",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+          "product": {
+            "name": "Mined Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $18,000,600",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 18000600,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "ReFereneet SOCLS2"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analyties"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Noah Shah {noah. shah@silverorbitanalytics. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product f Serviee: Mined Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:28:51Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+      "start_date": "2075-02-02",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+          "product": {
+            "name": "Mined Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $18,000,600",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 18000600,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "ReFereneet SOCLS2"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analyties"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Noah Shah {noah. shah@silverorbitanalytics. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product f Serviee: Mined Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "SOCLS2",
+      "customer_name": "Silver Orbit Analytics",
+      "email": "noah.shah@silverorbitanalytics.com"
+    },
+    "phases": [
+      {
+        "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+        "start_date": "2075-02-02",
+        "pricings": [
+          {
+            "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+            "product": {
+              "name": "Mined Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $18,000,600",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 18000600,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "ReFereneet SOCLS2"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analyties"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Noah Shah {noah. shah@silverorbitanalytics. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product f Serviee: Mined Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 7,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘fi... [truncated, 4109 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0036.pdf\n\n--- Page 1 [ocr] ---\n! ee\nBy\nACCELIC. |\n| COMMERCIAL SCHEDULE\nReFereneet SOCLS2 |\nCounterparty: Silver Orbit Analyties |\n - Primary Cantact?: Noah Shah (inah.shahwel luersebitanalytica. eam)\nEffective Date: 2075-02-02 |\nCAnieEoial Annune: $18,000,600\nOuanheleye 1\nProduct f Serviee: Mined Form\nThikx schedule must Be reooaedled with any LATS? AMEnEMehRs And FekePenoes\nFOF Bookmark Semple Page 4 of 4\n\n\n--- Page 2 [ocr] ---\nOT\nAMC CELIO.\nSample Data File Sample Bookmark File\nSrefarmak Erunc | [invoices] |\nSeymbalset WINLATIMI Invaiees by DatecD\n‘Field Erans date Ersns_ dsteal,s\n| 2D00-D1-L reypedo\nDeserinkion far ikem #1 Erans_tygenl, ih |\n‘field bkrans_type [amour |\nTYPEL Inveiees by Transactian Amount)\n“~F Teald trans amount beans _amaunt=1,0\nLL.Od\nSoaqge L\nSFiald b-rans_date.\n2000-01-2\n‘field deseripkian\nDescsigkien far item #2\n‘Field trans_tyoe\nTYPES\n‘Field brang_smannt\nLL.00\n“page L |\n“field trans_date\n2p00-D1-3\nSfield deseriptian\nBeseriotian for item AS\n‘field trans_type\nTYPES |\nThe example bookmark fle includes three distinck sections:\n« Invoices sorted, ascending, by date.\ns Invoices sorted, ascending, by item bye.\n= invoices sorted, descending, by transaction amount.\nPOF Bookmerk Sample Page 2 of 4.\n\n\n--- Page 3 [ocr] ---\nsample Files\nThis sample package contains:\n| | Bllename sd eseriptio fe\nap_bookmark.IFD The template design.\nap bookmark.mdt The template targeted tar POF output\nap bookmark.dat A sample data file im DAT format.\nap_bookmark.omk | 4 sample Bookmark file. |\nap_bookmark.pdt eample POF outout.\nap _bookmark_doc.pdt A, document desenbing the saniple.\nDenloying the Sample\nTo deploy this sample tn your environment:\n1. Open ihe template design ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate: presentment target.\n2. Modify the =z option in the “fob commaind in the data tile ap bookmark.dat to:\n1 Identify the target output device.\n«Identify the bookmark file using the -abmk cammand.\n4 Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvpices -shmkes_ noaskmark.omk —sbmsinvaices\nPOF Bookmark Sample Page 3 old\n\n\n--- Page 4 [ocr] ---\n3. Place the accompanying files in directories consistent with your Implamentatian:\n| « Place ap_bookmariclFD in tha Dasigns subdirectory for Output Designer.\n& Place ap. bookmartcmadt In the forms subdirectory accessibla to Central.\n| ¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\ns Torun this sample, place ap_bookmark.dat in the collector directory scanned by Gentral.\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\nCounterparty: Silwer Orbit Analytice\n\nfommercial Contact: Noah Shah (noah. shahsilverorbitanalytics. com)\n\nThe standard SL applies, but the SLA schedule itself le met reproduced in this\ndocument.\n\nOther commercial wording may appear eleaewhere im the packet and must be\nreconclled carefully.\n\nIf a referenced exhihit ar achedule is missing, ite contents ahould remain\nunresolved rather than. invented.\n\n\n--- Page 6 [ocr] ---\n| | | _ ;\n\nCountexparty: Silver Orbit Analyties\n\ncommercial Contaet: Heah Shah Indah. shahtsilverorbitanalytics. com)\n\nThe standard SLA applies, but the SLA schedule itself ia not reproduced in this\n\ndacument .\n\nUther commercial wording May appear &laenhere im the packet and muat be\n\nreconciled carefully.\n\nIf a referenced axhibhit ar achedule is missing, its contents should remain\n\nunresolved rather than invented,\n\nPayment mote: Fixed platform fees may be billed in advanee while Variable usage\n\nis billed in arrearg.\nOO\n\nreer\n\n\n--- Page 7 [ocr] ---\nes\nCounterparty: Silver Orbit Analytics —\nCommercial Contact: Noah Shah {noah. shah@silverorbitanalytics. com)\nThe Standard SLA applies, but the SLA schedule itself ia not reproduced in this.\ndecument .\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nIf a referenced exhibit oar schedule ig missing, ite contents should remain\n| unresolved rather than invented.\nFarmatting nate: equivalent amount atEings may appear din different styles within\nthe same packer.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+      "start_date": "2075-02-02",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+          "product": {
+            "name": "Mined Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $18,000,600",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 18000600,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "ReFereneet SOCLS2"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analyties"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Noah Shah {noah. shah@silverorbitanalytics. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product f Serviee: Mined Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "SOCLS2",
+      "customer_name": "Silver Orbit Analytics",
+      "email": "noah.shah@silverorbitanalytics.com"
+    },
+    "phases": [
+      {
+        "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+        "start_date": "2075-02-02",
+        "pricings": [
+          {
+            "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+            "product": {
+              "name": "Mined Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $18,000,600",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 18000600,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:28:51Z

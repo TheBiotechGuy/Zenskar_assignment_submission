@@ -1,0 +1,117 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "3900135",
+    "customer_name": "Bright Stream Networks",
+    "email": "eli.gupta@brightstreamnetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Commercial Schedule",
+    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-15T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "3900135",
+      "customer_name": "Bright Stream Networks",
+      "email": "eli.gupta@brightstreamnetworks.com"
+    },
+    "phases": [
+      {
+        "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+        "start_date": "2026-02-15",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+            "product": {
+              "description": "Product / Services name unreadable in OCR",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated as $7,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "USD",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reaferences: 3900135"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright st aan Networks"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Oster: 2026-62-15"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Oster: 2026-62-15"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "ig billed in arreara."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Servicws Mined Roem"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "the paid phage begins; trial terms do not"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# PDF parsing (see src/parsers/pdf_parser.py)
+pdfplumber>=0.11.0
+pypdf>=4.0.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+openai>=1.40.0
+
+pydantic>=2.0.0
+
+# LangGraph multi-agent pipeline
+langgraph>=0.2.0
+langchain-openai>=0.2.0
+langchain-core>=0.3.0
+
+python-dotenv>=1.0.0

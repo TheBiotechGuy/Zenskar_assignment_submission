@@ -1,0 +1,109 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "customer": {
+      "external_id": "300110",
+      "customer_name": "Blue Frame Analytics",
+      "email": "ava.morris@blueframeanalytics.com"
+    },
+    "phases": [
+      {
+        "name": "Stock Report for 2016-08",
+        "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+        "start_date": "2026-01-21",
+        "pricings": [
+          {
+            "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+            "product": {
+              "name": "Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300110"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Frame Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Morris (ava.morris@blueframeanalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-08"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "| Stock Report | 10 | 5 | $42,000.00 |"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "MONTHLY STOCK REPORT"
+    }
+  ]
+}

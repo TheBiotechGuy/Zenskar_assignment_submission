@@ -1,0 +1,1415 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:33:19Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0075_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:33:19Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:03:19 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf
+2026-04-20T04:03:19 | INFO | src.parsers.pdf_parser |   Page 1/5
+2026-04-20T04:03:22 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=59.0)
+2026-04-20T04:03:25 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T04:03:25 | INFO | src.parsers.pdf_parser |   Page 2/5
+2026-04-20T04:03:28 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=80.0)
+2026-04-20T04:03:31 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T04:03:31 | INFO | src.parsers.pdf_parser |   Page 3/5
+2026-04-20T04:03:33 | INFO | src.parsers.pdf_parser |   Page 4/5
+2026-04-20T04:03:36 | INFO | src.parsers.pdf_parser |   Page 5/5
+2026-04-20T04:03:40 | INFO | src.parsers.pdf_parser | Done: 5 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 2, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:33:40Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:33:40Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)"
+}
+
+2026-04-20T04:03:42 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:33:42Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:03:45 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:33:45Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:03:48 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:33:48Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+      "start_date": "2026-03-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Shipping Order",
+          "product": {
+            "name": "Shipping Order",
+            "description": "Product / Service",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated in order summary.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 24000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+      "start_date": "2026-03-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Shipping Order",
+          "product": {
+            "name": "Shipping Order",
+            "description": "Product / Service",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated in order summary.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 24000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:03:54 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:33:54Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+      "start_date": "2026-03-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Shipping Order",
+          "product": {
+            "name": "Shipping Order",
+            "description": "Product / Service",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated in order summary.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 24000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10268"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Apex Harbor Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Maya Turner (maya.turner@apexharboranalytics.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY\nReference: 300071"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+      "start_date": "2026-03-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Shipping Order",
+          "product": {
+            "name": "Shipping Order",
+            "description": "Product / Service",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated in order summary.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 24000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10268"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Apex Harbor Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Maya Turner (maya.turner@apexharboranalytics.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY\nReference: 300071"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:33:54Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+      "start_date": "2026-03-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Shipping Order",
+          "product": {
+            "name": "Shipping Order",
+            "description": "Product / Service",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated in order summary.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 24000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10268"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Apex Harbor Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Maya Turner (maya.turner@apexharboranalytics.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY\nReference: 300071"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "tags": [
+      "shipping order"
+    ],
+    "customer": {
+      "external_id": "10268",
+      "customer_name": "Apex Harbor Analytics",
+      "email": "maya.turner@apexharboranalytics.com",
+      "address": {
+        "line1": "6249 Market St",
+        "city": "Boston",
+        "state": "MA",
+        "zipCode": "02108"
+      }
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+        "start_date": "2026-03-13",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Shipping Order",
+            "product": {
+              "name": "Shipping Order",
+              "description": "Product / Service",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated in order summary.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 24000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10268"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Apex Harbor Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Maya Turner (maya.turner@apexharboranalytics.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY\nReference: 300071"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita con... [truncated, 1851 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0075.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10268\n\nSHIPPING / ORDER SUMMARY\nReference: 300071\nCounterparty: Apex Harbor Analytics\nPrimary Contact: Maya Turner (maya.turner@apexharboranalytics.com)\nEffective Date: 2026-03-13\nCommercial Amount: $24,000.00\nQuantity: 1\n\nProduct / Service: Shipping Order\nShip Address: 6249 Market St, Boston, MA 02108\n\n--- Page 2 [llm_vision] ---\nTotal Price: 1101.2\n\n--- Page 3 [ocr] ---\n| Counterparty: Apex Harbor Analytics | |\nCommercial Contact: Maya Turner (maya.turner@apexharhoranalytics .com)\nA. free trial period ends before the paid phase hegina; trial terms do. not\noverwrite paid pricing. | _——\n| Other commercial wording may appear elsewhere in-the packet and must be.\n| reconciled carefully. | | ; | ;\n7 If a ‘referenced axhibit or schedule is missing, ita contents should remain\nunresolved rather than invented.\nPayment: nate: fixed platform fees may be: billed in advance while variable usage\nis billed in arrears.\n|\n|\n\n\n--- Page 4 [ocr] ---\nsc\ncounterparty: Apex Harhor Analytics | |\nCommercial Contact: Maya Turner {maya.turner@apexharhoranalyticea.com}\n& free trial period ends hefore the paid phase beqins; trial terms do not\n| overwrite paid pricing,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. :\nif a referenced exhibit or schedule ig missing, ite centents should remain\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nOO\ncounterparty: Apex Harbor Analytics |\nCommercial Contact: Maya Turner (maya. turner@apexharboranalytics .com)\n\n) nx free trial period ends before the paid phase beqins; trial termes do not\n\n| overwrite paid pricing.\n\nGther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or achedule ia missing, its contents should remain\n\n| unresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10268",
+    "customer_name": "Apex Harbor Analytics",
+    "email": "maya.turner@apexharboranalytics.com",
+    "phone_number": null,
+    "address": {
+      "line1": "6249 Market St",
+      "line2": null,
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02108",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+      "start_date": "2026-03-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Shipping Order",
+          "product": {
+            "name": "Shipping Order",
+            "description": "Product / Service",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated in order summary.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 24000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10268"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Apex Harbor Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Maya Turner (maya.turner@apexharboranalytics.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 6249 Market St, Boston, MA 02108"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY\nReference: 300071"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03-13"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $24,000.00"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Shipping Order",
+    "description": "Shipping / Order Summary for Apex Harbor Analytics, Order ID 10268, Reference 300071",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-13T12:00:00Z",
+    "tags": [
+      "shipping order"
+    ],
+    "customer": {
+      "external_id": "10268",
+      "customer_name": "Apex Harbor Analytics",
+      "email": "maya.turner@apexharboranalytics.com",
+      "address": {
+        "line1": "6249 Market St",
+        "city": "Boston",
+        "state": "MA",
+        "zipCode": "02108"
+      }
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Commercial Amount: $24,000.00. Document notes that a free trial period ends before the paid phase begins, but no explicit trial pricing, dates, or line-item schedule are provided.",
+        "start_date": "2026-03-13",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Shipping Order",
+            "product": {
+              "name": "Shipping Order",
+              "description": "Product / Service",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated in order summary.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 24000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0075.pdf (5 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:33:54Z

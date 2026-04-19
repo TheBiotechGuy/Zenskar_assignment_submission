@@ -1,0 +1,994 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:24:38Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0009_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:24:38Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:54:39 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf
+2026-04-20T03:54:39 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T03:54:43 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=42.6)
+2026-04-20T03:54:47 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:54:47 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T03:54:51 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T03:54:57 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T03:55:01 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 1, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:25:01Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:25:01Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)"
+}
+
+2026-04-20T03:55:04 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:25:04Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:55:05 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:25:06Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:55:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:25:14Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": null,
+      "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-01",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": []
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": null,
+      "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-01",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": []
+    }
+  ]
+}
+
+2026-04-20T03:55:18 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:25:18Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-01",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": []
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300146"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@bluestreamworks.com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "East Repair Inc.                                                INVOICE"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL                                               $154.06"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-01",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": []
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300146"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@bluestreamworks.com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "East Repair Inc.                                                INVOICE"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL                                               $154.06"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:25:18Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-01",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": []
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300146"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@bluestreamworks.com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "East Repair Inc.                                                INVOICE"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL                                               $154.06"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "customer": {
+      "external_id": "300146",
+      "customer_name": "Blue Stream Works",
+      "email": "owen.reed@bluestreamworks.com"
+    },
+    "phases": [
+      {
+        "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-03-01",
+        "pricings": []
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id",
+    "name"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300146"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@bluestreamworks.com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "East Repair Inc.                                                INVOICE"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL                                               $154.06"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced ex... [truncated, 1801 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0009.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300146\nCounterparty: Blue Stream Works\nPrimary Contact: Owen Reed (owen.reed@bluestreamworks.com)\nEffective Date: 2026-02-26\nCommercial Amount: 718,000.00\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n11\n9\n9\n9\n\nTOTAL                                               $154.06\n\n--- Page 2 [ocr] ---\nCounterparty: Blue Strean Works\n\n| Commercial Contact: Owen Reed fowen,.reedibluestreamworke . oon)\n\n| Billing begging an the firet day af the momth following fhe Effective Date.\nOther commercial wording may appear eleewhere in the packet and muat be\nreconciled carefully,\ntf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented.\n\n\n--- Page 3 [ocr] ---\n| founterparty: Blue Stream Warke\ntammercial Cantach: rwen Kkeed {awen. ceedgblucetreamvorks .com |\n\nBilling begins on the Firat day of fhe month following the Bifective Date.\ndither commercial wording may appear elaewhere in the packet and must be\nyeconciled carefully.\n\n| Ti a referenced exhibit ov achedule ie missing,s ite rontenta sheuld remain\nunresolved rather than invented.\nPayment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara.\n\n\n--- Page 4 [ocr] ---\nI\nhounterparty: Blue Stream Warks\nCommercial Contact: Owen Reed (owen, reed@bluest reamworke, com}\nBilling beging on the Firet day of the month following Phe Effective Bere.\nUther commercial wording may appear elaewhers in the packet and must be\nreconciled carefully,\nIf a referenced exhibit or schedule is missing, ite fententsa should remain\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300146",
+    "customer_name": "Blue Stream Works",
+    "email": "owen.reed@bluestreamworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": null,
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "end_date": null,
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "renewal_policy": null,
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-03-01",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": []
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300146"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@bluestreamworks.com)"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "East Repair Inc.                                                INVOICE"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL                                               $154.06"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-26T12:00:00Z",
+    "anchor_date": "2026-03-01T12:00:00Z",
+    "tags": [
+      "invoice",
+      "commercial attachment"
+    ],
+    "customer": {
+      "external_id": "300146",
+      "customer_name": "Blue Stream Works",
+      "email": "owen.reed@bluestreamworks.com"
+    },
+    "phases": [
+      {
+        "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-03-01",
+        "pricings": []
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0009.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id",
+    "name"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:25:18Z

@@ -1,0 +1,1205 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:25:38Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0022_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:25:38Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:55:38 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf
+2026-04-20T03:55:38 | INFO | src.parsers.pdf_parser |   Page 1/3
+2026-04-20T03:55:42 | INFO | src.parsers.pdf_parser |   Page 2/3
+2026-04-20T03:55:46 | INFO | src.parsers.pdf_parser |   Page 3/3
+2026-04-20T03:55:49 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 0, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:25:49Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:25:49Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)"
+}
+
+2026-04-20T03:55:51 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:25:51Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:55:53 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:25:53Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:55:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:25:56Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+      "start_date": "2025-01-93",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+          "product": {
+            "name": "Invoices",
+            "description": "Product / Services: Invaters",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 6000,
+              "currency": null,
+              "billing_cadence": "monthly",
+              "quantity": 3
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+      "start_date": "2025-01-93",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+          "product": {
+            "name": "Invoices",
+            "description": "Product / Services: Invaters",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 6000,
+              "currency": null,
+              "billing_cadence": "monthly",
+              "quantity": 3
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:56:01 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:26:01Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+      "start_date": "2025-01-93",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+          "product": {
+            "name": "Invoices",
+            "description": "Product / Services: Invaters",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 6000,
+              "currency": null,
+              "billing_cadence": "monthly",
+              "quantity": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300007"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparsys Golden Path Connie re m"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "counterparty: Golden Fath Commerce"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Golden Path Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "zara.gupta@goldenpathcommerce .com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "involog Mumber: 10254"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "INVOICE"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Sfogict / Services; Invaters"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
+      "quote_or_span": "Amount: Jl, 000/mantp,"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 3"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Tatsl Ouse: S18, 000/manth"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A Free trial period ends before the paid phase hegins; trial terms do not overwrite paid pricing."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+      "start_date": "2025-01-93",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+          "product": {
+            "name": "Invoices",
+            "description": "Product / Services: Invaters",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 6000,
+              "currency": null,
+              "billing_cadence": "monthly",
+              "quantity": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300007"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparsys Golden Path Connie re m"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "counterparty: Golden Fath Commerce"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Golden Path Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "zara.gupta@goldenpathcommerce .com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "involog Mumber: 10254"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "INVOICE"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Sfogict / Services; Invaters"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
+      "quote_or_span": "Amount: Jl, 000/mantp,"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 3"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Tatsl Ouse: S18, 000/manth"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A Free trial period ends before the paid phase hegins; trial terms do not overwrite paid pricing."
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:26:01Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+      "start_date": "2025-01-93",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+          "product": {
+            "name": "Invoices",
+            "description": "Product / Services: Invaters",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 6000,
+              "currency": null,
+              "billing_cadence": "monthly",
+              "quantity": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300007"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparsys Golden Path Connie re m"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "counterparty: Golden Fath Commerce"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Golden Path Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "zara.gupta@goldenpathcommerce .com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "involog Mumber: 10254"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "INVOICE"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Sfogict / Services; Invaters"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
+      "quote_or_span": "Amount: Jl, 000/mantp,"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 3"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Tatsl Ouse: S18, 000/manth"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A Free trial period ends before the paid phase hegins; trial terms do not overwrite paid pricing."
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "tags": [
+      "invoice"
+    ],
+    "customer": {
+      "external_id": "300007",
+      "customer_name": "Golden Path Commerce",
+      "email": "zara.gupta@goldenpathcommerce.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+        "start_date": "2025-01-93",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+            "product": {
+              "name": "Invoices",
+              "description": "Product / Services: Invaters",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+              "pricing_data": {
+                "pricing_type": "per_unit",
+                "amount": 6000,
+                "billing_cadence": "monthly",
+                "quantity": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id",
+    "start_date"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300007"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparsys Golden Path Connie re m"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "counterparty: Golden Fath Commerce"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Golden Path Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "zara.gupta@goldenpathcommerce .com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "involog Mumber: 10254"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "INVOICE"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Sfogict / Services; Invaters"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
+      "quote_or_span": "Amount: Jl, 000/mantp,"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 3"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Tatsl Ouse: S18, 000/manth"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A Free trial period ends before the paid phase hegins; trial terms do not overwrite paid pricing."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents shoul... [truncated, 1438 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0022.pdf\n\n--- Page 1 [ocr] ---\na\n| INVOICE |\ninvolog Mumber: 10254\nCustamar Nanas Chon-siiey Chinaga |\n INvortcee\n| Reference: 300007\n| Counterparsys Golden Path Connie re m |\n: Primary Contact; Zars 1-03, '7°*9-S¥PESGyoldenpsthcannerce com, |\nEffective Date: 2025-01-93\n Canmsrcds) Amount: Jl, 000/mantp,\nQuantity: 3 | —\n—____ | Sfogict / Services; Invaters |\n| Tatsl Ouse: S18, 000/manth |\n|\n| |\n!\n\n\n--- Page 2 [ocr] ---\nne\nsee amended terms\ncounterparty: Golden Fath Commerce\nCommercial Contact: Zara Gupta {zara.gupta@goldenpathcommerce .com})\n| »& free trial period ends before the paid phase heging; txdal terme do net\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a yeferenced exhibit ar schedule ia missing, its contents should remain\n| unresolved rather than invented.\nPayment note: fixed platform fees may be bililed in advance while variable ugage\nis billed in arrears.\nee So\nTO\npr te\nee\n\n\n--- Page 3 [ocr] ---\naS _ SCT\nsee amended terms\n\nCounterparty: Golden Path Commerce\n\nCommercial Contact: Zara Gupta (zara. gupta@goldenpathcommerce com)\n\nA Free trial period ends before the paid phase hegins; trial terms do not\n\noverwrite paid pricing. |\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. oo\n\ntf a referenced evhibit or acheadule ia missing, ite contenta should remain |\n‘unresolved rather than invented.\n\nOO\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300007",
+    "customer_name": "Golden Path Commerce",
+    "email": "zara.gupta@goldenpathcommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "invoice"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+      "start_date": "2025-01-93",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+          "product": {
+            "name": "Invoices",
+            "description": "Product / Services: Invaters",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 6000,
+              "currency": null,
+              "billing_cadence": "monthly",
+              "quantity": 3
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300007"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparsys Golden Path Connie re m"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "counterparty: Golden Fath Commerce"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Golden Path Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "zara.gupta@goldenpathcommerce .com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "involog Mumber: 10254"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "INVOICE"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Sfogict / Services; Invaters"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
+      "quote_or_span": "Amount: Jl, 000/mantp,"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 3"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Tatsl Ouse: S18, 000/manth"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "paid phase"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A Free trial period ends before the paid phase hegins; trial terms do not overwrite paid pricing."
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Invoice 10254",
+    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
+    "status": "active",
+    "currency": "USD",
+    "tags": [
+      "invoice"
+    ],
+    "customer": {
+      "external_id": "300007",
+      "customer_name": "Golden Path Commerce",
+      "email": "zara.gupta@goldenpathcommerce.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+        "start_date": "2025-01-93",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+            "product": {
+              "name": "Invoices",
+              "description": "Product / Services: Invaters",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+              "pricing_data": {
+                "pricing_type": "per_unit",
+                "amount": 6000,
+                "billing_cadence": "monthly",
+                "quantity": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0022.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id",
+    "start_date"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:26:01Z

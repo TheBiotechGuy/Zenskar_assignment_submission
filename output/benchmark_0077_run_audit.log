@@ -1,0 +1,1493 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:33:55Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0077_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:33:55Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:03:55 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf
+2026-04-20T04:03:55 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T04:03:58 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T04:04:00 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=47.0)
+2026-04-20T04:04:03 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T04:04:03 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T04:04:06 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T04:04:09 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 1, 'empty': 0}
+2026-04-20T04:04:10 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:34:10Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:34:10Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)"
+}
+
+2026-04-20T04:04:12 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:34:12Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:04:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:34:14Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:04:17 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:34:17Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Order",
+      "description": "Shipping / Order Summary",
+      "start_date": "2026-03-08",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as 39,500 / month",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": null,
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 39500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Total Price listed separately on page 2",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Total Price: 724.5",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 724.5,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Order",
+      "description": "Shipping / Order Summary",
+      "start_date": "2026-03-08",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as 39,500 / month",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": null,
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 39500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Total Price listed separately on page 2",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Total Price: 724.5",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 724.5,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:04:23 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:34:23Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order",
+      "description": "Shipping / Order Summary",
+      "start_date": "2026-03-08",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as 39,500 / month",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": null,
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 39500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Total Price listed separately on page 2",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Total Price: 724.5",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 724.5,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference? 300067"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Morris (zara.morris@brightstreamworks .com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order [Ds 10264"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may diseuss continuation before expiry, but no automatic renewal is guaranteed by thig clause alone."
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product ¢ Service: Shipping order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "Total Price: 724.5"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Total Price: 724.5"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order",
+      "description": "Shipping / Order Summary",
+      "start_date": "2026-03-08",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as 39,500 / month",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": null,
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 39500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Total Price listed separately on page 2",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Total Price: 724.5",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 724.5,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference? 300067"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Morris (zara.morris@brightstreamworks .com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order [Ds 10264"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may diseuss continuation before expiry, but no automatic renewal is guaranteed by thig clause alone."
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product ¢ Service: Shipping order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "Total Price: 724.5"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Total Price: 724.5"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:34:23Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order",
+      "description": "Shipping / Order Summary",
+      "start_date": "2026-03-08",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as 39,500 / month",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": null,
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 39500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Total Price listed separately on page 2",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Total Price: 724.5",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 724.5,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference? 300067"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Morris (zara.morris@brightstreamworks .com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order [Ds 10264"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may diseuss continuation before expiry, but no automatic renewal is guaranteed by thig clause alone."
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product ¢ Service: Shipping order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "Total Price: 724.5"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Total Price: 724.5"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "start_date": "2026-03-08T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "customer": {
+      "external_id": "300067",
+      "customer_name": "Bright Stream Works",
+      "email": "zara.morris@brightstreamworks.com",
+      "address": {
+        "line1": "3157 Lake St",
+        "city": "Portland",
+        "state": "OR",
+        "zipCode": "87204"
+      }
+    },
+    "phases": [
+      {
+        "name": "Order",
+        "description": "Shipping / Order Summary",
+        "start_date": "2026-03-08",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount listed as 39,500 / month",
+            "product": {
+              "name": "Shipping order",
+              "type": "product"
+            },
+            "pricing": {
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 39500,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Total Price listed separately on page 2",
+            "product": {
+              "name": "Shipping order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Total Price: 724.5",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 724.5
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference? 300067"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Morris (zara.morris@brightstreamworks .com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order [Ds 10264"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may diseuss continuation before expiry, but no automatic renewal is guaranteed by thig clause alone."
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product ¢ Service: Shipping order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "Total Price: 724.5"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Total Price: 724.5"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should rem... [truncated, 1402 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0077.pdf\n\n--- Page 1 [ocr] ---\nOrder [Ds 10264\n‘SHIPPING / ORDER SUMMARY\nReference? 300067\nCounterparty: Bright Stream Warks\nPrimary Contact: Zara Morris. (zara .morria@hrightatreanwarks,cam}\nBftective Cater 2026-93-08. |\nComibereial Amaunet 39,500 /ngnth\nQuanti¢y: Lad\nProduct ¢ Service: Shipping order |\nShip Address: 3157 Lake St, Portland, OR 87204 :\n\n\n--- Page 2 [llm_vision] ---\nTotal Price: 724.5\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Stream Works\nCommereial Contact: Zara Morris (zara.morris@brightstreamworks .com)\nThe parties may diseuss continuation before expiry, but no automatic renewal is\nguaranteed by thig clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\n\n| ‘unresolved rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\nI\n\n\n--- Page 4 [ocr] ---\ncounterparty: Bright Stream Works | |\n\nfommereial Gantact: dara Morrie (zara.morrisébrightatreamworks .com)\n\nthe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone. |\ndther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nTf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300067",
+    "customer_name": "Bright Stream Works",
+    "email": "zara.morris@brightstreamworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": "3157 Lake St",
+      "line2": null,
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "87204",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-03-08T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Order",
+      "description": "Shipping / Order Summary",
+      "start_date": "2026-03-08",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as 39,500 / month",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": null,
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 39500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Total Price listed separately on page 2",
+          "product": {
+            "name": "Shipping order",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Total Price: 724.5",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 724.5,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference? 300067"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Stream Works"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Morris (zara.morris@brightstreamworks .com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 3157 Lake St, Portland, OR 87204"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order [Ds 10264"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may diseuss continuation before expiry, but no automatic renewal is guaranteed by thig clause alone."
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Bftective Cater 2026-93-08."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product ¢ Service: Shipping order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comibereial Amaunet 39,500 /ngnth"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "Total Price: 724.5"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Total Price: 724.5"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Order 10264",
+    "description": "Shipping / Order Summary for shipping order with Bright Stream Works",
+    "status": "active",
+    "start_date": "2026-03-08T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "shipping order"
+    ],
+    "customer": {
+      "external_id": "300067",
+      "customer_name": "Bright Stream Works",
+      "email": "zara.morris@brightstreamworks.com",
+      "address": {
+        "line1": "3157 Lake St",
+        "city": "Portland",
+        "state": "OR",
+        "zipCode": "87204"
+      }
+    },
+    "phases": [
+      {
+        "name": "Order",
+        "description": "Shipping / Order Summary",
+        "start_date": "2026-03-08",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount listed as 39,500 / month",
+            "product": {
+              "name": "Shipping order",
+              "type": "product"
+            },
+            "pricing": {
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 39500,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Total Price listed separately on page 2",
+            "product": {
+              "name": "Shipping order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Total Price: 724.5",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 724.5
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0077.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:34:23Z

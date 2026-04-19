@@ -1,0 +1,107 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300127",
+    "customer_name": "Vector Anchor Technologies",
+    "email": "zara.miller@vectoranchorrechnala, cam",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Commercial Schedule 300127",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
+    "status": "active",
+    "start_date": "2026-02-07T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "300127",
+      "customer_name": "Vector Anchor Technologies",
+      "email": "zara.miller@vectoranchorrechnala, cam"
+    },
+    "phases": [
+      {
+        "description": "Commercial Schedule",
+        "start_date": "2026-02-07",
+        "pricings": [
+          {
+            "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+            "product": {
+              "name": "Mixed Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 213000,
+                "billing_cadence": "month"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0032.pdf (6 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300127"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Vector Anchor Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-07"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Asount: 213,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Procucet / Service: Hixed Korn"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+    }
+  ]
+}

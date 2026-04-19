@@ -1,0 +1,1259 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:34:23Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0086_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:34:23Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:04:24 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf
+2026-04-20T04:04:24 | INFO | src.parsers.pdf_parser |   Page 1/3
+2026-04-20T04:04:27 | INFO | src.parsers.pdf_parser |   Page 2/3
+2026-04-20T04:04:30 | INFO | src.parsers.pdf_parser |   Page 3/3
+2026-04-20T04:04:33 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 0, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:34:33Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:34:33Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)"
+}
+
+2026-04-20T04:04:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:34:35Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:04:37 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:34:37Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:04:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:34:40Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+      "start_date": "2028-01-14",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Stock Report license/service",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $7,000 / month; Quantity 1",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "USD",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+      "start_date": "2028-01-14",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Stock Report license/service",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $7,000 / month; Quantity 1",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "USD",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:04:44 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:34:44Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+      "start_date": "2028-01-14",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Stock Report license/service",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $7,000 / month; Quantity 1",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "USD",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Das (zara.das@northharboraystems.com}"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Peaduct /# Serviee: Stack Repere."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity, 1"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "MONTHLY STOCK REPORT |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+      "start_date": "2028-01-14",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Stock Report license/service",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $7,000 / month; Quantity 1",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "USD",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Das (zara.das@northharboraystems.com}"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Peaduct /# Serviee: Stack Repere."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity, 1"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "MONTHLY STOCK REPORT |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:34:44Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+      "start_date": "2028-01-14",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Stock Report license/service",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $7,000 / month; Quantity 1",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "USD",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Das (zara.das@northharboraystems.com}"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Peaduct /# Serviee: Stack Repere."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity, 1"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "MONTHLY STOCK REPORT |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "customer": {
+      "external_id": "300103",
+      "customer_name": "North Harbor Systems",
+      "email": "zara.das@northharboraystems.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+        "start_date": "2028-01-14",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Stock Report license/service",
+            "product": {
+              "name": "Stock Report",
+              "description": "Product / Service: Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $7,000 / month; Quantity 1",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "USD",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Das (zara.das@northharboraystems.com}"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Peaduct /# Serviee: Stack Repere."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity, 1"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "MONTHLY STOCK REPORT |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 3,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain ... [truncated, 1484 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0086.pdf\n\n--- Page 1 [ocr] ---\noo\nstock Report for 2016-07\n\nMONTHLY STOCK REPORT |\n\nReference: 300103 |\n\nCOUATSEPArtyt Hakth Harber Syatems\n\nPeimary Contact: Zara Das (rake, das@noarthharborsystems, com)\n\nEffective Date: 2028-01~14 |\n\nCommercial Amount: $7,000 /manth\n\nQuantity, 1\n\nPeaduct /# Serviee: Stack Repere.\n\nPrariuet. : Malte Sela Units in Steck Unit: Pelee\n\nStack Report Lg 5 $7, 000/meanth\n| |\nOT\n\n\n--- Page 2 [ocr] ---\nCounterparty: North Harbor Systems\n\nCommercial Contact: Zara Dat (zara das(nocthharboraystems .com)\n\nA free trial period ends before the paid phase begins; trial terms do nat\n\noverwrite paid pricing- |\n\nOrher commercial wording may appear elsewhere in the packet and must be\n\nreconclLied earefully. |\n| If a referenced exhibit or schedule is missing, its contents should remain |\n\nunresolved rather than invented.\n: payment note: fixed platform fees may be billed in advance whtle variable usage |\n\nja billed in arrears.\n\n} | | _. _ | | . |\n\n\n--- Page 3 [ocr] ---\nCounterparty: North Harbor Systems\nCommercial Contact: Zara Das (zara.das@northharboraystems.com}\nA free trial period ends hefore the paid phase heging; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\n| the same packet.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+      "start_date": "2028-01-14",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Stock Report license/service",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $7,000 / month; Quantity 1",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "USD",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Das (zara.das@northharboraystems.com}"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Peaduct /# Serviee: Stack Repere."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity, 1"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "MONTHLY STOCK REPORT |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "customer": {
+      "external_id": "300103",
+      "customer_name": "North Harbor Systems",
+      "email": "zara.das@northharboraystems.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+        "start_date": "2028-01-14",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Stock Report license/service",
+            "product": {
+              "name": "Stock Report",
+              "description": "Product / Service: Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $7,000 / month; Quantity 1",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "USD",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:34:44Z

@@ -1,0 +1,1355 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:32:38Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0073_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:32:38Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:02:38 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf
+2026-04-20T04:02:38 | INFO | src.parsers.pdf_parser |   Page 1/9
+2026-04-20T04:02:41 | INFO | src.parsers.pdf_parser |   Page 2/9
+2026-04-20T04:02:43 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=39.3)
+2026-04-20T04:02:45 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T04:02:45 | INFO | src.parsers.pdf_parser |   Page 3/9
+2026-04-20T04:02:49 | INFO | src.parsers.pdf_parser |   Page 4/9
+2026-04-20T04:02:51 | INFO | src.parsers.pdf_parser |   Page 5/9
+2026-04-20T04:02:54 | INFO | src.parsers.pdf_parser |   Page 6/9
+2026-04-20T04:02:56 | INFO | src.parsers.pdf_parser |   Page 7/9
+2026-04-20T04:02:59 | INFO | src.parsers.pdf_parser |   Page 8/9
+2026-04-20T04:03:03 | INFO | src.parsers.pdf_parser |   Page 9/9
+2026-04-20T04:03:06 | INFO | src.parsers.pdf_parser | Done: 9 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 8, 'llm_vision': 1, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:33:06Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:33:06Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)"
+}
+
+2026-04-20T04:03:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:33:08Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:03:10 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:33:10Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:03:13 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:33:13Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": null,
+      "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+      "start_date": "2026-02-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Product / Service",
+            "description": "Shipping Order",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Comasreial Amount: £16,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 16000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": null,
+      "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+      "start_date": "2026-02-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Product / Service",
+            "description": "Shipping Order",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Comasreial Amount: £16,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 16000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:03:18 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:33:18Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+      "start_date": "2026-02-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Product / Service",
+            "description": "Shipping Order",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Comasreial Amount: £16,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 16000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order IB: 19248"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Stream Labs"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.type",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+      "start_date": "2026-02-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Product / Service",
+            "description": "Shipping Order",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Comasreial Amount: £16,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 16000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order IB: 19248"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Stream Labs"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.type",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:33:18Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+      "start_date": "2026-02-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Product / Service",
+            "description": "Shipping Order",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Comasreial Amount: £16,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 16000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order IB: 19248"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Stream Labs"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.type",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "customer": {
+      "external_id": "19248",
+      "customer_name": "Nimbus Stream Labs",
+      "email": "iris.miller@nimbusstreamlabs.com",
+      "address": {
+        "line1": "9527 R111 St",
+        "city": "Seattle",
+        "state": "HA",
+        "zipCode": "98104"
+      }
+    },
+    "phases": [
+      {
+        "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+        "start_date": "2026-02-21",
+        "pricings": [
+          {
+            "description": "Commercial Amount",
+            "product": {
+              "name": "Product / Service",
+              "description": "Shipping Order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Comasreial Amount: £16,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 16000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order IB: 19248"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Stream Labs"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.type",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 9,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or s... [truncated, 3899 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0073.pdf\n\n--- Page 1 [ocr] ---\nOrder IB: 19248\nSHIPPING / ORDER SUMMARY\nReferences 300051\nCounterparty: Nimbus Stream Labs\nPrimary Contact: Irie Miller (iris millerQ@nimbusstreamlabs.cem)\nEffective Date: 2026-02-21\nComasreial Amount: £16,000.00/mo\nQuantity: 1\nPyoduct / Sevuleat Shipping Order\nShip Address: 9527 R111 St, Seattle, HA 98104\nTT\n\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n--- Page 3 [ocr] ---\n| Counterparty: Nimbus Stream tabs | |\n: Commercial Cantact: Iris Miller {iris.millerénimbusstreamlabs cam)\nthe parties may discuss continuation hefore expiry, hut no automatic renewal 1a\nGuaranteed by this clause alone. |\n| Others commercial wording may appear elaewhere in the packet and must be\nreconciled carefully. |\ntf 4 referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in advance while variable usage\nis billed in arrears.\n\n\n--- Page 4 [ocr] ---\nch —— : —\n| BE BT |\n‘Counterparty: Nimbus Stream Labs |\nCommercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)\nane Parties may discuss continuation before expiry, but na automatic renewal ne} |\nguaranteed by this clause alone. |\n{ Other commercial wording may appear elsewhere in the packet and must be\nxeconciled carefully. oe |\nIf a referenced exhibit or achedule ig missing, its contents should remain.\nunresolved rather than invented.\n\n\n--- Page 5 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabe. com)\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule ia missing, ite contenta should remain\nunresolved rather than invented. |\na\n\n\n--- Page 6 [ocr] ---\nCounterparty: Nimbus Stream Labs\n\nCommercial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\n\nThe parties may discuss continuation hefore expiry, but no automatic renewal is\nguaranteed by this clause alone.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain |\nunresolved rather than invented. |\nFormatting note: equivalent amount strings may appear in different styles within.\n\nthe same packet.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Nimbus Stream Labs |\n\nCommercial Contact: Iris Miller (iris .miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this Clause alone. | :\nOther commercial wording may appear elsewhere in the packet and must. be |\nreconciled carefully.\n\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\nPayment nate: fixed platform fees may be billed in advance while variable usage\n\nia billed in arreara.\n\n\n--- Page 8 [ocr] ---\nCounterparty: Nimbus Stream Lahs\nCommercial Contaet: tris Miller f{iris.millerGnimbusstreamlabs. com)\nThe parties may discuss continuation hefore expiry, but na automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere in the packet and must be\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 9 [ocr] ---\n| |\nCounterparty: Nimbus Stream Labs |\nCommereial Contact: Iris Miller (iris.miller@nimbusstreamlabs.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\nTf a referenced exhibit or achedule is missing, its contents Should remain |\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "19248",
+    "customer_name": "Nimbus Stream Labs",
+    "email": "iris.miller@nimbusstreamlabs.com",
+    "phone_number": null,
+    "address": {
+      "line1": "9527 R111 St",
+      "line2": null,
+      "city": "Seattle",
+      "state": "HA",
+      "zipCode": "98104",
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+      "start_date": "2026-02-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Product / Service",
+            "description": "Shipping Order",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Comasreial Amount: £16,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 16000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order IB: 19248"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SHIPPING / ORDER SUMMARY"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Stream Labs"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: tria Miller (iris .miller@nimbusstreamlabs.com)"
+    },
+    {
+      "field": "customer.address.line1",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.city",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.state",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "customer.address.zipCode",
+      "quote_or_span": "Ship Address: 9527 R111 St, Seattle, HA 98104"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Comasreial Amount: £16,000.00/mo"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].pricings[0].product.type",
+      "quote_or_span": "Pyoduct / Sevuleat Shipping Order"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Effective Date: 2026-02-21"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Shipping / Order Summary",
+    "description": "Order 19248 for Nimbus Stream Labs; product/service shipping order.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-21T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "customer": {
+      "external_id": "19248",
+      "customer_name": "Nimbus Stream Labs",
+      "email": "iris.miller@nimbusstreamlabs.com",
+      "address": {
+        "line1": "9527 R111 St",
+        "city": "Seattle",
+        "state": "HA",
+        "zipCode": "98104"
+      }
+    },
+    "phases": [
+      {
+        "description": "Shipping / Order Summary for Nimbus Stream Labs. Effective Date stated as 2026-02-21. Commercial Amount stated as £16,000.00/mo. No explicit phase term or end date found.",
+        "start_date": "2026-02-21",
+        "pricings": [
+          {
+            "description": "Commercial Amount",
+            "product": {
+              "name": "Product / Service",
+              "description": "Shipping Order",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Comasreial Amount: £16,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 16000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0073.pdf (9 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:33:18Z

@@ -1,0 +1,112 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "customer": {
+      "external_id": "300147",
+      "customer_name": "Prime Orbit Networks",
+      "email": "theo.brooks@primeorbitnetworks.com",
+      "address": {}
+    },
+    "phases": [
+      {
+        "start_date": "2026-02-27",
+        "pricings": [
+          {
+            "product": {
+              "name": "Image Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 42000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Retecence: 300147"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Srime Orbit Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+    }
+  ]
+}

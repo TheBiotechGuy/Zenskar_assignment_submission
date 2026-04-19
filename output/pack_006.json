@@ -1,0 +1,125 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Summit Peak Systems",
+    "email": "zora.miller@summitpeaksystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-31T12:00:00Z",
+    "tags": [
+      "master_agreement.pdf",
+      "order_form.pdf",
+      "amendment_1.pdf"
+    ],
+    "customer": {
+      "customer_name": "Summit Peak Systems",
+      "email": "zora.miller@summitpeaksystems.com"
+    },
+    "phases": [
+      {
+        "name": "Commercial",
+        "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+        "start_date": "2026-01-31",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+            "product": {
+              "name": "Commercial Amount",
+              "description": "Recurring service fee",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Recurring fee",
+              "description": "Recurring fee £42,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Summit Peak Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-31"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00/mo"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-31"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Recurring fee £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £42,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Recurring fee £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: £42,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: £42,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Service levels are governed by Exhibit B."
+    }
+  ]
+}

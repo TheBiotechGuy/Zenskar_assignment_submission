@@ -1,0 +1,1231 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:30:25Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0059_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:30:25Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:00:25 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf
+2026-04-20T04:00:25 | INFO | src.parsers.pdf_parser |   Page 1/12
+2026-04-20T04:00:29 | INFO | src.parsers.pdf_parser |   Page 2/12
+2026-04-20T04:00:32 | INFO | src.parsers.pdf_parser |   Page 3/12
+2026-04-20T04:00:36 | INFO | src.parsers.pdf_parser |   Page 4/12
+2026-04-20T04:00:39 | INFO | src.parsers.pdf_parser |   Page 5/12
+2026-04-20T04:00:42 | INFO | src.parsers.pdf_parser |   Page 6/12
+2026-04-20T04:00:45 | INFO | src.parsers.pdf_parser |   Page 7/12
+2026-04-20T04:00:48 | INFO | src.parsers.pdf_parser |   Page 8/12
+2026-04-20T04:00:51 | INFO | src.parsers.pdf_parser |   Page 9/12
+2026-04-20T04:00:55 | INFO | src.parsers.pdf_parser |   Page 10/12
+2026-04-20T04:00:58 | INFO | src.parsers.pdf_parser |   Page 11/12
+2026-04-20T04:01:02 | INFO | src.parsers.pdf_parser |   Page 12/12
+2026-04-20T04:01:05 | INFO | src.parsers.pdf_parser | Done: 12 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 12, 'llm_vision': 0, 'empty': 0}
+2026-04-20T04:01:07 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:31:07Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:31:07Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)"
+}
+
+2026-04-20T04:01:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:31:08Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:01:10 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:31:10Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:01:13 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:31:13Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+      "start_date": "2026-03-29",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Line item product/service: Purchase Requisition",
+            "type": "product",
+            "sku": "101"
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: £7,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+      "start_date": "2026-03-29",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Line item product/service: Purchase Requisition",
+            "type": "product",
+            "sku": "101"
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: £7,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:01:18 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:31:18Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+      "start_date": "2026-03-29",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Line item product/service: Purchase Requisition",
+            "type": "product",
+            "sku": "101"
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: £7,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300087"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Canvas Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "sara.miller@brightcanvasanalytic.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product /# Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.sku",
+      "quote_or_span": "Purcchase Requisition 101 1"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+      "start_date": "2026-03-29",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Line item product/service: Purchase Requisition",
+            "type": "product",
+            "sku": "101"
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: £7,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300087"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Canvas Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "sara.miller@brightcanvasanalytic.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product /# Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.sku",
+      "quote_or_span": "Purcchase Requisition 101 1"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing."
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:31:18Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+      "start_date": "2026-03-29",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Line item product/service: Purchase Requisition",
+            "type": "product",
+            "sku": "101"
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: £7,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300087"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Canvas Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "sara.miller@brightcanvasanalytic.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product /# Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.sku",
+      "quote_or_span": "Purcchase Requisition 101 1"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing."
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "customer": {
+      "external_id": "300087",
+      "customer_name": "Bright Canvas Analytics",
+      "email": "sara.miller@brightcanvasanalytic.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+        "start_date": "2026-03-29",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount",
+            "product": {
+              "name": "Purchase Requisition",
+              "description": "Line item product/service: Purchase Requisition",
+              "type": "product",
+              "sku": "101"
+            },
+            "pricing": {
+              "description": "Commercial Amount: £7,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300087"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Canvas Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "sara.miller@brightcanvasanalytic.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product /# Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.sku",
+      "quote_or_span": "Purcchase Requisition 101 1"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 12,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the pack... [truncated, 6001 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0059.pdf\n\n--- Page 1 [ocr] ---\ncompany name: AGC Corporation\n. Purchase Requisitions - June 2077\nCreated By: John Doe\nPURCHASE REQUISITION\nReference: 300087 :\nCountecpacty: Bright Canvas Aaalytics\nPrimary Contact: Sara Miller (sara. miller@brightcanvasanslytic.com)\nSffective Date: 2026-03-29\nCommercial Amount: £7,000.00/mo\nQuanrity: 1\n| Product /# Service: Purchase Requisition\nLine Item Product ID Quantity\nPurcchase Requisition 101 1\nWiIyoyel Cam rtunnscils sou wice ts fo\n| tanjimup Dried-Apples ——|-—51 J 98-— |\n\n\n--- Page 2 [ocr] ---\ncounterparty: Bright Canvasa Analytics |\ncammercial Contact: Sara Miller {sara.millerébrightcanvasanalytic.com}\nnm free trial period ends before the paid phase begins; trial terme de not\noverwrite paid pricing.\nOther cammercial wording may appear elsewhere in the packet and muat be\nreeonciled. carefully. | |\nIf a referenced exhibit or schedule is misgging, its contents should remain\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n, ia BbBllled in arrears.\nee\n\n\n--- Page 3 [ocr] ---\na\nCounterparty: Bright Canvas Analytics\nCommereial Contact: Sara Miller {sara.miller@brightcanvaganalytic.cam}\n\n| h free trial period ends before the paid phase begins; trial terms do not\n\n. overwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n\nTf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Bright Canvag Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvaganalytic. cam)\n\n~% £ree trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully. |\n\nIf a referenced exhibit or schedule is missing, its contents should remain\n\nunresolved rather than invented.\n\nFormatting note: equivalent amount strings may appear in different styles within\n\nthe same packet.\n\n\n--- Page 5 [ocr] ---\ncounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (gaara millerdbrightcanvasanalytic.com)\nn free trial period enda hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n| Other commercial wording may appear elsewhere in the packet and must b= |\n| reconciled carefully.\ntf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\npo TT\n\n\n--- Page 6 [ocr] ---\nCounterparty: Bright Canvas Analytics\n\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com}). |\n| A free trial period ends before the paid phase beging; trial terms do not\n\noverwrite. paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must be\n\nreconciled carefully.\n\nIf a referenced exhibit or echedule is miagsing, its contenta should remain\n\nunresolved rather than invented.\n\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nig billed in arrears.\n\n\n--- Page 7 [ocr] ---\nCounterparty: Sright Canvas Analytics\nCommercial Contact: Sara Miller (sara.miller@brightcanvasanalytic.com)\nA free trial period ends before the paid phase begins; trial terms do not\nOverwrite paid pricing.\nOther comnercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\n| If a referenced exhibit or schedule is miasing, its contenta should remain\n| unresqlved rather than invented,\n|\n, | OOo\nOo _—\n\n\n--- Page 8 [ocr] ---\na\nCounterparty: Bright Canvas Analytics |\nCommercial Contact: Sara Milier (sara .miller@brightcanvasanalytic.com}\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n\n--- Page 9 [ocr] ---\n|\n|\n|\nCounterparty: Bright Canvas Analytics |\nCoemmereial Contact: Sara Miller (sara.miller@brightcanvasganalytic.com) ,\nA free trial period ends before the paid phase hegins; trial terms do not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. | |\nIf a referenced exhibit or schedule is missing, its contenta should ‘remain\n| unresolved rather than invented.\nnn |\nFormatting nate: equivalent amount strings may appear in different styles within\n| the same packet.\n|\n|\n|\n|\n|\n\n\n--- Page 10 [ocr] ---\n| Counterparty: Bright Canvas Analytics:\ncommercial Contact: Sara Milier jsara.millerébrightcanvasanalytic. com} |\n& free trial period ends before the paid phase hegins; trial terms do nat.\n\noverwrite pald pricing.\nSther cammercial wording may appear elsewhere in the packet and must be\n\n| reconciled carefully. | |\ntf a referenced exhibit or schedule ia missing, ita contents should remain\nunresolved yather than invented. |\nPayment mote: Fixed platform fees may be billed in advance while variahle usage\nis billed in arrears.\n\n\n--- Page 11 [ocr] ---\nce\n| ] ] ] } ] } | ] i\nflounterparty: Bright Canvas Analytics |\n| commerelal Contact: Sara Miller (sara.millerabrightcanvasanalytic, com) :\n| | | |\n| & free trial period ends hefore the paid phase hegina; trial terms de not\noverwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be |\n' reconciled carefully.\n! tf a referenced exhibit ar schedule is missing, its contenta should remain\nunresolved rather than invented,\n|\n|\n|\nPS\n\n\n--- Page 12 [ocr] ---\nSn\n\nCounterparty: Bright Canvas Analytics | |\n| Commerelal Contact: Sara Miller {sara.miller@brightcanvaganalytie.cam)\n\nA&A. free trial. period ends hefore the paid Phase hegins; trial terme do not\n\noverwrite paid pricing. | .\n\nOther commercial wording may appear elsewhere in the Packet and must be\n\nreconciled carefully. |\n\nfifa referenced exhibit or schedule igs missing, its contents should remain\n\nunresolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300087",
+    "customer_name": "Bright Canvas Analytics",
+    "email": "sara.miller@brightcanvasanalytic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Paid Phase",
+      "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+      "start_date": "2026-03-29",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount",
+          "product": {
+            "name": "Purchase Requisition",
+            "description": "Line item product/service: Purchase Requisition",
+            "type": "product",
+            "sku": "101"
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: £7,000.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 7000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300087"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Canvas Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "sara.miller@brightcanvasanalytic.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Sffective Date: 2026-03-29"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product /# Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.sku",
+      "quote_or_span": "Purcchase Requisition 101 1"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: £7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "£7,000.00/mo"
+    },
+    {
+      "field": "phases[0].phase_type",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing."
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Purchase Requisition",
+    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-03-29T12:00:00Z",
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "customer": {
+      "external_id": "300087",
+      "customer_name": "Bright Canvas Analytics",
+      "email": "sara.miller@brightcanvasanalytic.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+        "start_date": "2026-03-29",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount",
+            "product": {
+              "name": "Purchase Requisition",
+              "description": "Line item product/service: Purchase Requisition",
+              "type": "product",
+              "sku": "101"
+            },
+            "pricing": {
+              "description": "Commercial Amount: £7,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0059.pdf (12 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:31:18Z

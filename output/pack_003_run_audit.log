@@ -1,0 +1,1912 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:16:37Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/pack_003_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:16:37Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:46:37 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf
+2026-04-20T03:46:37 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T03:46:40 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T03:46:43 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T03:46:46 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T03:46:49 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:46:50 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:46:50 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf
+2026-04-20T03:46:50 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:46:51 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:46:51 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf
+2026-04-20T03:46:51 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:46:58 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:46:59 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:16:59Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:16:59Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)"
+}
+
+2026-04-20T03:47:01 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:17:01Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:47:03 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:17:03Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:47:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:17:08Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Subscription Term",
+      "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+      "start_date": null,
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Base recurring subscription fee",
+          "product": {
+            "name": "Subscription",
+            "description": "Recurring subscription commitment",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Base fee",
+            "description": "Base fee 242,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 242000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+          "product": {
+            "name": "Overage Usage",
+            "description": "Variable usage charges for excess consumption",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Overage",
+            "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 242,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        },
+        {
+          "description": "Amendment 1 overage schedule/invoice total",
+          "product": {
+            "name": "Amendment 1 Overage Schedule",
+            "description": "Supplemental overage schedule referenced in Amendment 1",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Amendment 1",
+            "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15406,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Subscription Term",
+      "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+      "start_date": null,
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Base recurring subscription fee",
+          "product": {
+            "name": "Subscription",
+            "description": "Recurring subscription commitment",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Base fee",
+            "description": "Base fee 242,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 242000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+          "product": {
+            "name": "Overage Usage",
+            "description": "Variable usage charges for excess consumption",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Overage",
+            "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 242,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        },
+        {
+          "description": "Amendment 1 overage schedule/invoice total",
+          "product": {
+            "name": "Amendment 1 Overage Schedule",
+            "description": "Supplemental overage schedule referenced in Amendment 1",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Amendment 1",
+            "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15406,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:47:15 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:17:15Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Subscription Term",
+      "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+      "start_date": null,
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Base recurring subscription fee",
+          "product": {
+            "name": "Subscription",
+            "description": "Recurring subscription commitment",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Base fee",
+            "description": "Base fee 242,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 242000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+          "product": {
+            "name": "Overage Usage",
+            "description": "Variable usage charges for excess consumption",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Overage",
+            "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 242,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        },
+        {
+          "description": "Amendment 1 overage schedule/invoice total",
+          "product": {
+            "name": "Amendment 1 Overage Schedule",
+            "description": "Supplemental overage schedule referenced in Amendment 1",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Amendment 1",
+            "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15406,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Blue Leaf Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Maya Shah (maya. shah@blueleaflogisties com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Base fee"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Base fee 242,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "242,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.name",
+      "quote_or_span": "Overage"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "242.0/unit"
+    },
+    {
+      "field": "phases[0].pricings[1].description",
+      "quote_or_span": "Overage shove included threshold billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.name",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.amount",
+      "quote_or_span": "TOTAL Si5A06"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "The Average schedule supplements the base fee and does nok replace the recurring commitment."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Bnendmenk Oates 2026-02-02"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "supplements the base fee and does nok replace the recurring commitment."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Subscription Term",
+      "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+      "start_date": null,
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Base recurring subscription fee",
+          "product": {
+            "name": "Subscription",
+            "description": "Recurring subscription commitment",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Base fee",
+            "description": "Base fee 242,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 242000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+          "product": {
+            "name": "Overage Usage",
+            "description": "Variable usage charges for excess consumption",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Overage",
+            "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 242,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        },
+        {
+          "description": "Amendment 1 overage schedule/invoice total",
+          "product": {
+            "name": "Amendment 1 Overage Schedule",
+            "description": "Supplemental overage schedule referenced in Amendment 1",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Amendment 1",
+            "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15406,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Blue Leaf Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Maya Shah (maya. shah@blueleaflogisties com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Base fee"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Base fee 242,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "242,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.name",
+      "quote_or_span": "Overage"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "242.0/unit"
+    },
+    {
+      "field": "phases[0].pricings[1].description",
+      "quote_or_span": "Overage shove included threshold billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.name",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.amount",
+      "quote_or_span": "TOTAL Si5A06"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "The Average schedule supplements the base fee and does nok replace the recurring commitment."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Bnendmenk Oates 2026-02-02"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "supplements the base fee and does nok replace the recurring commitment."
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:17:15Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Subscription Term",
+      "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+      "start_date": null,
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Base recurring subscription fee",
+          "product": {
+            "name": "Subscription",
+            "description": "Recurring subscription commitment",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Base fee",
+            "description": "Base fee 242,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 242000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+          "product": {
+            "name": "Overage Usage",
+            "description": "Variable usage charges for excess consumption",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Overage",
+            "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 242,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        },
+        {
+          "description": "Amendment 1 overage schedule/invoice total",
+          "product": {
+            "name": "Amendment 1 Overage Schedule",
+            "description": "Supplemental overage schedule referenced in Amendment 1",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Amendment 1",
+            "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15406,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Blue Leaf Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Maya Shah (maya. shah@blueleaflogisties com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Base fee"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Base fee 242,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "242,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.name",
+      "quote_or_span": "Overage"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "242.0/unit"
+    },
+    {
+      "field": "phases[0].pricings[1].description",
+      "quote_or_span": "Overage shove included threshold billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.name",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.amount",
+      "quote_or_span": "TOTAL Si5A06"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "The Average schedule supplements the base fee and does nok replace the recurring commitment."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Bnendmenk Oates 2026-02-02"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "supplements the base fee and does nok replace the recurring commitment."
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "customer": {
+      "customer_name": "Blue Leaf Logistics",
+      "email": "maya.shah@blueleaflogisties com"
+    },
+    "phases": [
+      {
+        "name": "Subscription Term",
+        "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Base recurring subscription fee",
+            "product": {
+              "name": "Subscription",
+              "description": "Recurring subscription commitment",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Base fee",
+              "description": "Base fee 242,000.00/mo.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 242000,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+            "product": {
+              "name": "Overage Usage",
+              "description": "Variable usage charges for excess consumption",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Overage",
+              "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+              "pricing_data": {
+                "pricing_type": "per_unit",
+                "amount": 242
+              }
+            }
+          },
+          {
+            "description": "Amendment 1 overage schedule/invoice total",
+            "product": {
+              "name": "Amendment 1 Overage Schedule",
+              "description": "Supplemental overage schedule referenced in Amendment 1",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Amendment 1",
+              "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 15406
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id",
+    "start_date"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Blue Leaf Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Maya Shah (maya. shah@blueleaflogisties com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Base fee"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Base fee 242,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "242,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.name",
+      "quote_or_span": "Overage"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "242.0/unit"
+    },
+    {
+      "field": "phases[0].pricings[1].description",
+      "quote_or_span": "Overage shove included threshold billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.name",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.amount",
+      "quote_or_span": "TOTAL Si5A06"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "The Average schedule supplements the base fee and does nok replace the recurring commitment."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Bnendmenk Oates 2026-02-02"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "supplements the base fee and does nok replace the recurring commitment."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description... [truncated, 2594 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n=. |\nACCELIO..\nMaster Agreement.\n| ‘Customer: Blue Leaf Logistics\nVendor: Silver Orbit Systems |\nPrimary Contact: Maya Shah (maya. shah@blueleaflogisties com} —_\n! nites nnn\nCustomer Pays & recurring subscription fee plus variable usage charges for excess |\nconsumption. | |\n7 +3. J—_—_.\nPOF Bookmork Somalo Pago 1 of4\n\n\n--- Page 2 [ocr] ---\n— —\n=\n=\nACCELIO.\nSampie Data File Sample Bookniark File\nArefarmsat trunc | Cinvol¢es|\nAsymbolset WINLATINI Invoices by Date=D\nAfield trans date ‘trans _datetL,aA.\n2000-01-21 [type]\n“field description | Invoices by [tem TypenD\nDescription far item #1 trsny_type=L, x |\n‘field trans type [amount ]\n: TYPEL Invoices by Trangzaction. Amount=D\n“field trans_eamaunt trans emount=1,D\n11.00\n“page 1\n“field trans_dste\n20B0-01-2\nField description\nDeserintien for item #2\n‘field trans type\nTYPE2\nField trans_smount\n11.00\n‘sage 1\n“field trans date\n2000-01-3\nAfield description\nDescription far item #3\nAfleld trans type\nTYPES .\n—— The avamnls hoakmark fila includes three distinct sections: |\n» invoices sortad, ascending, by date. |\ne Invoices sorted, ascending, by item type-\n« Invoices sorted, descending, by transaction amount.\nPOF Bookrnark Sample Page 2 of 4\n\n\n--- Page 3 [ocr] ---\nACCELIO.\nSample Files |\nThis sample package contains:\n-ap_bookmark.mdt | The template targeted far PDI Fs output. 7 _ -\nap_bookmark.dat A sample data filo in DAT formate ae |\nap_pookmark.pdf | Sample PDF output ee\n| ap_bookmark_doc.pdi oo A documant deserting the sample. a - a\nDeploying the Sample |\nTo deploy this sample in yaur environment:\n| 4. Open fhe template design ap_bookmark.JFD in Output Designer and recompile the\n{em plate for he appropriate presentment target.\n2. Modify the -z option in the “Job command in the data file ap_hookmark.dat ta: |\na Identify the target output device.\n| * fdentify the bookmark file using the -abmk command.\n® Identify tho section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nInvelces. -abmkep_nookmark mk -abmsinvcices: a\nType -shokep_bookmark .omk -sbmotyye |\nFOF Bookmark Sample Page 3of4\n\n\n--- Page 4 [ocr] ---\ntia\n— _\n|] $$\nACCELIO.\n3. Place tho accompanying filas In diractorias consistent with your implementation:\n¢ Place ap_bookmariIFD in the Dasiqns subdirectory for Output Designer.\ne¢ Place ap_bookmark.md# In the fonns subdirectory accessible to Central.\n| ¢ Place ap_bookmark.bmk in an addrassable directory. |\nRunning the Sampie |\n| e Torun this sampte, placa ap_bookmark.dat in tho collector directory scanned by Central.\nPOF Bookmark Sample Page 4 of 4\nTR\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?42,000.00/mo\nQuantity: 10\nFinance Contact: Eli Miller {eli.miller@blueleaflogistics.com)\nBase fee 242,000.00/mo. Overage shove included threshold billed at 242.0/unit in arrears.\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\naS _ TTT ms\nleast INGDEIr ING: NWOICE\nqei2 Hares: Lene\nAmendmenwe 1\nBnendmenk Oates 2026-02-02\nThe Average schedule supplements the base fee and does nok replace the recurring commitment.\n|\n—\nTOTAL Si5A06\nOo a Oo\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": null,
+    "customer_name": "Blue Leaf Logistics",
+    "email": "maya.shah@blueleaflogisties com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "currency": null,
+    "start_date": null,
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Subscription Term",
+      "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+      "start_date": null,
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Base recurring subscription fee",
+          "product": {
+            "name": "Subscription",
+            "description": "Recurring subscription commitment",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Base fee",
+            "description": "Base fee 242,000.00/mo.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 242000,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+          "product": {
+            "name": "Overage Usage",
+            "description": "Variable usage charges for excess consumption",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Overage",
+            "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": 242,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        },
+        {
+          "description": "Amendment 1 overage schedule/invoice total",
+          "product": {
+            "name": "Amendment 1 Overage Schedule",
+            "description": "Supplemental overage schedule referenced in Amendment 1",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Amendment 1",
+            "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 15406,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Blue Leaf Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Maya Shah (maya. shah@blueleaflogisties com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Base fee"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Base fee 242,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "242,000.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.name",
+      "quote_or_span": "Overage"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "242.0/unit"
+    },
+    {
+      "field": "phases[0].pricings[1].description",
+      "quote_or_span": "Overage shove included threshold billed at 242.0/unit in arrears."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.name",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.amount",
+      "quote_or_span": "TOTAL Si5A06"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "The Average schedule supplements the base fee and does nok replace the recurring commitment."
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.description",
+      "quote_or_span": "Bnendmenk Oates 2026-02-02"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendmenwe 1"
+    },
+    {
+      "field": "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "supplements the base fee and does nok replace the recurring commitment."
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Master Agreement / Order Form",
+    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "status": "draft",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "customer": {
+      "customer_name": "Blue Leaf Logistics",
+      "email": "maya.shah@blueleaflogisties com"
+    },
+    "phases": [
+      {
+        "name": "Subscription Term",
+        "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Base recurring subscription fee",
+            "product": {
+              "name": "Subscription",
+              "description": "Recurring subscription commitment",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Base fee",
+              "description": "Base fee 242,000.00/mo.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 242000,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+            "product": {
+              "name": "Overage Usage",
+              "description": "Variable usage charges for excess consumption",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Overage",
+              "description": "Overage above included threshold billed at 242.0/unit in arrears.",
+              "pricing_data": {
+                "pricing_type": "per_unit",
+                "amount": 242
+              }
+            }
+          },
+          {
+            "description": "Amendment 1 overage schedule/invoice total",
+            "product": {
+              "name": "Amendment 1 Overage Schedule",
+              "description": "Supplemental overage schedule referenced in Amendment 1",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Amendment 1",
+              "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 15406
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_003/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id",
+    "start_date"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:17:15Z

@@ -1,0 +1,1209 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:24:19Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0007_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:24:19Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:54:20 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf
+2026-04-20T03:54:20 | INFO | src.parsers.pdf_parser |   Page 1/2
+2026-04-20T03:54:23 | INFO | src.parsers.pdf_parser |   Page 2/2
+2026-04-20T03:54:26 | INFO | src.parsers.pdf_parser | Done: 2 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:54:27 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:24:27Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:24:27Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)"
+}
+
+2026-04-20T03:54:28 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:24:28Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:54:30 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:24:30Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:54:33 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:24:33Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": null,
+      "description": null,
+      "start_date": "2026-02-27",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": null,
+          "product": {
+            "name": "Image Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": null,
+      "description": null,
+      "start_date": "2026-02-27",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": null,
+          "product": {
+            "name": "Image Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:54:37 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:24:37Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": null,
+      "start_date": "2026-02-27",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": null,
+          "product": {
+            "name": "Image Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Retecence: 300147"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Srime Orbit Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": null,
+      "start_date": "2026-02-27",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": null,
+          "product": {
+            "name": "Image Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Retecence: 300147"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Srime Orbit Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:24:37Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": null,
+      "start_date": "2026-02-27",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": null,
+          "product": {
+            "name": "Image Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Retecence: 300147"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Srime Orbit Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "customer": {
+      "external_id": "300147",
+      "customer_name": "Prime Orbit Networks",
+      "email": "theo.brooks@primeorbitnetworks.com",
+      "address": {}
+    },
+    "phases": [
+      {
+        "start_date": "2026-02-27",
+        "pricings": [
+          {
+            "product": {
+              "name": "Image Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 42000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Retecence: 300147"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Srime Orbit Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenc... [truncated, 998 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300147",
+    "customer_name": "Prime Orbit Networks",
+    "email": "theo.brooks@primeorbitnetworks.com",
+    "phone_number": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": null,
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": null,
+      "description": null,
+      "start_date": "2026-02-27",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": null,
+          "product": {
+            "name": "Image Form",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "pricing_data": {
+              "pricing_type": "custom_pricing",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Retecence: 300147"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Srime Orbit Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "SCANNED COMMERCIAL ATTACHMENT",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-02-27T12:00:00Z",
+    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "customer": {
+      "external_id": "300147",
+      "customer_name": "Prime Orbit Networks",
+      "email": "theo.brooks@primeorbitnetworks.com",
+      "address": {}
+    },
+    "phases": [
+      {
+        "start_date": "2026-02-27",
+        "pricings": [
+          {
+            "product": {
+              "name": "Image Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 42000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:24:37Z

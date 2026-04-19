@@ -1,0 +1,112 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "3001193",
+    "customer_name": "Nimbus Canvas Commerce",
+    "email": "nina.singh@nimbuscanvascommerce.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Commercial Schedule - Reference 3001193",
+    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "status": "draft",
+    "currency": "GBP",
+    "customer": {
+      "external_id": "3001193",
+      "customer_name": "Nimbus Canvas Commerce",
+      "email": "nina.singh@nimbuscanvascommerce.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+        "start_date": "2025-01-36",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount for Mixed Form",
+            "product": {
+              "name": "Mixed Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: £7,000.00; Quantity: 1",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "GBP"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Free Trial",
+        "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+        "phase_type": "trial",
+        "pricings": []
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf (11 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id",
+    "start_date"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 3001193"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Nimbus Canvas Commerce"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Nina Singh (nina.singh@nimbuscanvascommerce.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "8¥eetive Dates 2025-01-36"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Servicer Mixed Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "£7,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo\n\n| Quantity: 1"
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    }
+  ]
+}

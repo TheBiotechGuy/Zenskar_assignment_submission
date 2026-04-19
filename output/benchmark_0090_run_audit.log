@@ -1,0 +1,1480 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:35:06Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0090_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:35:06Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:05:07 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf
+2026-04-20T04:05:07 | INFO | src.parsers.pdf_parser |   Page 1/8
+2026-04-20T04:05:11 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=52.9)
+2026-04-20T04:05:15 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T04:05:15 | INFO | src.parsers.pdf_parser |   Page 2/8
+2026-04-20T04:05:20 | INFO | src.parsers.pdf_parser |   Page 3/8
+2026-04-20T04:05:25 | INFO | src.parsers.pdf_parser |   Page 4/8
+2026-04-20T04:05:30 | INFO | src.parsers.pdf_parser |   Page 5/8
+2026-04-20T04:05:35 | INFO | src.parsers.pdf_parser |   Page 6/8
+2026-04-20T04:05:39 | INFO | src.parsers.pdf_parser |   Page 7/8
+2026-04-20T04:05:43 | INFO | src.parsers.pdf_parser |   Page 8/8
+2026-04-20T04:05:48 | INFO | src.parsers.pdf_parser | Done: 8 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 7, 'llm_vision': 1, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:35:48Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:35:48Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)"
+}
+
+2026-04-20T04:05:50 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:35:50Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:05:52 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:35:52Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:05:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:35:56Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Monthly Stock Report",
+      "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-01-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Fixed monthly commitment for Stock Report.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Fixed monthly commitment",
+            "description": "Commercial Amount: 78,500.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 78500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Usage above included threshold",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Usage charges",
+            "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": null,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Monthly Stock Report",
+      "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-01-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Fixed monthly commitment for Stock Report.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Fixed monthly commitment",
+            "description": "Commercial Amount: 78,500.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 78500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Usage above included threshold",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Usage charges",
+            "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": null,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:06:03 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:36:03Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Monthly Stock Report",
+      "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-01-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Fixed monthly commitment for Stock Report.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Fixed monthly commitment",
+            "description": "Commercial Amount: 78,500.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 78500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Usage above included threshold",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Usage charges",
+            "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": null,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference#: 300102"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Cedar Orbit Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Iris Das (iris.das@cedarorbittechnologi.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].pricings[1].product.description",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].custom_attributes.quantity",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "| Stock Report | 1200 | 360 | 78,500.00/mo |"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Monthly Stock Report",
+      "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-01-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Fixed monthly commitment for Stock Report.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Fixed monthly commitment",
+            "description": "Commercial Amount: 78,500.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 78500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Usage above included threshold",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Usage charges",
+            "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": null,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference#: 300102"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Cedar Orbit Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Iris Das (iris.das@cedarorbittechnologi.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].pricings[1].product.description",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].custom_attributes.quantity",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "| Stock Report | 1200 | 360 | 78,500.00/mo |"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:36:03Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Monthly Stock Report",
+      "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-01-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Fixed monthly commitment for Stock Report.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Fixed monthly commitment",
+            "description": "Commercial Amount: 78,500.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 78500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Usage above included threshold",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Usage charges",
+            "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": null,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference#: 300102"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Cedar Orbit Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Iris Das (iris.das@cedarorbittechnologi.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].pricings[1].product.description",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].custom_attributes.quantity",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "| Stock Report | 1200 | 360 | 78,500.00/mo |"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "start_date": "2026-01-13T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "customer": {
+      "external_id": "300102",
+      "customer_name": "Cedar Orbit Technologies",
+      "email": "iris.das@cedarorbittechnologi.com"
+    },
+    "phases": [
+      {
+        "name": "Monthly Stock Report",
+        "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-01-13",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Fixed monthly commitment for Stock Report.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Product / Service: Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Fixed monthly commitment",
+              "description": "Commercial Amount: 78,500.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 78500,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Usage above included threshold",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Usage charges",
+              "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+              "pricing_data": {
+                "pricing_type": "per_unit"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference#: 300102"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Cedar Orbit Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Iris Das (iris.das@cedarorbittechnologi.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].pricings[1].product.description",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].custom_attributes.quantity",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "| Stock Report | 1200 | 360 | 78,500.00/mo |"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 8,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its cont... [truncated, 3885 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0090.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-07\n\nMONTHLY STOCK REPORT\nReference#: 300102\nCounterparty: Cedar Orbit Technologies\nPrimary Contact: Iris Das (iris.das@cedarorbittechnologi.com)\nEffective Date: 2026-01-13\nCommercial Amount: 78,500.00/mo\nQuantity: 120\n\nProduct / Service: Stock Report\n| Product | Units Sold | Units in Stock | Unit Price |\n| Stock Report | 1200 | 360 | 78,500.00/mo |\n\n--- Page 2 [ocr] ---\nee\nCounterparty: Cedar Orhit Technologies\nCommercial Contact: tris Dae {icis .dasfcedarorbittechnologi.com}\n\n| & fixed monthly commitment applies in addition to usage charges billed in\naErearg above the included threaheld.\nOther cammercial wording may appear elsewhere im the packet and must be\nreconciled carefully.\n\n| if a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented,\n\nTT\n\n\n--- Page 3 [ocr] ---\n| : | | |\n\nCeunterparty: Cedar orbit Technologies\nfommercial Contaet: Iria Das firis.dasicedarerbittechnalaegi. cam}\n\n| B fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold. |\nOt hew commercial werding may appear elaewhere in the packet and must be\nreconciled carefully.\nif a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented.\nPayment nate: Fixed platform fees may be billed in advance while Wariable vaage\nis billed in arresrs.\n\n———- TT\n\n\n--- Page 4 [ocr] ---\n| Counterparty: Cedar Orbit Technologies\ncommercial Cantaer: trig Dae liris .dasicedarerbittechnolegi.com)\nA fixed monthly cammitment applies in additisn ta gage charges billed in\narrears above the included threshold.\n| Other cammercial wording May appear elsewhere in the Packet and must bea\nreconciled carefully.\nIf a referenced exhibit ar Scheduie is missing, its contents should remain\nunresolwed rather than invented,\nParmatting nate: equivaient amount Strings may appear in different etyles within\nthe same packet,\n,\n\n\n--- Page 5 [ocr] ---\nCounterparty: Cedar Orbit Technologies\n\nCommercial Contact: Iris bas {ivis .dasicedarorbittechnolagi. com}\n\n& fixed monthly commitment appliea in addition te usage charges billed in\narrears above the included threshold,\n\nOther commercial wording may appear elaewhere in the packet and must be\nreconciled carefully.\n\nIf a referenced exhibit. or schedole is missing, ite contenta should remain\nunresolved rather than invented,\n\n\n--- Page 6 [ocr] ---\nBe\nCounterparty: Cedar Orbit Technologies |\nfemmercial Cantacr: Iria Dae {iris .dashcedararbittechneloaci. com}\n& fixed monthly commitment applies in addition ta usage charges billed in\narreara above the included threshold,\nOther commercial wording may appear elsewhere in the packet and mugt be\nreconciled carefully, a |\nIf a referenced exhibit or schedule ig missing, ita contents should remain\nunresolved rather than invented.\nps\n\n\n--- Page 7 [ocr] ---\nxe\nCounterparty: Cedar Orbit Technologies\nCommercial Contact: Iria pas {iris .dasicedarerbittrechnolagi .com)\n4 £ixved monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nthew cammercial wording may appear eleaewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, ites contents should remain\nunresolved rather than invented,\nPayment mote: fixed platform fees may be billed in advance while variable usage |\nis billed in arrears,\n\n\n--- Page 8 [ocr] ---\n| |\n\nfountercparty: Cedar Orehit Technologies\nfommercial Contact: Iris Ose {iris .dasfcedarorbittechnologi. com}\n& fixed monthly commitment applies in addition to usage charges billed in\narrears above the included threshold.\nOther commercial wording may appear elsewhere in the packet and muat be\n\nreconciled carefully.\n| if a referenced exhibit or schedule is missing, ita contents should remain\nunresolwed rather than invented,\n|\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300102",
+    "customer_name": "Cedar Orbit Technologies",
+    "email": "iris.das@cedarorbittechnologi.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "currency": null,
+    "start_date": "2026-01-13T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Monthly Stock Report",
+      "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+      "start_date": "2026-01-13",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Fixed monthly commitment for Stock Report.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Product / Service: Stock Report",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Fixed monthly commitment",
+            "description": "Commercial Amount: 78,500.00/mo",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 78500,
+              "currency": null,
+              "billing_cadence": "monthly"
+            }
+          }
+        },
+        {
+          "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+          "product": {
+            "name": "Stock Report",
+            "description": "Usage above included threshold",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": "Usage charges",
+            "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+            "pricing_data": {
+              "pricing_type": "per_unit",
+              "amount": null,
+              "currency": null,
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference#: 300102"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Cedar Orbit Technologies"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Iris Das (iris.das@cedarorbittechnologi.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-13"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "78,500.00/mo"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: 78,500.00/mo"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].pricings[1].product.description",
+      "quote_or_span": "usage charges billed in arrears above the included threshold"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].custom_attributes.quantity",
+      "quote_or_span": "Quantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "| Stock Report | 1200 | 360 | 78,500.00/mo |"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Stock Report for 2016-07",
+    "description": "Monthly stock report for Cedar Orbit Technologies; product/service: Stock Report; commercial amount 78,500.00 per month; quantity 120.",
+    "status": "active",
+    "start_date": "2026-01-13T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "Stock Report"
+    ],
+    "customer": {
+      "external_id": "300102",
+      "customer_name": "Cedar Orbit Technologies",
+      "email": "iris.das@cedarorbittechnologi.com"
+    },
+    "phases": [
+      {
+        "name": "Monthly Stock Report",
+        "description": "Stock Report for 2016-07. Effective Date: 2026-01-13. Commercial Amount: 78,500.00/mo. Quantity: 120. A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold. Payment note: Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-01-13",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Fixed monthly commitment for Stock Report.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Product / Service: Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Fixed monthly commitment",
+              "description": "Commercial Amount: 78,500.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 78500,
+                "billing_cadence": "monthly"
+              }
+            }
+          },
+          {
+            "description": "Usage charges above the included threshold are billed in arrears; amount not stated.",
+            "product": {
+              "name": "Stock Report",
+              "description": "Usage above included threshold",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Usage charges",
+              "description": "A fixed monthly commitment applies in addition to usage charges billed in arrears above the included threshold.",
+              "pricing_data": {
+                "pricing_type": "per_unit"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0090.pdf (8 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:36:03Z

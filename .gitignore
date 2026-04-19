@@ -1,0 +1,16 @@
+# Python virtual environment
+.venv/
+
+# Secrets (template .env.example stays tracked)
+.env
+
+# Pytest (cache and other hidden .pytest* paths)
+.pytest*
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store

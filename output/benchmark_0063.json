@@ -1,0 +1,120 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "IOOOT",
+    "customer_name": "Blue Ledger Analytics",
+    "email": "nosh .baker@blueledgeranalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Purchase Requisition - October 2016",
+    "description": "Purchase Requisition for Blue Ledger Analytics, reference IOOOT, product/service: Purchase Requisition, quantity 12, commercial amount $10,000/month.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-03-21T12:00:00Z",
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "customer": {
+      "external_id": "IOOOT",
+      "customer_name": "Blue Ledger Analytics",
+      "email": "nosh .baker@blueledgeranalytics.com"
+    },
+    "phases": [
+      {
+        "name": "Purchase Requisition",
+        "description": "Commercial Amount: $10,000/month; Quantity: 12; Effective Date: 2026-03-21. No separate phase structure stated, so treated as a single contract phase.",
+        "start_date": "2026-03-21",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Purchase Requisition line item with quantity 12.",
+            "product": {
+              "name": "Purchase Requisition",
+              "description": "Product / Service: Purchase Requisition; Line item Product ID 101; Quantity 12.",
+              "type": "product",
+              "sku": "101"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated as $10,000/month. Source also notes equivalent fee formats and reconciliation guidance.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 10000,
+                "currency": "USD",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0063.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: IOOOT|"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Ledger Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contset: Noah Baker (nosh .baker@blueledgeranalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - October 2016"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-03~21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercisl Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-03~21"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].product.sku",
+      "quote_or_span": "Purchase Requisition 101 12"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercisl Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercisl Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Equivalent fee formats include 91D, O000/month, $10000/monrh, and $10,000.00/mo. |"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 12."
+    }
+  ]
+}

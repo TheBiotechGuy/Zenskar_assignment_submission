@@ -1,0 +1,129 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "300103",
+    "customer_name": "North Harbor Systems",
+    "email": "zara.das@northharboraystems.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "stock Report for 2016-07",
+    "description": "Monthly stock report / stock report service for North Harbor Systems",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2028-01-14T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "reference:300103",
+      "counterparty:North Harbor Systems"
+    ],
+    "customer": {
+      "external_id": "300103",
+      "customer_name": "North Harbor Systems",
+      "email": "zara.das@northharboraystems.com"
+    },
+    "phases": [
+      {
+        "name": "Paid Phase",
+        "description": "Monthly Stock Report commercial terms. Notes indicate any free trial period ends before the paid phase begins, but no explicit trial dates or pricing are stated.",
+        "start_date": "2028-01-14",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Stock Report license/service",
+            "product": {
+              "name": "Stock Report",
+              "description": "Product / Service: Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $7,000 / month; Quantity 1",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 7000,
+                "currency": "USD",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0086.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Commercial Contact: Zara Das (zara.das@northharboraystems.com}"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "stock Report for 2016-07"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2028-01~14"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Peaduct /# Serviee: Stack Repere."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial Amount: $7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "$7,000 /manth"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity, 1"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "MONTHLY STOCK REPORT |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Reference: 300103"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Counterparty: North Harbor Systems"
+    }
+  ]
+}

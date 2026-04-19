@@ -1,0 +1,138 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Delta Forge Logistics",
+      "email": "ava.doe@deltaforgelogistic.com"
+    },
+    "phases": [
+      {
+        "name": "Commercial schedule",
+        "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+        "start_date": "2026-01-11",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+            "product": {
+              "name": "Commercial schedule",
+              "description": "Order Form commercial schedule",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "£42,000.00/mo explicitly stated in Order Form.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Delta Forge Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)"
+    },
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-11"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Agreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Amendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000.00\nQuantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: North Leaf Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    }
+  ]
+}

@@ -1,0 +1,446 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:28:52Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0044_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:28:52Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:58:52 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf
+2026-04-20T03:58:52 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T03:58:56 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T03:59:00 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T03:59:05 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T03:59:07 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+2026-04-20T03:59:09 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "corpus": "",
+  "corpus_meta": ""
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "corpus": "",
+  "corpus_meta": ""
+}
+
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {}
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "customer": {}
+}
+
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {}
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "commercial_core": {}
+}
+
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": []
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "phases": []
+}
+
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": []
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "extraction_notes": []
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:29:09Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "extraction_notes": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {},
+  "missing_fields": [
+    "error:All PDFs were rejected as non-contract documents or failed to parse."
+  ],
+  "extraction_notes": []
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0044.pdf",
+      "accepted": false,
+      "reject_reason": "This is a sample PDF/manual about bookmark deployment, not a contract, order form, license, or amendment.",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\n- rN\n=\n=|\n| ACCELIO.\nMixed Manual | __—\n! Prepared fori Silver Ledger Analytige —————___————™TF\n——;-—\"teneer Lism Gupte (liam. guptadsilverledgeranslytic.cam) |\nDate: 2026-63-23:\nThis packet contains business/einanedalfeperational ingarmation.\nIt may Eeaenble commeteial paperwork but dass het, itselé constitute ab executed contract of\nefdee Schedule. _ . -\n‘Reviewers Should decide whether this should be rejected or escalated instead of extracted.\nPDF Bookmark Sample. Page 1 of d\n\n\n--- Page 2 [ocr] ---\n|\nACCELIO..\nSample Data File Samole Book ahs ttC<CS~™Stit*s\n| __trefoomst time ta nwotens]\n“fleld trans_dake trans dete], A\n“field description Inveices by [tem Tyae-0\n“field trans_type [amount }\nTYPEL Inveices ky Transactian. AmauntD: |\n“field trans_amount brang_amaunk=2... [truncated, 2719 chars total]"
+    }
+  ],
+  "corpus": "",
+  "corpus_meta": "",
+  "customer": {},
+  "commercial_core": {},
+  "phases": [],
+  "extraction_notes": [],
+  "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
+  "validated_json": {},
+  "missing_fields": [
+    "error:All PDFs were rejected as non-contract documents or failed to parse."
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:29:09Z

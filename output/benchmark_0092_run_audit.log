@@ -1,0 +1,1166 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:36:03Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/benchmark_0092_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:36:03Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T04:06:04 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf
+2026-04-20T04:06:04 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T04:06:08 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=52.5)
+2026-04-20T04:06:12 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T04:06:12 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T04:06:15 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T04:06:20 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T04:06:24 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 1, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:36:24Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:36:24Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)"
+}
+
+2026-04-20T04:06:25 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:36:25Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T04:06:27 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:36:27Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T04:06:31 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:36:31Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Stock Report for 2016-08",
+      "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+      "start_date": "2026-01-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+          "product": {
+            "name": "Stock Report",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Stock Report for 2016-08",
+      "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+      "start_date": "2026-01-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+          "product": {
+            "name": "Stock Report",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T04:06:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:36:35Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Stock Report for 2016-08",
+      "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+      "start_date": "2026-01-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+          "product": {
+            "name": "Stock Report",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300110"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Frame Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Morris (ava.morris@blueframeanalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-08"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "| Stock Report | 10 | 5 | $42,000.00 |"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "MONTHLY STOCK REPORT"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Stock Report for 2016-08",
+      "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+      "start_date": "2026-01-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+          "product": {
+            "name": "Stock Report",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300110"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Frame Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Morris (ava.morris@blueframeanalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-08"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "| Stock Report | 10 | 5 | $42,000.00 |"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "MONTHLY STOCK REPORT"
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:36:35Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Stock Report for 2016-08",
+      "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+      "start_date": "2026-01-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+          "product": {
+            "name": "Stock Report",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300110"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Frame Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Morris (ava.morris@blueframeanalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-08"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "| Stock Report | 10 | 5 | $42,000.00 |"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "MONTHLY STOCK REPORT"
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "customer": {
+      "external_id": "300110",
+      "customer_name": "Blue Frame Analytics",
+      "email": "ava.morris@blueframeanalytics.com"
+    },
+    "phases": [
+      {
+        "name": "Stock Report for 2016-08",
+        "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+        "start_date": "2026-01-21",
+        "pricings": [
+          {
+            "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+            "product": {
+              "name": "Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300110"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Frame Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Morris (ava.morris@blueframeanalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-08"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "| Stock Report | 10 | 5 | $42,000.00 |"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "MONTHLY STOCK REPORT"
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--... [truncated, 1698 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0092.pdf\n\n--- Page 1 [llm_vision] ---\nStock Report for 2016-08\n\nMONTHLY STOCK REPORT\nReference: 300110\nCounterparty: Blue Frame Analytics\nPrimary Contact: Ava Morris (ava.morris@blueframeanalytics.com)\nEffective Date: 2026-01-21\nCommercial Amount: $42,000.00\nQuantity: 1\n\nProduct / Service: Stock Report\nProduct\n| Stock Report | 10 | 5 | $42,000.00 |\n|  | Units Sold | Units in Stock | Unit Price |\n\n[REDACTED]\n\n--- Page 2 [ocr] ---\n| : |\n\nCounterparty: Blue Frame Analytics\n| Commercial ventact: Ava Morris (ava.morrisQblueframeanalytics. com)\n\nDiscounts may vary by rew and should remain attached to the affected product :\n\nather commercial wording may appear elsewhere im the packet and muat be\n\nregonclled carefully,\n\nif a referenced exhihit or acthedule is missing,\n\nunresqlved rather than invented,\n\n\n--- Page 3 [ocr] ---\nCounterparty: Blue Frame Analytica\n\n@emmereial Contact: Ava Morris fava wmarrisiblueframeanalytica.cam}\n\nfiieceunts may vary by row and should remain attached te the affected product\n\npricing.\n\nSrher rommexcial wording may appear elaewhere in the packet and must be\n\nFyeconciled carefully.\nEg KFererene eo -ekhibit— ers schedule is missing, a\n\nvnresolvwed rather than imrented. | 7\n\nPayment nete: Fixed platitorm fees may be Billed in advance mhile variable neage\n\nig billed in arrears.\n\n\n--- Page 4 [ocr] ---\nCounterparty: Blue Frame Analytics\nCommercial Contact: Byva Morris {ava.morristblueframeanalytics .com)\nBigeounts may vary by row and ghould vemain attached te the affected praduct.\npricing.\n\n| Other commercial wording may appear elsewhere in the packet and muat be\nreconglled carefully.\nti a referenced exhibit or schedule ie missing,\nunreaolved rather than invented.\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "300110",
+    "customer_name": "Blue Frame Analytics",
+    "email": "ava.morris@blueframeanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Stock Report for 2016-08",
+      "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+      "start_date": "2026-01-21",
+      "end_date": null,
+      "phase_type": null,
+      "pricings": [
+        {
+          "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+          "product": {
+            "name": "Stock Report",
+            "description": null,
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "USD",
+              "billing_cadence": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: 300110"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Blue Frame Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Morris (ava.morris@blueframeanalytics.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Stock Report for 2016-08"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Stock Report"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "| Stock Report | 10 | 5 | $42,000.00 |"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "MONTHLY STOCK REPORT"
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Stock Report for 2016-08",
+    "description": "Monthly Stock Report for Blue Frame Analytics, reference 300110, for Stock Report product.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2026-01-21T12:00:00Z",
+    "tags": [
+      "monthly stock report",
+      "stock report"
+    ],
+    "customer": {
+      "external_id": "300110",
+      "customer_name": "Blue Frame Analytics",
+      "email": "ava.morris@blueframeanalytics.com"
+    },
+    "phases": [
+      {
+        "name": "Stock Report for 2016-08",
+        "description": "Monthly Stock Report. Reference 300110. Effective Date: 2026-01-21. Commercial Amount: $42,000.00.",
+        "start_date": "2026-01-21",
+        "pricings": [
+          {
+            "description": "Product / Service: Stock Report. Table shows Stock Report | 10 | 5 | $42,000.00 with headers Units Sold, Units in Stock, Unit Price; column alignment is unclear in source.",
+            "product": {
+              "name": "Stock Report",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount stated as $42,000.00. Source table labels the amount under 'Unit Price', but quantity is 1 and table structure is ambiguous.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0092.pdf (4 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:36:35Z

@@ -1,0 +1,126 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "FOOUEZ",
+    "customer_name": "Bright Frame Networks",
+    "email": "noah.qupta@brightframenetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Purchase Requisitions - January 2017",
+    "description": "Purchase Requisition for Bright Frame Networks",
+    "status": "active",
+    "start_date": "2026-03-24T12:00:00Z",
+    "anchor_date": "2026-04-01T12:00:00Z",
+    "tags": [
+      "Purchase Requisition"
+    ],
+    "customer": {
+      "external_id": "FOOUEZ",
+      "customer_name": "Bright Frame Networks",
+      "email": "noah.qupta@brightframenetworks.com"
+    },
+    "phases": [
+      {
+        "name": "Purchase Requisition",
+        "description": "Reference: FOOUEZ. Effective Date: 2026-03-24. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-03-24",
+        "pricings": [
+          {
+            "description": "Commercial Amount stated as '710, G00/morntts' (OCR unclear, likely monthly commercial amount).",
+            "product": {
+              "name": "Purchase Requisition 101",
+              "description": "Product / Service: Purchase Requisition",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Billing begins on the first day of the month following the Effective Date.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 710000,
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0065.pdf (3 pages)"
+    }
+  },
+  "missing_fields": [
+    "currency",
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Reference: FOOUEZ"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Bright Frame Networks"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "noah.qupta@brightframenetworks.com"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Purchase Requisitions - January 2017"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].name",
+      "quote_or_span": "PURCHASE REQUISITION"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment nete: fixed platfoxm fees may be billed in advance while wariable usage is billed in arreara."
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "B&féctive Date: 2026-03-24"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Purchase Requisition 101"
+    },
+    {
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product f Service: Purchase Requisition"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Billing begins on the first day of the month following the Effective Date."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 710, G00/morntts"
+    }
+  ]
+}

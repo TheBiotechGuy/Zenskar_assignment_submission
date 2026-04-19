@@ -1,0 +1,1575 @@
+Zenskar contract agent - step audit log
+started_utc=2026-04-19T22:15:28Z
+================================================================================
+
+RUN_META
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "audit_log_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/output/pack_002_run_audit.log"
+}
+
+--------------------------------------------------------------------------------
+STEP: gather
+ts_utc=2026-04-19T22:15:28Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+2026-04-20T03:45:29 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf
+2026-04-20T03:45:29 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T03:45:34 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=51.2)
+2026-04-20T03:45:37 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:45:37 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T03:45:44 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=54.4)
+2026-04-20T03:45:49 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:45:49 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T03:45:56 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T03:46:02 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
+2026-04-20T03:46:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf
+2026-04-20T03:46:02 | INFO | src.parsers.pdf_parser |   Page 1/2
+2026-04-20T03:46:05 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=52.0)
+2026-04-20T03:46:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:46:08 | INFO | src.parsers.pdf_parser |   Page 2/2
+2026-04-20T03:46:12 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=59.6)
+2026-04-20T03:46:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:46:14 | INFO | src.parsers.pdf_parser | Done: 2 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 2, 'empty': 0}
+2026-04-20T03:46:14 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf
+2026-04-20T03:46:14 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T03:46:17 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=51.6)
+2026-04-20T03:46:20 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T03:46:20 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+--------------------------------------------------------------------------------
+STEP: parse
+ts_utc=2026-04-19T22:16:20Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "fatal_error": null,
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: merge
+ts_utc=2026-04-19T22:16:20Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "fatal_error": null,
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)"
+}
+
+2026-04-20T03:46:21 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-19T22:16:21Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T03:46:23 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: commercial
+ts_utc=2026-04-19T22:16:23Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+2026-04-20T03:46:29 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: phases
+ts_utc=2026-04-19T22:16:29Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "phases": [
+    {
+      "name": "Commercial schedule",
+      "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+      "start_date": "2026-01-11",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+          "product": {
+            "name": "Commercial schedule",
+            "description": "Order Form commercial schedule",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "£42,000.00/mo explicitly stated in Order Form.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "fatal_error": null,
+  "phases": [
+    {
+      "name": "Commercial schedule",
+      "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+      "start_date": "2026-01-11",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+          "product": {
+            "name": "Commercial schedule",
+            "description": "Order Form commercial schedule",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "£42,000.00/mo explicitly stated in Order Form.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+
+2026-04-20T03:46:36 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--------------------------------------------------------------------------------
+STEP: notes
+ts_utc=2026-04-19T22:16:36Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Commercial schedule",
+      "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+      "start_date": "2026-01-11",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+          "product": {
+            "name": "Commercial schedule",
+            "description": "Order Form commercial schedule",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "£42,000.00/mo explicitly stated in Order Form.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Delta Forge Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)"
+    },
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-11"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Agreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Amendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000.00\nQuantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: North Leaf Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Commercial schedule",
+      "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+      "start_date": "2026-01-11",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+          "product": {
+            "name": "Commercial schedule",
+            "description": "Order Form commercial schedule",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "£42,000.00/mo explicitly stated in Order Form.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "fatal_error": null,
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Delta Forge Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)"
+    },
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-11"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Agreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Amendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000.00\nQuantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: North Leaf Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    }
+  ]
+}
+
+--------------------------------------------------------------------------------
+STEP: assemble
+ts_utc=2026-04-19T22:16:36Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Commercial schedule",
+      "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+      "start_date": "2026-01-11",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+          "product": {
+            "name": "Commercial schedule",
+            "description": "Order Form commercial schedule",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "£42,000.00/mo explicitly stated in Order Form.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Delta Forge Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)"
+    },
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-11"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Agreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Amendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000.00\nQuantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: North Leaf Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    }
+  ],
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
+  "validated_json": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Delta Forge Logistics",
+      "email": "ava.doe@deltaforgelogistic.com"
+    },
+    "phases": [
+      {
+        "name": "Commercial schedule",
+        "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+        "start_date": "2026-01-11",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+            "product": {
+              "name": "Commercial schedule",
+              "description": "Order Form commercial schedule",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "£42,000.00/mo explicitly stated in Order Form.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Delta Forge Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)"
+    },
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-11"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Agreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Amendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000.00\nQuantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: North Leaf Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    }
+  ]
+}
+
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 4,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bo... [truncated, 2524 chars total]"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 2,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0"
+    },
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 1,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Delta Forge Logistics\nVendor: North Leaf Software\nPrimary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)\nEffective Date: 2026-01-11\n\nAgreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n|\nACCELIO.\nSample Files\nTRIS Sample package contsine:\nSp bookniark.1nadt The template targeted far POP output.\nAp booknigrk. dat | A sample data file in CAT format.\nap bookniark. bok | Asample bookmark file.\nap bookniark.gedt aample POP output.\nSp bookmiark_choc peli A decument describing the sample.\nDeploying the Sample\nTe deploy this sarnple in your environment\n1. Open ine template design ap_bookmark.FD in Quiput Designer and recompile the\nLeni plate for the appropriate presentment target.\n2. Madify the -2 option im ihe \"leo command in ihe data ile ap beoknmark.dat ta\n6 Identify the target output devices.\n® Identify the borkmark file using the -abmk command.\n6 Identify the section for which to generate bookmarks, if desired, using the edi i os\nLOMA.\nFor example,\nnvninee =ahmkaa baskmack.bmk -abmsinvaiees\nPOF Bookmark Sample Page 3 ata\ncc\n\n\n--- Page 4 [ocr] ---\n5. Place the accompanying files in directarias consistent with your inpleamentatian:\no Place ap_bookmarlalFD in the Designs subdirectory for Output Degigner-\no Place ap Eoolmarlinidl in the forms subdirectory accessible bo Genitral.\no Place ap_beokmarii.bok inan addressable directory.\nRunning the Saniple\ns Torun this sample, place ap_bealemark.dat in the collector directory scanned by Geniral.\nBOF Bookmerk Semple Page d of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nOrder ID: 10248\n\nOrder Form\n\nCommercial Amount: £42,000.00\nQuantity: 120\nFinance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)\n\nCommercial schedule starts 2026-01-11 at £42,000.00/mo.\n\n--- Page 2 [llm_vision] ---\nUnit Price: 34.8\nTotal: 174.0\n\nTotal Price:\n\nTotal Price: 440.0\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-02-25\n\nAmendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed.\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)",
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Delta Forge Logistics",
+    "email": "ava.doe@deltaforgelogistic.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "commercial_core": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  },
+  "phases": [
+    {
+      "name": "Commercial schedule",
+      "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+      "start_date": "2026-01-11",
+      "end_date": null,
+      "phase_type": "paid",
+      "pricings": [
+        {
+          "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+          "product": {
+            "name": "Commercial schedule",
+            "description": "Order Form commercial schedule",
+            "type": "product",
+            "sku": null
+          },
+          "pricing": {
+            "name": null,
+            "description": "£42,000.00/mo explicitly stated in Order Form.",
+            "pricing_data": {
+              "pricing_type": "flat_fee",
+              "amount": 42000,
+              "currency": "GBP",
+              "billing_cadence": "monthly"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Delta Forge Logistics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Ava Doe (ava.doe@deltaforgelogistic.com)"
+    },
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Order ID: 10248"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-01-11"
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Agreement renews automatically for successive one-year terms unless terminated with prior\nwritten notice."
+    },
+    {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "Amendment No. 1 removes automatic renewal and states the agreement terminates at current\nterm end unless a new order form is signed."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £42,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £42,000.00\nQuantity: 120"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: North Leaf Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Finance Contact: Owen Patel (owen.patel@deltaforgelogistic.com)"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Commercial schedule starts 2026-01-11 at £42,000.00/mo."
+    }
+  ],
+  "fatal_error": null,
+  "validated_json": {
+    "name": "Master Agreement / Order Form 10248",
+    "description": "Master Agreement between Delta Forge Logistics and North Leaf Software with related Order Form 10248 and Amendment 1.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-01-11T12:00:00Z",
+    "renewal_policy": "Originally auto-renewed for successive one-year terms unless terminated with prior written notice; Amendment 1 dated 2026-02-25 removes automatic renewal and provides that the agreement terminates at the current term end unless a new order form is signed.",
+    "tags": [
+      "master_agreement",
+      "order_form",
+      "amendment"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Delta Forge Logistics",
+      "email": "ava.doe@deltaforgelogistic.com"
+    },
+    "phases": [
+      {
+        "name": "Commercial schedule",
+        "description": "Order Form states: \"Commercial schedule starts 2026-01-11 at £42,000.00/mo.\" Master Agreement effective date is 2026-01-11. Amendment 1 affects renewal/termination only and does not change pricing.",
+        "start_date": "2026-01-11",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial Amount listed as £42,000.00; Quantity: 120.",
+            "product": {
+              "name": "Commercial schedule",
+              "description": "Order Form commercial schedule",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "£42,000.00/mo explicitly stated in Order Form.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 42000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/order_form.pdf (2 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_002/amendment_1.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ]
+}
+
+================================================================================
+ended_utc=2026-04-19T22:16:36Z

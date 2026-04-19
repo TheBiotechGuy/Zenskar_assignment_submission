@@ -1,0 +1,99 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "SOCLS2",
+    "customer_name": "Silver Orbit Analytics",
+    "email": "noah.shah@silverorbitanalytics.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "COMMERCIAL SCHEDULE",
+    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
+    "status": "active",
+    "currency": "USD",
+    "start_date": "2075-02-02T12:00:00Z",
+    "tags": [
+      "Commercial Schedule"
+    ],
+    "customer": {
+      "external_id": "SOCLS2",
+      "customer_name": "Silver Orbit Analytics",
+      "email": "noah.shah@silverorbitanalytics.com"
+    },
+    "phases": [
+      {
+        "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+        "start_date": "2075-02-02",
+        "pricings": [
+          {
+            "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+            "product": {
+              "name": "Mined Form",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial Amount: $18,000,600",
+              "pricing_data": {
+                "pricing_type": "custom_pricing",
+                "amount": 18000600,
+                "currency": "USD"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0036.pdf (7 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "ReFereneet SOCLS2"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analyties"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Counterparty: Silver Orbit Analytics"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Noah Shah {noah. shah@silverorbitanalytics. com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2075-02-02"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product f Serviee: Mined Form"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    }
+  ]
+}

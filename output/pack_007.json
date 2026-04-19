@@ -1,0 +1,145 @@
+{
+  "customer": {
+    "id": null,
+    "external_id": "10248",
+    "customer_name": "Cedar Canvas Software",
+    "email": "owen.reed@cedarcanvassoftware.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  },
+  "validated_json": {
+    "name": "Master Agreement",
+    "description": "Master Agreement between Cedar Canvas Software and Silver Oxptic Systems; associated order form indicates commercial amount of £15,000/month for quantity 10.",
+    "status": "active",
+    "currency": "GBP",
+    "start_date": "2026-02-05T12:00:00Z",
+    "anchor_date": "2026-02-05T12:00:00Z",
+    "tags": [
+      "Master Agreement",
+      "Order Form"
+    ],
+    "customer": {
+      "external_id": "10248",
+      "customer_name": "Cedar Canvas Software",
+      "email": "owen.reed@cedarcanvassoftware.com"
+    },
+    "phases": [
+      {
+        "name": "Order Form Commercial Phase",
+        "description": "Commercial fee stated in order form. Master agreement does not include pricing terms; later/additional order form provides pricing.",
+        "start_date": "2026-02-05",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Commercial fee £15,000.00/mo; quantity 10 stated separately.",
+            "product": {
+              "name": "Commercial Amount",
+              "description": "Order Form commercial fee",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Commercial fee £15,000.00/mo",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 15000,
+                "currency": "GBP",
+                "billing_cadence": "monthly"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "source": {
+      "ingestion": "zenskar_assignment_langgraph",
+      "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_007/order_form.pdf (1 pages)"
+    }
+  },
+  "missing_fields": [
+    "customer_id"
+  ],
+  "extraction_notes": [
+    {
+      "field": "customer.external_id",
+      "quote_or_span": "Invoice Number: 10248"
+    },
+    {
+      "field": "customer.customer_name",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "customer.email",
+      "quote_or_span": "Primary Contact: Owen Reed (owen.reed@cedarcanvassoftware.com)"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial fee £15,000.00/mo."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Commercial fee £15,000.00/mo. No SLA schedule is reproduced in this packet."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Cedar Canvas Software"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Vendor: Silver Oxptic Systems"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Commercial Amount: £15,000/month"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "rejected_pdf:amendment_1.pdf",
+      "quote_or_span": "This appears to be an invoice, which is a non-contract billing document."
+    }
+  ]
+}
