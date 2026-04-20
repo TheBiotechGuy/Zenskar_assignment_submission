@@ -32,10 +32,16 @@ logger = logging.getLogger(__name__)
 
 PER_PDF_TIMEOUT_SEC = int(os.getenv("ZENSKAR_PDF_TIMEOUT_SEC", "360"))
 MAX_CORPUS_CHARS = int(os.getenv("ZENSKAR_MAX_CORPUS_CHARS", "100000"))
+# Notes agent gets corpus + draft JSON; reserve ~20% for the JSON portion
+MAX_NOTES_CORPUS_CHARS = int(
+    os.getenv("ZENSKAR_NOTES_CORPUS_CHARS", str(int(MAX_CORPUS_CHARS * 0.8)))
+)
+MAX_PARSE_WORKERS = int(os.getenv("ZENSKAR_PARSE_WORKERS", "4"))
 
 
 def _rank_pdf(name: str) -> tuple[int, str]:
-    n = name.lower()
+    # Normalize spaces and hyphens so "order-form.pdf" matches "order_form"
+    n = name.lower().replace("-", "_").replace(" ", "_")
     ordered = [
         ("master", 0),
         ("msa", 0),
@@ -54,7 +60,7 @@ def _rank_pdf(name: str) -> tuple[int, str]:
         ("appendix", 4),
     ]
     for kw, rank in ordered:
-        if kw in n.replace(" ", "_"):
+        if kw in n:
             return rank, name
     return 10, name
 
@@ -97,35 +103,44 @@ def node_parse_and_screen(state: ContractAgentState) -> dict[str, Any]:
         invoke_json = make_json_chat_fn(relevance_model, api_key)
 
     parser = PDFParser(openai_api_key=api_key)
+    paths = state["pdf_paths"]
     records: list[PdfRecord] = []
+    # Maintain insertion order so results stay aligned with pdf_paths order
+    path_to_rec: dict[str, PdfRecord] = {}
+    for path in paths:
+        path_to_rec[path] = {
+            "path": path,
+            "accepted": False,
+            "reject_reason": "",
+            "page_count": 0,
+            "parse_error": None,
+        }
 
-    for path in state["pdf_paths"]:
-        rec: PdfRecord = {"path": path, "accepted": False, "reject_reason": "", "page_count": 0, "parse_error": None}
-        try:
-            with ThreadPoolExecutor(max_workers=1) as pool:
-                fut = pool.submit(_parse_one, parser, path)
+    # Parse all PDFs in parallel; each future still enforces its own per-PDF timeout
+    n_workers = min(len(paths), MAX_PARSE_WORKERS)
+    with ThreadPoolExecutor(max_workers=max(n_workers, 1)) as pool:
+        future_to_path = {pool.submit(_parse_one, parser, p): p for p in paths}
+        for fut, path in future_to_path.items():
+            rec = path_to_rec[path]
+            try:
                 doc = fut.result(timeout=PER_PDF_TIMEOUT_SEC)
-        except FuturesTimeout:
-            rec["accepted"] = False
-            rec["parse_error"] = f"parse exceeded {PER_PDF_TIMEOUT_SEC}s"
-            logger.error("%s", rec["parse_error"])
-            records.append(rec)
-            continue
-        except Exception as exc:
-            rec["accepted"] = False
-            rec["parse_error"] = str(exc)
-            logger.exception("Parse failed for %s", path)
-            records.append(rec)
-            continue
+            except FuturesTimeout:
+                rec["parse_error"] = f"parse exceeded {PER_PDF_TIMEOUT_SEC}s"
+                logger.error("%s", rec["parse_error"])
+                continue
+            except Exception as exc:
+                rec["parse_error"] = str(exc)
+                logger.exception("Parse failed for %s", path)
+                continue
 
-        rec["page_count"] = doc.page_count
-        rec["full_text"] = doc.full_text
-        text = doc.full_text
-        ok, reason = classify_pdf(text, invoke_json)
-        rec["accepted"] = ok
-        rec["reject_reason"] = reason if not ok else ""
-        records.append(rec)
+            rec["page_count"] = doc.page_count
+            rec["full_text"] = doc.full_text
+            ok, reason = classify_pdf(doc.full_text, invoke_json)
+            rec["accepted"] = ok
+            rec["reject_reason"] = reason if not ok else ""
 
+    # Preserve pdf_paths order
+    records = [path_to_rec[p] for p in paths]
     return {"pdf_records": records}
 
 
@@ -151,7 +166,11 @@ def node_merge_corpus(state: ContractAgentState) -> dict[str, Any]:
 
     corpus = "\n".join(parts)
     if len(corpus) > MAX_CORPUS_CHARS:
-        corpus = corpus[:MAX_CORPUS_CHARS] + "\n\n[TRUNCATED - corpus cap for model context]\n"
+        # Snap to the last newline so we never cut mid-sentence or mid-table
+        cutoff = corpus.rfind("\n", 0, MAX_CORPUS_CHARS)
+        if cutoff == -1:
+            cutoff = MAX_CORPUS_CHARS
+        corpus = corpus[:cutoff] + "\n\n[TRUNCATED — corpus cap reached]\n"
     meta = "Merged corpus from:\n" + "\n".join(meta_lines)
     return {"corpus": corpus, "corpus_meta": meta, "fatal_error": None}
 
@@ -229,7 +248,7 @@ def node_extraction_notes(state: ContractAgentState) -> dict[str, Any]:
         "phases": state.get("phases"),
     }
     user_msg = (
-        f"CONTRACT TEXT (for quoting only):\n{state['corpus'][:80000]}\n\n"
+        f"CONTRACT TEXT (for quoting only):\n{state['corpus'][:MAX_NOTES_CORPUS_CHARS]}\n\n"
         f"DRAFT JSON SUMMARY:\n{json.dumps(draft, ensure_ascii=False)[:20000]}"
     )
     try:
@@ -280,6 +299,7 @@ def node_assemble(state: ContractAgentState) -> dict[str, Any]:
     phases = state.get("phases") or []
     cust = state.get("customer") or {}
 
+    # Resolve once; pass to both compute_missing_field_keys and build_contract_payload
     customer_id = resolve_customer_id_from_extraction(cust)
     missing.extend(compute_missing_field_keys(commercial, phases, customer_id))
 
@@ -288,6 +308,7 @@ def node_assemble(state: ContractAgentState) -> dict[str, Any]:
         phases,
         cust,
         state.get("corpus_meta", ""),
+        customer_id,  # precomputed — no second resolution inside the function
     )
 
     contract, validation_paths = validate_contract_payload(payload)

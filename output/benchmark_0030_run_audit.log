@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:26:02Z
+started_utc=2026-04-20T05:23:19Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:26:02Z
+ts_utc=2026-04-20T05:23:19Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,23 +37,23 @@ ts_utc=2026-04-19T22:26:02Z
   "fatal_error": null
 }
 
-2026-04-20T03:56:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf
-2026-04-20T03:56:02 | INFO | src.parsers.pdf_parser |   Page 1/11
-2026-04-20T03:56:05 | INFO | src.parsers.pdf_parser |   Page 2/11
-2026-04-20T03:56:08 | INFO | src.parsers.pdf_parser |   Page 3/11
-2026-04-20T03:56:12 | INFO | src.parsers.pdf_parser |   Page 4/11
-2026-04-20T03:56:17 | INFO | src.parsers.pdf_parser |   Page 5/11
-2026-04-20T03:56:20 | INFO | src.parsers.pdf_parser |   Page 6/11
-2026-04-20T03:56:23 | INFO | src.parsers.pdf_parser |   Page 7/11
-2026-04-20T03:56:28 | INFO | src.parsers.pdf_parser |   Page 8/11
-2026-04-20T03:56:32 | INFO | src.parsers.pdf_parser |   Page 9/11
-2026-04-20T03:56:36 | INFO | src.parsers.pdf_parser |   Page 10/11
-2026-04-20T03:56:40 | INFO | src.parsers.pdf_parser |   Page 11/11
-2026-04-20T03:56:42 | INFO | src.parsers.pdf_parser | Done: 11 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 11, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:56:43 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:53:19 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf
+2026-04-20T10:53:19 | INFO | src.parsers.pdf_parser |   Page 1/11
+2026-04-20T10:53:22 | INFO | src.parsers.pdf_parser |   Page 2/11
+2026-04-20T10:53:25 | INFO | src.parsers.pdf_parser |   Page 3/11
+2026-04-20T10:53:28 | INFO | src.parsers.pdf_parser |   Page 4/11
+2026-04-20T10:53:32 | INFO | src.parsers.pdf_parser |   Page 5/11
+2026-04-20T10:53:34 | INFO | src.parsers.pdf_parser |   Page 6/11
+2026-04-20T10:53:36 | INFO | src.parsers.pdf_parser |   Page 7/11
+2026-04-20T10:53:40 | INFO | src.parsers.pdf_parser |   Page 8/11
+2026-04-20T10:53:43 | INFO | src.parsers.pdf_parser |   Page 9/11
+2026-04-20T10:53:47 | INFO | src.parsers.pdf_parser |   Page 10/11
+2026-04-20T10:53:50 | INFO | src.parsers.pdf_parser |   Page 11/11
+2026-04-20T10:53:53 | INFO | src.parsers.pdf_parser | Done: 11 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 11, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:53:54 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:26:43Z
+ts_utc=2026-04-20T05:23:54Z
 
 --- BEFORE (state entering step) ---
 {
@@ -101,7 +101,7 @@ ts_utc=2026-04-19T22:26:43Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:26:43Z
+ts_utc=2026-04-20T05:23:54Z
 
 --- BEFORE (state entering step) ---
 {
@@ -152,10 +152,10 @@ ts_utc=2026-04-19T22:26:43Z
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf (11 pages)"
 }
 
-2026-04-20T03:56:45 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:53:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:26:45Z
+ts_utc=2026-04-20T05:23:56Z
 
 --- BEFORE (state entering step) ---
 {
@@ -225,10 +225,10 @@ ts_utc=2026-04-19T22:26:45Z
   }
 }
 
-2026-04-20T03:56:47 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:53:57 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:26:47Z
+ts_utc=2026-04-20T05:23:57Z
 
 --- BEFORE (state entering step) ---
 {
@@ -249,31 +249,25 @@ ts_utc=2026-04-19T22:26:47Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0030.pdf\n\n--- Page 1 [ocr] ---\n| see amended terms es,\nCOMMERCIAL SCHEDULE\nReference: 3001193\n\nCounterparty: Nimbus Canvas Commerce\n\n| Peimazy Contact: Nina Singh inina.singh@nimbuscanvascommerce com)\n\n——- + -8¥eetive Dates 2025-01-36 —\n\nCammereial Amount: £7,000.00 oo\n\n| Quantity: 1\nProduct / Servicer Mixed Form\nTria sehedule must be reconciled with any Later Amendments ahd teferencesrs.\n\nPDF Bookmerk Sample Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\nyy\n2see amended terms =\nACCELIO.\nsample Data File Sample Bookmark File\nreformat trunc [invoices] |\n“symbolvet WINLATINL Involees by Date):\n“field trens_dste trans_datenLy a\n200D-01-1 a [type] |\n“field description. Invoices by Item Typed\nYéescriptian for item pl trans_typerl,N\n‘*£leld trans_type [amount] .\nTYPEL oo Invoices by Transaction Amount-0.\n“fleld trans_amount trans_amount-1,5 | : |\n11.00\n| “page 1\n“field trang_date\n2000-D1-2\n‘field description\nDescription for item #2\n“field trans_type\nTYPE2\n“fleald trans_ameaunkt\n11.00\n: “pege 1\nSEield trans _date\n2000-01-3\n<field deseription\nDeseriptian for item #3\nSfield trans_tyne\nTYPES\nThe example bookmark filo includes three distinc! sections:\n« Invoices sorted, ascending, by date.\n« Invoices sartad, ascanding, by Item type.\n* Invoices sorted, descending, by transaction amount.\nPDF Bookmark Sample Page 26f4\na es\n\n\n--- Page 3 [ocr] ---\nos\nsee L terms a mal\n| ACCELIO.\nSample Files\nThis sample package contains:\n, Filoname Description |\nap_bookmark.IFD The template design.\nap_bookmark.mdf The template targeted for PDF output.\nap_bookmark.dat A sample data fila in DAT format.\n| ap_bookmark.omk A sample bookmark file. |\nap_bookmark.pdf Sample PDF output. |\n| ap_bookmark_doc.pdi A document describlag the sample.\nDeploying the Sample\nTo deploy this sample in your environment:\n1. Open the template design ap_bookmark.IFD in Output Designer and recompile tho ,\ntemplate for the appropriate presontment tarqet.\n2. Modify the -z option in tha “Job command in the data filo ap_bookmark.dat to:\n¢ Identify the targat Output device.\n¢ = Identify the bookmark file using the -abmk command.\n: « Identify tha section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nTo bookmark by ... Uso tha command Jinp parameter...\ninvoices ~abakep_bookmash: opm “asbmasinvoices\nee een\nType mabekep_dookmark .bmb wabastyoe\na\n|\nPOF Bookmark Sample Page 3 of 4\n_ OO\n\n\n--- Page 4 [ocr] ---\na\n| rms Zam |\nACCELIO. |\n| 3. Place the accompanying files in directories consistent veilh your implamentation:\n« Place ap bookmark. [FD in the Dagigns subdirectory for Output Designer.\n| a Place ap_bookmark.mdf in the jorms subdirectory accassible to Central. |\n| » Place ap_bookmark.Omik inn addressable directory. |\n| Running the Sample\n| « Torun this samples, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Saniple Page dofa\nSo\n\n\n--- Page 5 [ocr] ---\n| See amended terms |\nCounterparty: Nimbus Canvas Commerce\nCommercial Cantact: Nina Singh (nina.singh@nimbuscanvascommerce.com) .\n4% free trial period ends hefore the paid phase begins; trial terms do not\n| overwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. a :\ntf a referenced exhibit or schedule is missing, ita contents should remain\nunresolved rathez than invented.\nPayment note: fixed platform fees may be billed in advance. while variahle usage\nis billed in arreara. |\n| Formatting note: equivalent. amount strings may appear in different styles within\n: the same packet.\n| | OO\n\n\n--- Page 6 [ocr] ---\nTO\n| amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina. singh@nimbuscanvascommerce.com}\nA free trial period ends hefore the Paid phase. begina; trial terme do not\noverwrite paid pricing. |\nOther cammercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nif a referenced exhibit or schedule is missing, ite contents aheuld remain |\nunresolved xather than invented,\n\n\n--- Page 7 [ocr] ---\n| : |\ncounterparty + Nimbus Canvas commerce\nCommercial Contact: Nina Singh (nina eingh@nimbuscanvascommerce com) :\nsn free trial periad ands before the paid phase hegqins; trial terms do not\noverwrite paid pricing.\norher commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\n{f a referenced exhibit or schedule is missing, its contents should remain\n| unrenolved rather than invented. :\n|\n\n\n--- Page 8 [ocr] ---\n_ _\n\nee\n\nCounterparty: Nimbus Canvaa Commerce | |\n\nCommercial Contact: Nina Singh {nina.singh@nimbuscanvaacommerce. com)\n\n& free trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must bea\n\nreconciled carefully.\n\nIf a referenced exhibit or schedule is miasing, ite contenta should remain\n| unresolved rather than invented. |\n\n—— OO\n\n\n--- Page 9 [ocr] ---\n| amended terms\n\ncounterparty: Nimbus Canvas Commerce a ,\nCommercial Contact: Nina Singh {nina.singh@rimbuscanvaacommerce..com)\nA free trial period ends before the paid. phase hegina; trial terms. do not\noverwrite ‘paid ‘pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nIfa referenced exhibit or echedule is migsing, its contenta Should remain\nunresolved. ‘rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable ‘usage\n\n| is billed in arrears.\n\n\n--- Page 10 [ocr] ---\nI TT\n’ ge amended terms\nCounterparty: Nimbus Canvas Commerce\nCommercial Contaet: Nina Singh {nina.singh@nimbuscanvascommerce.com)\n& free trial period ends hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n___ |_tther commercial wording-may_appear elsewhere in_the _packet_and_must be |\n| reconciled carefully. a | |\n| If a referenced exhibit or schedule ig missing, its contents should remain |\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\nthe same packet.\n\n\n--- Page 11 [ocr] ---\na\nsee amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina.singh@nimbuscanvascommerce.com)\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording. may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf (11 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3001193",
-    "customer_name": "Nimbus Canvas Commerce",
-    "email": "nina.singh@nimbuscanvascommerce.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
   "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
     "start_date": null,
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
-    "tags": null,
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "custom_attributes": null,
     "contract_link": null
   }
@@ -298,36 +292,30 @@ ts_utc=2026-04-19T22:26:47Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0030.pdf\n\n--- Page 1 [ocr] ---\n| see amended terms es,\nCOMMERCIAL SCHEDULE\nReference: 3001193\n\nCounterparty: Nimbus Canvas Commerce\n\n| Peimazy Contact: Nina Singh inina.singh@nimbuscanvascommerce com)\n\n——- + -8¥eetive Dates 2025-01-36 —\n\nCammereial Amount: £7,000.00 oo\n\n| Quantity: 1\nProduct / Servicer Mixed Form\nTria sehedule must be reconciled with any Later Amendments ahd teferencesrs.\n\nPDF Bookmerk Sample Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\nyy\n2see amended terms =\nACCELIO.\nsample Data File Sample Bookmark File\nreformat trunc [invoices] |\n“symbolvet WINLATINL Involees by Date):\n“field trens_dste trans_datenLy a\n200D-01-1 a [type] |\n“field description. Invoices by Item Typed\nYéescriptian for item pl trans_typerl,N\n‘*£leld trans_type [amount] .\nTYPEL oo Invoices by Transaction Amount-0.\n“fleld trans_amount trans_amount-1,5 | : |\n11.00\n| “page 1\n“field trang_date\n2000-D1-2\n‘field description\nDescription for item #2\n“field trans_type\nTYPE2\n“fleald trans_ameaunkt\n11.00\n: “pege 1\nSEield trans _date\n2000-01-3\n<field deseription\nDeseriptian for item #3\nSfield trans_tyne\nTYPES\nThe example bookmark filo includes three distinc! sections:\n« Invoices sorted, ascending, by date.\n« Invoices sartad, ascanding, by Item type.\n* Invoices sorted, descending, by transaction amount.\nPDF Bookmark Sample Page 26f4\na es\n\n\n--- Page 3 [ocr] ---\nos\nsee L terms a mal\n| ACCELIO.\nSample Files\nThis sample package contains:\n, Filoname Description |\nap_bookmark.IFD The template design.\nap_bookmark.mdf The template targeted for PDF output.\nap_bookmark.dat A sample data fila in DAT format.\n| ap_bookmark.omk A sample bookmark file. |\nap_bookmark.pdf Sample PDF output. |\n| ap_bookmark_doc.pdi A document describlag the sample.\nDeploying the Sample\nTo deploy this sample in your environment:\n1. Open the template design ap_bookmark.IFD in Output Designer and recompile tho ,\ntemplate for the appropriate presontment tarqet.\n2. Modify the -z option in tha “Job command in the data filo ap_bookmark.dat to:\n¢ Identify the targat Output device.\n¢ = Identify the bookmark file using the -abmk command.\n: « Identify tha section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nTo bookmark by ... Uso tha command Jinp parameter...\ninvoices ~abakep_bookmash: opm “asbmasinvoices\nee een\nType mabekep_dookmark .bmb wabastyoe\na\n|\nPOF Bookmark Sample Page 3 of 4\n_ OO\n\n\n--- Page 4 [ocr] ---\na\n| rms Zam |\nACCELIO. |\n| 3. Place the accompanying files in directories consistent veilh your implamentation:\n« Place ap bookmark. [FD in the Dagigns subdirectory for Output Designer.\n| a Place ap_bookmark.mdf in the jorms subdirectory accassible to Central. |\n| » Place ap_bookmark.Omik inn addressable directory. |\n| Running the Sample\n| « Torun this samples, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Saniple Page dofa\nSo\n\n\n--- Page 5 [ocr] ---\n| See amended terms |\nCounterparty: Nimbus Canvas Commerce\nCommercial Cantact: Nina Singh (nina.singh@nimbuscanvascommerce.com) .\n4% free trial period ends hefore the paid phase begins; trial terms do not\n| overwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. a :\ntf a referenced exhibit or schedule is missing, ita contents should remain\nunresolved rathez than invented.\nPayment note: fixed platform fees may be billed in advance. while variahle usage\nis billed in arreara. |\n| Formatting note: equivalent. amount strings may appear in different styles within\n: the same packet.\n| | OO\n\n\n--- Page 6 [ocr] ---\nTO\n| amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina. singh@nimbuscanvascommerce.com}\nA free trial period ends hefore the Paid phase. begina; trial terme do not\noverwrite paid pricing. |\nOther cammercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nif a referenced exhibit or schedule is missing, ite contents aheuld remain |\nunresolved xather than invented,\n\n\n--- Page 7 [ocr] ---\n| : |\ncounterparty + Nimbus Canvas commerce\nCommercial Contact: Nina Singh (nina eingh@nimbuscanvascommerce com) :\nsn free trial periad ands before the paid phase hegqins; trial terms do not\noverwrite paid pricing.\norher commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\n{f a referenced exhibit or schedule is missing, its contents should remain\n| unrenolved rather than invented. :\n|\n\n\n--- Page 8 [ocr] ---\n_ _\n\nee\n\nCounterparty: Nimbus Canvaa Commerce | |\n\nCommercial Contact: Nina Singh {nina.singh@nimbuscanvaacommerce. com)\n\n& free trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must bea\n\nreconciled carefully.\n\nIf a referenced exhibit or schedule is miasing, ite contenta should remain\n| unresolved rather than invented. |\n\n—— OO\n\n\n--- Page 9 [ocr] ---\n| amended terms\n\ncounterparty: Nimbus Canvas Commerce a ,\nCommercial Contact: Nina Singh {nina.singh@rimbuscanvaacommerce..com)\nA free trial period ends before the paid. phase hegina; trial terms. do not\noverwrite ‘paid ‘pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nIfa referenced exhibit or echedule is migsing, its contenta Should remain\nunresolved. ‘rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable ‘usage\n\n| is billed in arrears.\n\n\n--- Page 10 [ocr] ---\nI TT\n’ ge amended terms\nCounterparty: Nimbus Canvas Commerce\nCommercial Contaet: Nina Singh {nina.singh@nimbuscanvascommerce.com)\n& free trial period ends hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n___ |_tther commercial wording-may_appear elsewhere in_the _packet_and_must be |\n| reconciled carefully. a | |\n| If a referenced exhibit or schedule ig missing, its contents should remain |\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\nthe same packet.\n\n\n--- Page 11 [ocr] ---\na\nsee amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina.singh@nimbuscanvascommerce.com)\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording. may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf (11 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3001193",
-    "customer_name": "Nimbus Canvas Commerce",
-    "email": "nina.singh@nimbuscanvascommerce.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
     "start_date": null,
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
-    "tags": null,
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "custom_attributes": null,
     "contract_link": null
   }
 }
 
-2026-04-20T03:56:51 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:53:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:26:51Z
+ts_utc=2026-04-20T05:23:58Z
 
 --- BEFORE (state entering step) ---
 {
@@ -348,29 +336,6 @@ ts_utc=2026-04-19T22:26:51Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0030.pdf\n\n--- Page 1 [ocr] ---\n| see amended terms es,\nCOMMERCIAL SCHEDULE\nReference: 3001193\n\nCounterparty: Nimbus Canvas Commerce\n\n| Peimazy Contact: Nina Singh inina.singh@nimbuscanvascommerce com)\n\n——- + -8¥eetive Dates 2025-01-36 —\n\nCammereial Amount: £7,000.00 oo\n\n| Quantity: 1\nProduct / Servicer Mixed Form\nTria sehedule must be reconciled with any Later Amendments ahd teferencesrs.\n\nPDF Bookmerk Sample Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\nyy\n2see amended terms =\nACCELIO.\nsample Data File Sample Bookmark File\nreformat trunc [invoices] |\n“symbolvet WINLATINL Involees by Date):\n“field trens_dste trans_datenLy a\n200D-01-1 a [type] |\n“field description. Invoices by Item Typed\nYéescriptian for item pl trans_typerl,N\n‘*£leld trans_type [amount] .\nTYPEL oo Invoices by Transaction Amount-0.\n“fleld trans_amount trans_amount-1,5 | : |\n11.00\n| “page 1\n“field trang_date\n2000-D1-2\n‘field description\nDescription for item #2\n“field trans_type\nTYPE2\n“fleald trans_ameaunkt\n11.00\n: “pege 1\nSEield trans _date\n2000-01-3\n<field deseription\nDeseriptian for item #3\nSfield trans_tyne\nTYPES\nThe example bookmark filo includes three distinc! sections:\n« Invoices sorted, ascending, by date.\n« Invoices sartad, ascanding, by Item type.\n* Invoices sorted, descending, by transaction amount.\nPDF Bookmark Sample Page 26f4\na es\n\n\n--- Page 3 [ocr] ---\nos\nsee L terms a mal\n| ACCELIO.\nSample Files\nThis sample package contains:\n, Filoname Description |\nap_bookmark.IFD The template design.\nap_bookmark.mdf The template targeted for PDF output.\nap_bookmark.dat A sample data fila in DAT format.\n| ap_bookmark.omk A sample bookmark file. |\nap_bookmark.pdf Sample PDF output. |\n| ap_bookmark_doc.pdi A document describlag the sample.\nDeploying the Sample\nTo deploy this sample in your environment:\n1. Open the template design ap_bookmark.IFD in Output Designer and recompile tho ,\ntemplate for the appropriate presontment tarqet.\n2. Modify the -z option in tha “Job command in the data filo ap_bookmark.dat to:\n¢ Identify the targat Output device.\n¢ = Identify the bookmark file using the -abmk command.\n: « Identify tha section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nTo bookmark by ... Uso tha command Jinp parameter...\ninvoices ~abakep_bookmash: opm “asbmasinvoices\nee een\nType mabekep_dookmark .bmb wabastyoe\na\n|\nPOF Bookmark Sample Page 3 of 4\n_ OO\n\n\n--- Page 4 [ocr] ---\na\n| rms Zam |\nACCELIO. |\n| 3. Place the accompanying files in directories consistent veilh your implamentation:\n« Place ap bookmark. [FD in the Dagigns subdirectory for Output Designer.\n| a Place ap_bookmark.mdf in the jorms subdirectory accassible to Central. |\n| » Place ap_bookmark.Omik inn addressable directory. |\n| Running the Sample\n| « Torun this samples, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Saniple Page dofa\nSo\n\n\n--- Page 5 [ocr] ---\n| See amended terms |\nCounterparty: Nimbus Canvas Commerce\nCommercial Cantact: Nina Singh (nina.singh@nimbuscanvascommerce.com) .\n4% free trial period ends hefore the paid phase begins; trial terms do not\n| overwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. a :\ntf a referenced exhibit or schedule is missing, ita contents should remain\nunresolved rathez than invented.\nPayment note: fixed platform fees may be billed in advance. while variahle usage\nis billed in arreara. |\n| Formatting note: equivalent. amount strings may appear in different styles within\n: the same packet.\n| | OO\n\n\n--- Page 6 [ocr] ---\nTO\n| amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina. singh@nimbuscanvascommerce.com}\nA free trial period ends hefore the Paid phase. begina; trial terme do not\noverwrite paid pricing. |\nOther cammercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nif a referenced exhibit or schedule is missing, ite contents aheuld remain |\nunresolved xather than invented,\n\n\n--- Page 7 [ocr] ---\n| : |\ncounterparty + Nimbus Canvas commerce\nCommercial Contact: Nina Singh (nina eingh@nimbuscanvascommerce com) :\nsn free trial periad ands before the paid phase hegqins; trial terms do not\noverwrite paid pricing.\norher commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\n{f a referenced exhibit or schedule is missing, its contents should remain\n| unrenolved rather than invented. :\n|\n\n\n--- Page 8 [ocr] ---\n_ _\n\nee\n\nCounterparty: Nimbus Canvaa Commerce | |\n\nCommercial Contact: Nina Singh {nina.singh@nimbuscanvaacommerce. com)\n\n& free trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must bea\n\nreconciled carefully.\n\nIf a referenced exhibit or schedule is miasing, ite contenta should remain\n| unresolved rather than invented. |\n\n—— OO\n\n\n--- Page 9 [ocr] ---\n| amended terms\n\ncounterparty: Nimbus Canvas Commerce a ,\nCommercial Contact: Nina Singh {nina.singh@rimbuscanvaacommerce..com)\nA free trial period ends before the paid. phase hegina; trial terms. do not\noverwrite ‘paid ‘pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nIfa referenced exhibit or echedule is migsing, its contenta Should remain\nunresolved. ‘rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable ‘usage\n\n| is billed in arrears.\n\n\n--- Page 10 [ocr] ---\nI TT\n’ ge amended terms\nCounterparty: Nimbus Canvas Commerce\nCommercial Contaet: Nina Singh {nina.singh@nimbuscanvascommerce.com)\n& free trial period ends hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n___ |_tther commercial wording-may_appear elsewhere in_the _packet_and_must be |\n| reconciled carefully. a | |\n| If a referenced exhibit or schedule ig missing, its contents should remain |\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\nthe same packet.\n\n\n--- Page 11 [ocr] ---\na\nsee amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina.singh@nimbuscanvascommerce.com)\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording. may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf (11 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3001193",
-    "customer_name": "Nimbus Canvas Commerce",
-    "email": "nina.singh@nimbuscanvascommerce.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
-    "status": "draft",
-    "currency": "GBP",
-    "start_date": null,
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": null,
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -379,13 +344,13 @@ ts_utc=2026-04-19T22:26:51Z
   "phases": [
     {
       "name": "Paid Phase",
-      "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+      "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
       "start_date": "2025-01-36",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount for Mixed Form",
+          "description": "Mixed Form commercial amount",
           "product": {
             "name": "Mixed Form",
             "description": null,
@@ -397,7 +362,7 @@ ts_utc=2026-04-19T22:26:51Z
             "description": "Commercial Amount: £7,000.00; Quantity: 1",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -407,7 +372,7 @@ ts_utc=2026-04-19T22:26:51Z
     },
     {
       "name": "Free Trial",
-      "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+      "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
       "start_date": null,
       "end_date": null,
       "phase_type": "trial",
@@ -435,40 +400,17 @@ ts_utc=2026-04-19T22:26:51Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0030.pdf\n\n--- Page 1 [ocr] ---\n| see amended terms es,\nCOMMERCIAL SCHEDULE\nReference: 3001193\n\nCounterparty: Nimbus Canvas Commerce\n\n| Peimazy Contact: Nina Singh inina.singh@nimbuscanvascommerce com)\n\n——- + -8¥eetive Dates 2025-01-36 —\n\nCammereial Amount: £7,000.00 oo\n\n| Quantity: 1\nProduct / Servicer Mixed Form\nTria sehedule must be reconciled with any Later Amendments ahd teferencesrs.\n\nPDF Bookmerk Sample Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\nyy\n2see amended terms =\nACCELIO.\nsample Data File Sample Bookmark File\nreformat trunc [invoices] |\n“symbolvet WINLATINL Involees by Date):\n“field trens_dste trans_datenLy a\n200D-01-1 a [type] |\n“field description. Invoices by Item Typed\nYéescriptian for item pl trans_typerl,N\n‘*£leld trans_type [amount] .\nTYPEL oo Invoices by Transaction Amount-0.\n“fleld trans_amount trans_amount-1,5 | : |\n11.00\n| “page 1\n“field trang_date\n2000-D1-2\n‘field description\nDescription for item #2\n“field trans_type\nTYPE2\n“fleald trans_ameaunkt\n11.00\n: “pege 1\nSEield trans _date\n2000-01-3\n<field deseription\nDeseriptian for item #3\nSfield trans_tyne\nTYPES\nThe example bookmark filo includes three distinc! sections:\n« Invoices sorted, ascending, by date.\n« Invoices sartad, ascanding, by Item type.\n* Invoices sorted, descending, by transaction amount.\nPDF Bookmark Sample Page 26f4\na es\n\n\n--- Page 3 [ocr] ---\nos\nsee L terms a mal\n| ACCELIO.\nSample Files\nThis sample package contains:\n, Filoname Description |\nap_bookmark.IFD The template design.\nap_bookmark.mdf The template targeted for PDF output.\nap_bookmark.dat A sample data fila in DAT format.\n| ap_bookmark.omk A sample bookmark file. |\nap_bookmark.pdf Sample PDF output. |\n| ap_bookmark_doc.pdi A document describlag the sample.\nDeploying the Sample\nTo deploy this sample in your environment:\n1. Open the template design ap_bookmark.IFD in Output Designer and recompile tho ,\ntemplate for the appropriate presontment tarqet.\n2. Modify the -z option in tha “Job command in the data filo ap_bookmark.dat to:\n¢ Identify the targat Output device.\n¢ = Identify the bookmark file using the -abmk command.\n: « Identify tha section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example,\nTo bookmark by ... Uso tha command Jinp parameter...\ninvoices ~abakep_bookmash: opm “asbmasinvoices\nee een\nType mabekep_dookmark .bmb wabastyoe\na\n|\nPOF Bookmark Sample Page 3 of 4\n_ OO\n\n\n--- Page 4 [ocr] ---\na\n| rms Zam |\nACCELIO. |\n| 3. Place the accompanying files in directories consistent veilh your implamentation:\n« Place ap bookmark. [FD in the Dagigns subdirectory for Output Designer.\n| a Place ap_bookmark.mdf in the jorms subdirectory accassible to Central. |\n| » Place ap_bookmark.Omik inn addressable directory. |\n| Running the Sample\n| « Torun this samples, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Saniple Page dofa\nSo\n\n\n--- Page 5 [ocr] ---\n| See amended terms |\nCounterparty: Nimbus Canvas Commerce\nCommercial Cantact: Nina Singh (nina.singh@nimbuscanvascommerce.com) .\n4% free trial period ends hefore the paid phase begins; trial terms do not\n| overwrite paid pricing.\nOther commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. a :\ntf a referenced exhibit or schedule is missing, ita contents should remain\nunresolved rathez than invented.\nPayment note: fixed platform fees may be billed in advance. while variahle usage\nis billed in arreara. |\n| Formatting note: equivalent. amount strings may appear in different styles within\n: the same packet.\n| | OO\n\n\n--- Page 6 [ocr] ---\nTO\n| amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina. singh@nimbuscanvascommerce.com}\nA free trial period ends hefore the Paid phase. begina; trial terme do not\noverwrite paid pricing. |\nOther cammercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\nif a referenced exhibit or schedule is missing, ite contents aheuld remain |\nunresolved xather than invented,\n\n\n--- Page 7 [ocr] ---\n| : |\ncounterparty + Nimbus Canvas commerce\nCommercial Contact: Nina Singh (nina eingh@nimbuscanvascommerce com) :\nsn free trial periad ands before the paid phase hegqins; trial terms do not\noverwrite paid pricing.\norher commercial wording may appear elsewhere in the packet and must be\n| reconciled carefully. |\n{f a referenced exhibit or schedule is missing, its contents should remain\n| unrenolved rather than invented. :\n|\n\n\n--- Page 8 [ocr] ---\n_ _\n\nee\n\nCounterparty: Nimbus Canvaa Commerce | |\n\nCommercial Contact: Nina Singh {nina.singh@nimbuscanvaacommerce. com)\n\n& free trial period ends before the paid phase begins; trial terms do not\n\noverwrite paid pricing.\n\nOther commercial wording may appear elsewhere in the packet and must bea\n\nreconciled carefully.\n\nIf a referenced exhibit or schedule is miasing, ite contenta should remain\n| unresolved rather than invented. |\n\n—— OO\n\n\n--- Page 9 [ocr] ---\n| amended terms\n\ncounterparty: Nimbus Canvas Commerce a ,\nCommercial Contact: Nina Singh {nina.singh@rimbuscanvaacommerce..com)\nA free trial period ends before the paid. phase hegina; trial terms. do not\noverwrite ‘paid ‘pricing.\nOther commercial wording may appear elsewhere in the packet and must be\nIfa referenced exhibit or echedule is migsing, its contenta Should remain\nunresolved. ‘rather than invented. _\nPayment note: fixed platform fees may be billed in advance while variable ‘usage\n\n| is billed in arrears.\n\n\n--- Page 10 [ocr] ---\nI TT\n’ ge amended terms\nCounterparty: Nimbus Canvas Commerce\nCommercial Contaet: Nina Singh {nina.singh@nimbuscanvascommerce.com)\n& free trial period ends hefore the paid phase begins; trial terms do not\noverwrite paid pricing.\n___ |_tther commercial wording-may_appear elsewhere in_the _packet_and_must be |\n| reconciled carefully. a | |\n| If a referenced exhibit or schedule ig missing, its contents should remain |\nunresolved rather than invented.\nFormatting note: equivalent amount strings may appear in different styles within\nthe same packet.\n\n\n--- Page 11 [ocr] ---\na\nsee amended terms\nCounterparty: Nimbus Canvas Commerce |\nCommercial Contact: Nina Singh (nina.singh@nimbuscanvascommerce.com)\nA free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing.\nOther commercial wording. may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0030.pdf (11 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3001193",
-    "customer_name": "Nimbus Canvas Commerce",
-    "email": "nina.singh@nimbuscanvascommerce.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
-    "status": "draft",
-    "currency": "GBP",
-    "start_date": null,
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": null,
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
       "name": "Paid Phase",
-      "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+      "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
       "start_date": "2025-01-36",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount for Mixed Form",
+          "description": "Mixed Form commercial amount",
           "product": {
             "name": "Mixed Form",
             "description": null,
@@ -480,7 +422,7 @@ ts_utc=2026-04-19T22:26:51Z
             "description": "Commercial Amount: £7,000.00; Quantity: 1",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -490,7 +432,7 @@ ts_utc=2026-04-19T22:26:51Z
     },
     {
       "name": "Free Trial",
-      "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+      "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
       "start_date": null,
       "end_date": null,
       "phase_type": "trial",
@@ -499,10 +441,10 @@ ts_utc=2026-04-19T22:26:51Z
   ]
 }
 
-2026-04-20T03:56:55 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:54:03 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:26:55Z
+ts_utc=2026-04-20T05:24:03Z
 
 --- BEFORE (state entering step) ---
 {
@@ -534,28 +476,32 @@ ts_utc=2026-04-19T22:26:55Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
     "start_date": null,
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
-    "tags": null,
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": "Paid Phase",
-      "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+      "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
       "start_date": "2025-01-36",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount for Mixed Form",
+          "description": "Mixed Form commercial amount",
           "product": {
             "name": "Mixed Form",
             "description": null,
@@ -567,7 +513,7 @@ ts_utc=2026-04-19T22:26:55Z
             "description": "Commercial Amount: £7,000.00; Quantity: 1",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -577,7 +523,7 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "name": "Free Trial",
-      "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+      "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
       "start_date": null,
       "end_date": null,
       "phase_type": "trial",
@@ -604,31 +550,31 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+      "quote_or_span": "COMMERCIAL SCHEDULE"
     },
     {
       "field": "commercial_core.currency",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "8¥eetive Dates 2025-01-36"
+      "quote_or_span": "——- + -8¥eetive Dates 2025-01-36 —"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase begins"
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00; Quantity: 1"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product / Servicer Mixed Form"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£7,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -636,6 +582,14 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "phases[1].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[0].description",
       "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
     }
   ]
@@ -671,28 +625,32 @@ ts_utc=2026-04-19T22:26:55Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
     "start_date": null,
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
-    "tags": null,
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": "Paid Phase",
-      "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+      "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
       "start_date": "2025-01-36",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount for Mixed Form",
+          "description": "Mixed Form commercial amount",
           "product": {
             "name": "Mixed Form",
             "description": null,
@@ -704,7 +662,7 @@ ts_utc=2026-04-19T22:26:55Z
             "description": "Commercial Amount: £7,000.00; Quantity: 1",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -714,7 +672,7 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "name": "Free Trial",
-      "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+      "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
       "start_date": null,
       "end_date": null,
       "phase_type": "trial",
@@ -737,31 +695,31 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+      "quote_or_span": "COMMERCIAL SCHEDULE"
     },
     {
       "field": "commercial_core.currency",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "8¥eetive Dates 2025-01-36"
+      "quote_or_span": "——- + -8¥eetive Dates 2025-01-36 —"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase begins"
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00; Quantity: 1"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product / Servicer Mixed Form"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£7,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -769,6 +727,14 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "phases[1].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[0].description",
       "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
     }
   ]
@@ -776,7 +742,7 @@ ts_utc=2026-04-19T22:26:55Z
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:26:55Z
+ts_utc=2026-04-20T05:24:03Z
 
 --- BEFORE (state entering step) ---
 {
@@ -808,28 +774,32 @@ ts_utc=2026-04-19T22:26:55Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
     "start_date": null,
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
-    "tags": null,
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": "Paid Phase",
-      "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+      "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
       "start_date": "2025-01-36",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount for Mixed Form",
+          "description": "Mixed Form commercial amount",
           "product": {
             "name": "Mixed Form",
             "description": null,
@@ -841,7 +811,7 @@ ts_utc=2026-04-19T22:26:55Z
             "description": "Commercial Amount: £7,000.00; Quantity: 1",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -851,7 +821,7 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "name": "Free Trial",
-      "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+      "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
       "start_date": null,
       "end_date": null,
       "phase_type": "trial",
@@ -873,31 +843,31 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+      "quote_or_span": "COMMERCIAL SCHEDULE"
     },
     {
       "field": "commercial_core.currency",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "8¥eetive Dates 2025-01-36"
+      "quote_or_span": "——- + -8¥eetive Dates 2025-01-36 —"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase begins"
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00; Quantity: 1"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product / Servicer Mixed Form"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£7,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -905,6 +875,14 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "phases[1].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[0].description",
       "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
     }
   ],
@@ -914,10 +892,15 @@ ts_utc=2026-04-19T22:26:55Z
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
   "validated_json": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "customer": {
       "external_id": "3001193",
       "customer_name": "Nimbus Canvas Commerce",
@@ -926,12 +909,12 @@ ts_utc=2026-04-19T22:26:55Z
     "phases": [
       {
         "name": "Paid Phase",
-        "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+        "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
         "start_date": "2025-01-36",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial Amount for Mixed Form",
+            "description": "Mixed Form commercial amount",
             "product": {
               "name": "Mixed Form",
               "type": "product"
@@ -940,7 +923,7 @@ ts_utc=2026-04-19T22:26:55Z
               "description": "Commercial Amount: £7,000.00; Quantity: 1",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP"
               }
             }
@@ -949,7 +932,7 @@ ts_utc=2026-04-19T22:26:55Z
       },
       {
         "name": "Free Trial",
-        "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+        "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
         "phase_type": "trial",
         "pricings": []
       }
@@ -961,6 +944,8 @@ ts_utc=2026-04-19T22:26:55Z
   },
   "missing_fields": [
     "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+    "phases[1].pricings",
     "start_date"
   ],
   "extraction_notes": [
@@ -978,31 +963,31 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+      "quote_or_span": "COMMERCIAL SCHEDULE"
     },
     {
       "field": "commercial_core.currency",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "8¥eetive Dates 2025-01-36"
+      "quote_or_span": "——- + -8¥eetive Dates 2025-01-36 —"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase begins"
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00; Quantity: 1"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product / Servicer Mixed Form"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£7,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -1010,6 +995,14 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "phases[1].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[0].description",
       "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
     }
   ]
@@ -1045,28 +1038,32 @@ ts_utc=2026-04-19T22:26:55Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
     "start_date": null,
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
-    "tags": null,
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": "Paid Phase",
-      "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+      "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
       "start_date": "2025-01-36",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount for Mixed Form",
+          "description": "Mixed Form commercial amount",
           "product": {
             "name": "Mixed Form",
             "description": null,
@@ -1078,7 +1075,7 @@ ts_utc=2026-04-19T22:26:55Z
             "description": "Commercial Amount: £7,000.00; Quantity: 1",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -1088,7 +1085,7 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "name": "Free Trial",
-      "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+      "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
       "start_date": null,
       "end_date": null,
       "phase_type": "trial",
@@ -1110,31 +1107,31 @@ ts_utc=2026-04-19T22:26:55Z
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+      "quote_or_span": "COMMERCIAL SCHEDULE"
     },
     {
       "field": "commercial_core.currency",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "8¥eetive Dates 2025-01-36"
+      "quote_or_span": "——- + -8¥eetive Dates 2025-01-36 —"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase begins"
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00; Quantity: 1"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product / Servicer Mixed Form"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£7,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -1143,14 +1140,27 @@ ts_utc=2026-04-19T22:26:55Z
     {
       "field": "phases[1].name",
       "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
     }
   ],
   "fatal_error": null,
   "validated_json": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "customer": {
       "external_id": "3001193",
       "customer_name": "Nimbus Canvas Commerce",
@@ -1159,12 +1169,12 @@ ts_utc=2026-04-19T22:26:55Z
     "phases": [
       {
         "name": "Paid Phase",
-        "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+        "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
         "start_date": "2025-01-36",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial Amount for Mixed Form",
+            "description": "Mixed Form commercial amount",
             "product": {
               "name": "Mixed Form",
               "type": "product"
@@ -1173,7 +1183,7 @@ ts_utc=2026-04-19T22:26:55Z
               "description": "Commercial Amount: £7,000.00; Quantity: 1",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP"
               }
             }
@@ -1182,7 +1192,7 @@ ts_utc=2026-04-19T22:26:55Z
       },
       {
         "name": "Free Trial",
-        "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+        "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
         "phase_type": "trial",
         "pricings": []
       }
@@ -1194,9 +1204,11 @@ ts_utc=2026-04-19T22:26:55Z
   },
   "missing_fields": [
     "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+    "phases[1].pricings",
     "start_date"
   ]
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:26:55Z
+ended_utc=2026-04-20T05:24:03Z

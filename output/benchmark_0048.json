@@ -11,8 +11,8 @@
   },
   "validated_json": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
@@ -27,21 +27,23 @@
     "phases": [
       {
         "name": "Purchase Order",
-        "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+        "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
         "start_date": "2026-02-05",
+        "phase_type": "order",
         "pricings": [
           {
-            "description": "Commercial amount for the purchase order.",
+            "description": "Commercial Amount listed on the purchase order.",
             "product": {
               "name": "Purchase Order",
               "description": "Product / Service: Purchase Order",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount explicitly stated on Page 1.",
+              "name": "Commercial Amount",
+              "description": "Fixed commercial amount on purchase order.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP"
               }
             }
@@ -55,7 +57,8 @@
     }
   },
   "missing_fields": [
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence"
   ],
   "extraction_notes": [
     {
@@ -68,14 +71,30 @@
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+      "quote_or_span": "Zara Chen (zara.chen@silvervistasystems.com)"
     },
     {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-05"
     },
     {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
       "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
       "quote_or_span": "Cammercial Amaunt: £7,000.00"
     },
     {
@@ -89,22 +108,6 @@
     {
       "field": "phases[0].description",
       "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
-    },
-    {
-      "field": "phases[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
     }
   ]
 }

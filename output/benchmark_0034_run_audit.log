@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:27:31Z
+started_utc=2026-04-20T05:24:33Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:27:31Z
+ts_utc=2026-04-20T05:24:33Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,17 +37,17 @@ ts_utc=2026-04-19T22:27:31Z
   "fatal_error": null
 }
 
-2026-04-20T03:57:32 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf
-2026-04-20T03:57:32 | INFO | src.parsers.pdf_parser |   Page 1/5
-2026-04-20T03:57:35 | INFO | src.parsers.pdf_parser |   Page 2/5
-2026-04-20T03:57:40 | INFO | src.parsers.pdf_parser |   Page 3/5
-2026-04-20T03:57:44 | INFO | src.parsers.pdf_parser |   Page 4/5
-2026-04-20T03:57:48 | INFO | src.parsers.pdf_parser |   Page 5/5
-2026-04-20T03:57:52 | INFO | src.parsers.pdf_parser | Done: 5 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 5, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:57:55 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:54:33 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf
+2026-04-20T10:54:33 | INFO | src.parsers.pdf_parser |   Page 1/5
+2026-04-20T10:54:37 | INFO | src.parsers.pdf_parser |   Page 2/5
+2026-04-20T10:54:42 | INFO | src.parsers.pdf_parser |   Page 3/5
+2026-04-20T10:54:46 | INFO | src.parsers.pdf_parser |   Page 4/5
+2026-04-20T10:54:50 | INFO | src.parsers.pdf_parser |   Page 5/5
+2026-04-20T10:54:55 | INFO | src.parsers.pdf_parser | Done: 5 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 5, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:54:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:27:55Z
+ts_utc=2026-04-20T05:24:56Z
 
 --- BEFORE (state entering step) ---
 {
@@ -95,7 +95,7 @@ ts_utc=2026-04-19T22:27:55Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:27:55Z
+ts_utc=2026-04-20T05:24:56Z
 
 --- BEFORE (state entering step) ---
 {
@@ -146,83 +146,11 @@ ts_utc=2026-04-19T22:27:55Z
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)"
 }
 
-2026-04-20T03:57:57 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
---------------------------------------------------------------------------------
-STEP: customer
-ts_utc=2026-04-19T22:27:57Z
-
---- BEFORE (state entering step) ---
-{
-  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
-  "recursive_pdf": false,
-  "pdf_paths": [
-    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf"
-  ],
-  "pdf_records": [
-    {
-      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
-      "accepted": true,
-      "reject_reason": "",
-      "page_count": 5,
-      "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field d... [truncated, 2901 chars total]"
-    }
-  ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
-  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
-  "fatal_error": null
-}
-
---- NODE_RETURN (delta merged by LangGraph) ---
-{
-  "customer": {
-    "id": null,
-    "external_id": "3900135",
-    "customer_name": "Bright Stream Networks",
-    "email": "eli.gupta@brightstreamnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  }
-}
-
---- AFTER (merged state leaving step) ---
-{
-  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
-  "recursive_pdf": false,
-  "pdf_paths": [
-    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf"
-  ],
-  "pdf_records": [
-    {
-      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
-      "accepted": true,
-      "reject_reason": "",
-      "page_count": 5,
-      "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field d... [truncated, 2901 chars total]"
-    }
-  ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
-  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
-  "fatal_error": null,
-  "customer": {
-    "id": null,
-    "external_id": "3900135",
-    "customer_name": "Bright Stream Networks",
-    "email": "eli.gupta@brightstreamnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  }
-}
-
-2026-04-20T03:58:00 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:54:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:54:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:28:00Z
+ts_utc=2026-04-20T05:24:58Z
 
 --- BEFORE (state entering step) ---
 {
@@ -243,16 +171,6 @@ ts_utc=2026-04-19T22:28:00Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3900135",
-    "customer_name": "Bright Stream Networks",
-    "email": "eli.gupta@brightstreamnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -260,7 +178,7 @@ ts_utc=2026-04-19T22:28:00Z
 {
   "commercial_core": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
@@ -268,7 +186,7 @@ ts_utc=2026-04-19T22:28:00Z
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -294,6 +212,52 @@ ts_utc=2026-04-19T22:28:00Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
+  "fatal_error": null,
+  "commercial_core": {
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
+    "status": "draft",
+    "currency": "USD",
+    "start_date": "2026-02-15T12:00:00Z",
+    "end_date": null,
+    "anchor_date": null,
+    "renewal_policy": null,
+    "tags": [
+      "commercial schedule"
+    ],
+    "custom_attributes": null,
+    "contract_link": null
+  }
+}
+
+--------------------------------------------------------------------------------
+STEP: customer
+ts_utc=2026-04-20T05:24:58Z
+
+--- BEFORE (state entering step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field d... [truncated, 2901 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
+  "fatal_error": null
+}
+
+--- NODE_RETURN (delta merged by LangGraph) ---
+{
   "customer": {
     "id": null,
     "external_id": "3900135",
@@ -303,29 +267,45 @@ ts_utc=2026-04-19T22:28:00Z
     "address": null,
     "tax_info": null,
     "custom_attributes": null
-  },
-  "fatal_error": null,
-  "commercial_core": {
-    "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
-    "status": "draft",
-    "currency": "USD",
-    "start_date": "2026-02-15T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "Commercial Schedule"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
   }
 }
 
-2026-04-20T03:58:04 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+--- AFTER (merged state leaving step) ---
+{
+  "input_path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
+  "recursive_pdf": false,
+  "pdf_paths": [
+    "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf"
+  ],
+  "pdf_records": [
+    {
+      "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf",
+      "accepted": true,
+      "reject_reason": "",
+      "page_count": 5,
+      "parse_error": null,
+      "full_text": "\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field d... [truncated, 2901 chars total]"
+    }
+  ],
+  "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
+  "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
+  "fatal_error": null,
+  "customer": {
+    "id": null,
+    "external_id": "3900135",
+    "customer_name": "Bright Stream Networks",
+    "email": "eli.gupta@brightstreamnetworks.com",
+    "phone_number": null,
+    "address": null,
+    "tax_info": null,
+    "custom_attributes": null
+  }
+}
+
+2026-04-20T10:54:59 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:28:04Z
+ts_utc=2026-04-20T05:24:59Z
 
 --- BEFORE (state entering step) ---
 {
@@ -346,31 +326,6 @@ ts_utc=2026-04-19T22:28:04Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3900135",
-    "customer_name": "Bright Stream Networks",
-    "email": "eli.gupta@brightstreamnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
-    "status": "draft",
-    "currency": "USD",
-    "start_date": "2026-02-15T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "Commercial Schedule"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -378,26 +333,26 @@ ts_utc=2026-04-19T22:28:04Z
 {
   "phases": [
     {
-      "name": null,
-      "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+      "name": "Commercial Schedule",
+      "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
       "start_date": "2026-02-15",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
           "product": {
             "name": null,
-            "description": "Product / Services name unreadable in OCR",
+            "description": "Product / Services line is unclear in OCR.",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount stated as $7,000.00/mo",
+            "name": "Commercial Amount",
+            "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -427,54 +382,29 @@ ts_utc=2026-04-19T22:28:04Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0034.pdf\n\n--- Page 1 [ocr] ---\nea |\naon\n| ,\nACCELIOC.\n| COMMERCIAL SCHEDULE\nReaferences: 3900135\n| Counterparty: Bright st aan Networks\n——feinary Contact: Eli Gupts feli.gupta@¢hrightatresmnctworks oo |\nEffective Oster: 2026-62-15 |\nCammercial Amount: $7,000. 00/ma\nQuantity: 1 __\nProduct / Servicws Mined Roem ~~ Ss\n__——_ |__This sthedule must be reconedled with any later amendments and references.\n|\n|\nPDF Bookmark Samna Paga 1 of 4\n\n\n--- Page 2 [ocr] ---\naa\ncd\nACCELIO.\n{\nSample Data File Sample Bookmark Fijs\n“reformat t-rune finveices]\n“field trans date trang.\n2000-D1-1 [type]\n“field deserivtion Invoice. |\nDeveription far item fil trans_to\n“field trans _type [smount]\nTYPEL Invoices by Transaction AmountaD\n‘field trans amount trang_amounte1, my\nii .oG\n“oaqe 2\n| “field trans_date |\n2DDD~D1-2\n“Field deserivkion |\nDescription For item #2 |\n“field tranz_tyoe\nTYPE2\n“field trans smoaunt\n11.00\n| ‘saqe 1\n| “field trans _date\n| 2000-01-3 |\n“field déeseriptian :\nNeseription fer item fz\n“field trans_type\n| TYPES |\nThe exampte bookmark file includes three distinct sections:\n| * Invcices sosted, ascending, by date. |\n* Invoices sorted, ascending, by item type.\n2 Invoices sorted, descending, by transaction amount.\nPOF Bookmark Sample Page 2 of 4 |\n, . .\nNN\n\n\n--- Page 3 [ocr] ---\n| ACCELIO.\nThis sample package contains:\nThe template design.\nA sample bookmark file. |\nSample PDF output\nA documont describing the sample.\nDeploying the Sample\nTa deploy this sample in your environment:\n1. Open the template design ap_bookmark.lED in Output Designer and recompile the |\ntemplate for the appropriate presentment target.\n2. Modify the -z option in tha ‘Job command in the data file a p_bookmark.dat to:\n| ¢ Identify the target output davice.\n¢ Identify the bookmark file using the -abmk commana.\n¢ Identify the section for which to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\nInvoices ~abaksp_nookmark.pmk ~abmainvoices |\nCa\nPOF Bookmark Sample Page 3ofa |\n|\n\n\n--- Page 4 [ocr] ---\nOO —ACCEMION\n& Place tha accompanying files {n directories consistant with your Implamentation: ee\n8 Place ap_bookmari. FD in the Dagigns subdirectory for Output Designer.\na Place ap_bookmark.mdf in the forms.subdiractory accessible to.Cantral..\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directary scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\n\n\n--- Page 5 [ocr] ---\n| Counterparty: Bright Stream Networks\nCommercial Cantact: Eli Gupta feli.guptabrightetreamnetworks. com)\n& free trial period ends before the paid phage begins; trial terms do not —\noverwrite paid pricing.\nne Other commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit or scheduie is missing,\nunresolwed rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara.\nJ\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0034.pdf (5 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "3900135",
-    "customer_name": "Bright Stream Networks",
-    "email": "eli.gupta@brightstreamnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
-    "status": "draft",
-    "currency": "USD",
-    "start_date": "2026-02-15T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "Commercial Schedule"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": null,
-      "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+      "name": "Commercial Schedule",
+      "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
       "start_date": "2026-02-15",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
           "product": {
             "name": null,
-            "description": "Product / Services name unreadable in OCR",
+            "description": "Product / Services line is unclear in OCR.",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount stated as $7,000.00/mo",
+            "name": "Commercial Amount",
+            "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -485,10 +415,10 @@ ts_utc=2026-04-19T22:28:04Z
   ]
 }
 
-2026-04-20T03:58:09 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:55:04 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:28:10Z
+ts_utc=2026-04-20T05:25:04Z
 
 --- BEFORE (state entering step) ---
 {
@@ -521,7 +451,7 @@ ts_utc=2026-04-19T22:28:10Z
   },
   "commercial_core": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
@@ -529,33 +459,33 @@ ts_utc=2026-04-19T22:28:10Z
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+      "name": "Commercial Schedule",
+      "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
       "start_date": "2026-02-15",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
           "product": {
             "name": null,
-            "description": "Product / Services name unreadable in OCR",
+            "description": "Product / Services line is unclear in OCR.",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount stated as $7,000.00/mo",
+            "name": "Commercial Amount",
+            "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -599,6 +529,10 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Effective Oster: 2026-62-15"
     },
     {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
@@ -607,24 +541,20 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "ig billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
+      "field": "phases[0].pricings[0].pricing.product.description",
       "quote_or_span": "Product / Servicws Mined Roem"
     },
     {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "the paid phage begins; trial terms do not"
+      "field": "phases[0].description",
+      "quote_or_span": "This sthedule must be reconedled with any later amendments and references."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "COMMERCIAL SCHEDULE"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara."
     }
   ]
 }
@@ -660,7 +590,7 @@ ts_utc=2026-04-19T22:28:10Z
   },
   "commercial_core": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
@@ -668,33 +598,33 @@ ts_utc=2026-04-19T22:28:10Z
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+      "name": "Commercial Schedule",
+      "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
       "start_date": "2026-02-15",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
           "product": {
             "name": null,
-            "description": "Product / Services name unreadable in OCR",
+            "description": "Product / Services line is unclear in OCR.",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount stated as $7,000.00/mo",
+            "name": "Commercial Amount",
+            "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -734,6 +664,10 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Effective Oster: 2026-62-15"
     },
     {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
@@ -742,31 +676,27 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "ig billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
+      "field": "phases[0].pricings[0].pricing.product.description",
       "quote_or_span": "Product / Servicws Mined Roem"
     },
     {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "the paid phage begins; trial terms do not"
+      "field": "phases[0].description",
+      "quote_or_span": "This sthedule must be reconedled with any later amendments and references."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "COMMERCIAL SCHEDULE"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara."
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:28:10Z
+ts_utc=2026-04-20T05:25:04Z
 
 --- BEFORE (state entering step) ---
 {
@@ -799,7 +729,7 @@ ts_utc=2026-04-19T22:28:10Z
   },
   "commercial_core": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
@@ -807,33 +737,33 @@ ts_utc=2026-04-19T22:28:10Z
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+      "name": "Commercial Schedule",
+      "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
       "start_date": "2026-02-15",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
           "product": {
             "name": null,
-            "description": "Product / Services name unreadable in OCR",
+            "description": "Product / Services line is unclear in OCR.",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount stated as $7,000.00/mo",
+            "name": "Commercial Amount",
+            "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -872,6 +802,10 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Effective Oster: 2026-62-15"
     },
     {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
@@ -880,24 +814,20 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "ig billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
+      "field": "phases[0].pricings[0].pricing.product.description",
       "quote_or_span": "Product / Servicws Mined Roem"
     },
     {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "the paid phage begins; trial terms do not"
+      "field": "phases[0].description",
+      "quote_or_span": "This sthedule must be reconedled with any later amendments and references."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "COMMERCIAL SCHEDULE"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara."
     }
   ],
   "fatal_error": null
@@ -907,12 +837,12 @@ ts_utc=2026-04-19T22:28:10Z
 {
   "validated_json": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "customer": {
       "external_id": "3900135",
@@ -921,21 +851,23 @@ ts_utc=2026-04-19T22:28:10Z
     },
     "phases": [
       {
-        "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+        "name": "Commercial Schedule",
+        "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
         "start_date": "2026-02-15",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+            "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
             "product": {
-              "description": "Product / Services name unreadable in OCR",
+              "description": "Product / Services line is unclear in OCR.",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount stated as $7,000.00/mo",
+              "name": "Commercial Amount",
+              "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -982,6 +914,10 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Effective Oster: 2026-62-15"
     },
     {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
@@ -990,24 +926,20 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "ig billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
+      "field": "phases[0].pricings[0].pricing.product.description",
       "quote_or_span": "Product / Servicws Mined Roem"
     },
     {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "the paid phage begins; trial terms do not"
+      "field": "phases[0].description",
+      "quote_or_span": "This sthedule must be reconedled with any later amendments and references."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "COMMERCIAL SCHEDULE"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara."
     }
   ]
 }
@@ -1043,7 +975,7 @@ ts_utc=2026-04-19T22:28:10Z
   },
   "commercial_core": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
@@ -1051,33 +983,33 @@ ts_utc=2026-04-19T22:28:10Z
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+      "name": "Commercial Schedule",
+      "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
       "start_date": "2026-02-15",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
           "product": {
             "name": null,
-            "description": "Product / Services name unreadable in OCR",
+            "description": "Product / Services line is unclear in OCR.",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount stated as $7,000.00/mo",
+            "name": "Commercial Amount",
+            "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -1116,6 +1048,10 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Effective Oster: 2026-62-15"
     },
     {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
@@ -1124,35 +1060,31 @@ ts_utc=2026-04-19T22:28:10Z
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "ig billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
+      "field": "phases[0].pricings[0].pricing.product.description",
       "quote_or_span": "Product / Servicws Mined Roem"
     },
     {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "the paid phage begins; trial terms do not"
+      "field": "phases[0].description",
+      "quote_or_span": "This sthedule must be reconedled with any later amendments and references."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "COMMERCIAL SCHEDULE"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara."
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "customer": {
       "external_id": "3900135",
@@ -1161,21 +1093,23 @@ ts_utc=2026-04-19T22:28:10Z
     },
     "phases": [
       {
-        "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+        "name": "Commercial Schedule",
+        "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
         "start_date": "2026-02-15",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+            "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
             "product": {
-              "description": "Product / Services name unreadable in OCR",
+              "description": "Product / Services line is unclear in OCR.",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount stated as $7,000.00/mo",
+              "name": "Commercial Amount",
+              "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -1195,4 +1129,4 @@ ts_utc=2026-04-19T22:28:10Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:28:10Z
+ended_utc=2026-04-20T05:25:04Z

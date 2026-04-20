@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:29:09Z
+started_utc=2026-04-20T05:26:19Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:29:09Z
+ts_utc=2026-04-20T05:26:19Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,18 +37,18 @@ ts_utc=2026-04-19T22:29:09Z
   "fatal_error": null
 }
 
-2026-04-20T03:59:10 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf
-2026-04-20T03:59:10 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:59:14 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:59:21 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=54.9)
-2026-04-20T03:59:26 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:59:26 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:59:30 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:59:33 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 1, 'empty': 0}
-2026-04-20T03:59:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:56:19 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf
+2026-04-20T10:56:19 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:56:24 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:56:34 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=54.9)
+2026-04-20T10:56:39 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:56:39 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:56:44 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:56:48 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:56:50 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:29:35Z
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -66,10 +66,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ]
 }
@@ -86,17 +86,17 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:29:35Z
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -109,10 +109,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "fatal_error": null
@@ -136,10 +136,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
@@ -148,8 +148,8 @@ ts_utc=2026-04-19T22:29:35Z
 }
 
 --------------------------------------------------------------------------------
-STEP: customer
-ts_utc=2026-04-19T22:29:35Z
+STEP: commercial
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -162,10 +162,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
@@ -175,7 +175,7 @@ ts_utc=2026-04-19T22:29:35Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "customer": {}
+  "commercial_core": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -189,21 +189,21 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
   "corpus_meta": "",
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "customer": {}
+  "commercial_core": {}
 }
 
 --------------------------------------------------------------------------------
-STEP: commercial
-ts_utc=2026-04-19T22:29:35Z
+STEP: customer
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -216,21 +216,20 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "commercial_core": {}
+  "customer": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -244,22 +243,21 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "commercial_core": {}
+  "customer": {}
 }
 
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:29:35Z
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -272,16 +270,14 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
@@ -301,23 +297,21 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
   "phases": []
 }
 
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:29:35Z
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -330,10 +324,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
@@ -360,10 +354,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
@@ -377,7 +371,7 @@ ts_utc=2026-04-19T22:29:35Z
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:29:35Z
+ts_utc=2026-04-20T05:26:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -390,10 +384,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
@@ -425,10 +419,10 @@ ts_utc=2026-04-19T22:29:35Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0046.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be a sample PDF/bookmark documentation, not a commercial contract, order form, MSA, amendment, or license agreement.",
+      "reject_reason": "This is sample/documentation text about PDF bookmarks and file deployment, not a commercial contract, order form, MSA, amendment, or license agreement.",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2463 chars total]"
+      "full_text": "\n--- Page 1 [ocr] ---\na\n—\ni\nMixed Manual |\nPrepared fort Silwer Orbit Software\nOQWheE: Iris. Reed (Leia. teebdgal lveror bi tack tware. com)\nDate: 2026-03-26\nThis packet contains business / financial /operational LHESEMAE LON.\nTH may tesenble camtereial paperwork but does wert iteele conatitute ah executed contract at\nofder schedule. | | BS\nRevieWEES ARGULE decide whether thia showld be rejected ar sacalated instead of extracted.\nPOF Bookmark Sample Page 1 of d\na\n\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_... [truncated, 2460 chars total]"
     }
   ],
   "corpus": "",
@@ -445,4 +439,4 @@ ts_utc=2026-04-19T22:29:35Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:29:35Z
+ended_utc=2026-04-20T05:26:50Z

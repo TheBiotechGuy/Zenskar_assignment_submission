@@ -11,9 +11,11 @@
   },
   "validated_json": {
     "name": "Invoice 10254",
-    "description": "Invoice for invoicers/services with quantity 3 and total due $18,000/month; amended terms referenced elsewhere.",
-    "status": "active",
+    "description": "Invoice for Invoices product/services with Golden Path Commerce; reference 300007; quantity 3; total due $18,000/month.",
+    "status": "draft",
     "currency": "USD",
+    "start_date": "2025-01-03T12:00:00Z",
+    "anchor_date": "2025-01-03T12:00:00Z",
     "tags": [
       "invoice"
     ],
@@ -24,29 +26,34 @@
     },
     "phases": [
       {
-        "name": "Paid Phase",
-        "description": "Invoice indicates commercial terms. No explicit trial pricing stated; amended terms note that any free trial ends before the paid phase begins and does not overwrite paid pricing.",
+        "description": "Invoice / amended terms packet for Golden Path Commerce. OCR indicates effective date and monthly invoicing for 'Invoters' with quantity 3 and total due $18,000/month. Amended terms mention a free trial exists and ends before the paid phase begins, but no explicit trial dates or trial pricing are stated.",
         "start_date": "2025-01-93",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Invoice line for services; quantity 3. OCR is unclear on currency and exact unit basis.",
+            "description": "OCR text: 'Product / Services: Invaters' / 'Invoters'; quantity 3; total due $18,000/month.",
             "product": {
-              "name": "Invoices",
-              "description": "Product / Services: Invaters",
+              "name": "Invoters",
               "type": "product"
             },
             "pricing": {
-              "description": "Amount appears as 'Jl, 000/mantp,' and total due as 'S18, 000/manth' on OCR; interpreted as monthly recurring pricing but currency unresolved.",
+              "description": "Total due stated as $18,000/month. A separate 'Amount: $1,000/month' is present in OCR but relationship is unclear; not used as line amount.",
               "pricing_data": {
-                "pricing_type": "per_unit",
-                "amount": 6000,
+                "pricing_type": "package",
+                "amount": 18000.0,
+                "currency": "USD",
                 "billing_cadence": "monthly",
                 "quantity": 3
               }
             }
           }
         ]
+      },
+      {
+        "name": "Free Trial",
+        "description": "Amended terms state: 'free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.' No explicit trial dates or pricing stated.",
+        "phase_type": "trial",
+        "pricings": []
       }
     ],
     "source": {
@@ -56,7 +63,7 @@
   },
   "missing_fields": [
     "customer_id",
-    "start_date"
+    "phases[1].pricings"
   ],
   "extraction_notes": [
     {
@@ -80,40 +87,44 @@
       "quote_or_span": "zara.gupta@goldenpathcommerce .com"
     },
     {
+      "field": "customer.email",
+      "quote_or_span": "zara. gupta@goldenpathcommerce com"
+    },
+    {
       "field": "commercial_core.name",
       "quote_or_span": "involog Mumber: 10254"
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "INVOICE"
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
+    },
+    {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2025-01-93"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2025-01-93"
     },
     {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "Sfogict / Services; Invaters"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Amount: Jl, 000/mantp,"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
       "quote_or_span": "Quantity: 3"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Sfogict / Services; Invaters"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Tatsl Ouse: S18, 000/manth"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Amount: Jl, 000/mantp,"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "A Free trial period ends before the paid phase hegins; trial terms do not overwrite paid pricing."
+      "field": "phases[1].phase_type",
+      "quote_or_span": "free trial period ends before the paid phase heging; txdal terme do net overwrite paid pricing."
     }
   ]
 }

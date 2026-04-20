@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:23:50Z
+started_utc=2026-04-20T05:21:15Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:23:50Z
+ts_utc=2026-04-20T05:21:15Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,16 +37,16 @@ ts_utc=2026-04-19T22:23:50Z
   "fatal_error": null
 }
 
-2026-04-20T03:53:50 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf
-2026-04-20T03:53:50 | INFO | src.parsers.pdf_parser |   Page 1/3
-2026-04-20T03:53:54 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=54.4)
-2026-04-20T03:53:59 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:53:59 | INFO | src.parsers.pdf_parser |   Page 2/3
-2026-04-20T03:54:02 | INFO | src.parsers.pdf_parser |   Page 3/3
-2026-04-20T03:54:06 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:51:15 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf
+2026-04-20T10:51:15 | INFO | src.parsers.pdf_parser |   Page 1/3
+2026-04-20T10:51:21 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=54.4)
+2026-04-20T10:51:25 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:25 | INFO | src.parsers.pdf_parser |   Page 2/3
+2026-04-20T10:51:28 | INFO | src.parsers.pdf_parser |   Page 3/3
+2026-04-20T10:51:32 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 1, 'empty': 0}
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:24:06Z
+ts_utc=2026-04-20T05:21:32Z
 
 --- BEFORE (state entering step) ---
 {
@@ -67,7 +67,7 @@ ts_utc=2026-04-19T22:24:06Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ]
 }
@@ -87,14 +87,14 @@ ts_utc=2026-04-19T22:24:06Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:24:06Z
+ts_utc=2026-04-20T05:21:32Z
 
 --- BEFORE (state entering step) ---
 {
@@ -110,7 +110,7 @@ ts_utc=2026-04-19T22:24:06Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
   "fatal_error": null
@@ -118,7 +118,7 @@ ts_utc=2026-04-19T22:24:06Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "fatal_error": null
 }
@@ -137,18 +137,18 @@ ts_utc=2026-04-19T22:24:06Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
   "fatal_error": null,
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)"
 }
 
-2026-04-20T03:54:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:34 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:24:08Z
+ts_utc=2026-04-20T05:21:34Z
 
 --- BEFORE (state entering step) ---
 {
@@ -164,10 +164,10 @@ ts_utc=2026-04-19T22:24:08Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "fatal_error": null
 }
@@ -200,10 +200,10 @@ ts_utc=2026-04-19T22:24:08Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "fatal_error": null,
   "customer": {
@@ -218,10 +218,10 @@ ts_utc=2026-04-19T22:24:08Z
   }
 }
 
-2026-04-20T03:54:10 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:24:10Z
+ts_utc=2026-04-20T05:21:35Z
 
 --- BEFORE (state entering step) ---
 {
@@ -237,29 +237,19 @@ ts_utc=2026-04-19T22:24:10Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300139",
-    "customer_name": "Apex Bloom Labs",
-    "email": "arjun.morris@apexbloomlabs.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
   "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -289,25 +279,15 @@ ts_utc=2026-04-19T22:24:10Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300139",
-    "customer_name": "Apex Bloom Labs",
-    "email": "arjun.morris@apexbloomlabs.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -323,10 +303,10 @@ ts_utc=2026-04-19T22:24:10Z
   }
 }
 
-2026-04-20T03:54:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:24:14Z
+ts_utc=2026-04-20T05:21:35Z
 
 --- BEFORE (state entering step) ---
 {
@@ -342,37 +322,11 @@ ts_utc=2026-04-19T22:24:14Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300139",
-    "customer_name": "Apex Bloom Labs",
-    "email": "arjun.morris@apexbloomlabs.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
-    "status": "draft",
-    "currency": "GBP",
-    "start_date": "2026-02-19T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "invoice",
-      "scanned commercial attachment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -380,11 +334,11 @@ ts_utc=2026-04-19T22:24:14Z
 {
   "phases": [
     {
-      "name": "Commercial Terms",
-      "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+      "name": null,
+      "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
       "start_date": "2026-02-19",
       "end_date": null,
-      "phase_type": "paid",
+      "phase_type": null,
       "pricings": [
         {
           "description": "Commercial Amount",
@@ -399,7 +353,7 @@ ts_utc=2026-04-19T22:24:14Z
             "description": "Commercial Amount: £18,000/month",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 18000,
+              "amount": 18000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -424,45 +378,19 @@ ts_utc=2026-04-19T22:24:14Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300139",
-    "customer_name": "Apex Bloom Labs",
-    "email": "arjun.morris@apexbloomlabs.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
-    "status": "draft",
-    "currency": "GBP",
-    "start_date": "2026-02-19T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "invoice",
-      "scanned commercial attachment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": "Commercial Terms",
-      "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+      "name": null,
+      "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
       "start_date": "2026-02-19",
       "end_date": null,
-      "phase_type": "paid",
+      "phase_type": null,
       "pricings": [
         {
           "description": "Commercial Amount",
@@ -477,7 +405,7 @@ ts_utc=2026-04-19T22:24:14Z
             "description": "Commercial Amount: £18,000/month",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 18000,
+              "amount": 18000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -488,10 +416,10 @@ ts_utc=2026-04-19T22:24:14Z
   ]
 }
 
-2026-04-20T03:54:19 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:24:19Z
+ts_utc=2026-04-20T05:21:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -507,10 +435,10 @@ ts_utc=2026-04-19T22:24:19Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "customer": {
     "id": null,
@@ -523,8 +451,8 @@ ts_utc=2026-04-19T22:24:19Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -540,11 +468,11 @@ ts_utc=2026-04-19T22:24:19Z
   },
   "phases": [
     {
-      "name": "Commercial Terms",
-      "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+      "name": null,
+      "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
       "start_date": "2026-02-19",
       "end_date": null,
-      "phase_type": "paid",
+      "phase_type": null,
       "pricings": [
         {
           "description": "Commercial Amount",
@@ -559,7 +487,7 @@ ts_utc=2026-04-19T22:24:19Z
             "description": "Commercial Amount: £18,000/month",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 18000,
+              "amount": 18000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -599,18 +527,6 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Effective Date: 2026-02-19"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Amount: £18,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "fixed platform fees may be billed in advance"
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "recurring platform | fees"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
@@ -627,8 +543,16 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "fixed platform fées may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £18,000/month"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "East Repair Inc.                                                     INVOICE"
     },
     {
       "field": "commercial_core.description",
@@ -659,10 +583,10 @@ ts_utc=2026-04-19T22:24:19Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "customer": {
     "id": null,
@@ -675,8 +599,8 @@ ts_utc=2026-04-19T22:24:19Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -692,11 +616,11 @@ ts_utc=2026-04-19T22:24:19Z
   },
   "phases": [
     {
-      "name": "Commercial Terms",
-      "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+      "name": null,
+      "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
       "start_date": "2026-02-19",
       "end_date": null,
-      "phase_type": "paid",
+      "phase_type": null,
       "pricings": [
         {
           "description": "Commercial Amount",
@@ -711,7 +635,7 @@ ts_utc=2026-04-19T22:24:19Z
             "description": "Commercial Amount: £18,000/month",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 18000,
+              "amount": 18000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -747,18 +671,6 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Effective Date: 2026-02-19"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Amount: £18,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "fixed platform fees may be billed in advance"
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "recurring platform | fees"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
@@ -775,8 +687,16 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "fixed platform fées may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £18,000/month"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "East Repair Inc.                                                     INVOICE"
     },
     {
       "field": "commercial_core.description",
@@ -795,7 +715,7 @@ ts_utc=2026-04-19T22:24:19Z
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:24:19Z
+ts_utc=2026-04-20T05:21:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -811,10 +731,10 @@ ts_utc=2026-04-19T22:24:19Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "customer": {
     "id": null,
@@ -827,8 +747,8 @@ ts_utc=2026-04-19T22:24:19Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -844,11 +764,11 @@ ts_utc=2026-04-19T22:24:19Z
   },
   "phases": [
     {
-      "name": "Commercial Terms",
-      "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+      "name": null,
+      "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
       "start_date": "2026-02-19",
       "end_date": null,
-      "phase_type": "paid",
+      "phase_type": null,
       "pricings": [
         {
           "description": "Commercial Amount",
@@ -863,7 +783,7 @@ ts_utc=2026-04-19T22:24:19Z
             "description": "Commercial Amount: £18,000/month",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 18000,
+              "amount": 18000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -898,18 +818,6 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Effective Date: 2026-02-19"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Amount: £18,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "fixed platform fees may be billed in advance"
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "recurring platform | fees"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
@@ -926,8 +834,16 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "fixed platform fées may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £18,000/month"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "East Repair Inc.                                                     INVOICE"
     },
     {
       "field": "commercial_core.description",
@@ -948,7 +864,8 @@ ts_utc=2026-04-19T22:24:19Z
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
   "validated_json": {
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -963,10 +880,8 @@ ts_utc=2026-04-19T22:24:19Z
     },
     "phases": [
       {
-        "name": "Commercial Terms",
-        "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+        "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
         "start_date": "2026-02-19",
-        "phase_type": "paid",
         "pricings": [
           {
             "description": "Commercial Amount",
@@ -979,7 +894,7 @@ ts_utc=2026-04-19T22:24:19Z
               "description": "Commercial Amount: £18,000/month",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 18000,
+                "amount": 18000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -994,8 +909,7 @@ ts_utc=2026-04-19T22:24:19Z
     }
   },
   "missing_fields": [
-    "customer_id",
-    "name"
+    "customer_id"
   ],
   "extraction_notes": [
     {
@@ -1023,18 +937,6 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Effective Date: 2026-02-19"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Amount: £18,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "fixed platform fees may be billed in advance"
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "recurring platform | fees"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
@@ -1051,8 +953,16 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "fixed platform fées may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £18,000/month"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "East Repair Inc.                                                     INVOICE"
     },
     {
       "field": "commercial_core.description",
@@ -1083,10 +993,10 @@ ts_utc=2026-04-19T22:24:19Z
       "reject_reason": "",
       "page_count": 3,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhi... [truncated, 1553 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or ... [truncated, 1546 chars total]"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                            INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL $154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
+  "corpus": "\n\n### SOURCE FILE: benchmark_0005.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                     INVOICE\n\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\nReference: 300139\nCounterparty: Apex Bloom Labs\nPrimary Contact: Arjun Morris (arjun.morris@apexbloomlabs.com)\nEffective Date: 2026-02-19\nCommercial Amount: £18,000/month\nQuantity: 1\n\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms.\n\n1\n9\n0\n9\n\nTOTAL\n$154.06\n\n--- Page 2 [ocr] ---\ncounterparty: Apex Bloom Labs: |\n\nCommercial Cantaet! Acjun Morris (arjun.morrisiapexbloeomlabsa.cam)\n\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Yoraus for feécurzing platform |\n| fees. |\n| ‘Other cammercial wording may appear elsewhere in. the packet and must’ be\n| reconciled carefully.. 7\n\nLf a referenced exhibit or schedule iz missing, its contents should remain.\n\nunresolved rather than invented. | |\n| Payment nate: fixed platform fées may be billed in advance while variable usage\n\n——— ig billed in axrears..\n\nFormatting note: equivalent amount strings may appear in different styles within L\n\nthe same’ packet. —\n\n\n--- Page 3 [ocr] ---\n_ | | | | |\n| Counterparty: Apex Sloomn Labs\n\nConmercial Contact: Arjun Morris tarjun.morria@apexbloomlabs .com)\n| gahlungeziel: netto 30 Tage. Rechnungsstellung im Voraus for recurring platform |\n\nfeea,\n\nOther cammercial wording may appear elsewhere in the packet and must be\n\nreconciled earefully.\n| If a referenced ayhibit or achedule ia missing, its contents ghould remain\nunresolved rather than invented.\n|\n| |\n\n. |\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0005.pdf (3 pages)",
   "customer": {
     "id": null,
@@ -1099,8 +1009,8 @@ ts_utc=2026-04-19T22:24:19Z
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": null,
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -1116,11 +1026,11 @@ ts_utc=2026-04-19T22:24:19Z
   },
   "phases": [
     {
-      "name": "Commercial Terms",
-      "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+      "name": null,
+      "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
       "start_date": "2026-02-19",
       "end_date": null,
-      "phase_type": "paid",
+      "phase_type": null,
       "pricings": [
         {
           "description": "Commercial Amount",
@@ -1135,7 +1045,7 @@ ts_utc=2026-04-19T22:24:19Z
             "description": "Commercial Amount: £18,000/month",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 18000,
+              "amount": 18000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -1170,18 +1080,6 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Effective Date: 2026-02-19"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Amount: £18,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "fixed platform fees may be billed in advance"
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "recurring platform | fees"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
@@ -1198,8 +1096,16 @@ ts_utc=2026-04-19T22:24:19Z
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "fixed platform fées may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £18,000/month"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "East Repair Inc.                                                     INVOICE"
     },
     {
       "field": "commercial_core.description",
@@ -1216,7 +1122,8 @@ ts_utc=2026-04-19T22:24:19Z
   ],
   "fatal_error": null,
   "validated_json": {
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -1231,10 +1138,8 @@ ts_utc=2026-04-19T22:24:19Z
     },
     "phases": [
       {
-        "name": "Commercial Terms",
-        "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+        "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
         "start_date": "2026-02-19",
-        "phase_type": "paid",
         "pricings": [
           {
             "description": "Commercial Amount",
@@ -1247,7 +1152,7 @@ ts_utc=2026-04-19T22:24:19Z
               "description": "Commercial Amount: £18,000/month",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 18000,
+                "amount": 18000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -1262,10 +1167,9 @@ ts_utc=2026-04-19T22:24:19Z
     }
   },
   "missing_fields": [
-    "customer_id",
-    "name"
+    "customer_id"
   ]
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:24:19Z
+ended_utc=2026-04-20T05:21:40Z

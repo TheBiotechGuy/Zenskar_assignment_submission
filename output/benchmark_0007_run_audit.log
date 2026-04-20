@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:24:19Z
+started_utc=2026-04-20T05:21:41Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:24:19Z
+ts_utc=2026-04-20T05:21:41Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,14 +37,14 @@ ts_utc=2026-04-19T22:24:19Z
   "fatal_error": null
 }
 
-2026-04-20T03:54:20 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf
-2026-04-20T03:54:20 | INFO | src.parsers.pdf_parser |   Page 1/2
-2026-04-20T03:54:23 | INFO | src.parsers.pdf_parser |   Page 2/2
-2026-04-20T03:54:26 | INFO | src.parsers.pdf_parser | Done: 2 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:54:27 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:41 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf
+2026-04-20T10:51:41 | INFO | src.parsers.pdf_parser |   Page 1/2
+2026-04-20T10:51:45 | INFO | src.parsers.pdf_parser |   Page 2/2
+2026-04-20T10:51:48 | INFO | src.parsers.pdf_parser | Done: 2 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:51:50 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:24:27Z
+ts_utc=2026-04-20T05:21:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -92,7 +92,7 @@ ts_utc=2026-04-19T22:24:27Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:24:27Z
+ts_utc=2026-04-20T05:21:50Z
 
 --- BEFORE (state entering step) ---
 {
@@ -143,10 +143,10 @@ ts_utc=2026-04-19T22:24:27Z
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)"
 }
 
-2026-04-20T03:54:28 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:51 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:24:28Z
+ts_utc=2026-04-20T05:21:51Z
 
 --- BEFORE (state entering step) ---
 {
@@ -178,15 +178,7 @@ ts_utc=2026-04-19T22:24:28Z
     "customer_name": "Prime Orbit Networks",
     "email": "theo.brooks@primeorbitnetworks.com",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   }
@@ -218,24 +210,16 @@ ts_utc=2026-04-19T22:24:28Z
     "customer_name": "Prime Orbit Networks",
     "email": "theo.brooks@primeorbitnetworks.com",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   }
 }
 
-2026-04-20T03:54:30 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:52 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:24:30Z
+ts_utc=2026-04-20T05:21:52Z
 
 --- BEFORE (state entering step) ---
 {
@@ -256,24 +240,6 @@ ts_utc=2026-04-19T22:24:30Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300147",
-    "customer_name": "Prime Orbit Networks",
-    "email": "theo.brooks@primeorbitnetworks.com",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -281,14 +247,17 @@ ts_utc=2026-04-19T22:24:30Z
 {
   "commercial_core": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "custom_attributes": null,
     "contract_link": null
   }
@@ -313,44 +282,29 @@ ts_utc=2026-04-19T22:24:30Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300147",
-    "customer_name": "Prime Orbit Networks",
-    "email": "theo.brooks@primeorbitnetworks.com",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "custom_attributes": null,
     "contract_link": null
   }
 }
 
-2026-04-20T03:54:33 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:53 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:24:33Z
+ts_utc=2026-04-20T05:21:53Z
 
 --- BEFORE (state entering step) ---
 {
@@ -371,37 +325,6 @@ ts_utc=2026-04-19T22:24:33Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300147",
-    "customer_name": "Prime Orbit Networks",
-    "email": "theo.brooks@primeorbitnetworks.com",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
-    "currency": "USD",
-    "start_date": "2026-02-27T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -410,13 +333,13 @@ ts_utc=2026-04-19T22:24:33Z
   "phases": [
     {
       "name": null,
-      "description": null,
+      "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
       "start_date": "2026-02-27",
       "end_date": null,
       "phase_type": null,
       "pricings": [
         {
-          "description": null,
+          "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
           "product": {
             "name": "Image Form",
             "description": null,
@@ -425,10 +348,10 @@ ts_utc=2026-04-19T22:24:33Z
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
             "pricing_data": {
               "pricing_type": "custom_pricing",
-              "amount": 42000,
+              "amount": null,
               "currency": "USD",
               "billing_cadence": null
             }
@@ -458,48 +381,17 @@ ts_utc=2026-04-19T22:24:33Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0007.pdf\n\n--- Page 1 [ocr] ---\n| | | | _ | __ | | _\nJen ast fe Pallr | Ine. IAT Ce fs\n1912 Harvest Lane\nSCANNED COMMERCIAL ATTACHMENT\n| Retecence: 300147\nCounterparty: Srime Orbit Networks\nPrimacy Contact: Théo Brooks (theo. brooks@primeorbitnetworks.com) |\nEffeetive Date: 2026-02-27\nCommercial Amount: $42,000.00/no |\nQuantity: 12\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. 4 |\neee ig\n9\n9\nTOTAL i546\n\n\n--- Page 2 [ocr] ---\nsee _. terms\n\nCounterparty: Prime Grhit Networks\nCommercial Contact: Theo Brooks {theo.brooks@primeorbitnetwarks.com)\nThe parties may discuss continuation hefore expiry, hut no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must bea.\nreconciled carefully.\ntf a referenced exhibit or schedule is migsing, its contents should remain\nunresolved rathex than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0007.pdf (2 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "300147",
-    "customer_name": "Prime Orbit Networks",
-    "email": "theo.brooks@primeorbitnetworks.com",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
-    "currency": "USD",
-    "start_date": "2026-02-27T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
       "name": null,
-      "description": null,
+      "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
       "start_date": "2026-02-27",
       "end_date": null,
       "phase_type": null,
       "pricings": [
         {
-          "description": null,
+          "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
           "product": {
             "name": "Image Form",
             "description": null,
@@ -508,10 +400,10 @@ ts_utc=2026-04-19T22:24:33Z
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
             "pricing_data": {
               "pricing_type": "custom_pricing",
-              "amount": 42000,
+              "amount": null,
               "currency": "USD",
               "billing_cadence": null
             }
@@ -522,10 +414,10 @@ ts_utc=2026-04-19T22:24:33Z
   ]
 }
 
-2026-04-20T03:54:37 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:51:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:24:37Z
+ts_utc=2026-04-20T05:21:58Z
 
 --- BEFORE (state entering step) ---
 {
@@ -552,41 +444,36 @@ ts_utc=2026-04-19T22:24:37Z
     "customer_name": "Prime Orbit Networks",
     "email": "theo.brooks@primeorbitnetworks.com",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": null,
-      "description": null,
+      "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
       "start_date": "2026-02-27",
       "end_date": null,
       "phase_type": null,
       "pricings": [
         {
-          "description": null,
+          "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
           "product": {
             "name": "Image Form",
             "description": null,
@@ -595,10 +482,10 @@ ts_utc=2026-04-19T22:24:37Z
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
             "pricing_data": {
               "pricing_type": "custom_pricing",
-              "amount": 42000,
+              "amount": null,
               "currency": "USD",
               "billing_cadence": null
             }
@@ -634,8 +521,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Effeetive Date: 2026-02-27"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
       "field": "commercial_core.renewal_policy",
       "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     },
     {
       "field": "phases[0].start_date",
@@ -646,20 +541,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Product / Service: Image Form"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 12"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     }
   ]
 }
@@ -689,41 +580,36 @@ ts_utc=2026-04-19T22:24:37Z
     "customer_name": "Prime Orbit Networks",
     "email": "theo.brooks@primeorbitnetworks.com",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": null,
-      "description": null,
+      "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
       "start_date": "2026-02-27",
       "end_date": null,
       "phase_type": null,
       "pricings": [
         {
-          "description": null,
+          "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
           "product": {
             "name": "Image Form",
             "description": null,
@@ -732,10 +618,10 @@ ts_utc=2026-04-19T22:24:37Z
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
             "pricing_data": {
               "pricing_type": "custom_pricing",
-              "amount": 42000,
+              "amount": null,
               "currency": "USD",
               "billing_cadence": null
             }
@@ -767,8 +653,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Effeetive Date: 2026-02-27"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
       "field": "commercial_core.renewal_policy",
       "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     },
     {
       "field": "phases[0].start_date",
@@ -779,27 +673,23 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Product / Service: Image Form"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 12"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:24:37Z
+ts_utc=2026-04-20T05:21:58Z
 
 --- BEFORE (state entering step) ---
 {
@@ -826,41 +716,36 @@ ts_utc=2026-04-19T22:24:37Z
     "customer_name": "Prime Orbit Networks",
     "email": "theo.brooks@primeorbitnetworks.com",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": null,
-      "description": null,
+      "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
       "start_date": "2026-02-27",
       "end_date": null,
       "phase_type": null,
       "pricings": [
         {
-          "description": null,
+          "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
           "product": {
             "name": "Image Form",
             "description": null,
@@ -869,10 +754,10 @@ ts_utc=2026-04-19T22:24:37Z
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
             "pricing_data": {
               "pricing_type": "custom_pricing",
-              "amount": 42000,
+              "amount": null,
               "currency": "USD",
               "billing_cadence": null
             }
@@ -903,8 +788,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Effeetive Date: 2026-02-27"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
       "field": "commercial_core.renewal_policy",
       "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     },
     {
       "field": "phases[0].start_date",
@@ -915,20 +808,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Product / Service: Image Form"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 12"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     }
   ],
   "fatal_error": null
@@ -938,31 +827,36 @@ ts_utc=2026-04-19T22:24:37Z
 {
   "validated_json": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "customer": {
       "external_id": "300147",
       "customer_name": "Prime Orbit Networks",
-      "email": "theo.brooks@primeorbitnetworks.com",
-      "address": {}
+      "email": "theo.brooks@primeorbitnetworks.com"
     },
     "phases": [
       {
+        "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
         "start_date": "2026-02-27",
         "pricings": [
           {
+            "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
             "product": {
               "name": "Image Form",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+              "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
               "pricing_data": {
                 "pricing_type": "custom_pricing",
-                "amount": 42000,
                 "currency": "USD"
               }
             }
@@ -1000,8 +894,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Effeetive Date: 2026-02-27"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
       "field": "commercial_core.renewal_policy",
       "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     },
     {
       "field": "phases[0].start_date",
@@ -1012,20 +914,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Product / Service: Image Form"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 12"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     }
   ]
 }
@@ -1055,41 +953,36 @@ ts_utc=2026-04-19T22:24:37Z
     "customer_name": "Prime Orbit Networks",
     "email": "theo.brooks@primeorbitnetworks.com",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": null,
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
       "name": null,
-      "description": null,
+      "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
       "start_date": "2026-02-27",
       "end_date": null,
       "phase_type": null,
       "pricings": [
         {
-          "description": null,
+          "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
           "product": {
             "name": "Image Form",
             "description": null,
@@ -1098,10 +991,10 @@ ts_utc=2026-04-19T22:24:37Z
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+            "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
             "pricing_data": {
               "pricing_type": "custom_pricing",
-              "amount": 42000,
+              "amount": null,
               "currency": "USD",
               "billing_cadence": null
             }
@@ -1132,8 +1025,16 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Effeetive Date: 2026-02-27"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effeetive Date: 2026-02-27"
+    },
+    {
       "field": "commercial_core.renewal_policy",
       "quote_or_span": "The parties may discuss continuation hefore expiry, hut no automatic renewal is guaranteed by this clause alone."
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     },
     {
       "field": "phases[0].start_date",
@@ -1144,50 +1045,51 @@ ts_utc=2026-04-19T22:24:37Z
       "quote_or_span": "Product / Service: Image Form"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "Commercial Amount: $42,000.00/no"
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Quantity: 12"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Commercial Amount: $42,000.00/no | \nQuantity: 12"
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\n\nis billed in arrearg,"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Commercial Amount: $42,000.00/no |"
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "SCANNED COMMERCIAL ATTACHMENT",
-    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service; quantity 12; commercial amount $42,000.00.",
-    "status": "active",
+    "description": "Commercial attachment for Prime Orbit Networks covering Image Form service/product, quantity 12, commercial amount $42,000.00.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-27T12:00:00Z",
+    "anchor_date": "2026-02-27T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
+    "tags": [
+      "commercial attachment",
+      "scanned"
+    ],
     "customer": {
       "external_id": "300147",
       "customer_name": "Prime Orbit Networks",
-      "email": "theo.brooks@primeorbitnetworks.com",
-      "address": {}
+      "email": "theo.brooks@primeorbitnetworks.com"
     },
     "phases": [
       {
+        "description": "Commercial attachment effective 2026-02-27 for product/service 'Image Form'. No explicit phase segmentation in provided text.",
         "start_date": "2026-02-27",
         "pricings": [
           {
+            "description": "Quantity: 12. Commercial Amount: $42,000.00/no as OCR'd; billing cadence/unit is unclear from source text.",
             "product": {
               "name": "Image Form",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount: $42,000.00/no; Quantity: 12. Billing cadence unclear from OCR.",
+              "description": "Commercial Amount shown as '$42,000.00/no' in OCR. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no explicit mapping to this line item.",
               "pricing_data": {
                 "pricing_type": "custom_pricing",
-                "amount": 42000,
                 "currency": "USD"
               }
             }
@@ -1206,4 +1108,4 @@ ts_utc=2026-04-19T22:24:37Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:24:37Z
+ended_utc=2026-04-20T05:21:58Z

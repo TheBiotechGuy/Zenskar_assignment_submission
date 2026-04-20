@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:22:24Z
+started_utc=2026-04-20T05:19:32Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:22:24Z
+ts_utc=2026-04-20T05:19:32Z
 
 --- BEFORE (state entering step) ---
 {
@@ -41,29 +41,29 @@ ts_utc=2026-04-19T22:22:24Z
   "fatal_error": null
 }
 
-2026-04-20T03:52:24 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf
-2026-04-20T03:52:24 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:52:31 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=45.5)
-2026-04-20T03:52:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:52:35 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:52:44 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=45.2)
-2026-04-20T03:52:50 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:52:50 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:52:56 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:53:04 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
-2026-04-20T03:53:04 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf
-2026-04-20T03:53:04 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:53:08 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=49.4)
-2026-04-20T03:53:11 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:53:11 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
-2026-04-20T03:53:11 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf
-2026-04-20T03:53:11 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:53:14 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=46.1)
-2026-04-20T03:53:17 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:53:17 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:49:33 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf
+2026-04-20T10:49:33 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf
+2026-04-20T10:49:33 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf
+2026-04-20T10:49:33 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:49:33 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:49:33 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:49:40 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=46.1)
+2026-04-20T10:49:41 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=49.4)
+2026-04-20T10:49:43 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:43 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:49:45 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:45 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:49:47 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=45.5)
+2026-04-20T10:49:53 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:53 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:50:05 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=45.2)
+2026-04-20T10:50:11 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:50:11 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:50:20 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:50:32 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:23:17Z
+ts_utc=2026-04-20T05:20:32Z
 
 --- BEFORE (state entering step) ---
 {
@@ -86,7 +86,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -94,7 +94,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -124,7 +124,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -132,7 +132,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -147,7 +147,7 @@ ts_utc=2026-04-19T22:23:17Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:23:17Z
+ts_utc=2026-04-20T05:20:32Z
 
 --- BEFORE (state entering step) ---
 {
@@ -165,7 +165,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -173,7 +173,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -189,7 +189,7 @@ ts_utc=2026-04-19T22:23:17Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -210,7 +210,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -218,7 +218,7 @@ ts_utc=2026-04-19T22:23:17Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -230,14 +230,14 @@ ts_utc=2026-04-19T22:23:17Z
     }
   ],
   "fatal_error": null,
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)"
 }
 
-2026-04-20T03:53:18 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:50:33 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:23:18Z
+ts_utc=2026-04-20T05:20:33Z
 
 --- BEFORE (state entering step) ---
 {
@@ -255,7 +255,7 @@ ts_utc=2026-04-19T22:23:18Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -263,7 +263,7 @@ ts_utc=2026-04-19T22:23:18Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -274,7 +274,7 @@ ts_utc=2026-04-19T22:23:18Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -309,7 +309,7 @@ ts_utc=2026-04-19T22:23:18Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -317,7 +317,7 @@ ts_utc=2026-04-19T22:23:18Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -328,7 +328,7 @@ ts_utc=2026-04-19T22:23:18Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "fatal_error": null,
   "customer": {
@@ -343,10 +343,10 @@ ts_utc=2026-04-19T22:23:18Z
   }
 }
 
-2026-04-20T03:53:20 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:50:34 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:23:20Z
+ts_utc=2026-04-20T05:20:34Z
 
 --- BEFORE (state entering step) ---
 {
@@ -364,7 +364,7 @@ ts_utc=2026-04-19T22:23:20Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -372,7 +372,7 @@ ts_utc=2026-04-19T22:23:20Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -383,18 +383,8 @@ ts_utc=2026-04-19T22:23:20Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Apex Bridge Holdings",
-    "email": "noah.turner@apexbridgeholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -402,16 +392,16 @@ ts_utc=2026-04-19T22:23:20Z
 {
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -435,7 +425,7 @@ ts_utc=2026-04-19T22:23:20Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -443,7 +433,7 @@ ts_utc=2026-04-19T22:23:20Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -454,31 +444,21 @@ ts_utc=2026-04-19T22:23:20Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Apex Bridge Holdings",
-    "email": "noah.turner@apexbridgeholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -486,10 +466,10 @@ ts_utc=2026-04-19T22:23:20Z
   }
 }
 
-2026-04-20T03:53:23 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:50:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:23:23Z
+ts_utc=2026-04-20T05:20:35Z
 
 --- BEFORE (state entering step) ---
 {
@@ -507,7 +487,7 @@ ts_utc=2026-04-19T22:23:23Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -515,7 +495,7 @@ ts_utc=2026-04-19T22:23:23Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -526,35 +506,8 @@ ts_utc=2026-04-19T22:23:23Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Apex Bridge Holdings",
-    "email": "noah.turner@apexbridgeholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
-    "currency": "GBP",
-    "start_date": "2026-02-20T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -562,8 +515,8 @@ ts_utc=2026-04-19T22:23:23Z
 {
   "phases": [
     {
-      "name": null,
-      "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+      "name": "Commercial Terms",
+      "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
       "start_date": "2026-02-20",
       "end_date": null,
       "phase_type": "paid",
@@ -578,10 +531,10 @@ ts_utc=2026-04-19T22:23:23Z
           },
           "pricing": {
             "name": null,
-            "description": "Amount appears as equivalent textual monthly formats across documents.",
+            "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -608,7 +561,7 @@ ts_utc=2026-04-19T22:23:23Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -616,7 +569,7 @@ ts_utc=2026-04-19T22:23:23Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -627,40 +580,13 @@ ts_utc=2026-04-19T22:23:23Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Apex Bridge Holdings",
-    "email": "noah.turner@apexbridgeholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
-    "currency": "GBP",
-    "start_date": "2026-02-20T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": null,
-      "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+      "name": "Commercial Terms",
+      "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
       "start_date": "2026-02-20",
       "end_date": null,
       "phase_type": "paid",
@@ -675,10 +601,10 @@ ts_utc=2026-04-19T22:23:23Z
           },
           "pricing": {
             "name": null,
-            "description": "Amount appears as equivalent textual monthly formats across documents.",
+            "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -689,10 +615,10 @@ ts_utc=2026-04-19T22:23:23Z
   ]
 }
 
-2026-04-20T03:53:28 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:50:41 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:23:28Z
+ts_utc=2026-04-20T05:20:41Z
 
 --- BEFORE (state entering step) ---
 {
@@ -710,7 +636,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -718,7 +644,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -729,7 +655,7 @@ ts_utc=2026-04-19T22:23:28Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -743,16 +669,16 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -760,8 +686,8 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+      "name": "Commercial Terms",
+      "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
       "start_date": "2026-02-20",
       "end_date": null,
       "phase_type": "paid",
@@ -776,10 +702,10 @@ ts_utc=2026-04-19T22:23:28Z
           },
           "pricing": {
             "name": null,
-            "description": "Amount appears as equivalent textual monthly formats across documents.",
+            "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -819,7 +745,7 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
@@ -835,6 +761,14 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
       "field": "commercial_core.tags[0]",
       "quote_or_span": "Master Agreement"
     },
@@ -845,26 +779,6 @@ ts_utc=2026-04-19T22:23:28Z
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
-    },
-    {
-      "field": "commercial_core.status",
-      "quote_or_span": "Effective Date: 2026-02-20"
-    },
-    {
-      "field": "customer.custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
-    },
-    {
-      "field": "amendment_1.amendment_date",
-      "quote_or_span": "Amendment Date: 2026-04-06"
-    },
-    {
-      "field": "vendor.name",
-      "quote_or_span": "Vendor: Golden Ledger Works"
     }
   ]
 }
@@ -885,7 +799,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -893,7 +807,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -904,7 +818,7 @@ ts_utc=2026-04-19T22:23:28Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -918,16 +832,16 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -935,8 +849,8 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+      "name": "Commercial Terms",
+      "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
       "start_date": "2026-02-20",
       "end_date": null,
       "phase_type": "paid",
@@ -951,10 +865,10 @@ ts_utc=2026-04-19T22:23:28Z
           },
           "pricing": {
             "name": null,
-            "description": "Amount appears as equivalent textual monthly formats across documents.",
+            "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -990,7 +904,7 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
@@ -1006,6 +920,14 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
       "field": "commercial_core.tags[0]",
       "quote_or_span": "Master Agreement"
     },
@@ -1016,33 +938,13 @@ ts_utc=2026-04-19T22:23:28Z
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
-    },
-    {
-      "field": "commercial_core.status",
-      "quote_or_span": "Effective Date: 2026-02-20"
-    },
-    {
-      "field": "customer.custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
-    },
-    {
-      "field": "amendment_1.amendment_date",
-      "quote_or_span": "Amendment Date: 2026-04-06"
-    },
-    {
-      "field": "vendor.name",
-      "quote_or_span": "Vendor: Golden Ledger Works"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:23:28Z
+ts_utc=2026-04-20T05:20:41Z
 
 --- BEFORE (state entering step) ---
 {
@@ -1060,7 +962,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -1068,7 +970,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -1079,7 +981,7 @@ ts_utc=2026-04-19T22:23:28Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -1093,16 +995,16 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -1110,8 +1012,8 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+      "name": "Commercial Terms",
+      "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
       "start_date": "2026-02-20",
       "end_date": null,
       "phase_type": "paid",
@@ -1126,10 +1028,10 @@ ts_utc=2026-04-19T22:23:28Z
           },
           "pricing": {
             "name": null,
-            "description": "Amount appears as equivalent textual monthly formats across documents.",
+            "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -1164,7 +1066,7 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
@@ -1180,6 +1082,14 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
       "field": "commercial_core.tags[0]",
       "quote_or_span": "Master Agreement"
     },
@@ -1190,26 +1100,6 @@ ts_utc=2026-04-19T22:23:28Z
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
-    },
-    {
-      "field": "commercial_core.status",
-      "quote_or_span": "Effective Date: 2026-02-20"
-    },
-    {
-      "field": "customer.custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
-    },
-    {
-      "field": "amendment_1.amendment_date",
-      "quote_or_span": "Amendment Date: 2026-04-06"
-    },
-    {
-      "field": "vendor.name",
-      "quote_or_span": "Vendor: Golden Ledger Works"
     }
   ],
   "fatal_error": null
@@ -1219,13 +1109,13 @@ ts_utc=2026-04-19T22:23:28Z
 {
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "customer": {
@@ -1234,7 +1124,8 @@ ts_utc=2026-04-19T22:23:28Z
     },
     "phases": [
       {
-        "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+        "name": "Commercial Terms",
+        "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
         "start_date": "2026-02-20",
         "phase_type": "paid",
         "pricings": [
@@ -1245,10 +1136,10 @@ ts_utc=2026-04-19T22:23:28Z
               "type": "product"
             },
             "pricing": {
-              "description": "Amount appears as equivalent textual monthly formats across documents.",
+              "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -1291,7 +1182,7 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
@@ -1307,6 +1198,14 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
       "field": "commercial_core.tags[0]",
       "quote_or_span": "Master Agreement"
     },
@@ -1317,26 +1216,6 @@ ts_utc=2026-04-19T22:23:28Z
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
-    },
-    {
-      "field": "commercial_core.status",
-      "quote_or_span": "Effective Date: 2026-02-20"
-    },
-    {
-      "field": "customer.custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
-    },
-    {
-      "field": "amendment_1.amendment_date",
-      "quote_or_span": "Amendment Date: 2026-04-06"
-    },
-    {
-      "field": "vendor.name",
-      "quote_or_span": "Vendor: Golden Ledger Works"
     }
   ]
 }
@@ -1357,7 +1236,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field descriptio... [truncated, 2629 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescrip... [truncated, 2617 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf",
@@ -1365,7 +1244,7 @@ ts_utc=2026-04-19T22:23:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
+      "full_text": "\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet."
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf",
@@ -1376,7 +1255,7 @@ ts_utc=2026-04-19T22:23:28Z
       "full_text": "\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality."
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Bookmark Sample                                                     Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\nCustomer Name: Vins et alcoolk Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Apex Bridge Holdings\nVendor: Golden Ledger Works\nPrimary Contact: Noah Turner (noah.turner@apexbridgeholdings.com)\nEffective Date: 2026-02-20\n\nMonthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning.\n\nPDF Document Sample                                            Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\n4.\na\nAC ELMO.\nSample Files\nThis sample package contains:\nPllenarne Descriptlan oe\nap booknmark.lIFD | Tite template degicn. oe\nap bookmark.1odt Th be: mplate targeted far FOF Output\nap_bookmark.dat 4 gariple date tile in Cua forrruat. | |\nap_bookmark mk 4 ample bookmark file. |\nap bookrark_cac pelf Adacument describing the sample. an\nDeploying the Sample\nTo deploy this sarnple in YOUT environment:\n1. Open ihe template design ap_bookmark..FD in Ouiput Designer and recompile the\ntern plate for the appropriate preseninient target.\n2. Modify the <2 option in ihe “jab command in ine date file ap bookniark.dat to:\né (identify the targel output device,\n« dentify the bockmack file using the -abmik command.\ne Identify the section for which to generate bookmarks, if desired, using the sabe\ncommand.\nFor exanuple,\nrrenines a~shmkag bookmark bink —shmsiniaices |\nPF Bookrnerk Sample Page Sef 4\n\n\n--- Page 4 [ocr] ---\n—,\n4. Flace the accompanying files in directories consistent wilh VOU inniblementatian:\nS Place ap_bookmariilFO inthe Daslgns subdirectory for Output Designer.\no Flsee ap_boaokmarinniel in the forms subdirectory aecessible to Genteral.\no Place ap_bookmartzbmlk in an addressable directory.\nRUN the Sarnale\n= Torun this sample, place ap_beolumart.dat in the collector directory scanned by Central.\nPOF Bookmark Semple Page d of 4.\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10248\n\nCustomer Name: Vins et alcool Chevalier\nOrder Form\n\nCommercial Amount: £42,000/month\nQuantity: 1\nFinance Contact: Noah Shah (noah.shah@apexbridgeholdings.com)\n\nCommercial amount appears in more than one equivalent textual format across this packet.\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nSample PDF\n\nAmendment 1\n\nAmendment Date: 2026-04-06\n\nScoring should consider semantic normalization, not raw string equality.\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_010/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -1390,16 +1269,16 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -1407,8 +1286,8 @@ ts_utc=2026-04-19T22:23:28Z
   },
   "phases": [
     {
-      "name": null,
-      "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+      "name": "Commercial Terms",
+      "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
       "start_date": "2026-02-20",
       "end_date": null,
       "phase_type": "paid",
@@ -1423,10 +1302,10 @@ ts_utc=2026-04-19T22:23:28Z
           },
           "pricing": {
             "name": null,
-            "description": "Amount appears as equivalent textual monthly formats across documents.",
+            "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -1461,7 +1340,7 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
@@ -1477,6 +1356,14 @@ ts_utc=2026-04-19T22:23:28Z
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
       "field": "commercial_core.tags[0]",
       "quote_or_span": "Master Agreement"
     },
@@ -1487,38 +1374,18 @@ ts_utc=2026-04-19T22:23:28Z
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
-    },
-    {
-      "field": "commercial_core.status",
-      "quote_or_span": "Effective Date: 2026-02-20"
-    },
-    {
-      "field": "customer.custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
-    },
-    {
-      "field": "amendment_1.amendment_date",
-      "quote_or_span": "Amendment Date: 2026-04-06"
-    },
-    {
-      "field": "vendor.name",
-      "quote_or_span": "Vendor: Golden Ledger Works"
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "customer": {
@@ -1527,7 +1394,8 @@ ts_utc=2026-04-19T22:23:28Z
     },
     "phases": [
       {
-        "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+        "name": "Commercial Terms",
+        "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
         "start_date": "2026-02-20",
         "phase_type": "paid",
         "pricings": [
@@ -1538,10 +1406,10 @@ ts_utc=2026-04-19T22:23:28Z
               "type": "product"
             },
             "pricing": {
-              "description": "Amount appears as equivalent textual monthly formats across documents.",
+              "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -1561,4 +1429,4 @@ ts_utc=2026-04-19T22:23:28Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:23:28Z
+ended_utc=2026-04-20T05:20:41Z

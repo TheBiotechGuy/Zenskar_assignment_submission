@@ -11,13 +11,13 @@
   },
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "start_date": "2026-01-21T12:00:00Z",
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "customer": {
       "customer_name": "Bright Path Networks",
@@ -25,25 +25,23 @@
     },
     "phases": [
       {
-        "name": "Subscription Services",
-        "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+        "name": "Recurring Subscriptions",
+        "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
         "start_date": "2026-01-21",
         "phase_type": "recurring",
         "pricings": [
           {
-            "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+            "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
             "product": {
               "name": "Subscription",
-              "description": "Annual subscription",
+              "description": "Recurring subscription",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+              "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
               "pricing_data": {
-                "pricing_type": "custom_pricing",
-                "amount": 242000,
-                "billing_cadence": "monthly",
-                "quantity": 10
+                "pricing_type": "per_unit",
+                "amount": 242000.0
               }
             }
           }
@@ -51,7 +49,7 @@
       },
       {
         "name": "Implementation Services",
-        "description": "One-time onboarding services under separate commercial table.",
+        "description": "One-time implementation services are billed under a separate commercial table.",
         "start_date": "2026-01-21",
         "phase_type": "one_time",
         "pricings": [
@@ -59,13 +57,13 @@
             "description": "One-time onboarding 23000.00.",
             "product": {
               "name": "Onboarding",
-              "description": "One-time onboarding",
+              "description": "One-time implementation services",
               "type": "product"
             },
             "pricing": {
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 23000
+                "amount": 23000.0
               }
             }
           }
@@ -79,7 +77,9 @@
   },
   "missing_fields": [
     "currency",
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+    "phases[1].pricings[0].pricing.pricing_data.billing_cadence"
   ],
   "extraction_notes": [
     {
@@ -95,19 +95,23 @@
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
@@ -115,40 +119,36 @@
       "quote_or_span": "Commercial Amount: 242,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Commercial Amount: 242,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
-      "quote_or_span": "Quantity: 10"
-    },
-    {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "One-time onboarding 23000.00."
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Annual subscription 242,000.00."
     },
     {
-      "field": "phases[1].start_date",
-      "quote_or_span": "Effective Date: 2026-01-21"
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Annual subscription 242,000.00."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity: 10"
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+      "field": "phases[1].pricings[0].product.name",
+      "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "### SOURCE FILE: order_form.pdf"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+      "field": "phases[1].description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "commercial_core.description",
@@ -159,8 +159,12 @@
       "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
     },
     {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Exhibit B"
+    },
+    {
       "field": "rejected_pdf:amendment_1.pdf",
-      "quote_or_span": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms."
+      "quote_or_span": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms."
     }
   ]
 }

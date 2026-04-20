@@ -11,12 +11,12 @@
   },
   "validated_json": {
     "name": "Commercial Schedule",
-    "description": "ACCELIO commercial schedule for Bright Stream Networks for Mined Room services.",
+    "description": "Commercial schedule for Bright Stream Networks covering Mined Room service.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "customer": {
       "external_id": "3900135",
@@ -25,21 +25,23 @@
     },
     "phases": [
       {
-        "description": "Commercial schedule to be reconciled with later amendments and references. OCR indicates Effective Date 2026-02-15, Commercial Amount $7,000.00/mo, Quantity 1, but product/service name is unresolved from provided text.",
+        "name": "Commercial Schedule",
+        "description": "Commercial Schedule references 3900135. This schedule must be reconciled with any later amendments and references. Counterparty: Bright Stream Networks. Effective date appears as 2026-02-15. Commercial Amount: $7,000.00/mo. Quantity: 1. Product / Services text is illegible/unclear.",
         "start_date": "2026-02-15",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+            "description": "Commercial Amount stated as $7,000.00/mo; product/service name unclear from OCR.",
             "product": {
-              "description": "Product / Services name unreadable in OCR",
+              "description": "Product / Services line is unclear in OCR.",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount stated as $7,000.00/mo",
+              "name": "Commercial Amount",
+              "description": "Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -86,6 +88,10 @@
       "quote_or_span": "Effective Oster: 2026-62-15"
     },
     {
+      "field": "phases[0].pricings[0].pricing.name",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
+    },
+    {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
@@ -94,24 +100,20 @@
       "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage"
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammercial Amount: $7,000. 00/ma"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "ig billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
+      "field": "phases[0].pricings[0].pricing.product.description",
       "quote_or_span": "Product / Servicws Mined Roem"
     },
     {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "the paid phage begins; trial terms do not"
+      "field": "phases[0].description",
+      "quote_or_span": "This sthedule must be reconedled with any later amendments and references."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "COMMERCIAL SCHEDULE"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage\nig billed in arreara."
     }
   ]
 }

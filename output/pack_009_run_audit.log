@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:21:49Z
+started_utc=2026-04-20T05:19:02Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:21:49Z
+ts_utc=2026-04-20T05:19:02Z
 
 --- BEFORE (state entering step) ---
 {
@@ -41,23 +41,23 @@ ts_utc=2026-04-19T22:21:49Z
   "fatal_error": null
 }
 
-2026-04-20T03:51:49 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf
-2026-04-20T03:51:49 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:51:51 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:51:55 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:51:58 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:52:01 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:52:01 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf
-2026-04-20T03:52:01 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:52:02 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:52:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf
-2026-04-20T03:52:02 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:52:09 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=39.4)
-2026-04-20T03:52:12 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:52:12 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:49:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf
+2026-04-20T10:49:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf
+2026-04-20T10:49:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf
+2026-04-20T10:49:03 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:49:03 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:49:03 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:49:04 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:49:07 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:49:14 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=39.4)
+2026-04-20T10:49:15 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:49:19 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:49:19 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:19 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:49:23 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:22:12Z
+ts_utc=2026-04-20T05:19:23Z
 
 --- BEFORE (state entering step) ---
 {
@@ -96,7 +96,7 @@ ts_utc=2026-04-19T22:22:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ]
 }
@@ -134,14 +134,14 @@ ts_utc=2026-04-19T22:22:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:22:12Z
+ts_utc=2026-04-20T05:19:23Z
 
 --- BEFORE (state entering step) ---
 {
@@ -175,7 +175,7 @@ ts_utc=2026-04-19T22:22:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
   "fatal_error": null
@@ -183,7 +183,7 @@ ts_utc=2026-04-19T22:22:12Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -220,18 +220,18 @@ ts_utc=2026-04-19T22:22:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
   "fatal_error": null,
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)"
 }
 
-2026-04-20T03:52:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:25 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:22:14Z
+ts_utc=2026-04-20T05:19:25Z
 
 --- BEFORE (state entering step) ---
 {
@@ -265,10 +265,10 @@ ts_utc=2026-04-19T22:22:14Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -279,7 +279,7 @@ ts_utc=2026-04-19T22:22:14Z
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -319,17 +319,17 @@ ts_utc=2026-04-19T22:22:14Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "fatal_error": null,
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -337,10 +337,10 @@ ts_utc=2026-04-19T22:22:14Z
   }
 }
 
-2026-04-20T03:52:16 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:25 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:22:16Z
+ts_utc=2026-04-20T05:19:25Z
 
 --- BEFORE (state entering step) ---
 {
@@ -374,21 +374,11 @@ ts_utc=2026-04-19T22:22:16Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -396,17 +386,17 @@ ts_utc=2026-04-19T22:22:16Z
 {
   "commercial_core": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -445,45 +435,35 @@ ts_utc=2026-04-19T22:22:16Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   }
 }
 
-2026-04-20T03:52:19 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:26 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:22:19Z
+ts_utc=2026-04-20T05:19:26Z
 
 --- BEFORE (state entering step) ---
 {
@@ -517,38 +497,11 @@ ts_utc=2026-04-19T22:22:19Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
-    "start_date": "2026-02-15T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -556,26 +509,26 @@ ts_utc=2026-04-19T22:22:19Z
 {
   "phases": [
     {
-      "name": "Commercial Term",
-      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+      "name": "Initial Term",
+      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
       "start_date": "2026-02-25",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount",
+          "description": "Commercial Amount from Order Form",
           "product": {
-            "name": "Commercial Services",
+            "name": "Commercial Amount",
             "description": null,
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+            "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 224000,
+              "amount": 224000.0,
               "currency": null,
               "billing_cadence": "monthly"
             }
@@ -618,61 +571,34 @@ ts_utc=2026-04-19T22:22:19Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
-    "start_date": "2026-02-15T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": "Commercial Term",
-      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+      "name": "Initial Term",
+      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
       "start_date": "2026-02-25",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount",
+          "description": "Commercial Amount from Order Form",
           "product": {
-            "name": "Commercial Services",
+            "name": "Commercial Amount",
             "description": null,
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+            "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 224000,
+              "amount": 224000.0,
               "currency": null,
               "billing_cadence": "monthly"
             }
@@ -683,10 +609,10 @@ ts_utc=2026-04-19T22:22:19Z
   ]
 }
 
-2026-04-20T03:52:23 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:49:31 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:22:23Z
+ts_utc=2026-04-20T05:19:31Z
 
 --- BEFORE (state entering step) ---
 {
@@ -720,16 +646,16 @@ ts_utc=2026-04-19T22:22:23Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -737,43 +663,43 @@ ts_utc=2026-04-19T22:22:23Z
   },
   "commercial_core": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial Term",
-      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+      "name": "Initial Term",
+      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
       "start_date": "2026-02-25",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount",
+          "description": "Commercial Amount from Order Form",
           "product": {
-            "name": "Commercial Services",
+            "name": "Commercial Amount",
             "description": null,
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+            "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 224000,
+              "amount": 224000.0,
               "currency": null,
               "billing_cadence": "monthly"
             }
@@ -797,16 +723,12 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Primary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}"
     },
     {
-      "field": "commercial_core.name",
-      "quote_or_span": "Mester Agreement |"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-15"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless atherwise stated."
+      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -821,7 +743,11 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Commercial Amount: 2?24,000.00/mo"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "commercial_core.name",
+      "quote_or_span": "Mester Agreement"
+    },
+    {
+      "field": "commercial_core.name",
       "quote_or_span": "Order Form"
     },
     {
@@ -829,8 +755,32 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Vendor: Summit Bridge Systems |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Operational launch timing and contractual commencement can differ."
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Mester Agreement |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)"
+    },
+    {
+      "field": "commercial_core.custom_attributes.projected_go_live_date",
+      "quote_or_span": "Projected go-live date: 2026-03-22. Go-live timing does not hy itself change the"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-01"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_total",
+      "quote_or_span": "TOTAL                                                          $154.06"
     }
   ]
 }
@@ -867,16 +817,16 @@ ts_utc=2026-04-19T22:22:23Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -884,43 +834,43 @@ ts_utc=2026-04-19T22:22:23Z
   },
   "commercial_core": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial Term",
-      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+      "name": "Initial Term",
+      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
       "start_date": "2026-02-25",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount",
+          "description": "Commercial Amount from Order Form",
           "product": {
-            "name": "Commercial Services",
+            "name": "Commercial Amount",
             "description": null,
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+            "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 224000,
+              "amount": 224000.0,
               "currency": null,
               "billing_cadence": "monthly"
             }
@@ -940,16 +890,12 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Primary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}"
     },
     {
-      "field": "commercial_core.name",
-      "quote_or_span": "Mester Agreement |"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-15"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless atherwise stated."
+      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -964,7 +910,11 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Commercial Amount: 2?24,000.00/mo"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "commercial_core.name",
+      "quote_or_span": "Mester Agreement"
+    },
+    {
+      "field": "commercial_core.name",
       "quote_or_span": "Order Form"
     },
     {
@@ -972,15 +922,39 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Vendor: Summit Bridge Systems |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Operational launch timing and contractual commencement can differ."
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Mester Agreement |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)"
+    },
+    {
+      "field": "commercial_core.custom_attributes.projected_go_live_date",
+      "quote_or_span": "Projected go-live date: 2026-03-22. Go-live timing does not hy itself change the"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-01"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_total",
+      "quote_or_span": "TOTAL                                                          $154.06"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:22:23Z
+ts_utc=2026-04-20T05:19:31Z
 
 --- BEFORE (state entering step) ---
 {
@@ -1014,16 +988,16 @@ ts_utc=2026-04-19T22:22:23Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -1031,43 +1005,43 @@ ts_utc=2026-04-19T22:22:23Z
   },
   "commercial_core": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial Term",
-      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+      "name": "Initial Term",
+      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
       "start_date": "2026-02-25",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount",
+          "description": "Commercial Amount from Order Form",
           "product": {
-            "name": "Commercial Services",
+            "name": "Commercial Amount",
             "description": null,
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+            "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 224000,
+              "amount": 224000.0,
               "currency": null,
               "billing_cadence": "monthly"
             }
@@ -1086,16 +1060,12 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Primary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}"
     },
     {
-      "field": "commercial_core.name",
-      "quote_or_span": "Mester Agreement |"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-15"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless atherwise stated."
+      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -1110,7 +1080,11 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Commercial Amount: 2?24,000.00/mo"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "commercial_core.name",
+      "quote_or_span": "Mester Agreement"
+    },
+    {
+      "field": "commercial_core.name",
       "quote_or_span": "Order Form"
     },
     {
@@ -1118,8 +1092,32 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Vendor: Summit Bridge Systems |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Operational launch timing and contractual commencement can differ."
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Mester Agreement |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)"
+    },
+    {
+      "field": "commercial_core.custom_attributes.projected_go_live_date",
+      "quote_or_span": "Projected go-live date: 2026-03-22. Go-live timing does not hy itself change the"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-01"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_total",
+      "quote_or_span": "TOTAL                                                          $154.06"
     }
   ],
   "fatal_error": null
@@ -1129,36 +1127,37 @@ ts_utc=2026-04-19T22:22:23Z
 {
   "validated_json": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "customer": {
       "customer_name": "Summit orbit Analytics",
-      "email": "liam. shah@summitorbitanalyti. com"
+      "email": "liam.shah@summitorbitanalyti.com"
     },
     "phases": [
       {
-        "name": "Commercial Term",
-        "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+        "name": "Initial Term",
+        "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
         "start_date": "2026-02-25",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial Amount",
+            "description": "Commercial Amount from Order Form",
             "product": {
-              "name": "Commercial Services",
+              "name": "Commercial Amount",
               "type": "product"
             },
             "pricing": {
-              "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+              "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 224000,
+                "amount": 224000.0,
                 "billing_cadence": "monthly"
               }
             }
@@ -1172,7 +1171,6 @@ ts_utc=2026-04-19T22:22:23Z
     }
   },
   "missing_fields": [
-    "currency",
     "customer_id"
   ],
   "extraction_notes": [
@@ -1185,16 +1183,12 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Primary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}"
     },
     {
-      "field": "commercial_core.name",
-      "quote_or_span": "Mester Agreement |"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-15"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless atherwise stated."
+      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -1209,7 +1203,11 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Commercial Amount: 2?24,000.00/mo"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "commercial_core.name",
+      "quote_or_span": "Mester Agreement"
+    },
+    {
+      "field": "commercial_core.name",
       "quote_or_span": "Order Form"
     },
     {
@@ -1217,8 +1215,32 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Vendor: Summit Bridge Systems |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Operational launch timing and contractual commencement can differ."
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Mester Agreement |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)"
+    },
+    {
+      "field": "commercial_core.custom_attributes.projected_go_live_date",
+      "quote_or_span": "Projected go-live date: 2026-03-22. Go-live timing does not hy itself change the"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-01"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_total",
+      "quote_or_span": "TOTAL                                                          $154.06"
     }
   ]
 }
@@ -1255,16 +1277,16 @@ ts_utc=2026-04-19T22:22:23Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                                 INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\nTOTAL\n$154.06\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\name | |\nmm\nay]\nACCELIO.\nMester Agreement |\nCustomer: Summit orbit Analytics\nVendor: Summit Bridge Systems |\nPrimary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}\nEffective Date: 2026-02-15\nEffective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless\natherwise stated.\n|\nPDF Boolanark Sample Poga 1 of 4\n\n\n--- Page 2 [ocr] ---\nSample Data File Saniple Boolarark Fife\n| “reformat trune invoices]\n' “aymbpolget MINLAT IL Inveices ny DateeO |\n| “field trans_date Frans daterl,A (\n2DD0-Dl~L tkype]\n“field désériptien — Inveiees py Item Typend\nDeseription fos item f1 Erans_typeal,A _ |\n*fieald trans_tyne eee oa t—<CstCi\nTEPEL Or aaices by Transaction Amaunt=D |\nae nas 50-3 | krans_amounk trans_amount1,D |\nSopege L\n| “field trans_date\n200D-01-2. .\n“field deséeriptian |\nDeseripkion for Lhemt #2\n“Field trang_tyoe\n| TYPEZ |\nfield trans _anaunt |\n| 11.00\n‘page Lo\n‘fleld trans_date\n2000-01-3\n“field dese¢ription\nDeseription. for. item 3.\n“field trans_type |\nTYPES\nTha example bookmark fila includas three distinct sections:\n* invoices sorted, ascending, by date.\n+ Invoices sorted; ascending, by item type.\n# Invoices sorted, descending, by transaction amount.\n|\nPDF Bookmark Sampte Page 2 of 4\n\n\n--- Page 3 [ocr] ---\n>\nACCELIO.,.\n|\nSample Files\nThis sample package contains:.\nEe a\nDeploying the Sample |\n| To deploy this sample in your environment:\n1. Open the template dosign ap_bookmark.IFD in Output Designer and recompile the\ntemplate for the appropriate presentment target.\n2. Modify the -z option in the “Job command in the data filo ap_bookmark.dat to:\ne = Identify the target output device. |\n° Identify tho bookmark file using the -abmk command.\n| e identify the section for which to generate bookmarks, if desired, using the -abms |\n| command.\nFor example,\nEe\nPOF Bookmark Sample Page 3 of 4 |\n| |\neee\n\n\n--- Page 4 [ocr] ---\n=\n\nACCELIO.\n3. Place the accompanying files In directaries consistant with your impfamentation: |\n\n| ¢ Place ap_bookmancIFD In the Designs subdiractory for Qutput Designer.\n\n| ¢ Place ap_bookmaricmdf In the forms subdiractory accessible to Central.\n\n« Place ap_bookmark.bmk in an addressable directory. |\nRunning the Sample :\n\n° Torun this sample, place ap_bookniark.dat in the collector directory scanned by Central. |\n\n| -_\nPDF Bookmark Sample Page dof 4 |\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nPurchase Orders\nOrder Form\nCommercial Amount: 2?24,000.00/mo\nQuantity: 120\nFinance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)\nProjected go-live date: 2026-03-22. Go-live timing does not hy itself change the\neffective date.\n\nPsge t\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                                  INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-04-01\n\nOperational launch timing and contractual commencement can differ.\n\nM\n9\n9\n9\n\n\nTOTAL                                                          $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_009/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -1272,43 +1294,43 @@ ts_utc=2026-04-19T22:22:23Z
   },
   "commercial_core": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
-    "currency": null,
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial Term",
-      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+      "name": "Initial Term",
+      "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
       "start_date": "2026-02-25",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Commercial Amount",
+          "description": "Commercial Amount from Order Form",
           "product": {
-            "name": "Commercial Services",
+            "name": "Commercial Amount",
             "description": null,
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+            "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 224000,
+              "amount": 224000.0,
               "currency": null,
               "billing_cadence": "monthly"
             }
@@ -1327,16 +1349,12 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Primary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}"
     },
     {
-      "field": "commercial_core.name",
-      "quote_or_span": "Mester Agreement |"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-15"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless atherwise stated."
+      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -1351,7 +1369,11 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Commercial Amount: 2?24,000.00/mo"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "commercial_core.name",
+      "quote_or_span": "Mester Agreement"
+    },
+    {
+      "field": "commercial_core.name",
       "quote_or_span": "Order Form"
     },
     {
@@ -1359,43 +1381,68 @@ ts_utc=2026-04-19T22:22:23Z
       "quote_or_span": "Vendor: Summit Bridge Systems |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Operational launch timing and contractual commencement can differ."
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Mester Agreement |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)"
+    },
+    {
+      "field": "commercial_core.custom_attributes.projected_go_live_date",
+      "quote_or_span": "Projected go-live date: 2026-03-22. Go-live timing does not hy itself change the"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-01"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_total",
+      "quote_or_span": "TOTAL                                                          $154.06"
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "customer": {
       "customer_name": "Summit orbit Analytics",
-      "email": "liam. shah@summitorbitanalyti. com"
+      "email": "liam.shah@summitorbitanalyti.com"
     },
     "phases": [
       {
-        "name": "Commercial Term",
-        "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+        "name": "Initial Term",
+        "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
         "start_date": "2026-02-25",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial Amount",
+            "description": "Commercial Amount from Order Form",
             "product": {
-              "name": "Commercial Services",
+              "name": "Commercial Amount",
               "type": "product"
             },
             "pricing": {
-              "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+              "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 224000,
+                "amount": 224000.0,
                 "billing_cadence": "monthly"
               }
             }
@@ -1409,10 +1456,9 @@ ts_utc=2026-04-19T22:22:23Z
     }
   },
   "missing_fields": [
-    "currency",
     "customer_id"
   ]
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:22:23Z
+ended_utc=2026-04-20T05:19:31Z

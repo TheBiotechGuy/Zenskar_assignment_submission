@@ -1,7 +1,7 @@
 {
   "customer": {
     "id": null,
-    "external_id": "10248",
+    "external_id": null,
     "customer_name": "Blue Forge Works",
     "email": "arjun.turner@blueforgeworks.com",
     "phone_number": null,
@@ -10,68 +10,53 @@
     "custom_attributes": null
   },
   "validated_json": {
-    "name": "Master Agreement",
-    "description": "Master Agreement for Blue Forge Works with usage-based charges measured using API events and event counts; associated Order Form ID 10248 and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement / Order Form",
+    "description": "Master Agreement between Blue Forge Works and Summit Leaf Systems with related Order Form and Amendment 1; usage-based charges measured using API events and event counts.",
+    "status": "draft",
     "start_date": "2026-02-10T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment",
-      "usage-based"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "customer": {
-      "external_id": "10248",
       "customer_name": "Blue Forge Works",
       "email": "arjun.turner@blueforgeworks.com"
     },
     "phases": [
       {
-        "name": "Order Form Pricing",
-        "description": "Effective under master agreement dated 2026-02-10, as amended by Amendment 1 dated 2026-03-27.",
+        "name": "Default Phase",
+        "description": "Effective under Master Agreement and Order Form; later Amendment 1 clarifies not to invent a metered quantity identifier where none is provided.",
         "start_date": "2026-02-10",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Recurring fee 70,000.00/mo.",
+            "description": "Recurring fee",
             "product": {
               "name": "Recurring fee",
               "type": "product"
             },
             "pricing": {
+              "description": "Recurring fee 70,000.00/mo.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 70000,
+                "amount": 70000.0,
                 "billing_cadence": "monthly"
               }
             }
           },
           {
-            "description": "Variable usage 70.0/event. Usage-based charges are measured using API events and event counts. Metric identifier not provided.",
+            "description": "Variable usage",
             "product": {
               "name": "Variable usage",
-              "description": "Measured using API events and event counts.",
+              "description": "Usage-based charges are measured using API events and event counts.",
               "type": "product"
             },
             "pricing": {
-              "description": "Metric identifier not provided.",
+              "description": "Variable usage 70.0/event. Metric identifier not provided.",
               "pricing_data": {
                 "pricing_type": "per_unit",
-                "amount": 70
-              }
-            }
-          },
-          {
-            "description": "Unit Price: 34.8",
-            "product": {
-              "name": "Unit Price line item",
-              "type": "product"
-            },
-            "pricing": {
-              "description": "Source also shows Total 174.0 and Total Price 4440.0; relationship is unclear.",
-              "pricing_data": {
-                "pricing_type": "per_unit",
-                "amount": 34.8
+                "amount": 70.0
               }
             }
           }
@@ -85,16 +70,13 @@
   },
   "missing_fields": [
     "currency",
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[1].pricing.pricing_data.billing_cadence"
   ],
   "extraction_notes": [
     {
       "field": "customer.customer_name",
       "quote_or_span": "Customer: Blue Forge Works"
-    },
-    {
-      "field": "customer.external_id",
-      "quote_or_span": "Order ID: 10248"
     },
     {
       "field": "customer.email",
@@ -105,64 +87,44 @@
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.start_date",
-      "quote_or_span": "Effective Date: 2026-02-10"
-    },
-    {
       "field": "commercial_core.description",
       "quote_or_span": "Usage-based charges are measured using API events and event counts."
+    },
+    {
+      "field": "commercial_core.start_date",
+      "quote_or_span": "Effective Date: 2026-02-10"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-02-10"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Auwendivant Date: 2026-03-27"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Recurring fee 70,000.00/mo."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Recurring fee 70,000.00/mo."
+      "quote_or_span": "Commercial Amount: 70,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "70,000.00/mo."
+      "quote_or_span": "Recurring fee 70,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[1].description",
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Variable usage 70.0/event. Metric identifier not provided."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
-      "quote_or_span": "70.0/event"
     },
     {
       "field": "phases[0].pricings[1].product.description",
       "quote_or_span": "Usage-based charges are measured using API events and event counts."
     },
     {
-      "field": "phases[0].pricings[2].description",
-      "quote_or_span": "Unit Price: 34.8"
+      "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "Variable usage 70.0/event."
     },
     {
-      "field": "phases[0].pricings[2].pricing.pricing_data.amount",
-      "quote_or_span": "Unit Price: 34.8"
-    },
-    {
-      "field": "phases[0].custom_attributes.order_form_commercial_amount",
-      "quote_or_span": "Commercial Amount: 70,000.00"
-    },
-    {
-      "field": "phases[0].custom_attributes.quantity",
-      "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Aryan Cole (aryan.cole@biqstgromworks.com)"
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Master Agreement"
     },
     {
       "field": "commercial_core.tags[1]",
@@ -171,10 +133,6 @@
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amésdment 1 |"
-    },
-    {
-      "field": "commercial_core.custom_attributes.amendment_date",
-      "quote_or_span": "Auwendivant Date: 2026-03-27"
     }
   ]
 }

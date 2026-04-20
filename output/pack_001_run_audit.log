@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:14:50Z
+started_utc=2026-04-20T05:12:40Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:14:50Z
+ts_utc=2026-04-20T05:12:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -41,23 +41,23 @@ ts_utc=2026-04-19T22:14:50Z
   "fatal_error": null
 }
 
-2026-04-20T03:44:51 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf
-2026-04-20T03:44:51 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:44:54 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:44:57 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:45:00 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:45:02 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:45:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf
-2026-04-20T03:45:02 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:45:03 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:45:03 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf
-2026-04-20T03:45:03 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:45:08 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=40.2)
-2026-04-20T03:45:12 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:45:12 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:42:41 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf
+2026-04-20T10:42:41 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf
+2026-04-20T10:42:41 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf
+2026-04-20T10:42:41 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:42:41 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:42:41 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:42:42 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:42:44 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:42:47 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=40.2)
+2026-04-20T10:42:48 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:42:51 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:42:51 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:42:51 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:42:54 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:15:12Z
+ts_utc=2026-04-20T05:12:54Z
 
 --- BEFORE (state entering step) ---
 {
@@ -96,7 +96,7 @@ ts_utc=2026-04-19T22:15:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ]
 }
@@ -134,14 +134,14 @@ ts_utc=2026-04-19T22:15:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:15:12Z
+ts_utc=2026-04-20T05:12:54Z
 
 --- BEFORE (state entering step) ---
 {
@@ -175,7 +175,7 @@ ts_utc=2026-04-19T22:15:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
   "fatal_error": null
@@ -183,7 +183,7 @@ ts_utc=2026-04-19T22:15:12Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -220,18 +220,18 @@ ts_utc=2026-04-19T22:15:12Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
   "fatal_error": null,
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)"
 }
 
-2026-04-20T03:45:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:42:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:15:14Z
+ts_utc=2026-04-20T05:12:56Z
 
 --- BEFORE (state entering step) ---
 {
@@ -265,10 +265,10 @@ ts_utc=2026-04-19T22:15:14Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -281,15 +281,7 @@ ts_utc=2026-04-19T22:15:14Z
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   }
@@ -327,10 +319,10 @@ ts_utc=2026-04-19T22:15:14Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "fatal_error": null,
   "customer": {
@@ -339,24 +331,16 @@ ts_utc=2026-04-19T22:15:14Z
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   }
 }
 
-2026-04-20T03:45:16 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:42:57 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:15:16Z
+ts_utc=2026-04-20T05:12:57Z
 
 --- BEFORE (state entering step) ---
 {
@@ -390,46 +374,28 @@ ts_utc=2026-04-19T22:15:16Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "10248",
-    "customer_name": "prime Leat Holdings",
-    "email": "nina .potel@primelcatholdings can",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
   "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
+    "renewal_policy": null,
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -469,42 +435,24 @@ ts_utc=2026-04-19T22:15:16Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "10248",
-    "customer_name": "prime Leat Holdings",
-    "email": "nina .potel@primelcatholdings can",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
+    "renewal_policy": null,
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -512,10 +460,10 @@ ts_utc=2026-04-19T22:15:16Z
   }
 }
 
-2026-04-20T03:45:20 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:42:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:15:20Z
+ts_utc=2026-04-20T05:12:58Z
 
 --- BEFORE (state entering step) ---
 {
@@ -549,46 +497,11 @@ ts_utc=2026-04-19T22:15:20Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "10248",
-    "customer_name": "prime Leat Holdings",
-    "email": "nina .potel@primelcatholdings can",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
-    "currency": "USD",
-    "start_date": "2026-01-06T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
-    "tags": [
-      "master agreement",
-      "order form",
-      "amendment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -596,45 +509,45 @@ ts_utc=2026-04-19T22:15:20Z
 {
   "phases": [
     {
-      "name": "Platform Subscription",
-      "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+      "name": "Subscription Phase",
+      "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
       "start_date": "2026-01-06",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Initial platform subscription fee with included units: 10.",
+          "description": "Initial platform subscription fee; included units: 10.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Initial platform subscription",
+            "name": "Platform subscription",
+            "description": "Commercial Amount / Initial platform subscription fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Initial platform subscription fee",
+            "name": "Platform fee",
+            "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
           }
         },
         {
-          "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+          "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Amended platform subscription",
+            "name": "Platform subscription",
+            "description": "Amended platform fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+            "name": "Platform fee amendment",
+            "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 12000,
+              "amount": 12000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -677,88 +590,53 @@ ts_utc=2026-04-19T22:15:20Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "10248",
-    "customer_name": "prime Leat Holdings",
-    "email": "nina .potel@primelcatholdings can",
-    "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
-    "currency": "USD",
-    "start_date": "2026-01-06T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
-    "tags": [
-      "master agreement",
-      "order form",
-      "amendment"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": "Platform Subscription",
-      "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+      "name": "Subscription Phase",
+      "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
       "start_date": "2026-01-06",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Initial platform subscription fee with included units: 10.",
+          "description": "Initial platform subscription fee; included units: 10.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Initial platform subscription",
+            "name": "Platform subscription",
+            "description": "Commercial Amount / Initial platform subscription fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Initial platform subscription fee",
+            "name": "Platform fee",
+            "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
           }
         },
         {
-          "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+          "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Amended platform subscription",
+            "name": "Platform subscription",
+            "description": "Amended platform fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+            "name": "Platform fee amendment",
+            "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 12000,
+              "amount": 12000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -769,10 +647,10 @@ ts_utc=2026-04-19T22:15:20Z
   ]
 }
 
-2026-04-20T03:45:28 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:43:05 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:15:28Z
+ts_utc=2026-04-20T05:13:05Z
 
 --- BEFORE (state entering step) ---
 {
@@ -806,10 +684,10 @@ ts_utc=2026-04-19T22:15:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -817,30 +695,22 @@ ts_utc=2026-04-19T22:15:28Z
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
+    "renewal_policy": null,
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -848,45 +718,45 @@ ts_utc=2026-04-19T22:15:28Z
   },
   "phases": [
     {
-      "name": "Platform Subscription",
-      "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+      "name": "Subscription Phase",
+      "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
       "start_date": "2026-01-06",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Initial platform subscription fee with included units: 10.",
+          "description": "Initial platform subscription fee; included units: 10.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Initial platform subscription",
+            "name": "Platform subscription",
+            "description": "Commercial Amount / Initial platform subscription fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Initial platform subscription fee",
+            "name": "Platform fee",
+            "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
           }
         },
         {
-          "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+          "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Amended platform subscription",
+            "name": "Platform subscription",
+            "description": "Amended platform fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+            "name": "Platform fee amendment",
+            "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 12000,
+              "amount": 12000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -914,6 +784,10 @@ ts_utc=2026-04-19T22:15:28Z
       "quote_or_span": "Primary Contacer Nina Patel (nina .potel@primelcatholdings can]"
     },
     {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agveemant"
+    },
+    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-06"
     },
@@ -923,83 +797,51 @@ ts_utc=2026-04-19T22:15:28Z
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "Commercial Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "$10,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "platform subscription fee"
+    },
+    {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "$12,000/month"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$12,000/month beginning next renewal cycle"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "beginning next renewal cycle"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Amendment Date: 2026-02-20"
     },
     {
-      "field": "phases[0].pricings[1].pricing.description",
-      "quote_or_span": "Amendment Date: 2026-02-20"
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06"
     },
     {
-      "field": "phases[0].pricings[1].description",
-      "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "$10,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "platform subscription"
-    },
-    {
-      "field": "customer.customer_name",
-      "quote_or_span": "Custamer Name: Vins et alenale Chavalier"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $10,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Quantity: 10"
+      "field": "phases[0].pricings[1].pricing.pricing_data.currency",
+      "quote_or_span": "$12,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Included units: 10."
-    },
-    {
-      "field": "customer.email",
-      "quote_or_span": "Finance Contact: Liam Baker (liam. baker@primeleafholdings.com)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Master Agveemant"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "platform fee"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor:t River Harker Logistics"
     }
   ]
 }
@@ -1036,10 +878,10 @@ ts_utc=2026-04-19T22:15:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -1047,30 +889,22 @@ ts_utc=2026-04-19T22:15:28Z
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
+    "renewal_policy": null,
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -1078,45 +912,45 @@ ts_utc=2026-04-19T22:15:28Z
   },
   "phases": [
     {
-      "name": "Platform Subscription",
-      "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+      "name": "Subscription Phase",
+      "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
       "start_date": "2026-01-06",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Initial platform subscription fee with included units: 10.",
+          "description": "Initial platform subscription fee; included units: 10.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Initial platform subscription",
+            "name": "Platform subscription",
+            "description": "Commercial Amount / Initial platform subscription fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Initial platform subscription fee",
+            "name": "Platform fee",
+            "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
           }
         },
         {
-          "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+          "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Amended platform subscription",
+            "name": "Platform subscription",
+            "description": "Amended platform fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+            "name": "Platform fee amendment",
+            "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 12000,
+              "amount": 12000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -1140,6 +974,10 @@ ts_utc=2026-04-19T22:15:28Z
       "quote_or_span": "Primary Contacer Nina Patel (nina .potel@primelcatholdings can]"
     },
     {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agveemant"
+    },
+    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-06"
     },
@@ -1149,90 +987,58 @@ ts_utc=2026-04-19T22:15:28Z
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "Commercial Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "$10,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "platform subscription fee"
+    },
+    {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "$12,000/month"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$12,000/month beginning next renewal cycle"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "beginning next renewal cycle"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Amendment Date: 2026-02-20"
     },
     {
-      "field": "phases[0].pricings[1].pricing.description",
-      "quote_or_span": "Amendment Date: 2026-02-20"
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06"
     },
     {
-      "field": "phases[0].pricings[1].description",
-      "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "$10,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "platform subscription"
-    },
-    {
-      "field": "customer.customer_name",
-      "quote_or_span": "Custamer Name: Vins et alenale Chavalier"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $10,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Quantity: 10"
+      "field": "phases[0].pricings[1].pricing.pricing_data.currency",
+      "quote_or_span": "$12,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Included units: 10."
-    },
-    {
-      "field": "customer.email",
-      "quote_or_span": "Finance Contact: Liam Baker (liam. baker@primeleafholdings.com)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Master Agveemant"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "platform fee"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor:t River Harker Logistics"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:15:28Z
+ts_utc=2026-04-20T05:13:05Z
 
 --- BEFORE (state entering step) ---
 {
@@ -1266,10 +1072,10 @@ ts_utc=2026-04-19T22:15:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -1277,30 +1083,22 @@ ts_utc=2026-04-19T22:15:28Z
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
+    "renewal_policy": null,
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -1308,45 +1106,45 @@ ts_utc=2026-04-19T22:15:28Z
   },
   "phases": [
     {
-      "name": "Platform Subscription",
-      "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+      "name": "Subscription Phase",
+      "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
       "start_date": "2026-01-06",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Initial platform subscription fee with included units: 10.",
+          "description": "Initial platform subscription fee; included units: 10.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Initial platform subscription",
+            "name": "Platform subscription",
+            "description": "Commercial Amount / Initial platform subscription fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Initial platform subscription fee",
+            "name": "Platform fee",
+            "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
           }
         },
         {
-          "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+          "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Amended platform subscription",
+            "name": "Platform subscription",
+            "description": "Amended platform fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+            "name": "Platform fee amendment",
+            "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 12000,
+              "amount": 12000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -1369,6 +1167,10 @@ ts_utc=2026-04-19T22:15:28Z
       "quote_or_span": "Primary Contacer Nina Patel (nina .potel@primelcatholdings can]"
     },
     {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agveemant"
+    },
+    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-06"
     },
@@ -1378,83 +1180,51 @@ ts_utc=2026-04-19T22:15:28Z
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "Commercial Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "$10,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "platform subscription fee"
+    },
+    {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "$12,000/month"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$12,000/month beginning next renewal cycle"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "beginning next renewal cycle"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Amendment Date: 2026-02-20"
     },
     {
-      "field": "phases[0].pricings[1].pricing.description",
-      "quote_or_span": "Amendment Date: 2026-02-20"
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06"
     },
     {
-      "field": "phases[0].pricings[1].description",
-      "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "$10,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "platform subscription"
-    },
-    {
-      "field": "customer.customer_name",
-      "quote_or_span": "Custamer Name: Vins et alenale Chavalier"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $10,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Quantity: 10"
+      "field": "phases[0].pricings[1].pricing.pricing_data.currency",
+      "quote_or_span": "$12,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Included units: 10."
-    },
-    {
-      "field": "customer.email",
-      "quote_or_span": "Finance Contact: Liam Baker (liam. baker@primeleafholdings.com)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Master Agveemant"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "platform fee"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor:t River Harker Logistics"
     }
   ],
   "fatal_error": null
@@ -1463,61 +1233,59 @@ ts_utc=2026-04-19T22:15:28Z
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
   "validated_json": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "customer": {
       "external_id": "10248",
       "customer_name": "prime Leat Holdings",
-      "email": "nina .potel@primelcatholdings can",
-      "address": {}
+      "email": "nina .potel@primelcatholdings can"
     },
     "phases": [
       {
-        "name": "Platform Subscription",
-        "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+        "name": "Subscription Phase",
+        "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
         "start_date": "2026-01-06",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Initial platform subscription fee with included units: 10.",
+            "description": "Initial platform subscription fee; included units: 10.",
             "product": {
-              "name": "Platform Subscription",
-              "description": "Initial platform subscription",
+              "name": "Platform subscription",
+              "description": "Commercial Amount / Initial platform subscription fee",
               "type": "product"
             },
             "pricing": {
-              "name": "Platform Fee",
-              "description": "Initial platform subscription fee",
+              "name": "Platform fee",
+              "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 10000,
+                "amount": 10000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
             }
           },
           {
-            "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+            "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
             "product": {
-              "name": "Platform Subscription",
-              "description": "Amended platform subscription",
+              "name": "Platform subscription",
+              "description": "Amended platform fee",
               "type": "product"
             },
             "pricing": {
-              "name": "Platform Fee",
-              "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+              "name": "Platform fee amendment",
+              "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 12000,
+                "amount": 12000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -1548,6 +1316,10 @@ ts_utc=2026-04-19T22:15:28Z
       "quote_or_span": "Primary Contacer Nina Patel (nina .potel@primelcatholdings can]"
     },
     {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agveemant"
+    },
+    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-06"
     },
@@ -1557,83 +1329,51 @@ ts_utc=2026-04-19T22:15:28Z
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "Commercial Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "$10,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "platform subscription fee"
+    },
+    {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "$12,000/month"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$12,000/month beginning next renewal cycle"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "beginning next renewal cycle"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Amendment Date: 2026-02-20"
     },
     {
-      "field": "phases[0].pricings[1].pricing.description",
-      "quote_or_span": "Amendment Date: 2026-02-20"
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06"
     },
     {
-      "field": "phases[0].pricings[1].description",
-      "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "$10,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "platform subscription"
-    },
-    {
-      "field": "customer.customer_name",
-      "quote_or_span": "Custamer Name: Vins et alenale Chavalier"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $10,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Quantity: 10"
+      "field": "phases[0].pricings[1].pricing.pricing_data.currency",
+      "quote_or_span": "$12,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Included units: 10."
-    },
-    {
-      "field": "customer.email",
-      "quote_or_span": "Finance Contact: Liam Baker (liam. baker@primeleafholdings.com)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Master Agveemant"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "platform fee"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor:t River Harker Logistics"
     }
   ]
 }
@@ -1670,10 +1410,10 @@ ts_utc=2026-04-19T22:15:28Z
       "reject_reason": "",
       "page_count": 1,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                          INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL  $154.00\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [ocr] ---\n| |\n1 oan\noe\nACEC ELI.\nMaster Agveemant\nCustomer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06\nFees may be amended only hy a leter signed writing, |\nPDF Bodonsk Rampts Pega 1 of\n\n\n--- Page 2 [ocr] ---\nete\na\nACCELIO.\nSamplo Data Filo Sample Bookmark Filo\n“reformat trune = |\n—- ss YTEDORGGt WINLATING Involces by Date\n“fleld trans_date trans_date=1,2a\n2000-01-1 (type]\n“field deserintton Invoices by Item Typed\nDescription for item #} trans typeel,A\n“{leld trans_type [amount]\n| TYPE) Invoices by Transaction Asount-0\n“fleld trans_arount trans_smountl,D\n| 11.00 |\n“page 1 :\n“field trans_date\n2000-01-2\n“SLeld descriptian\nDescription for item 92\n“L{leld trans type\nTYPE2\n“field trans_samount\n{1.00\n“page Ll\n“fleld trans_date\n2000-01-3\n“f{leld description\nDescription for Lten 93\n“fleld trans_type\nTYPE\nTha example bookmark file includas thros distinct sections:\ne invoicas sorted, ascending, by data.\ne Invoices sortod, ascending, by item type.\ne Invoicos sorted, dosconding, by transaction amount.\nPOF Bookmark Samplo Page 204\nOn\n\n\n--- Page 3 [ocr] ---\nACCELIO. |\nsample Files\nThis sample package contains:\nFilename — Description a | | |\nap_bookmark.IFD The template design. | | | |\nA sample bookmark fite. | |\nap_bookmark pdf | Sample PDF output. | | ;\nDeploying the Sample\nTo deploy this sample in your anviranment:\n1. Open the template design ap_bookmark.IFD In Output Designer and recompile the\n. taniplate for the appropriate presentmant target.\n2: Modify the -z option in tha “fob command in the data file ap_bookmark.dat ta! )\ne = |dantify the target autput device.\n« Identify the bookmark file using the -abmk commana.\na Identify tha section for vehich to generate bookmarks, if desired, using the -abms\ncommand.\nFor example, |\n|\n| Inveices | ~sbmkep_bookmark mk ~shmsinveices |\nPOF Bookmark Sample Page 3 of 4\n\n\n--- Page 4 [ocr] ---\n| i\nee\nA\nACCELIO..\n3. Place the accompanying files In directaries consistent with your implementation:\n« Place ap_bookmark.IFD in the Dasigns subdirectory for Output Designer.\ne Place ap_bookmark.mdf In the forms subdirectory accessible to Central.\n¢ Place ap_bookmark.bmk in an addressable directory.\nRunning the Sample\n* Torun this sample, place ap_bookmark.dat in the collector directory scanned by Central. |\nPOF Bookmark Sample Page 4 of 4\nOO\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [ocr] ---\nInvoice Number: 10248\nCustamer Name: Vins et alenale Chavalier\nOrder Form\nCommercial Amount: $10,000/month\nQuantity: 10\nFinance Contact: Liam Baker (liam. baker@primeleafholdings.com)\nInitial platform subscription fee: $10,000.00/mo. Included units: 10.\n\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [llm_vision] ---\nEast Repair Inc.                                            INVOICE\n\n1912 Harvest Lane\nAmendment 1\n\nAmendment Date: 2026-02-20\n\nAmendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.\n\nM\n9\n9\n9\n\nTOTAL $154.06\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_001/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
@@ -1681,30 +1421,22 @@ ts_utc=2026-04-19T22:15:28Z
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "commercial_core": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
+    "renewal_policy": null,
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "custom_attributes": null,
@@ -1712,45 +1444,45 @@ ts_utc=2026-04-19T22:15:28Z
   },
   "phases": [
     {
-      "name": "Platform Subscription",
-      "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+      "name": "Subscription Phase",
+      "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
       "start_date": "2026-01-06",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Initial platform subscription fee with included units: 10.",
+          "description": "Initial platform subscription fee; included units: 10.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Initial platform subscription",
+            "name": "Platform subscription",
+            "description": "Commercial Amount / Initial platform subscription fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Initial platform subscription fee",
+            "name": "Platform fee",
+            "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
           }
         },
         {
-          "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+          "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
           "product": {
-            "name": "Platform Subscription",
-            "description": "Amended platform subscription",
+            "name": "Platform subscription",
+            "description": "Amended platform fee",
             "type": "product",
             "sku": null
           },
           "pricing": {
-            "name": "Platform Fee",
-            "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+            "name": "Platform fee amendment",
+            "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 12000,
+              "amount": 12000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -1773,6 +1505,10 @@ ts_utc=2026-04-19T22:15:28Z
       "quote_or_span": "Primary Contacer Nina Patel (nina .potel@primelcatholdings can]"
     },
     {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agveemant"
+    },
+    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-06"
     },
@@ -1782,142 +1518,108 @@ ts_utc=2026-04-19T22:15:28Z
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "Commercial Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "$10,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "platform subscription fee"
+    },
+    {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "$12,000/month"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$12,000/month beginning next renewal cycle"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "beginning next renewal cycle"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Amendment Date: 2026-02-20"
     },
     {
-      "field": "phases[0].pricings[1].pricing.description",
-      "quote_or_span": "Amendment Date: 2026-02-20"
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06"
     },
     {
-      "field": "phases[0].pricings[1].description",
-      "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "$10,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "platform subscription"
-    },
-    {
-      "field": "customer.customer_name",
-      "quote_or_span": "Custamer Name: Vins et alenale Chavalier"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $10,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Quantity: 10"
+      "field": "phases[0].pricings[1].pricing.pricing_data.currency",
+      "quote_or_span": "$12,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Included units: 10."
-    },
-    {
-      "field": "customer.email",
-      "quote_or_span": "Finance Contact: Liam Baker (liam. baker@primeleafholdings.com)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Master Agveemant"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "platform fee"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor:t River Harker Logistics"
     }
   ],
   "fatal_error": null,
   "validated_json": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "customer": {
       "external_id": "10248",
       "customer_name": "prime Leat Holdings",
-      "email": "nina .potel@primelcatholdings can",
-      "address": {}
+      "email": "nina .potel@primelcatholdings can"
     },
     "phases": [
       {
-        "name": "Platform Subscription",
-        "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+        "name": "Subscription Phase",
+        "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
         "start_date": "2026-01-06",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Initial platform subscription fee with included units: 10.",
+            "description": "Initial platform subscription fee; included units: 10.",
             "product": {
-              "name": "Platform Subscription",
-              "description": "Initial platform subscription",
+              "name": "Platform subscription",
+              "description": "Commercial Amount / Initial platform subscription fee",
               "type": "product"
             },
             "pricing": {
-              "name": "Platform Fee",
-              "description": "Initial platform subscription fee",
+              "name": "Platform fee",
+              "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 10000,
+                "amount": 10000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
             }
           },
           {
-            "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+            "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
             "product": {
-              "name": "Platform Subscription",
-              "description": "Amended platform subscription",
+              "name": "Platform subscription",
+              "description": "Amended platform fee",
               "type": "product"
             },
             "pricing": {
-              "name": "Platform Fee",
-              "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+              "name": "Platform fee amendment",
+              "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 12000,
+                "amount": 12000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -1937,4 +1639,4 @@ ts_utc=2026-04-19T22:15:28Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:15:28Z
+ended_utc=2026-04-20T05:13:05Z

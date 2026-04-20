@@ -3,7 +3,7 @@
     "id": null,
     "external_id": null,
     "customer_name": "Blue Leaf Logistics",
-    "email": "maya.shah@blueleaflogisties com",
+    "email": "maya. shah@blueleaflogisties com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -11,28 +11,29 @@
   },
   "validated_json": {
     "name": "Master Agreement / Order Form",
-    "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption; order form lists base fee and overage pricing.",
+    "description": "Master agreement for Blue Leaf Logistics with Silver Orbit Systems; recurring subscription base fee plus variable usage charges, supplemented by Order Form and Amendment 1.",
     "status": "draft",
+    "anchor_date": "2026-02-02T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "customer": {
       "customer_name": "Blue Leaf Logistics",
-      "email": "maya.shah@blueleaflogisties com"
+      "email": "maya. shah@blueleaflogisties com"
     },
     "phases": [
       {
-        "name": "Subscription Term",
-        "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the overage schedule supplements the base fee and does not replace the recurring commitment.",
+        "name": "Recurring Subscription",
+        "description": "Customer pays a recurring subscription fee plus variable usage charges for excess consumption. Amendment 1 states the average schedule supplements the base fee and does not replace the recurring commitment.",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Base recurring subscription fee",
+            "description": "Base recurring fee from Order Form.",
             "product": {
               "name": "Subscription",
-              "description": "Recurring subscription commitment",
+              "description": "Recurring subscription/base fee",
               "type": "product"
             },
             "pricing": {
@@ -40,16 +41,16 @@
               "description": "Base fee 242,000.00/mo.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 242000,
+                "amount": 242000.0,
                 "billing_cadence": "monthly"
               }
             }
           },
           {
-            "description": "Overage above included threshold billed in arrears; amendment supplements base fee and does not replace recurring commitment.",
+            "description": "Overage above included threshold billed in arrears.",
             "product": {
               "name": "Overage Usage",
-              "description": "Variable usage charges for excess consumption",
+              "description": "Variable usage charges for excess consumption above included threshold",
               "type": "product"
             },
             "pricing": {
@@ -57,23 +58,24 @@
               "description": "Overage above included threshold billed at 242.0/unit in arrears.",
               "pricing_data": {
                 "pricing_type": "per_unit",
-                "amount": 242
+                "amount": 242.0
               }
             }
           },
           {
-            "description": "Amendment 1 overage schedule/invoice total",
+            "description": "Amendment 1 supplemental average schedule total; supplements base fee and does not replace recurring commitment.",
             "product": {
-              "name": "Amendment 1 Overage Schedule",
-              "description": "Supplemental overage schedule referenced in Amendment 1",
+              "name": "Average Schedule",
+              "description": "Supplemental charge per Amendment 1",
               "type": "product"
             },
             "pricing": {
               "name": "Amendment 1",
-              "description": "Amendment Date: 2026-02-02. The overage schedule supplements the base fee and does not replace the recurring commitment. TOTAL $15,406.",
+              "description": "TOTAL $15,406. Amendment date: 2026-02-02. Supplements the base fee and does not replace the recurring commitment.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 15406
+                "amount": 15406.0,
+                "currency": "USD"
               }
             }
           }
@@ -88,6 +90,8 @@
   "missing_fields": [
     "currency",
     "customer_id",
+    "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
+    "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
     "start_date"
   ],
   "extraction_notes": [
@@ -97,23 +101,19 @@
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Maya Shah (maya. shah@blueleaflogisties com)"
+      "quote_or_span": "Primary Contact: Maya Shah (maya. shah@blueleaflogisties com)"
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "Master Agreement"
+      "quote_or_span": "Master Agreement."
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Bnendmenk Oates 2026-02-02"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Customer Pays & recurring subscription fee plus variable usage charges for excess consumption."
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.name",
-      "quote_or_span": "Base fee"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -121,31 +121,15 @@
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "242,000.00/mo"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "Overage"
+      "quote_or_span": "Base fee 242,000.00/mo."
     },
     {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
       "quote_or_span": "billed at 242.0/unit in arrears."
     },
     {
-      "field": "phases[0].pricings[1].pricing.pricing_data.pricing_type",
-      "quote_or_span": "242.0/unit"
-    },
-    {
-      "field": "phases[0].pricings[1].description",
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Overage shove included threshold billed at 242.0/unit in arrears."
-    },
-    {
-      "field": "phases[0].pricings[2].pricing.name",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[2].pricing.description",
-      "quote_or_span": "Amendmenwe 1"
     },
     {
       "field": "phases[0].pricings[2].pricing.pricing_data.amount",
@@ -156,24 +140,12 @@
       "quote_or_span": "The Average schedule supplements the base fee and does nok replace the recurring commitment."
     },
     {
-      "field": "phases[0].pricings[2].pricing.description",
-      "quote_or_span": "Bnendmenk Oates 2026-02-02"
-    },
-    {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "Master Agreement"
-    },
-    {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
+      "field": "phases[0].pricings[2].pricing.name",
       "quote_or_span": "Amendmenwe 1"
     },
     {
-      "field": "phases[0].pricings[2].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "supplements the base fee and does nok replace the recurring commitment."
+      "field": "phases[0].product.name",
+      "quote_or_span": "recurring subscription fee plus variable usage charges"
     }
   ]
 }

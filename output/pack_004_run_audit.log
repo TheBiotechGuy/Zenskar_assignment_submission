@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:17:16Z
+started_utc=2026-04-20T05:14:25Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:17:16Z
+ts_utc=2026-04-20T05:14:25Z
 
 --- BEFORE (state entering step) ---
 {
@@ -43,31 +43,31 @@ ts_utc=2026-04-19T22:17:16Z
   "fatal_error": null
 }
 
-2026-04-20T03:47:16 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf
-2026-04-20T03:47:16 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:47:23 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=37.6)
-2026-04-20T03:47:26 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:47:26 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:47:34 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=52.2)
-2026-04-20T03:47:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:47:40 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:47:45 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:47:52 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
-2026-04-20T03:47:52 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf
-2026-04-20T03:47:52 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:47:55 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=40.7)
-2026-04-20T03:47:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:47:58 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
-2026-04-20T03:47:58 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf
-2026-04-20T03:47:58 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:48:00 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:48:01 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:48:01 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf
-2026-04-20T03:48:01 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:48:01 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:44:26 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:44:27 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:44:30 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:44:31 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=40.7)
+2026-04-20T10:44:35 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:44:35 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:44:35 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=37.6)
+2026-04-20T10:44:39 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:44:39 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:44:51 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=52.2)
+2026-04-20T10:44:57 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:44:57 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:45:05 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:45:17 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
+2026-04-20T10:45:18 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:18:01Z
+ts_utc=2026-04-20T05:15:18Z
 
 --- BEFORE (state entering step) ---
 {
@@ -104,7 +104,7 @@ ts_utc=2026-04-19T22:18:01Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -151,7 +151,7 @@ ts_utc=2026-04-19T22:18:01Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -169,7 +169,7 @@ ts_utc=2026-04-19T22:18:01Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:18:01Z
+ts_utc=2026-04-20T05:15:18Z
 
 --- BEFORE (state entering step) ---
 {
@@ -201,7 +201,7 @@ ts_utc=2026-04-19T22:18:01Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -255,7 +255,7 @@ ts_utc=2026-04-19T22:18:01Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -274,10 +274,10 @@ ts_utc=2026-04-19T22:18:01Z
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf (1 pages)"
 }
 
-2026-04-20T03:48:03 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:45:19 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:18:03Z
+ts_utc=2026-04-20T05:15:19Z
 
 --- BEFORE (state entering step) ---
 {
@@ -309,7 +309,7 @@ ts_utc=2026-04-19T22:18:03Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -372,7 +372,7 @@ ts_utc=2026-04-19T22:18:03Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -401,10 +401,10 @@ ts_utc=2026-04-19T22:18:03Z
   }
 }
 
-2026-04-20T03:48:05 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:45:20 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:18:05Z
+ts_utc=2026-04-20T05:15:20Z
 
 --- BEFORE (state entering step) ---
 {
@@ -436,7 +436,7 @@ ts_utc=2026-04-19T22:18:05Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -452,16 +452,6 @@ ts_utc=2026-04-19T22:18:05Z
   ],
   "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Bright Path Networks\nVendor: North Orbit Systems\nPrimary Contact: Sara Khan (sara.khan@brightpathnetworks.com)\nEffective Date: 2026-01-21\n\nRecurring subscriptions and one-time implementation services are billed under separate\ncommercial tables.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nul\nACCELIO..\nsample Files\nThis ample package contains:\n| ap_bookmark. pdf Sample POF output.\nap bookmark doc. pdf & document desenbing the sample.\nDeploying the Sample\nTe deploy this sample tn your environment\n1. Open the template design ap_bookmiark.IFD in Guiput Designer and recompile the\nler plate for the appropriaie presentment target.\n2. iadity the -2 option in the “jeb command in the data fle ap beokmark.dat to:\n6 Identify the target output device.\n6 ldentify the booknoiark fie Wein the -bmik command.\n*  |dentify the section for which to generate bookmarks, if desired, using the -abms\nCoOnniriand.\nFor example,\nIrvecices —shokae oadckneark amk —abosinvaLlces\nBOP Bookmerk Seaniple Page 3 at.\n\n\n--- Page 4 [ocr] ---\n—— ae,\n\nAC CIELIC..\n\n4. Place the accompanying files in directories congistent with your implementation:\no Place ap_beokmarIFO in the Dosigns subdinsctory tor Output Designer\no Place ap _beokmeari.mel in the forms subdirectory accessible to Central.\no Place ap_beokmeari.bok in. an addressable directory.\n\nRunning the Sample\ne Torun this sample, place ap_boolunarldar in the collector direciary scanned by Ceniiral.\nBF Bookrienk Sample Page & ot 4.\nae\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10243\nCustomer Name: Vins et alcools Chevalier\nOrder Form\n\nCommercial Amount: 242,000/month\nQuantity: 10\nFinance Contact Ell Reed (ell.reed@brightpathnetworks.com)\n\nAnnual subscription 242,000.00. One-time onboarding 23000.00.\n\n\n\n### SOURCE FILE: exhibit_b.pdf\n\n--- Page 1 [ocr] ---\nStock Report for 2016-07\nExhibit B\nReferenced service levels, usage definitions, or support windows may appear here if\nattached.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Bright Path Networks",
-    "email": "sara.khan@brightpathnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -469,17 +459,17 @@ ts_utc=2026-04-19T22:18:05Z
 {
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "currency": null,
     "start_date": "2026-01-21T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -516,7 +506,7 @@ ts_utc=2026-04-19T22:18:05Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -532,40 +522,30 @@ ts_utc=2026-04-19T22:18:05Z
   ],
   "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Bright Path Networks\nVendor: North Orbit Systems\nPrimary Contact: Sara Khan (sara.khan@brightpathnetworks.com)\nEffective Date: 2026-01-21\n\nRecurring subscriptions and one-time implementation services are billed under separate\ncommercial tables.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nul\nACCELIO..\nsample Files\nThis ample package contains:\n| ap_bookmark. pdf Sample POF output.\nap bookmark doc. pdf & document desenbing the sample.\nDeploying the Sample\nTe deploy this sample tn your environment\n1. Open the template design ap_bookmiark.IFD in Guiput Designer and recompile the\nler plate for the appropriaie presentment target.\n2. iadity the -2 option in the “jeb command in the data fle ap beokmark.dat to:\n6 Identify the target output device.\n6 ldentify the booknoiark fie Wein the -bmik command.\n*  |dentify the section for which to generate bookmarks, if desired, using the -abms\nCoOnniriand.\nFor example,\nIrvecices —shokae oadckneark amk —abosinvaLlces\nBOP Bookmerk Seaniple Page 3 at.\n\n\n--- Page 4 [ocr] ---\n—— ae,\n\nAC CIELIC..\n\n4. Place the accompanying files in directories congistent with your implementation:\no Place ap_beokmarIFO in the Dosigns subdinsctory tor Output Designer\no Place ap _beokmeari.mel in the forms subdirectory accessible to Central.\no Place ap_beokmeari.bok in. an addressable directory.\n\nRunning the Sample\ne Torun this sample, place ap_boolunarldar in the collector direciary scanned by Ceniiral.\nBF Bookrienk Sample Page & ot 4.\nae\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10243\nCustomer Name: Vins et alcools Chevalier\nOrder Form\n\nCommercial Amount: 242,000/month\nQuantity: 10\nFinance Contact Ell Reed (ell.reed@brightpathnetworks.com)\n\nAnnual subscription 242,000.00. One-time onboarding 23000.00.\n\n\n\n### SOURCE FILE: exhibit_b.pdf\n\n--- Page 1 [ocr] ---\nStock Report for 2016-07\nExhibit B\nReferenced service levels, usage definitions, or support windows may appear here if\nattached.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Bright Path Networks",
-    "email": "sara.khan@brightpathnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "currency": null,
     "start_date": "2026-01-21T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "custom_attributes": null,
     "contract_link": null
   }
 }
 
-2026-04-20T03:48:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:45:22 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:18:08Z
+ts_utc=2026-04-20T05:15:22Z
 
 --- BEFORE (state entering step) ---
 {
@@ -597,7 +577,7 @@ ts_utc=2026-04-19T22:18:08Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -613,33 +593,6 @@ ts_utc=2026-04-19T22:18:08Z
   ],
   "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Bright Path Networks\nVendor: North Orbit Systems\nPrimary Contact: Sara Khan (sara.khan@brightpathnetworks.com)\nEffective Date: 2026-01-21\n\nRecurring subscriptions and one-time implementation services are billed under separate\ncommercial tables.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nul\nACCELIO..\nsample Files\nThis ample package contains:\n| ap_bookmark. pdf Sample POF output.\nap bookmark doc. pdf & document desenbing the sample.\nDeploying the Sample\nTe deploy this sample tn your environment\n1. Open the template design ap_bookmiark.IFD in Guiput Designer and recompile the\nler plate for the appropriaie presentment target.\n2. iadity the -2 option in the “jeb command in the data fle ap beokmark.dat to:\n6 Identify the target output device.\n6 ldentify the booknoiark fie Wein the -bmik command.\n*  |dentify the section for which to generate bookmarks, if desired, using the -abms\nCoOnniriand.\nFor example,\nIrvecices —shokae oadckneark amk —abosinvaLlces\nBOP Bookmerk Seaniple Page 3 at.\n\n\n--- Page 4 [ocr] ---\n—— ae,\n\nAC CIELIC..\n\n4. Place the accompanying files in directories congistent with your implementation:\no Place ap_beokmarIFO in the Dosigns subdinsctory tor Output Designer\no Place ap _beokmeari.mel in the forms subdirectory accessible to Central.\no Place ap_beokmeari.bok in. an addressable directory.\n\nRunning the Sample\ne Torun this sample, place ap_boolunarldar in the collector direciary scanned by Ceniiral.\nBF Bookrienk Sample Page & ot 4.\nae\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10243\nCustomer Name: Vins et alcools Chevalier\nOrder Form\n\nCommercial Amount: 242,000/month\nQuantity: 10\nFinance Contact Ell Reed (ell.reed@brightpathnetworks.com)\n\nAnnual subscription 242,000.00. One-time onboarding 23000.00.\n\n\n\n### SOURCE FILE: exhibit_b.pdf\n\n--- Page 1 [ocr] ---\nStock Report for 2016-07\nExhibit B\nReferenced service levels, usage definitions, or support windows may appear here if\nattached.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Bright Path Networks",
-    "email": "sara.khan@brightpathnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
-    "currency": null,
-    "start_date": "2026-01-21T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -647,29 +600,28 @@ ts_utc=2026-04-19T22:18:08Z
 {
   "phases": [
     {
-      "name": "Subscription Services",
-      "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+      "name": "Recurring Subscriptions",
+      "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "recurring",
       "pricings": [
         {
-          "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+          "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
           "product": {
             "name": "Subscription",
-            "description": "Annual subscription",
+            "description": "Recurring subscription",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+            "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
             "pricing_data": {
-              "pricing_type": "custom_pricing",
-              "amount": 242000,
+              "pricing_type": "per_unit",
+              "amount": 242000.0,
               "currency": null,
-              "billing_cadence": "monthly",
-              "quantity": 10
+              "billing_cadence": null
             }
           }
         }
@@ -677,7 +629,7 @@ ts_utc=2026-04-19T22:18:08Z
     },
     {
       "name": "Implementation Services",
-      "description": "One-time onboarding services under separate commercial table.",
+      "description": "One-time implementation services are billed under a separate commercial table.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "one_time",
@@ -686,7 +638,7 @@ ts_utc=2026-04-19T22:18:08Z
           "description": "One-time onboarding 23000.00.",
           "product": {
             "name": "Onboarding",
-            "description": "One-time onboarding",
+            "description": "One-time implementation services",
             "type": "product",
             "sku": null
           },
@@ -695,7 +647,7 @@ ts_utc=2026-04-19T22:18:08Z
             "description": null,
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 23000,
+              "amount": 23000.0,
               "currency": null,
               "billing_cadence": null
             }
@@ -736,7 +688,7 @@ ts_utc=2026-04-19T22:18:08Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -752,59 +704,31 @@ ts_utc=2026-04-19T22:18:08Z
   ],
   "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Bright Path Networks\nVendor: North Orbit Systems\nPrimary Contact: Sara Khan (sara.khan@brightpathnetworks.com)\nEffective Date: 2026-01-21\n\nRecurring subscriptions and one-time implementation services are billed under separate\ncommercial tables.\n\nPDF Bookmark Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nul\nACCELIO..\nsample Files\nThis ample package contains:\n| ap_bookmark. pdf Sample POF output.\nap bookmark doc. pdf & document desenbing the sample.\nDeploying the Sample\nTe deploy this sample tn your environment\n1. Open the template design ap_bookmiark.IFD in Guiput Designer and recompile the\nler plate for the appropriaie presentment target.\n2. iadity the -2 option in the “jeb command in the data fle ap beokmark.dat to:\n6 Identify the target output device.\n6 ldentify the booknoiark fie Wein the -bmik command.\n*  |dentify the section for which to generate bookmarks, if desired, using the -abms\nCoOnniriand.\nFor example,\nIrvecices —shokae oadckneark amk —abosinvaLlces\nBOP Bookmerk Seaniple Page 3 at.\n\n\n--- Page 4 [ocr] ---\n—— ae,\n\nAC CIELIC..\n\n4. Place the accompanying files in directories congistent with your implementation:\no Place ap_beokmarIFO in the Dosigns subdinsctory tor Output Designer\no Place ap _beokmeari.mel in the forms subdirectory accessible to Central.\no Place ap_beokmeari.bok in. an addressable directory.\n\nRunning the Sample\ne Torun this sample, place ap_boolunarldar in the collector direciary scanned by Ceniiral.\nBF Bookrienk Sample Page & ot 4.\nae\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nINVOICE\n\nInvoice Number: 10243\nCustomer Name: Vins et alcools Chevalier\nOrder Form\n\nCommercial Amount: 242,000/month\nQuantity: 10\nFinance Contact Ell Reed (ell.reed@brightpathnetworks.com)\n\nAnnual subscription 242,000.00. One-time onboarding 23000.00.\n\n\n\n### SOURCE FILE: exhibit_b.pdf\n\n--- Page 1 [ocr] ---\nStock Report for 2016-07\nExhibit B\nReferenced service levels, usage definitions, or support windows may appear here if\nattached.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/exhibit_b.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Bright Path Networks",
-    "email": "sara.khan@brightpathnetworks.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
-    "currency": null,
-    "start_date": "2026-01-21T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": "Subscription Services",
-      "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+      "name": "Recurring Subscriptions",
+      "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "recurring",
       "pricings": [
         {
-          "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+          "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
           "product": {
             "name": "Subscription",
-            "description": "Annual subscription",
+            "description": "Recurring subscription",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+            "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
             "pricing_data": {
-              "pricing_type": "custom_pricing",
-              "amount": 242000,
+              "pricing_type": "per_unit",
+              "amount": 242000.0,
               "currency": null,
-              "billing_cadence": "monthly",
-              "quantity": 10
+              "billing_cadence": null
             }
           }
         }
@@ -812,7 +736,7 @@ ts_utc=2026-04-19T22:18:08Z
     },
     {
       "name": "Implementation Services",
-      "description": "One-time onboarding services under separate commercial table.",
+      "description": "One-time implementation services are billed under a separate commercial table.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "one_time",
@@ -821,7 +745,7 @@ ts_utc=2026-04-19T22:18:08Z
           "description": "One-time onboarding 23000.00.",
           "product": {
             "name": "Onboarding",
-            "description": "One-time onboarding",
+            "description": "One-time implementation services",
             "type": "product",
             "sku": null
           },
@@ -830,7 +754,7 @@ ts_utc=2026-04-19T22:18:08Z
             "description": null,
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 23000,
+              "amount": 23000.0,
               "currency": null,
               "billing_cadence": null
             }
@@ -841,10 +765,10 @@ ts_utc=2026-04-19T22:18:08Z
   ]
 }
 
-2026-04-20T03:48:15 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:45:30 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:18:15Z
+ts_utc=2026-04-20T05:15:30Z
 
 --- BEFORE (state entering step) ---
 {
@@ -876,7 +800,7 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -904,46 +828,45 @@ ts_utc=2026-04-19T22:18:15Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "currency": null,
     "start_date": "2026-01-21T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Subscription Services",
-      "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+      "name": "Recurring Subscriptions",
+      "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "recurring",
       "pricings": [
         {
-          "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+          "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
           "product": {
             "name": "Subscription",
-            "description": "Annual subscription",
+            "description": "Recurring subscription",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+            "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
             "pricing_data": {
-              "pricing_type": "custom_pricing",
-              "amount": 242000,
+              "pricing_type": "per_unit",
+              "amount": 242000.0,
               "currency": null,
-              "billing_cadence": "monthly",
-              "quantity": 10
+              "billing_cadence": null
             }
           }
         }
@@ -951,7 +874,7 @@ ts_utc=2026-04-19T22:18:15Z
     },
     {
       "name": "Implementation Services",
-      "description": "One-time onboarding services under separate commercial table.",
+      "description": "One-time implementation services are billed under a separate commercial table.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "one_time",
@@ -960,7 +883,7 @@ ts_utc=2026-04-19T22:18:15Z
           "description": "One-time onboarding 23000.00.",
           "product": {
             "name": "Onboarding",
-            "description": "One-time onboarding",
+            "description": "One-time implementation services",
             "type": "product",
             "sku": null
           },
@@ -969,7 +892,7 @@ ts_utc=2026-04-19T22:18:15Z
             "description": null,
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 23000,
+              "amount": 23000.0,
               "currency": null,
               "billing_cadence": null
             }
@@ -997,19 +920,23 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
@@ -1017,40 +944,36 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Commercial Amount: 242,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Commercial Amount: 242,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
-      "quote_or_span": "Quantity: 10"
-    },
-    {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "One-time onboarding 23000.00."
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Annual subscription 242,000.00."
     },
     {
-      "field": "phases[1].start_date",
-      "quote_or_span": "Effective Date: 2026-01-21"
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Annual subscription 242,000.00."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity: 10"
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+      "field": "phases[1].pricings[0].product.name",
+      "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "### SOURCE FILE: order_form.pdf"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+      "field": "phases[1].description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "commercial_core.description",
@@ -1059,6 +982,10 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "field": "customer.custom_attributes.finance_contact",
       "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Exhibit B"
     }
   ]
 }
@@ -1093,7 +1020,7 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -1121,46 +1048,45 @@ ts_utc=2026-04-19T22:18:15Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "currency": null,
     "start_date": "2026-01-21T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Subscription Services",
-      "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+      "name": "Recurring Subscriptions",
+      "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "recurring",
       "pricings": [
         {
-          "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+          "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
           "product": {
             "name": "Subscription",
-            "description": "Annual subscription",
+            "description": "Recurring subscription",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+            "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
             "pricing_data": {
-              "pricing_type": "custom_pricing",
-              "amount": 242000,
+              "pricing_type": "per_unit",
+              "amount": 242000.0,
               "currency": null,
-              "billing_cadence": "monthly",
-              "quantity": 10
+              "billing_cadence": null
             }
           }
         }
@@ -1168,7 +1094,7 @@ ts_utc=2026-04-19T22:18:15Z
     },
     {
       "name": "Implementation Services",
-      "description": "One-time onboarding services under separate commercial table.",
+      "description": "One-time implementation services are billed under a separate commercial table.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "one_time",
@@ -1177,7 +1103,7 @@ ts_utc=2026-04-19T22:18:15Z
           "description": "One-time onboarding 23000.00.",
           "product": {
             "name": "Onboarding",
-            "description": "One-time onboarding",
+            "description": "One-time implementation services",
             "type": "product",
             "sku": null
           },
@@ -1186,7 +1112,7 @@ ts_utc=2026-04-19T22:18:15Z
             "description": null,
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 23000,
+              "amount": 23000.0,
               "currency": null,
               "billing_cadence": null
             }
@@ -1210,19 +1136,23 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
@@ -1230,40 +1160,36 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Commercial Amount: 242,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Commercial Amount: 242,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
-      "quote_or_span": "Quantity: 10"
-    },
-    {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "One-time onboarding 23000.00."
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Annual subscription 242,000.00."
     },
     {
-      "field": "phases[1].start_date",
-      "quote_or_span": "Effective Date: 2026-01-21"
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Annual subscription 242,000.00."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity: 10"
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+      "field": "phases[1].pricings[0].product.name",
+      "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "### SOURCE FILE: order_form.pdf"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+      "field": "phases[1].description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "commercial_core.description",
@@ -1272,13 +1198,17 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "field": "customer.custom_attributes.finance_contact",
       "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Exhibit B"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:18:15Z
+ts_utc=2026-04-20T05:15:30Z
 
 --- BEFORE (state entering step) ---
 {
@@ -1310,7 +1240,7 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -1338,46 +1268,45 @@ ts_utc=2026-04-19T22:18:15Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "currency": null,
     "start_date": "2026-01-21T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Subscription Services",
-      "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+      "name": "Recurring Subscriptions",
+      "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "recurring",
       "pricings": [
         {
-          "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+          "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
           "product": {
             "name": "Subscription",
-            "description": "Annual subscription",
+            "description": "Recurring subscription",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+            "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
             "pricing_data": {
-              "pricing_type": "custom_pricing",
-              "amount": 242000,
+              "pricing_type": "per_unit",
+              "amount": 242000.0,
               "currency": null,
-              "billing_cadence": "monthly",
-              "quantity": 10
+              "billing_cadence": null
             }
           }
         }
@@ -1385,7 +1314,7 @@ ts_utc=2026-04-19T22:18:15Z
     },
     {
       "name": "Implementation Services",
-      "description": "One-time onboarding services under separate commercial table.",
+      "description": "One-time implementation services are billed under a separate commercial table.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "one_time",
@@ -1394,7 +1323,7 @@ ts_utc=2026-04-19T22:18:15Z
           "description": "One-time onboarding 23000.00.",
           "product": {
             "name": "Onboarding",
-            "description": "One-time onboarding",
+            "description": "One-time implementation services",
             "type": "product",
             "sku": null
           },
@@ -1403,7 +1332,7 @@ ts_utc=2026-04-19T22:18:15Z
             "description": null,
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 23000,
+              "amount": 23000.0,
               "currency": null,
               "billing_cadence": null
             }
@@ -1426,19 +1355,23 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
@@ -1446,40 +1379,36 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Commercial Amount: 242,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Commercial Amount: 242,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
-      "quote_or_span": "Quantity: 10"
-    },
-    {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "One-time onboarding 23000.00."
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Annual subscription 242,000.00."
     },
     {
-      "field": "phases[1].start_date",
-      "quote_or_span": "Effective Date: 2026-01-21"
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Annual subscription 242,000.00."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity: 10"
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+      "field": "phases[1].pricings[0].product.name",
+      "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "### SOURCE FILE: order_form.pdf"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+      "field": "phases[1].description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "commercial_core.description",
@@ -1488,6 +1417,10 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "field": "customer.custom_attributes.finance_contact",
       "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Exhibit B"
     }
   ],
   "fatal_error": null
@@ -1497,13 +1430,13 @@ ts_utc=2026-04-19T22:18:15Z
 {
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "start_date": "2026-01-21T12:00:00Z",
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "customer": {
       "customer_name": "Bright Path Networks",
@@ -1511,25 +1444,23 @@ ts_utc=2026-04-19T22:18:15Z
     },
     "phases": [
       {
-        "name": "Subscription Services",
-        "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+        "name": "Recurring Subscriptions",
+        "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
         "start_date": "2026-01-21",
         "phase_type": "recurring",
         "pricings": [
           {
-            "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+            "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
             "product": {
               "name": "Subscription",
-              "description": "Annual subscription",
+              "description": "Recurring subscription",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+              "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
               "pricing_data": {
-                "pricing_type": "custom_pricing",
-                "amount": 242000,
-                "billing_cadence": "monthly",
-                "quantity": 10
+                "pricing_type": "per_unit",
+                "amount": 242000.0
               }
             }
           }
@@ -1537,7 +1468,7 @@ ts_utc=2026-04-19T22:18:15Z
       },
       {
         "name": "Implementation Services",
-        "description": "One-time onboarding services under separate commercial table.",
+        "description": "One-time implementation services are billed under a separate commercial table.",
         "start_date": "2026-01-21",
         "phase_type": "one_time",
         "pricings": [
@@ -1545,13 +1476,13 @@ ts_utc=2026-04-19T22:18:15Z
             "description": "One-time onboarding 23000.00.",
             "product": {
               "name": "Onboarding",
-              "description": "One-time onboarding",
+              "description": "One-time implementation services",
               "type": "product"
             },
             "pricing": {
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 23000
+                "amount": 23000.0
               }
             }
           }
@@ -1565,7 +1496,9 @@ ts_utc=2026-04-19T22:18:15Z
   },
   "missing_fields": [
     "currency",
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+    "phases[1].pricings[0].pricing.pricing_data.billing_cadence"
   ],
   "extraction_notes": [
     {
@@ -1581,19 +1514,23 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
@@ -1601,40 +1538,36 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Commercial Amount: 242,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Commercial Amount: 242,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
-      "quote_or_span": "Quantity: 10"
-    },
-    {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "One-time onboarding 23000.00."
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Annual subscription 242,000.00."
     },
     {
-      "field": "phases[1].start_date",
-      "quote_or_span": "Effective Date: 2026-01-21"
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Annual subscription 242,000.00."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity: 10"
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+      "field": "phases[1].pricings[0].product.name",
+      "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "### SOURCE FILE: order_form.pdf"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+      "field": "phases[1].description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "commercial_core.description",
@@ -1645,8 +1578,12 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
     },
     {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Exhibit B"
+    },
+    {
       "field": "rejected_pdf:amendment_1.pdf",
-      "quote_or_span": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms."
+      "quote_or_span": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms."
     }
   ]
 }
@@ -1681,7 +1618,7 @@ ts_utc=2026-04-19T22:18:15Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_004/amendment_1.pdf",
       "accepted": false,
-      "reject_reason": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms.",
+      "reject_reason": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSample PDF\n menterenpetien ecoaina costinor caly tha RCTEEIRT clyeyeinyica monte\n|\n|\n|\n|\n"
@@ -1709,46 +1646,45 @@ ts_utc=2026-04-19T22:18:15Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "currency": null,
     "start_date": "2026-01-21T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Subscription Services",
-      "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+      "name": "Recurring Subscriptions",
+      "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "recurring",
       "pricings": [
         {
-          "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+          "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
           "product": {
             "name": "Subscription",
-            "description": "Annual subscription",
+            "description": "Recurring subscription",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": null,
-            "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+            "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
             "pricing_data": {
-              "pricing_type": "custom_pricing",
-              "amount": 242000,
+              "pricing_type": "per_unit",
+              "amount": 242000.0,
               "currency": null,
-              "billing_cadence": "monthly",
-              "quantity": 10
+              "billing_cadence": null
             }
           }
         }
@@ -1756,7 +1692,7 @@ ts_utc=2026-04-19T22:18:15Z
     },
     {
       "name": "Implementation Services",
-      "description": "One-time onboarding services under separate commercial table.",
+      "description": "One-time implementation services are billed under a separate commercial table.",
       "start_date": "2026-01-21",
       "end_date": null,
       "phase_type": "one_time",
@@ -1765,7 +1701,7 @@ ts_utc=2026-04-19T22:18:15Z
           "description": "One-time onboarding 23000.00.",
           "product": {
             "name": "Onboarding",
-            "description": "One-time onboarding",
+            "description": "One-time implementation services",
             "type": "product",
             "sku": null
           },
@@ -1774,7 +1710,7 @@ ts_utc=2026-04-19T22:18:15Z
             "description": null,
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 23000,
+              "amount": 23000.0,
               "currency": null,
               "billing_cadence": null
             }
@@ -1797,19 +1733,23 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Master Agreement"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate\ncommercial tables."
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
+    },
+    {
+      "field": "phases[1].name",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-01-21"
+    },
+    {
+      "field": "phases[1].start_date",
       "quote_or_span": "Effective Date: 2026-01-21"
     },
     {
@@ -1817,40 +1757,36 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Commercial Amount: 242,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Commercial Amount: 242,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
-      "quote_or_span": "Quantity: 10"
-    },
-    {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Annual subscription 242,000.00. One-time onboarding 23000.00."
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "One-time onboarding 23000.00."
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Annual subscription 242,000.00."
     },
     {
-      "field": "phases[1].start_date",
-      "quote_or_span": "Effective Date: 2026-01-21"
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+      "quote_or_span": "Commercial Amount: 242,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Annual subscription 242,000.00."
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.pricing_type",
+      "quote_or_span": "Quantity: 10"
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "### SOURCE FILE: master_agreement.pdf"
+      "field": "phases[1].pricings[0].product.name",
+      "quote_or_span": "One-time onboarding 23000.00."
     },
     {
-      "field": "commercial_core.tags[1]",
-      "quote_or_span": "### SOURCE FILE: order_form.pdf"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "### SOURCE FILE: exhibit_b.pdf"
+      "field": "phases[1].description",
+      "quote_or_span": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables."
     },
     {
       "field": "commercial_core.description",
@@ -1861,20 +1797,24 @@ ts_utc=2026-04-19T22:18:15Z
       "quote_or_span": "Finance Contact Ell Reed (ell.reed@brightpathnetworks.com)"
     },
     {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Exhibit B"
+    },
+    {
       "field": "rejected_pdf:amendment_1.pdf",
-      "quote_or_span": "This excerpt appears to be a sample/garbled document and does not show contract, order, license, or amendment terms."
+      "quote_or_span": "The excerpt appears to be a sample/garbled page and does not show contract, order, license, or amendment terms."
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Bright Path Networks and North Orbit Systems. Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
-    "status": "active",
+    "description": "Master agreement between Bright Path Networks and North Orbit Systems covering recurring subscriptions and one-time implementation services, with related order form and exhibit.",
+    "status": "draft",
     "start_date": "2026-01-21T12:00:00Z",
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "exhibit_b.pdf"
+      "master_agreement",
+      "order_form",
+      "exhibit_b"
     ],
     "customer": {
       "customer_name": "Bright Path Networks",
@@ -1882,25 +1822,23 @@ ts_utc=2026-04-19T22:18:15Z
     },
     "phases": [
       {
-        "name": "Subscription Services",
-        "description": "Recurring subscriptions and one-time implementation services are billed under separate commercial tables.",
+        "name": "Recurring Subscriptions",
+        "description": "Recurring subscriptions are billed under a separate commercial table. Order Form states \"Annual subscription 242,000.00\" and also shows \"Commercial Amount: 242,000/month\"; pricing frequency is inconsistent.",
         "start_date": "2026-01-21",
         "phase_type": "recurring",
         "pricings": [
           {
-            "description": "Annual subscription 242,000.00. Commercial Amount: 242,000/month. Quantity: 10.",
+            "description": "Annual subscription 242,000.00. Quantity: 10. Order Form also states \"Commercial Amount: 242,000/month\".",
             "product": {
               "name": "Subscription",
-              "description": "Annual subscription",
+              "description": "Recurring subscription",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount: 242,000/month; Quantity: 10; contract text also states Annual subscription 242,000.00.",
+              "description": "Pricing frequency is ambiguous between annual and monthly in the Order Form.",
               "pricing_data": {
-                "pricing_type": "custom_pricing",
-                "amount": 242000,
-                "billing_cadence": "monthly",
-                "quantity": 10
+                "pricing_type": "per_unit",
+                "amount": 242000.0
               }
             }
           }
@@ -1908,7 +1846,7 @@ ts_utc=2026-04-19T22:18:15Z
       },
       {
         "name": "Implementation Services",
-        "description": "One-time onboarding services under separate commercial table.",
+        "description": "One-time implementation services are billed under a separate commercial table.",
         "start_date": "2026-01-21",
         "phase_type": "one_time",
         "pricings": [
@@ -1916,13 +1854,13 @@ ts_utc=2026-04-19T22:18:15Z
             "description": "One-time onboarding 23000.00.",
             "product": {
               "name": "Onboarding",
-              "description": "One-time onboarding",
+              "description": "One-time implementation services",
               "type": "product"
             },
             "pricing": {
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 23000
+                "amount": 23000.0
               }
             }
           }
@@ -1936,9 +1874,11 @@ ts_utc=2026-04-19T22:18:15Z
   },
   "missing_fields": [
     "currency",
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+    "phases[1].pricings[0].pricing.pricing_data.billing_cadence"
   ]
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:18:15Z
+ended_utc=2026-04-20T05:15:30Z

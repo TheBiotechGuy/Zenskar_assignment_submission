@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:25:18Z
+started_utc=2026-04-20T05:22:33Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:25:18Z
+ts_utc=2026-04-20T05:22:33Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,13 +37,13 @@ ts_utc=2026-04-19T22:25:18Z
   "fatal_error": null
 }
 
-2026-04-20T03:55:19 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf
-2026-04-20T03:55:19 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:55:23 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:55:24 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:52:34 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf
+2026-04-20T10:52:34 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:52:39 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:52:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:25:24Z
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -61,7 +61,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -81,7 +81,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -91,7 +91,7 @@ ts_utc=2026-04-19T22:25:24Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:25:24Z
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -104,7 +104,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -131,7 +131,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -143,8 +143,8 @@ ts_utc=2026-04-19T22:25:24Z
 }
 
 --------------------------------------------------------------------------------
-STEP: customer
-ts_utc=2026-04-19T22:25:24Z
+STEP: commercial
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -157,7 +157,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -170,7 +170,7 @@ ts_utc=2026-04-19T22:25:24Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "customer": {}
+  "commercial_core": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -184,7 +184,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -193,12 +193,12 @@ ts_utc=2026-04-19T22:25:24Z
   "corpus": "",
   "corpus_meta": "",
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "customer": {}
+  "commercial_core": {}
 }
 
 --------------------------------------------------------------------------------
-STEP: commercial
-ts_utc=2026-04-19T22:25:24Z
+STEP: customer
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -211,7 +211,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -219,13 +219,12 @@ ts_utc=2026-04-19T22:25:24Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "commercial_core": {}
+  "customer": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -239,7 +238,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -247,14 +246,13 @@ ts_utc=2026-04-19T22:25:24Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "commercial_core": {}
+  "customer": {}
 }
 
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:25:24Z
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -267,7 +265,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -275,8 +273,6 @@ ts_utc=2026-04-19T22:25:24Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
@@ -296,7 +292,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -304,15 +300,13 @@ ts_utc=2026-04-19T22:25:24Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
   "phases": []
 }
 
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:25:24Z
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -325,7 +319,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -355,7 +349,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -372,7 +366,7 @@ ts_utc=2026-04-19T22:25:24Z
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:25:24Z
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -385,7 +379,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -420,7 +414,7 @@ ts_utc=2026-04-19T22:25:24Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0018.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/financial document, not a contract, order form, MSA, amendment, or license.",
+      "reject_reason": "This excerpt appears to be an invoice or non-contract business document, not a contract, order form, MSA, amendment, or license.",
       "page_count": 1,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nSast Repair Inc. INVOICE\nleast Repair Inc. INWCUC IS\n1212 Harvest Lane\n\nImage Sears\n\nPrepared for: Glue Orbit Analytics\n\nOwes: Mins Cole Inina.coletblucearbitanalytics. com)\n\nDates SOS 6-O3—A00\n\nThis packet combkains business Financial \"operational infernatiioc.\n\nIt may césemble commeccial paperwork but does not itselt sonsiitwie an executed comkoact of order\n\nsckediyle .\n\nRevyiewecs should decide whethec this should be rejected of escalated instead of extracted.\n\n|\nTOTAL 154.06. |\n"
@@ -440,4 +434,4 @@ ts_utc=2026-04-19T22:25:24Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:25:24Z
+ended_utc=2026-04-20T05:22:40Z

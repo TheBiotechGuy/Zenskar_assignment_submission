@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:30:01Z
+started_utc=2026-04-20T05:27:20Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:30:01Z
+ts_utc=2026-04-20T05:27:20Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,15 +37,15 @@ ts_utc=2026-04-19T22:30:01Z
   "fatal_error": null
 }
 
-2026-04-20T04:00:02 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf
-2026-04-20T04:00:02 | INFO | src.parsers.pdf_parser |   Page 1/3
-2026-04-20T04:00:05 | INFO | src.parsers.pdf_parser |   Page 2/3
-2026-04-20T04:00:07 | INFO | src.parsers.pdf_parser |   Page 3/3
-2026-04-20T04:00:10 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 0, 'empty': 0}
-2026-04-20T04:00:12 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:21 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf
+2026-04-20T10:57:21 | INFO | src.parsers.pdf_parser |   Page 1/3
+2026-04-20T10:57:26 | INFO | src.parsers.pdf_parser |   Page 2/3
+2026-04-20T10:57:30 | INFO | src.parsers.pdf_parser |   Page 3/3
+2026-04-20T10:57:35 | INFO | src.parsers.pdf_parser | Done: 3 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 3, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:57:39 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:30:12Z
+ts_utc=2026-04-20T05:27:39Z
 
 --- BEFORE (state entering step) ---
 {
@@ -93,7 +93,7 @@ ts_utc=2026-04-19T22:30:12Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:30:12Z
+ts_utc=2026-04-20T05:27:39Z
 
 --- BEFORE (state entering step) ---
 {
@@ -144,10 +144,10 @@ ts_utc=2026-04-19T22:30:12Z
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf (3 pages)"
 }
 
-2026-04-20T04:00:13 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:30:13Z
+ts_utc=2026-04-20T05:27:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -217,10 +217,10 @@ ts_utc=2026-04-19T22:30:13Z
   }
 }
 
-2026-04-20T04:00:15 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:40 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:30:15Z
+ts_utc=2026-04-20T05:27:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -241,16 +241,6 @@ ts_utc=2026-04-19T22:30:15Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0050.pdf\n\n--- Page 1 [ocr] ---\noe ee\nASF,\nPurchase Orders\nJPURCHASE ORDER |\n(Reference: IDPO3L\nCaunterporby: Golden Orhkit Heldinags |\nPrimary Cantact;: Avs Khan {4va.khanegeldenarbithaldings .cam) |\nEffective Dates 2026-D2-D1\nCommercial Amaunt: 27142, 000fmanth\nQuantity: 12\nProduct / Service: Puxchaze Order\n| Requested By: Ava Khan\nS|\n_ | ‘\n—\nPage t\n\n\n--- Page 2 [ocr] ---\nS|\n|  Caunterparty: Golden Orbit Holdings | ;\nCommercial Cantact: Ava Khan (ava.khan@goldenorbitholdings.com)\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and’ must be.\nreconciled carefully. |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara.\n\n\n--- Page 3 [ocr] ---\nPO\nbe\ncounterparty: Golden Orbit Holdings |\n) Commerelal Cantact: Ava than {ava.khanfigqoldenorbitheldings.com}\nFouivalent fee formata include §10,000/month, $10000/manth, and $10, 000.00/me.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\ntf a referenced exhibit or achedule is missing, its contenta should remain\nunresplved rather than invented.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "IDPO3L",
-    "customer_name": "Golden Orbit Holdings",
-    "email": "ava.khan@goldenorbitholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -258,15 +248,15 @@ ts_utc=2026-04-19T22:30:15Z
 {
   "commercial_core": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -292,38 +282,28 @@ ts_utc=2026-04-19T22:30:15Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0050.pdf\n\n--- Page 1 [ocr] ---\noe ee\nASF,\nPurchase Orders\nJPURCHASE ORDER |\n(Reference: IDPO3L\nCaunterporby: Golden Orhkit Heldinags |\nPrimary Cantact;: Avs Khan {4va.khanegeldenarbithaldings .cam) |\nEffective Dates 2026-D2-D1\nCommercial Amaunt: 27142, 000fmanth\nQuantity: 12\nProduct / Service: Puxchaze Order\n| Requested By: Ava Khan\nS|\n_ | ‘\n—\nPage t\n\n\n--- Page 2 [ocr] ---\nS|\n|  Caunterparty: Golden Orbit Holdings | ;\nCommercial Cantact: Ava Khan (ava.khan@goldenorbitholdings.com)\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and’ must be.\nreconciled carefully. |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara.\n\n\n--- Page 3 [ocr] ---\nPO\nbe\ncounterparty: Golden Orbit Holdings |\n) Commerelal Cantact: Ava than {ava.khanfigqoldenorbitheldings.com}\nFouivalent fee formata include §10,000/month, $10000/manth, and $10, 000.00/me.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\ntf a referenced exhibit or achedule is missing, its contenta should remain\nunresplved rather than invented.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "IDPO3L",
-    "customer_name": "Golden Orbit Holdings",
-    "email": "ava.khan@goldenorbitholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "custom_attributes": null,
     "contract_link": null
   }
 }
 
-2026-04-20T04:00:18 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:43 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:30:18Z
+ts_utc=2026-04-20T05:27:43Z
 
 --- BEFORE (state entering step) ---
 {
@@ -344,31 +324,6 @@ ts_utc=2026-04-19T22:30:18Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0050.pdf\n\n--- Page 1 [ocr] ---\noe ee\nASF,\nPurchase Orders\nJPURCHASE ORDER |\n(Reference: IDPO3L\nCaunterporby: Golden Orhkit Heldinags |\nPrimary Cantact;: Avs Khan {4va.khanegeldenarbithaldings .cam) |\nEffective Dates 2026-D2-D1\nCommercial Amaunt: 27142, 000fmanth\nQuantity: 12\nProduct / Service: Puxchaze Order\n| Requested By: Ava Khan\nS|\n_ | ‘\n—\nPage t\n\n\n--- Page 2 [ocr] ---\nS|\n|  Caunterparty: Golden Orbit Holdings | ;\nCommercial Cantact: Ava Khan (ava.khan@goldenorbitholdings.com)\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and’ must be.\nreconciled carefully. |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara.\n\n\n--- Page 3 [ocr] ---\nPO\nbe\ncounterparty: Golden Orbit Holdings |\n) Commerelal Cantact: Ava than {ava.khanfigqoldenorbitheldings.com}\nFouivalent fee formata include §10,000/month, $10000/manth, and $10, 000.00/me.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\ntf a referenced exhibit or achedule is missing, its contenta should remain\nunresplved rather than invented.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "IDPO3L",
-    "customer_name": "Golden Orbit Holdings",
-    "email": "ava.khan@goldenorbitholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
-    "start_date": "2026-02-01T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "Purchase Order"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -377,16 +332,16 @@ ts_utc=2026-04-19T22:30:18Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
       "start_date": "2026-02-01",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
           "product": {
             "name": "Purchase Order",
-            "description": null,
+            "description": "Product / Service: Purchase Order",
             "type": "product",
             "sku": null
           },
@@ -395,7 +350,7 @@ ts_utc=2026-04-19T22:30:18Z
             "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -425,45 +380,20 @@ ts_utc=2026-04-19T22:30:18Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0050.pdf\n\n--- Page 1 [ocr] ---\noe ee\nASF,\nPurchase Orders\nJPURCHASE ORDER |\n(Reference: IDPO3L\nCaunterporby: Golden Orhkit Heldinags |\nPrimary Cantact;: Avs Khan {4va.khanegeldenarbithaldings .cam) |\nEffective Dates 2026-D2-D1\nCommercial Amaunt: 27142, 000fmanth\nQuantity: 12\nProduct / Service: Puxchaze Order\n| Requested By: Ava Khan\nS|\n_ | ‘\n—\nPage t\n\n\n--- Page 2 [ocr] ---\nS|\n|  Caunterparty: Golden Orbit Holdings | ;\nCommercial Cantact: Ava Khan (ava.khan@goldenorbitholdings.com)\nEquivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.\nOther commercial wording may appear elsewhere in the packet and’ must be.\nreconciled carefully. |\nIf a referenced exhibit or schedule is missing, its contents should remain\nunresolved rather than invented. |\nPayment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara.\n\n\n--- Page 3 [ocr] ---\nPO\nbe\ncounterparty: Golden Orbit Holdings |\n) Commerelal Cantact: Ava than {ava.khanfigqoldenorbitheldings.com}\nFouivalent fee formata include §10,000/month, $10000/manth, and $10, 000.00/me.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully. |\ntf a referenced exhibit or achedule is missing, its contenta should remain\nunresplved rather than invented.\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0050.pdf (3 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "IDPO3L",
-    "customer_name": "Golden Orbit Holdings",
-    "email": "ava.khan@goldenorbitholdings.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
-    "start_date": "2026-02-01T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "Purchase Order"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
       "start_date": "2026-02-01",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
           "product": {
             "name": "Purchase Order",
-            "description": null,
+            "description": "Product / Service: Purchase Order",
             "type": "product",
             "sku": null
           },
@@ -472,7 +402,7 @@ ts_utc=2026-04-19T22:30:18Z
             "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -483,10 +413,10 @@ ts_utc=2026-04-19T22:30:18Z
   ]
 }
 
-2026-04-20T04:00:24 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:48 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:30:24Z
+ts_utc=2026-04-20T05:27:48Z
 
 --- BEFORE (state entering step) ---
 {
@@ -519,15 +449,15 @@ ts_utc=2026-04-19T22:30:24Z
   },
   "commercial_core": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -535,16 +465,16 @@ ts_utc=2026-04-19T22:30:24Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
       "start_date": "2026-02-01",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
           "product": {
             "name": "Purchase Order",
-            "description": null,
+            "description": "Product / Service: Purchase Order",
             "type": "product",
             "sku": null
           },
@@ -553,7 +483,7 @@ ts_utc=2026-04-19T22:30:24Z
             "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -570,7 +500,7 @@ ts_utc=2026-04-19T22:30:24Z
   "extraction_notes": [
     {
       "field": "customer.external_id",
-      "quote_or_span": "(Reference: IDPO3L"
+      "quote_or_span": "Reference: IDPO3L"
     },
     {
       "field": "customer.customer_name",
@@ -578,7 +508,7 @@ ts_utc=2026-04-19T22:30:24Z
     },
     {
       "field": "customer.customer_name",
-      "quote_or_span": "Caunterparty: Golden Orbit Holdings"
+      "quote_or_span": "Counterparty: Golden Orbit Holdings"
     },
     {
       "field": "customer.email",
@@ -589,56 +519,48 @@ ts_utc=2026-04-19T22:30:24Z
       "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "Purchase Orders"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Quantity: 12"
+      "field": "phases[0].name",
+      "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].product.name",
       "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$10,000/month"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 12"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Requested By: Ava Khan"
     }
   ]
 }
@@ -674,15 +596,15 @@ ts_utc=2026-04-19T22:30:24Z
   },
   "commercial_core": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -690,16 +612,16 @@ ts_utc=2026-04-19T22:30:24Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
       "start_date": "2026-02-01",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
           "product": {
             "name": "Purchase Order",
-            "description": null,
+            "description": "Product / Service: Purchase Order",
             "type": "product",
             "sku": null
           },
@@ -708,7 +630,7 @@ ts_utc=2026-04-19T22:30:24Z
             "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -721,7 +643,7 @@ ts_utc=2026-04-19T22:30:24Z
   "extraction_notes": [
     {
       "field": "customer.external_id",
-      "quote_or_span": "(Reference: IDPO3L"
+      "quote_or_span": "Reference: IDPO3L"
     },
     {
       "field": "customer.customer_name",
@@ -729,7 +651,7 @@ ts_utc=2026-04-19T22:30:24Z
     },
     {
       "field": "customer.customer_name",
-      "quote_or_span": "Caunterparty: Golden Orbit Holdings"
+      "quote_or_span": "Counterparty: Golden Orbit Holdings"
     },
     {
       "field": "customer.email",
@@ -740,63 +662,55 @@ ts_utc=2026-04-19T22:30:24Z
       "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "Purchase Orders"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Quantity: 12"
+      "field": "phases[0].name",
+      "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].product.name",
       "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$10,000/month"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 12"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Requested By: Ava Khan"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:30:24Z
+ts_utc=2026-04-20T05:27:48Z
 
 --- BEFORE (state entering step) ---
 {
@@ -829,15 +743,15 @@ ts_utc=2026-04-19T22:30:24Z
   },
   "commercial_core": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -845,16 +759,16 @@ ts_utc=2026-04-19T22:30:24Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
       "start_date": "2026-02-01",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
           "product": {
             "name": "Purchase Order",
-            "description": null,
+            "description": "Product / Service: Purchase Order",
             "type": "product",
             "sku": null
           },
@@ -863,7 +777,7 @@ ts_utc=2026-04-19T22:30:24Z
             "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -875,7 +789,7 @@ ts_utc=2026-04-19T22:30:24Z
   "extraction_notes": [
     {
       "field": "customer.external_id",
-      "quote_or_span": "(Reference: IDPO3L"
+      "quote_or_span": "Reference: IDPO3L"
     },
     {
       "field": "customer.customer_name",
@@ -883,7 +797,7 @@ ts_utc=2026-04-19T22:30:24Z
     },
     {
       "field": "customer.customer_name",
-      "quote_or_span": "Caunterparty: Golden Orbit Holdings"
+      "quote_or_span": "Counterparty: Golden Orbit Holdings"
     },
     {
       "field": "customer.email",
@@ -894,56 +808,48 @@ ts_utc=2026-04-19T22:30:24Z
       "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "Purchase Orders"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Quantity: 12"
+      "field": "phases[0].name",
+      "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].product.name",
       "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$10,000/month"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 12"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Requested By: Ava Khan"
     }
   ],
   "fatal_error": null
@@ -953,11 +859,12 @@ ts_utc=2026-04-19T22:30:24Z
 {
   "validated_json": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "customer": {
       "external_id": "IDPO3L",
@@ -967,21 +874,22 @@ ts_utc=2026-04-19T22:30:24Z
     "phases": [
       {
         "name": "Purchase Order",
-        "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+        "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
         "start_date": "2026-02-01",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+            "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
             "product": {
               "name": "Purchase Order",
+              "description": "Product / Service: Purchase Order",
               "type": "product"
             },
             "pricing": {
               "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 10000,
+                "amount": 10000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -996,13 +904,12 @@ ts_utc=2026-04-19T22:30:24Z
     }
   },
   "missing_fields": [
-    "currency",
     "customer_id"
   ],
   "extraction_notes": [
     {
       "field": "customer.external_id",
-      "quote_or_span": "(Reference: IDPO3L"
+      "quote_or_span": "Reference: IDPO3L"
     },
     {
       "field": "customer.customer_name",
@@ -1010,7 +917,7 @@ ts_utc=2026-04-19T22:30:24Z
     },
     {
       "field": "customer.customer_name",
-      "quote_or_span": "Caunterparty: Golden Orbit Holdings"
+      "quote_or_span": "Counterparty: Golden Orbit Holdings"
     },
     {
       "field": "customer.email",
@@ -1021,56 +928,48 @@ ts_utc=2026-04-19T22:30:24Z
       "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "Purchase Orders"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Quantity: 12"
+      "field": "phases[0].name",
+      "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].product.name",
       "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$10,000/month"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 12"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Requested By: Ava Khan"
     }
   ]
 }
@@ -1106,15 +1005,15 @@ ts_utc=2026-04-19T22:30:24Z
   },
   "commercial_core": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
-    "currency": null,
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "end_date": null,
     "anchor_date": null,
     "renewal_policy": null,
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -1122,16 +1021,16 @@ ts_utc=2026-04-19T22:30:24Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+      "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
       "start_date": "2026-02-01",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+          "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
           "product": {
             "name": "Purchase Order",
-            "description": null,
+            "description": "Product / Service: Purchase Order",
             "type": "product",
             "sku": null
           },
@@ -1140,7 +1039,7 @@ ts_utc=2026-04-19T22:30:24Z
             "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 10000,
+              "amount": 10000.0,
               "currency": "USD",
               "billing_cadence": "monthly"
             }
@@ -1152,7 +1051,7 @@ ts_utc=2026-04-19T22:30:24Z
   "extraction_notes": [
     {
       "field": "customer.external_id",
-      "quote_or_span": "(Reference: IDPO3L"
+      "quote_or_span": "Reference: IDPO3L"
     },
     {
       "field": "customer.customer_name",
@@ -1160,7 +1059,7 @@ ts_utc=2026-04-19T22:30:24Z
     },
     {
       "field": "customer.customer_name",
-      "quote_or_span": "Caunterparty: Golden Orbit Holdings"
+      "quote_or_span": "Counterparty: Golden Orbit Holdings"
     },
     {
       "field": "customer.email",
@@ -1171,66 +1070,59 @@ ts_utc=2026-04-19T22:30:24Z
       "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "commercial_core.tags[0]",
-      "quote_or_span": "Purchase Orders"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Dates 2026-D2-D1"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Quantity: 12"
+      "field": "phases[0].name",
+      "quote_or_span": "JPURCHASE ORDER |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Commercial Amaunt: 27142, 000fmanth"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in’ advance while variable usage\nis billed in arreara."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].product.name",
       "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+      "field": "phases[0].pricings[0].product.description",
+      "quote_or_span": "Product / Service: Puxchaze Order"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
       "quote_or_span": "$10,000/month"
     },
     {
-      "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$10,000/month"
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Quantity: 12"
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Requested By: Ava Khan"
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Purchase Order",
-    "description": "Purchase Order for Golden Orbit Holdings, reference IDPO3L, quantity 12, commercial amount 27142,000/month",
-    "status": "active",
+    "description": "Purchase order for Golden Orbit Holdings, quantity 12, requested by Ava Khan.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-01T12:00:00Z",
     "tags": [
-      "Purchase Order"
+      "purchase order"
     ],
     "customer": {
       "external_id": "IDPO3L",
@@ -1240,21 +1132,22 @@ ts_utc=2026-04-19T22:30:24Z
     "phases": [
       {
         "name": "Purchase Order",
-        "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date 2026-02-01; Commercial Amount appears as 27142,000/month in OCR but is ambiguous. Supplemental text states equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
+        "description": "Reference: IDPO3L; Counterparty: Golden Orbit Holdings; Effective Date: 2026-02-01; Commercial Amount shown as 27142,000/month in OCR, but pages 2-3 clarify equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo. Later clarification reconciles pricing as $10,000 per month.",
         "start_date": "2026-02-01",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Fixed platform fee; payment note says fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+            "description": "Monthly purchase order/platform fee. OCR on page 1 is unclear, but clarified by later pages stating equivalent fee formats include $10,000/month.",
             "product": {
               "name": "Purchase Order",
+              "description": "Product / Service: Purchase Order",
               "type": "product"
             },
             "pricing": {
               "description": "Equivalent fee formats include $10,000/month, $10000/month, and $10,000.00/mo.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 10000,
+                "amount": 10000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -1269,10 +1162,9 @@ ts_utc=2026-04-19T22:30:24Z
     }
   },
   "missing_fields": [
-    "currency",
     "customer_id"
   ]
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:30:24Z
+ended_utc=2026-04-20T05:27:48Z

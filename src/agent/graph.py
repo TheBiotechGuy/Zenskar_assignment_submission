@@ -1,4 +1,14 @@
-"""LangGraph: gather PDFs -> parse & relevance -> merge corpus -> multi-agent extraction -> assemble."""
+"""LangGraph: gather PDFs -> parse & relevance -> merge corpus -> multi-agent extraction -> assemble.
+
+Extraction pipeline (fan-out/fan-in for parallel LLM calls):
+
+  gather → parse → merge → customer ──┐
+                         → commercial ─┼→ notes → assemble → END
+                         → phases    ──┘
+
+customer, commercial, and phases nodes read only from corpus and write to
+independent state keys, so LangGraph runs them concurrently.
+"""
 
 from __future__ import annotations
 
@@ -25,6 +35,9 @@ from src.agent.step_audit import (
 )
 from src.agent.state import ContractAgentState
 from src.models.contract_v2 import build_submission_envelope
+
+# Compiled app is cached at module level — build_graph + compile is called once per process
+_APP: Any = None
 
 
 def _wrap_step(
@@ -61,13 +74,28 @@ def build_graph() -> StateGraph:
     g.set_entry_point("gather")
     g.add_edge("gather", "parse")
     g.add_edge("parse", "merge")
+
+    # Fan-out: three independent LLM agents run in parallel after merge
     g.add_edge("merge", "customer")
-    g.add_edge("customer", "commercial")
-    g.add_edge("commercial", "phases")
+    g.add_edge("merge", "commercial")
+    g.add_edge("merge", "phases")
+
+    # Fan-in: notes waits for all three extraction branches to complete
+    g.add_edge("customer", "notes")
+    g.add_edge("commercial", "notes")
     g.add_edge("phases", "notes")
+
     g.add_edge("notes", "assemble")
     g.add_edge("assemble", END)
     return g
+
+
+def _get_app() -> Any:
+    """Return the compiled LangGraph app, building and caching it on first call."""
+    global _APP
+    if _APP is None:
+        _APP = build_graph().compile()
+    return _APP
 
 
 def run_contract_agent(
@@ -77,8 +105,7 @@ def run_contract_agent(
     audit_log_path: str | None = None,
 ) -> dict[str, Any]:
     """Run the compiled graph and return the submission envelope."""
-    graph = build_graph()
-    app = graph.compile()
+    app = _get_app()
     initial: ContractAgentState = {
         "input_path": input_path,
         "recursive_pdf": recursive_pdf,

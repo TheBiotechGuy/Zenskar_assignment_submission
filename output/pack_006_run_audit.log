@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:19:00Z
+started_utc=2026-04-20T05:16:07Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:19:00Z
+ts_utc=2026-04-20T05:16:07Z
 
 --- BEFORE (state entering step) ---
 {
@@ -41,27 +41,27 @@ ts_utc=2026-04-19T22:19:00Z
   "fatal_error": null
 }
 
-2026-04-20T03:49:01 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf
-2026-04-20T03:49:01 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:49:08 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=41.6)
-2026-04-20T03:49:11 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:49:11 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:49:20 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=52.9)
-2026-04-20T03:49:25 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:49:25 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:49:35 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:49:42 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
-2026-04-20T03:49:42 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf
-2026-04-20T03:49:43 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:49:46 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=58.8)
-2026-04-20T03:49:49 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
-2026-04-20T03:49:49 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
-2026-04-20T03:49:49 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf
-2026-04-20T03:49:49 | INFO | src.parsers.pdf_parser |   Page 1/1
-2026-04-20T03:49:52 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:46:08 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf
+2026-04-20T10:46:08 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf
+2026-04-20T10:46:08 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf
+2026-04-20T10:46:08 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:46:08 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:46:08 | INFO | src.parsers.pdf_parser |   Page 1/1
+2026-04-20T10:46:14 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 1, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:46:15 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=58.8)
+2026-04-20T10:46:19 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:46:19 | INFO | src.parsers.pdf_parser | Done: 1 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 0, 'llm_vision': 1, 'empty': 0}
+2026-04-20T10:46:20 | INFO | src.parsers.pdf_parser |     Page 1 → LLM vision (ocr_conf=41.6)
+2026-04-20T10:46:23 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:46:23 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:46:35 | INFO | src.parsers.pdf_parser |     Page 2 → LLM vision (ocr_conf=52.9)
+2026-04-20T10:46:43 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:46:43 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:46:56 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:47:06 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 2, 'llm_vision': 2, 'empty': 0}
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:19:52Z
+ts_utc=2026-04-20T05:17:06Z
 
 --- BEFORE (state entering step) ---
 {
@@ -84,7 +84,7 @@ ts_utc=2026-04-19T22:19:52Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -122,7 +122,7 @@ ts_utc=2026-04-19T22:19:52Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -145,7 +145,7 @@ ts_utc=2026-04-19T22:19:52Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:19:52Z
+ts_utc=2026-04-20T05:17:06Z
 
 --- BEFORE (state entering step) ---
 {
@@ -163,7 +163,7 @@ ts_utc=2026-04-19T22:19:52Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -187,7 +187,7 @@ ts_utc=2026-04-19T22:19:52Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -208,7 +208,7 @@ ts_utc=2026-04-19T22:19:52Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -228,14 +228,14 @@ ts_utc=2026-04-19T22:19:52Z
     }
   ],
   "fatal_error": null,
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)"
 }
 
-2026-04-20T03:49:53 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:47:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:19:53Z
+ts_utc=2026-04-20T05:17:08Z
 
 --- BEFORE (state entering step) ---
 {
@@ -253,7 +253,7 @@ ts_utc=2026-04-19T22:19:53Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -272,7 +272,7 @@ ts_utc=2026-04-19T22:19:53Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "fatal_error": null
 }
@@ -283,7 +283,7 @@ ts_utc=2026-04-19T22:19:53Z
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -307,7 +307,7 @@ ts_utc=2026-04-19T22:19:53Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -326,14 +326,14 @@ ts_utc=2026-04-19T22:19:53Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "fatal_error": null,
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -341,10 +341,10 @@ ts_utc=2026-04-19T22:19:53Z
   }
 }
 
-2026-04-20T03:49:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:47:08 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:19:56Z
+ts_utc=2026-04-20T05:17:08Z
 
 --- BEFORE (state entering step) ---
 {
@@ -362,7 +362,7 @@ ts_utc=2026-04-19T22:19:56Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -381,18 +381,8 @@ ts_utc=2026-04-19T22:19:56Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -400,17 +390,17 @@ ts_utc=2026-04-19T22:19:56Z
 {
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-03-17T12:00:00Z",
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
@@ -433,7 +423,7 @@ ts_utc=2026-04-19T22:19:56Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -452,42 +442,32 @@ ts_utc=2026-04-19T22:19:56Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-03-17T12:00:00Z",
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   }
 }
 
-2026-04-20T03:49:58 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:47:10 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:19:58Z
+ts_utc=2026-04-20T05:17:10Z
 
 --- BEFORE (state entering step) ---
 {
@@ -505,7 +485,7 @@ ts_utc=2026-04-19T22:19:58Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -524,35 +504,8 @@ ts_utc=2026-04-19T22:19:58Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
-    "currency": "GBP",
-    "start_date": "2026-01-31T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -560,26 +513,26 @@ ts_utc=2026-04-19T22:19:58Z
 {
   "phases": [
     {
-      "name": "Commercial",
-      "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+      "name": "Paid Phase",
+      "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
       "start_date": "2026-01-31",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+          "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
           "product": {
-            "name": "Commercial Amount",
-            "description": "Recurring service fee",
+            "name": "Apex Orbit Analytics services",
+            "description": "Services under Master Agreement / Order Form",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": "Recurring fee",
-            "description": "Recurring fee £42,000.00/mo",
+            "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -606,7 +559,7 @@ ts_utc=2026-04-19T22:19:58Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -625,58 +578,31 @@ ts_utc=2026-04-19T22:19:58Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
-  "customer": {
-    "id": null,
-    "external_id": null,
-    "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
-    "currency": "GBP",
-    "start_date": "2026-01-31T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": null,
-    "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
-      "name": "Commercial",
-      "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+      "name": "Paid Phase",
+      "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
       "start_date": "2026-01-31",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+          "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
           "product": {
-            "name": "Commercial Amount",
-            "description": "Recurring service fee",
+            "name": "Apex Orbit Analytics services",
+            "description": "Services under Master Agreement / Order Form",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": "Recurring fee",
-            "description": "Recurring fee £42,000.00/mo",
+            "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -687,10 +613,10 @@ ts_utc=2026-04-19T22:19:58Z
   ]
 }
 
-2026-04-20T03:50:03 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:47:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:20:03Z
+ts_utc=2026-04-20T05:17:14Z
 
 --- BEFORE (state entering step) ---
 {
@@ -708,7 +634,7 @@ ts_utc=2026-04-19T22:20:03Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -727,13 +653,13 @@ ts_utc=2026-04-19T22:20:03Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -741,43 +667,43 @@ ts_utc=2026-04-19T22:20:03Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-03-17T12:00:00Z",
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial",
-      "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+      "name": "Paid Phase",
+      "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
       "start_date": "2026-01-31",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+          "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
           "product": {
-            "name": "Commercial Amount",
-            "description": "Recurring service fee",
+            "name": "Apex Orbit Analytics services",
+            "description": "Services under Master Agreement / Order Form",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": "Recurring fee",
-            "description": "Recurring fee £42,000.00/mo",
+            "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -798,7 +724,7 @@ ts_utc=2026-04-19T22:20:03Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+      "quote_or_span": "Primary Contact: Zara Miller (zara.miller@summitpeaksystems.com)"
     },
     {
       "field": "commercial_core.name",
@@ -809,20 +735,16 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Effective Date: 2026-01-31"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Amendment Date: 2026-03-17"
+    },
+    {
       "field": "commercial_core.currency",
       "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-01-31"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Recurring fee £42,000.00/mo."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].pricings[0].pricing.name",
@@ -845,12 +767,12 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Quantity: 120"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor: Apex Orbit Analytics"
+      "field": "phases[0].description",
+      "quote_or_span": "If Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,"
     },
     {
       "field": "commercial_core.description",
-      "quote_or_span": "Service levels are governed by Exhibit B."
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
     }
   ]
 }
@@ -871,7 +793,7 @@ ts_utc=2026-04-19T22:20:03Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -890,13 +812,13 @@ ts_utc=2026-04-19T22:20:03Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -904,43 +826,43 @@ ts_utc=2026-04-19T22:20:03Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-03-17T12:00:00Z",
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial",
-      "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+      "name": "Paid Phase",
+      "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
       "start_date": "2026-01-31",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+          "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
           "product": {
-            "name": "Commercial Amount",
-            "description": "Recurring service fee",
+            "name": "Apex Orbit Analytics services",
+            "description": "Services under Master Agreement / Order Form",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": "Recurring fee",
-            "description": "Recurring fee £42,000.00/mo",
+            "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -957,7 +879,7 @@ ts_utc=2026-04-19T22:20:03Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+      "quote_or_span": "Primary Contact: Zara Miller (zara.miller@summitpeaksystems.com)"
     },
     {
       "field": "commercial_core.name",
@@ -968,20 +890,16 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Effective Date: 2026-01-31"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Amendment Date: 2026-03-17"
+    },
+    {
       "field": "commercial_core.currency",
       "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-01-31"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Recurring fee £42,000.00/mo."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].pricings[0].pricing.name",
@@ -1004,19 +922,19 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Quantity: 120"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor: Apex Orbit Analytics"
+      "field": "phases[0].description",
+      "quote_or_span": "If Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,"
     },
     {
       "field": "commercial_core.description",
-      "quote_or_span": "Service levels are governed by Exhibit B."
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:20:03Z
+ts_utc=2026-04-20T05:17:14Z
 
 --- BEFORE (state entering step) ---
 {
@@ -1034,7 +952,7 @@ ts_utc=2026-04-19T22:20:03Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -1053,13 +971,13 @@ ts_utc=2026-04-19T22:20:03Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -1067,43 +985,43 @@ ts_utc=2026-04-19T22:20:03Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-03-17T12:00:00Z",
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial",
-      "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+      "name": "Paid Phase",
+      "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
       "start_date": "2026-01-31",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+          "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
           "product": {
-            "name": "Commercial Amount",
-            "description": "Recurring service fee",
+            "name": "Apex Orbit Analytics services",
+            "description": "Services under Master Agreement / Order Form",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": "Recurring fee",
-            "description": "Recurring fee £42,000.00/mo",
+            "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -1119,7 +1037,7 @@ ts_utc=2026-04-19T22:20:03Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+      "quote_or_span": "Primary Contact: Zara Miller (zara.miller@summitpeaksystems.com)"
     },
     {
       "field": "commercial_core.name",
@@ -1130,20 +1048,16 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Effective Date: 2026-01-31"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Amendment Date: 2026-03-17"
+    },
+    {
       "field": "commercial_core.currency",
       "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-01-31"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Recurring fee £42,000.00/mo."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].pricings[0].pricing.name",
@@ -1166,12 +1080,12 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Quantity: 120"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor: Apex Orbit Analytics"
+      "field": "phases[0].description",
+      "quote_or_span": "If Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,"
     },
     {
       "field": "commercial_core.description",
-      "quote_or_span": "Service levels are governed by Exhibit B."
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
     }
   ],
   "fatal_error": null
@@ -1181,39 +1095,40 @@ ts_utc=2026-04-19T22:20:03Z
 {
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
+    "anchor_date": "2026-03-17T12:00:00Z",
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "customer": {
       "customer_name": "Summit Peak Systems",
-      "email": "zora.miller@summitpeaksystems.com"
+      "email": "zara.miller@summitpeaksystems.com"
     },
     "phases": [
       {
-        "name": "Commercial",
-        "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+        "name": "Paid Phase",
+        "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
         "start_date": "2026-01-31",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+            "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
             "product": {
-              "name": "Commercial Amount",
-              "description": "Recurring service fee",
+              "name": "Apex Orbit Analytics services",
+              "description": "Services under Master Agreement / Order Form",
               "type": "product"
             },
             "pricing": {
               "name": "Recurring fee",
-              "description": "Recurring fee £42,000.00/mo",
+              "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -1237,7 +1152,7 @@ ts_utc=2026-04-19T22:20:03Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+      "quote_or_span": "Primary Contact: Zara Miller (zara.miller@summitpeaksystems.com)"
     },
     {
       "field": "commercial_core.name",
@@ -1248,20 +1163,16 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Effective Date: 2026-01-31"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Amendment Date: 2026-03-17"
+    },
+    {
       "field": "commercial_core.currency",
       "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-01-31"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Recurring fee £42,000.00/mo."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].pricings[0].pricing.name",
@@ -1284,12 +1195,12 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Quantity: 120"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor: Apex Orbit Analytics"
+      "field": "phases[0].description",
+      "quote_or_span": "If Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,"
     },
     {
       "field": "commercial_core.description",
-      "quote_or_span": "Service levels are governed by Exhibit B."
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
     }
   ]
 }
@@ -1310,7 +1221,7 @@ ts_utc=2026-04-19T22:20:03Z
       "reject_reason": "",
       "page_count": 4,
       "parse_error": null,
-      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invo... [truncated, 2533 chars total]"
+      "full_text": "\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n... [truncated, 2496 chars total]"
     },
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf",
@@ -1329,13 +1240,13 @@ ts_utc=2026-04-19T22:20:03Z
       "full_text": "\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n"
     }
   ],
-  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zora Miller (zora.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample                                          Page 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n• Invoices sorted, ascending, by date.\n\n• Invoices sorted, ascending, by item type.\n\n• Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
+  "corpus": "\n\n### SOURCE FILE: master_agreement.pdf\n\n--- Page 1 [llm_vision] ---\nACCELIO.\n\nMaster Agreement\n\nCustomer: Summit Peak Systems\nVendor: Apex Orbit Analytics\nPrimary Contact: Zara Miller (zara.miller@summitpeaksystems.com)\nEffective Date: 2026-01-31\n\nService levels are governed by Exhibit B.\n\nPDF Document Sample\n\nPage 1 of 4\n\n--- Page 2 [llm_vision] ---\nACCELIO.\n\nSample Data File\n\n^reformat trunc\n^symbolset WINLATIN1\n^field trans_date\n2000-01-1\n^field description\nDescription for item #1\n^field trans_type\nTYPE1\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-2\n^field description\nDescription for item #2\n^field trans_type\nTYPE2\n^field trans_amount\n11.00\n^page 1\n^field trans_date\n2000-01-3\n^field description\nDescription for item #3\n^field trans_type\nTYPE3\n\nSample Bookmark File\n\n[invoices]\nInvoices by Date=0\ntrans_date=1,A\n[type]\nInvoices by Item Type=0\ntrans_type=1,A\n[amount]\nInvoices by Transaction Amount=0\ntrans_amount=1,D\n\nThe example bookmark file includes three distinct sections:\n\n•  Invoices sorted, ascending, by date.\n\n•  Invoices sorted, ascending, by item type.\n\n•  Invoices sorted, descending, by transaction amount.\n\nPDF Bookmark Sample\n\nPage 2 of 4\n\n--- Page 3 [ocr] ---\nACCEL.\n\nSaimiple Files\nTHIS 2amiple package contains:\n\nPlanar Deeecription\nap_booknnark FD _| The template deeign.\nsip _bookmark.dat | & sample dats file in DvkT format.\n| id\n| ap_bookniark.bmk | 4 gample bookmark file.\nap bookmark. palf sample POP cuit. |\nSp bookniark_doc pelt 4, document describing the sample.\nDeploying the Sample\nTe deploy this sample in your environment:\n\n1. Oper the template degign ap_bookmarkJFD in Output Designer and recompile the\ntemplate for the appropriate preseniment target, .\n2. iWedity the =2 agtion in the “eb conimane ir ihe dats file ap bookmark clat to:\n6 Identify the target output devin.\no Identify the bookmark file using the -abmk comand.\no identify the 2ection for which to generate bookmarks, if desired, using the -abms\n7 comin. |_\nFor example,\nInweines sahinka_hoakmark im “abs LivoLees\n= iii ket gpg _\nBOF Bookrnerk Semple age 3 at 4\n\n\n--- Page 4 [ocr] ---\na. Place the accompanying files in directories consistent wilh your implementation:\no Place ap_boaokmarclrO inthe Goslgns subdirectory for Output Designer.\n° Place op_bookmaricmd? in the forms subdirectory accessible to Central.\no Place ap_bookmarihmlt in an addressable directory.\nRUNING the Saniple\n2 To fun this sample, place ap_bealmiark.dat in the collector directory seanned ny Geeninal.\nFP Bookmerk Semple Page fl of 4\n\n\n\n\n### SOURCE FILE: order_form.pdf\n\n--- Page 1 [llm_vision] ---\nPurchase Orders\n\n| Order Form |\n\nCommercial Amount: £42,000.00/mo\nQuantity: 120\nFinance Contact: Liam Singh (liam.singh@summitpeaksystems.com)\n\nRecurring fee £42,000.00/mo. Service levels referenced but not attached here.\n\nPage 1\n\n\n\n### SOURCE FILE: amendment_1.pdf\n\n--- Page 1 [ocr] ---\nTTT aa\n. : . VW | | |\nfanendmecst L\n: Amendment Date: 2026-03-17\nIf Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,\noe\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/master_agreement.pdf (4 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/order_form.pdf (1 pages)\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/packs/pack_006/amendment_1.pdf (1 pages)",
   "customer": {
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -1343,43 +1254,43 @@ ts_utc=2026-04-19T22:20:03Z
   },
   "commercial_core": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
     "end_date": null,
-    "anchor_date": null,
+    "anchor_date": "2026-03-17T12:00:00Z",
     "renewal_policy": null,
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "custom_attributes": null,
     "contract_link": null
   },
   "phases": [
     {
-      "name": "Commercial",
-      "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+      "name": "Paid Phase",
+      "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
       "start_date": "2026-01-31",
       "end_date": null,
       "phase_type": "paid",
       "pricings": [
         {
-          "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+          "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
           "product": {
-            "name": "Commercial Amount",
-            "description": "Recurring service fee",
+            "name": "Apex Orbit Analytics services",
+            "description": "Services under Master Agreement / Order Form",
             "type": "product",
             "sku": null
           },
           "pricing": {
             "name": "Recurring fee",
-            "description": "Recurring fee £42,000.00/mo",
+            "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 42000,
+              "amount": 42000.0,
               "currency": "GBP",
               "billing_cadence": "monthly"
             }
@@ -1395,7 +1306,7 @@ ts_utc=2026-04-19T22:20:03Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+      "quote_or_span": "Primary Contact: Zara Miller (zara.miller@summitpeaksystems.com)"
     },
     {
       "field": "commercial_core.name",
@@ -1406,20 +1317,16 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Effective Date: 2026-01-31"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Amendment Date: 2026-03-17"
+    },
+    {
       "field": "commercial_core.currency",
       "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-01-31"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Recurring fee £42,000.00/mo."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].pricings[0].pricing.name",
@@ -1442,50 +1349,51 @@ ts_utc=2026-04-19T22:20:03Z
       "quote_or_span": "Quantity: 120"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor: Apex Orbit Analytics"
+      "field": "phases[0].description",
+      "quote_or_span": "If Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,"
     },
     {
       "field": "commercial_core.description",
-      "quote_or_span": "Service levels are governed by Exhibit B."
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
+    "anchor_date": "2026-03-17T12:00:00Z",
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "customer": {
       "customer_name": "Summit Peak Systems",
-      "email": "zora.miller@summitpeaksystems.com"
+      "email": "zara.miller@summitpeaksystems.com"
     },
     "phases": [
       {
-        "name": "Commercial",
-        "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+        "name": "Paid Phase",
+        "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
         "start_date": "2026-01-31",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+            "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
             "product": {
-              "name": "Commercial Amount",
-              "description": "Recurring service fee",
+              "name": "Apex Orbit Analytics services",
+              "description": "Services under Master Agreement / Order Form",
               "type": "product"
             },
             "pricing": {
               "name": "Recurring fee",
-              "description": "Recurring fee £42,000.00/mo",
+              "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -1505,4 +1413,4 @@ ts_utc=2026-04-19T22:20:03Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:20:03Z
+ended_utc=2026-04-20T05:17:14Z

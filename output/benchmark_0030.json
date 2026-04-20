@@ -10,10 +10,15 @@
     "custom_attributes": null
   },
   "validated_json": {
-    "name": "Commercial Schedule - Reference 3001193",
-    "description": "Commercial schedule for Nimbus Canvas Commerce for Mixed Form product/service.",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Nimbus Canvas Commerce covering 1 quantity of Mixed Form service with a commercial amount of £7,000.00 and notes about a free trial preceding the paid phase.",
     "status": "draft",
     "currency": "GBP",
+    "tags": [
+      "Commercial Schedule",
+      "Mixed Form",
+      "Free Trial"
+    ],
     "customer": {
       "external_id": "3001193",
       "customer_name": "Nimbus Canvas Commerce",
@@ -22,12 +27,12 @@
     "phases": [
       {
         "name": "Paid Phase",
-        "description": "Commercial schedule states 'Commercial Amount: £7,000.00', Quantity: 1, Product / Services: Mixed Form. Repeated amendment text says a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
+        "description": "Commercial Schedule Reference 3001193. Later amended terms indicate a free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing.",
         "start_date": "2025-01-36",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial Amount for Mixed Form",
+            "description": "Mixed Form commercial amount",
             "product": {
               "name": "Mixed Form",
               "type": "product"
@@ -36,7 +41,7 @@
               "description": "Commercial Amount: £7,000.00; Quantity: 1",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP"
               }
             }
@@ -45,7 +50,7 @@
       },
       {
         "name": "Free Trial",
-        "description": "Referenced in amended terms as preceding the paid phase, but no price, dates, or line items are provided.",
+        "description": "A free trial period ends before the paid phase begins; no trial pricing specified.",
         "phase_type": "trial",
         "pricings": []
       }
@@ -57,6 +62,8 @@
   },
   "missing_fields": [
     "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
+    "phases[1].pricings",
     "start_date"
   ],
   "extraction_notes": [
@@ -74,31 +81,31 @@
     },
     {
       "field": "commercial_core.name",
-      "quote_or_span": "COMMERCIAL SCHEDULE\nReference: 3001193"
+      "quote_or_span": "COMMERCIAL SCHEDULE"
     },
     {
       "field": "commercial_core.currency",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "8¥eetive Dates 2025-01-36"
+      "quote_or_span": "——- + -8¥eetive Dates 2025-01-36 —"
     },
     {
-      "field": "phases[0].name",
-      "quote_or_span": "paid phase begins"
+      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "Cammereial Amount: £7,000.00 oo"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £7,000.00; Quantity: 1"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product / Servicer Mixed Form"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Cammereial Amount: £7,000.00"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£7,000.00"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -106,6 +113,14 @@
     },
     {
       "field": "phases[1].name",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[1].description",
+      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
+    },
+    {
+      "field": "phases[0].description",
       "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not\noverwrite paid pricing."
     }
   ]

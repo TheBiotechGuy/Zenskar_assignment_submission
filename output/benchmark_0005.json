@@ -10,7 +10,8 @@
     "custom_attributes": null
   },
   "validated_json": {
-    "description": "Scanned commercial attachment / invoice for Apex Bloom Labs; product/service Image Form; commercial amount £18,000/month.",
+    "name": "East Repair Inc. - Apex Bloom Labs Commercial Attachment",
+    "description": "Scanned commercial attachment/invoice referencing Apex Bloom Labs for Image Form service, quantity 1, commercial amount £18,000/month.",
     "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-19T12:00:00Z",
@@ -25,10 +26,8 @@
     },
     "phases": [
       {
-        "name": "Commercial Terms",
-        "description": "Invoice/commercial attachment for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount: £18,000/month. Payment terms indicate recurring platform fees billed in advance and usage billed in arrears; no explicit separate usage price stated.",
+        "description": "Commercial attachment/invoice for Apex Bloom Labs. Effective Date: 2026-02-19. Commercial Amount stated as £18,000/month. Payment terms note recurring platform fees billed in advance; variable usage billed in arrears. No explicit separate phase names provided.",
         "start_date": "2026-02-19",
-        "phase_type": "paid",
         "pricings": [
           {
             "description": "Commercial Amount",
@@ -41,7 +40,7 @@
               "description": "Commercial Amount: £18,000/month",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 18000,
+                "amount": 18000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -56,8 +55,7 @@
     }
   },
   "missing_fields": [
-    "customer_id",
-    "name"
+    "customer_id"
   ],
   "extraction_notes": [
     {
@@ -85,18 +83,6 @@
       "quote_or_span": "Effective Date: 2026-02-19"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Amount: £18,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "fixed platform fees may be billed in advance"
-    },
-    {
-      "field": "phases[0].pricings[0].product.description",
-      "quote_or_span": "recurring platform | fees"
-    },
-    {
       "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
@@ -113,8 +99,16 @@
       "quote_or_span": "Commercial Amount: £18,000/month"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "fixed platform fées may be billed in advance while variable usage"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: £18,000/month"
+    },
+    {
+      "field": "commercial_core.name",
+      "quote_or_span": "East Repair Inc.                                                     INVOICE"
     },
     {
       "field": "commercial_core.description",

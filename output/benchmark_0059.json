@@ -11,12 +11,12 @@
   },
   "validated_json": {
     "name": "Purchase Requisition",
-    "description": "Purchase Requisition for Bright Canvas Analytics with commercial amount £7,000.00/mo",
-    "status": "active",
+    "description": "Purchase Requisition for Bright Canvas Analytics at £7,000.00 per month",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-03-29T12:00:00Z",
     "tags": [
-      "Purchase Requisition"
+      "purchase requisition"
     ],
     "customer": {
       "external_id": "300087",
@@ -26,7 +26,7 @@
     "phases": [
       {
         "name": "Paid Phase",
-        "description": "Purchase Requisition effective 2026-03-29 with commercial amount stated as £7,000.00/mo. Document notes that any free trial ends before the paid phase begins, but no separate trial pricing is stated.",
+        "description": "Purchase Requisition effective 2026-03-29. Commercial Amount stated as £7,000.00/mo. Repeated packet note indicates any free trial ends before the paid phase begins, but no explicit trial pricing or dates are provided.",
         "start_date": "2026-03-29",
         "phase_type": "paid",
         "pricings": [
@@ -34,7 +34,7 @@
             "description": "Commercial Amount",
             "product": {
               "name": "Purchase Requisition",
-              "description": "Line item product/service: Purchase Requisition",
+              "description": "Line item product/service listed as Purchase Requisition",
               "type": "product",
               "sku": "101"
             },
@@ -42,7 +42,7 @@
               "description": "Commercial Amount: £7,000.00/mo",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -94,11 +94,11 @@
     },
     {
       "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product /# Service: Purchase Requisition"
+      "quote_or_span": "Purchase Requisition"
     },
     {
       "field": "phases[0].pricings[0].product.sku",
-      "quote_or_span": "Purcchase Requisition 101 1"
+      "quote_or_span": "Purchase Requisition 101 1"
     },
     {
       "field": "phases[0].pricings[0].pricing.description",
@@ -115,10 +115,6 @@
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
       "quote_or_span": "£7,000.00/mo"
-    },
-    {
-      "field": "phases[0].phase_type",
-      "quote_or_span": "A free trial period ends before the paid phase begins; trial terms do not overwrite paid pricing."
     }
   ]
 }

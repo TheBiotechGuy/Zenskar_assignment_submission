@@ -3,7 +3,7 @@
     "id": null,
     "external_id": null,
     "customer_name": "Summit orbit Analytics",
-    "email": "liam. shah@summitorbitanalyti. com",
+    "email": "liam.shah@summitorbitanalyti.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -11,36 +11,37 @@
   },
   "validated_json": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement between customer Summit Orbit Analytics and vendor Summit Bridge Systems with related order form and Amendment 1.",
-    "status": "active",
+    "description": "Master Agreement between Summit Orbit Analytics and Summit Bridge Systems with related Order Form and Amendment 1.",
+    "status": "draft",
+    "currency": "USD",
     "start_date": "2026-02-15T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
-      "amendment"
+      "Master Agreement",
+      "Order Form",
+      "Amendment"
     ],
     "customer": {
       "customer_name": "Summit orbit Analytics",
-      "email": "liam. shah@summitorbitanalyti. com"
+      "email": "liam.shah@summitorbitanalyti.com"
     },
     "phases": [
       {
-        "name": "Commercial Term",
-        "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 notes operational launch timing and contractual commencement can differ but provides no revised pricing.",
+        "name": "Initial Term",
+        "description": "Commercial obligations commence on the Effective Date unless otherwise stated. Order Form states Commercial Amount: 224,000.00/mo. Amendment 1 does not state revised pricing or superseding commercial terms.",
         "start_date": "2026-02-25",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial Amount",
+            "description": "Commercial Amount from Order Form",
             "product": {
-              "name": "Commercial Services",
+              "name": "Commercial Amount",
               "type": "product"
             },
             "pricing": {
-              "description": "Order Form states 'Commercial Amount: 224,000.00/mo'",
+              "description": "Order Form lists \"Commercial Amount: 224,000.00/mo\".",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 224000,
+                "amount": 224000.0,
                 "billing_cadence": "monthly"
               }
             }
@@ -54,7 +55,6 @@
     }
   },
   "missing_fields": [
-    "currency",
     "customer_id"
   ],
   "extraction_notes": [
@@ -67,16 +67,12 @@
       "quote_or_span": "Primary Contact: Liam Shah (liam. shah@summitorbitanalyti. com}"
     },
     {
-      "field": "commercial_core.name",
-      "quote_or_span": "Mester Agreement |"
-    },
-    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-15"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless atherwise stated."
+      "quote_or_span": "Effective Date: 2026-02-25. Cammercial obligations commence on the Effective Date unless"
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
@@ -91,7 +87,11 @@
       "quote_or_span": "Commercial Amount: 2?24,000.00/mo"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "commercial_core.name",
+      "quote_or_span": "Mester Agreement"
+    },
+    {
+      "field": "commercial_core.name",
       "quote_or_span": "Order Form"
     },
     {
@@ -99,8 +99,32 @@
       "quote_or_span": "Vendor: Summit Bridge Systems |"
     },
     {
-      "field": "phases[0].description",
-      "quote_or_span": "Operational launch timing and contractual commencement can differ."
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "Mester Agreement |"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "Order Form"
+    },
+    {
+      "field": "commercial_core.tags[2]",
+      "quote_or_span": "Amendment 1"
+    },
+    {
+      "field": "customer.custom_attributes.finance_contact",
+      "quote_or_span": "Finance Contact: Liam Turner {liam.turner8summitorbitanalyti.com)"
+    },
+    {
+      "field": "commercial_core.custom_attributes.projected_go_live_date",
+      "quote_or_span": "Projected go-live date: 2026-03-22. Go-live timing does not hy itself change the"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_date",
+      "quote_or_span": "Amendment Date: 2026-04-01"
+    },
+    {
+      "field": "commercial_core.custom_attributes.amendment_total",
+      "quote_or_span": "TOTAL                                                          $154.06"
     }
   ]
 }

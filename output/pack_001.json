@@ -5,74 +5,64 @@
     "customer_name": "prime Leat Holdings",
     "email": "nina .potel@primelcatholdings can",
     "phone_number": null,
-    "address": {
-      "line1": null,
-      "line2": null,
-      "city": null,
-      "state": null,
-      "zipCode": null,
-      "country": null,
-      "country_code": null
-    },
+    "address": null,
     "tax_info": null,
     "custom_attributes": null
   },
   "validated_json": {
-    "name": "Master Agreement / Order Form",
-    "description": "Master agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1.",
-    "status": "active",
+    "name": "Master Agreement",
+    "description": "Master Agreement between Prime Leaf Holdings and River Marker Logistics with related order form and Amendment 1 for platform subscription fees.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2026-01-06T12:00:00Z",
-    "renewal_policy": "Amendment 1 states the prior platform fee is replaced with $12,000/month beginning next renewal cycle.",
     "tags": [
-      "master agreement",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "customer": {
       "external_id": "10248",
       "customer_name": "prime Leat Holdings",
-      "email": "nina .potel@primelcatholdings can",
-      "address": {}
+      "email": "nina .potel@primelcatholdings can"
     },
     "phases": [
       {
-        "name": "Platform Subscription",
-        "description": "Master Agreement effective 2026-01-06. Order Form states initial platform subscription fee of $10,000.00/mo with included units: 10. Amendment 1 dated 2026-02-20 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+        "name": "Subscription Phase",
+        "description": "Order Form dated after master agreement. Amendment 1 dated 2026-02-20 replaces the prior platform fee beginning next renewal cycle.",
         "start_date": "2026-01-06",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Initial platform subscription fee with included units: 10.",
+            "description": "Initial platform subscription fee; included units: 10.",
             "product": {
-              "name": "Platform Subscription",
-              "description": "Initial platform subscription",
+              "name": "Platform subscription",
+              "description": "Commercial Amount / Initial platform subscription fee",
               "type": "product"
             },
             "pricing": {
-              "name": "Platform Fee",
-              "description": "Initial platform subscription fee",
+              "name": "Platform fee",
+              "description": "Initial platform subscription fee: $10,000.00/mo. Included units: 10.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 10000,
+                "amount": 10000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
             }
           },
           {
-            "description": "Amendment 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
+            "description": "Replacement platform fee beginning next renewal cycle per Amendment 1.",
             "product": {
-              "name": "Platform Subscription",
-              "description": "Amended platform subscription",
+              "name": "Platform subscription",
+              "description": "Amended platform fee",
               "type": "product"
             },
             "pricing": {
-              "name": "Platform Fee",
-              "description": "Replacement platform fee effective beginning next renewal cycle per Amendment 1 dated 2026-02-20.",
+              "name": "Platform fee amendment",
+              "description": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 12000,
+                "amount": 12000.0,
                 "currency": "USD",
                 "billing_cadence": "monthly"
               }
@@ -103,6 +93,10 @@
       "quote_or_span": "Primary Contacer Nina Patel (nina .potel@primelcatholdings can]"
     },
     {
+      "field": "commercial_core.name",
+      "quote_or_span": "Master Agveemant"
+    },
+    {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-01-06"
     },
@@ -112,83 +106,51 @@
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "Commercial Amount: $10,000/month"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
       "field": "phases[0].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "Initial platform subscription fee: $10,000.00/mo."
+      "quote_or_span": "$10,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Initial platform subscription fee: $10,000.00/mo. Included units: 10."
     },
     {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "platform subscription fee"
+    },
+    {
       "field": "phases[0].pricings[1].pricing.pricing_data.amount",
+      "quote_or_span": "$12,000/month"
+    },
+    {
+      "field": "phases[0].pricings[1].pricing.description",
       "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "$12,000/month beginning next renewal cycle"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "beginning next renewal cycle"
     },
     {
       "field": "phases[0].description",
       "quote_or_span": "Amendment Date: 2026-02-20"
     },
     {
-      "field": "phases[0].pricings[1].pricing.description",
-      "quote_or_span": "Amendment Date: 2026-02-20"
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: prime Leat Holdings :\nVendert River Harker Logistics\nPrimary Contacer Nina Patel (nina .potel@primelcatholdings can]\nEffective Date: 2026-01-06"
     },
     {
-      "field": "phases[0].pricings[1].description",
-      "quote_or_span": "Amendment No. 1 replaces the prior platform fee with $12,000/month beginning next renewal cycle."
+      "field": "phases[0].pricings[0].pricing.pricing_data.currency",
+      "quote_or_span": "$10,000.00/mo."
     },
     {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "platform subscription"
-    },
-    {
-      "field": "customer.customer_name",
-      "quote_or_span": "Custamer Name: Vins et alenale Chavalier"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "Commercial Amount: $10,000/month"
-    },
-    {
-      "field": "phases[0].pricings[0].pricing.pricing_data.unit_amount",
-      "quote_or_span": "Quantity: 10"
+      "field": "phases[0].pricings[1].pricing.pricing_data.currency",
+      "quote_or_span": "$12,000/month"
     },
     {
       "field": "phases[0].pricings[0].description",
       "quote_or_span": "Included units: 10."
-    },
-    {
-      "field": "customer.email",
-      "quote_or_span": "Finance Contact: Liam Baker (liam. baker@primeleafholdings.com)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Master Agveemant"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "Order Form"
-    },
-    {
-      "field": "commercial_core.tags[2]",
-      "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "phases[0].pricings[1].pricing.name",
-      "quote_or_span": "platform fee"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor:t River Harker Logistics"
     }
   ]
 }

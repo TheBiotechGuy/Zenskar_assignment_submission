@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:29:35Z
+started_utc=2026-04-20T05:26:51Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:29:35Z
+ts_utc=2026-04-20T05:26:51Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,15 +37,15 @@ ts_utc=2026-04-19T22:29:35Z
   "fatal_error": null
 }
 
-2026-04-20T03:59:36 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf
-2026-04-20T03:59:36 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:59:39 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:59:43 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:59:47 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:59:50 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:56:51 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf
+2026-04-20T10:56:51 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:56:55 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:57:00 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:57:05 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:57:11 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:29:50Z
+ts_utc=2026-04-20T05:27:11Z
 
 --- BEFORE (state entering step) ---
 {
@@ -93,7 +93,7 @@ ts_utc=2026-04-19T22:29:50Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:29:50Z
+ts_utc=2026-04-20T05:27:11Z
 
 --- BEFORE (state entering step) ---
 {
@@ -144,10 +144,10 @@ ts_utc=2026-04-19T22:29:50Z
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf (4 pages)"
 }
 
-2026-04-20T03:59:51 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:12 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: customer
-ts_utc=2026-04-19T22:29:51Z
+ts_utc=2026-04-20T05:27:12Z
 
 --- BEFORE (state entering step) ---
 {
@@ -217,10 +217,10 @@ ts_utc=2026-04-19T22:29:51Z
   }
 }
 
-2026-04-20T03:59:53 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: commercial
-ts_utc=2026-04-19T22:29:53Z
+ts_utc=2026-04-20T05:27:14Z
 
 --- BEFORE (state entering step) ---
 {
@@ -241,16 +241,6 @@ ts_utc=2026-04-19T22:29:53Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0048.pdf\n\n--- Page 1 [ocr] ---\na a a\nsee amended od SS “4 |\nPurchases Orders\n\nPURCHASE ORDER ~\n\nReference: S00D35\n\nCounterparty: Silver Vista Systems\n\nPrimary Cantact: Zara Chen {zara.chen@silvervistasystems .com)\n\nEffective Date: 2026-02-05\n\nCammercial Amaunt: £7,000.00\n\nQuantity: 120\n\nProduct / Service: Purchase Order\n\nRequested By: Zara& Chen\nPage Tt\nOO\n\n\n--- Page 2 [ocr] ---\neco\nsee amended terms\nCounterparty: Silver Vista Systema\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, .\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arrears.\n\n\n--- Page 3 [ocr] ---\nsee amended terms\n\n| counterparty: Silwer Vista Systema |\ncommercial Contaet: Zara chen (zara.chen@ailvervistasyatema. com}\n\n| The parties may diseusa continuation before expiry, Hut no automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere - he nooks :\nreconciled carefully.\nIf a referenced exhibit or gchedule is missing, |\nunresolved rather than invented, ee\n\n_ Se\n\n\n--- Page 4 [ocr] ---\ne amended terms\nCounterparty: Silver Vista Systems\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\n——— >The parties may discuss continuation hefore expiry, but no automatic renewal is”\nguaranteed by this clause alone,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit ar schedule ie miasing,\nunresolved rather than invented,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf (4 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "S00D35",
-    "customer_name": "Silver Vista Systems",
-    "email": "zara.chen@silvervistasystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null
 }
 
@@ -258,8 +248,8 @@ ts_utc=2026-04-19T22:29:53Z
 {
   "commercial_core": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "end_date": null,
@@ -292,21 +282,11 @@ ts_utc=2026-04-19T22:29:53Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0048.pdf\n\n--- Page 1 [ocr] ---\na a a\nsee amended od SS “4 |\nPurchases Orders\n\nPURCHASE ORDER ~\n\nReference: S00D35\n\nCounterparty: Silver Vista Systems\n\nPrimary Cantact: Zara Chen {zara.chen@silvervistasystems .com)\n\nEffective Date: 2026-02-05\n\nCammercial Amaunt: £7,000.00\n\nQuantity: 120\n\nProduct / Service: Purchase Order\n\nRequested By: Zara& Chen\nPage Tt\nOO\n\n\n--- Page 2 [ocr] ---\neco\nsee amended terms\nCounterparty: Silver Vista Systema\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, .\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arrears.\n\n\n--- Page 3 [ocr] ---\nsee amended terms\n\n| counterparty: Silwer Vista Systema |\ncommercial Contaet: Zara chen (zara.chen@ailvervistasyatema. com}\n\n| The parties may diseusa continuation before expiry, Hut no automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere - he nooks :\nreconciled carefully.\nIf a referenced exhibit or gchedule is missing, |\nunresolved rather than invented, ee\n\n_ Se\n\n\n--- Page 4 [ocr] ---\ne amended terms\nCounterparty: Silver Vista Systems\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\n——— >The parties may discuss continuation hefore expiry, but no automatic renewal is”\nguaranteed by this clause alone,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit ar schedule ie miasing,\nunresolved rather than invented,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf (4 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "S00D35",
-    "customer_name": "Silver Vista Systems",
-    "email": "zara.chen@silvervistasystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
   "fatal_error": null,
   "commercial_core": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "end_date": null,
@@ -320,10 +300,10 @@ ts_utc=2026-04-19T22:29:53Z
   }
 }
 
-2026-04-20T03:59:56 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:14 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:29:56Z
+ts_utc=2026-04-20T05:27:14Z
 
 --- BEFORE (state entering step) ---
 {
@@ -344,31 +324,6 @@ ts_utc=2026-04-19T22:29:56Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0048.pdf\n\n--- Page 1 [ocr] ---\na a a\nsee amended od SS “4 |\nPurchases Orders\n\nPURCHASE ORDER ~\n\nReference: S00D35\n\nCounterparty: Silver Vista Systems\n\nPrimary Cantact: Zara Chen {zara.chen@silvervistasystems .com)\n\nEffective Date: 2026-02-05\n\nCammercial Amaunt: £7,000.00\n\nQuantity: 120\n\nProduct / Service: Purchase Order\n\nRequested By: Zara& Chen\nPage Tt\nOO\n\n\n--- Page 2 [ocr] ---\neco\nsee amended terms\nCounterparty: Silver Vista Systema\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, .\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arrears.\n\n\n--- Page 3 [ocr] ---\nsee amended terms\n\n| counterparty: Silwer Vista Systema |\ncommercial Contaet: Zara chen (zara.chen@ailvervistasyatema. com}\n\n| The parties may diseusa continuation before expiry, Hut no automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere - he nooks :\nreconciled carefully.\nIf a referenced exhibit or gchedule is missing, |\nunresolved rather than invented, ee\n\n_ Se\n\n\n--- Page 4 [ocr] ---\ne amended terms\nCounterparty: Silver Vista Systems\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\n——— >The parties may discuss continuation hefore expiry, but no automatic renewal is”\nguaranteed by this clause alone,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit ar schedule ie miasing,\nunresolved rather than invented,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf (4 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "S00D35",
-    "customer_name": "Silver Vista Systems",
-    "email": "zara.chen@silvervistasystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
-    "currency": "GBP",
-    "start_date": "2026-02-05T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": [
-      "purchase order"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null
 }
 
@@ -377,13 +332,13 @@ ts_utc=2026-04-19T22:29:56Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+      "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
       "start_date": "2026-02-05",
       "end_date": null,
-      "phase_type": null,
+      "phase_type": "order",
       "pricings": [
         {
-          "description": "Commercial amount for the purchase order.",
+          "description": "Commercial Amount listed on the purchase order.",
           "product": {
             "name": "Purchase Order",
             "description": "Product / Service: Purchase Order",
@@ -391,11 +346,11 @@ ts_utc=2026-04-19T22:29:56Z
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount explicitly stated on Page 1.",
+            "name": "Commercial Amount",
+            "description": "Fixed commercial amount on purchase order.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -425,42 +380,17 @@ ts_utc=2026-04-19T22:29:56Z
   ],
   "corpus": "\n\n### SOURCE FILE: benchmark_0048.pdf\n\n--- Page 1 [ocr] ---\na a a\nsee amended od SS “4 |\nPurchases Orders\n\nPURCHASE ORDER ~\n\nReference: S00D35\n\nCounterparty: Silver Vista Systems\n\nPrimary Cantact: Zara Chen {zara.chen@silvervistasystems .com)\n\nEffective Date: 2026-02-05\n\nCammercial Amaunt: £7,000.00\n\nQuantity: 120\n\nProduct / Service: Purchase Order\n\nRequested By: Zara& Chen\nPage Tt\nOO\n\n\n--- Page 2 [ocr] ---\neco\nsee amended terms\nCounterparty: Silver Vista Systema\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\nThe parties may discuss continuation before expiry, but no automatic renewal is\nguaranteed by this clause alone.\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\ntf a referenced exhibit or schedule is missing, .\nunresolved rather than invented.\nPayment note: fixed platform fees may be billed in advance while variable usage\nig billed in arrears.\n\n\n--- Page 3 [ocr] ---\nsee amended terms\n\n| counterparty: Silwer Vista Systema |\ncommercial Contaet: Zara chen (zara.chen@ailvervistasyatema. com}\n\n| The parties may diseusa continuation before expiry, Hut no automatic renewal is\nguaranteed by this clause alone.\nOther cammercial wording may appear elsewhere - he nooks :\nreconciled carefully.\nIf a referenced exhibit or gchedule is missing, |\nunresolved rather than invented, ee\n\n_ Se\n\n\n--- Page 4 [ocr] ---\ne amended terms\nCounterparty: Silver Vista Systems\nCommercial Contact: Zara Chen (zara.chen@silvervistasystems.com)\n——— >The parties may discuss continuation hefore expiry, but no automatic renewal is”\nguaranteed by this clause alone,\nOther commercial wording may appear elsewhere in the packet and must be\nreconciled carefully.\nIf a referenced exhibit ar schedule ie miasing,\nunresolved rather than invented,\n\n",
   "corpus_meta": "Merged corpus from:\n- /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0048.pdf (4 pages)",
-  "customer": {
-    "id": null,
-    "external_id": "S00D35",
-    "customer_name": "Silver Vista Systems",
-    "email": "zara.chen@silvervistasystems.com",
-    "phone_number": null,
-    "address": null,
-    "tax_info": null,
-    "custom_attributes": null
-  },
-  "commercial_core": {
-    "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
-    "currency": "GBP",
-    "start_date": "2026-02-05T12:00:00Z",
-    "end_date": null,
-    "anchor_date": null,
-    "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
-    "tags": [
-      "purchase order"
-    ],
-    "custom_attributes": null,
-    "contract_link": null
-  },
   "fatal_error": null,
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+      "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
       "start_date": "2026-02-05",
       "end_date": null,
-      "phase_type": null,
+      "phase_type": "order",
       "pricings": [
         {
-          "description": "Commercial amount for the purchase order.",
+          "description": "Commercial Amount listed on the purchase order.",
           "product": {
             "name": "Purchase Order",
             "description": "Product / Service: Purchase Order",
@@ -468,11 +398,11 @@ ts_utc=2026-04-19T22:29:56Z
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount explicitly stated on Page 1.",
+            "name": "Commercial Amount",
+            "description": "Fixed commercial amount on purchase order.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -483,10 +413,10 @@ ts_utc=2026-04-19T22:29:56Z
   ]
 }
 
-2026-04-20T04:00:01 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:57:20 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:30:01Z
+ts_utc=2026-04-20T05:27:20Z
 
 --- BEFORE (state entering step) ---
 {
@@ -519,8 +449,8 @@ ts_utc=2026-04-19T22:30:01Z
   },
   "commercial_core": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "end_date": null,
@@ -535,13 +465,13 @@ ts_utc=2026-04-19T22:30:01Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+      "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
       "start_date": "2026-02-05",
       "end_date": null,
-      "phase_type": null,
+      "phase_type": "order",
       "pricings": [
         {
-          "description": "Commercial amount for the purchase order.",
+          "description": "Commercial Amount listed on the purchase order.",
           "product": {
             "name": "Purchase Order",
             "description": "Product / Service: Purchase Order",
@@ -549,11 +479,11 @@ ts_utc=2026-04-19T22:30:01Z
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount explicitly stated on Page 1.",
+            "name": "Commercial Amount",
+            "description": "Fixed commercial amount on purchase order.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -578,14 +508,30 @@ ts_utc=2026-04-19T22:30:01Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+      "quote_or_span": "Zara Chen (zara.chen@silvervistasystems.com)"
     },
     {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-05"
     },
     {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
       "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
       "quote_or_span": "Cammercial Amaunt: £7,000.00"
     },
     {
@@ -599,22 +545,6 @@ ts_utc=2026-04-19T22:30:01Z
     {
       "field": "phases[0].description",
       "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
-    },
-    {
-      "field": "phases[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
     }
   ]
 }
@@ -650,8 +580,8 @@ ts_utc=2026-04-19T22:30:01Z
   },
   "commercial_core": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "end_date": null,
@@ -666,13 +596,13 @@ ts_utc=2026-04-19T22:30:01Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+      "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
       "start_date": "2026-02-05",
       "end_date": null,
-      "phase_type": null,
+      "phase_type": "order",
       "pricings": [
         {
-          "description": "Commercial amount for the purchase order.",
+          "description": "Commercial Amount listed on the purchase order.",
           "product": {
             "name": "Purchase Order",
             "description": "Product / Service: Purchase Order",
@@ -680,11 +610,11 @@ ts_utc=2026-04-19T22:30:01Z
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount explicitly stated on Page 1.",
+            "name": "Commercial Amount",
+            "description": "Fixed commercial amount on purchase order.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -705,14 +635,30 @@ ts_utc=2026-04-19T22:30:01Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+      "quote_or_span": "Zara Chen (zara.chen@silvervistasystems.com)"
     },
     {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-05"
     },
     {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
       "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
       "quote_or_span": "Cammercial Amaunt: £7,000.00"
     },
     {
@@ -726,29 +672,13 @@ ts_utc=2026-04-19T22:30:01Z
     {
       "field": "phases[0].description",
       "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
-    },
-    {
-      "field": "phases[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
     }
   ]
 }
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:30:01Z
+ts_utc=2026-04-20T05:27:20Z
 
 --- BEFORE (state entering step) ---
 {
@@ -781,8 +711,8 @@ ts_utc=2026-04-19T22:30:01Z
   },
   "commercial_core": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "end_date": null,
@@ -797,13 +727,13 @@ ts_utc=2026-04-19T22:30:01Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+      "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
       "start_date": "2026-02-05",
       "end_date": null,
-      "phase_type": null,
+      "phase_type": "order",
       "pricings": [
         {
-          "description": "Commercial amount for the purchase order.",
+          "description": "Commercial Amount listed on the purchase order.",
           "product": {
             "name": "Purchase Order",
             "description": "Product / Service: Purchase Order",
@@ -811,11 +741,11 @@ ts_utc=2026-04-19T22:30:01Z
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount explicitly stated on Page 1.",
+            "name": "Commercial Amount",
+            "description": "Fixed commercial amount on purchase order.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -835,14 +765,30 @@ ts_utc=2026-04-19T22:30:01Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+      "quote_or_span": "Zara Chen (zara.chen@silvervistasystems.com)"
     },
     {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-05"
     },
     {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
       "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
       "quote_or_span": "Cammercial Amaunt: £7,000.00"
     },
     {
@@ -856,22 +802,6 @@ ts_utc=2026-04-19T22:30:01Z
     {
       "field": "phases[0].description",
       "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
-    },
-    {
-      "field": "phases[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
     }
   ],
   "fatal_error": null
@@ -881,8 +811,8 @@ ts_utc=2026-04-19T22:30:01Z
 {
   "validated_json": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
@@ -897,21 +827,23 @@ ts_utc=2026-04-19T22:30:01Z
     "phases": [
       {
         "name": "Purchase Order",
-        "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+        "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
         "start_date": "2026-02-05",
+        "phase_type": "order",
         "pricings": [
           {
-            "description": "Commercial amount for the purchase order.",
+            "description": "Commercial Amount listed on the purchase order.",
             "product": {
               "name": "Purchase Order",
               "description": "Product / Service: Purchase Order",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount explicitly stated on Page 1.",
+              "name": "Commercial Amount",
+              "description": "Fixed commercial amount on purchase order.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP"
               }
             }
@@ -925,7 +857,8 @@ ts_utc=2026-04-19T22:30:01Z
     }
   },
   "missing_fields": [
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence"
   ],
   "extraction_notes": [
     {
@@ -938,14 +871,30 @@ ts_utc=2026-04-19T22:30:01Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+      "quote_or_span": "Zara Chen (zara.chen@silvervistasystems.com)"
     },
     {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-05"
     },
     {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
       "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
       "quote_or_span": "Cammercial Amaunt: £7,000.00"
     },
     {
@@ -959,22 +908,6 @@ ts_utc=2026-04-19T22:30:01Z
     {
       "field": "phases[0].description",
       "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
-    },
-    {
-      "field": "phases[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
     }
   ]
 }
@@ -1010,8 +943,8 @@ ts_utc=2026-04-19T22:30:01Z
   },
   "commercial_core": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "end_date": null,
@@ -1026,13 +959,13 @@ ts_utc=2026-04-19T22:30:01Z
   "phases": [
     {
       "name": "Purchase Order",
-      "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+      "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
       "start_date": "2026-02-05",
       "end_date": null,
-      "phase_type": null,
+      "phase_type": "order",
       "pricings": [
         {
-          "description": "Commercial amount for the purchase order.",
+          "description": "Commercial Amount listed on the purchase order.",
           "product": {
             "name": "Purchase Order",
             "description": "Product / Service: Purchase Order",
@@ -1040,11 +973,11 @@ ts_utc=2026-04-19T22:30:01Z
             "sku": null
           },
           "pricing": {
-            "name": null,
-            "description": "Commercial Amount explicitly stated on Page 1.",
+            "name": "Commercial Amount",
+            "description": "Fixed commercial amount on purchase order.",
             "pricing_data": {
               "pricing_type": "flat_fee",
-              "amount": 7000,
+              "amount": 7000.0,
               "currency": "GBP",
               "billing_cadence": null
             }
@@ -1064,14 +997,30 @@ ts_utc=2026-04-19T22:30:01Z
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Zara Chen {zara.chen@silvervistasystems .com)"
+      "quote_or_span": "Zara Chen (zara.chen@silvervistasystems.com)"
     },
     {
       "field": "commercial_core.start_date",
       "quote_or_span": "Effective Date: 2026-02-05"
     },
     {
+      "field": "commercial_core.renewal_policy",
+      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
+    },
+    {
       "field": "commercial_core.currency",
+      "quote_or_span": "Cammercial Amaunt: £7,000.00"
+    },
+    {
+      "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-05"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Purchase Order"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.name",
       "quote_or_span": "Cammercial Amaunt: £7,000.00"
     },
     {
@@ -1085,29 +1034,13 @@ ts_utc=2026-04-19T22:30:01Z
     {
       "field": "phases[0].description",
       "quote_or_span": "Quantity: 120"
-    },
-    {
-      "field": "phases[0].name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Product / Service: Purchase Order"
-    },
-    {
-      "field": "commercial_core.renewal_policy",
-      "quote_or_span": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone."
-    },
-    {
-      "field": "phases[0].description",
-      "quote_or_span": "Payment note: fixed platform fees may be billed in advance while variable usage ig billed in arrears."
     }
   ],
   "fatal_error": null,
   "validated_json": {
     "name": "Purchase Order - S00D35",
-    "description": "Purchase order for Silver Vista Systems with quantity 120 and commercial amount £7,000.00.",
-    "status": "active",
+    "description": "Purchase order for Silver Vista Systems; quantity 120; commercial amount £7,000.00; product/service: Purchase Order.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-05T12:00:00Z",
     "renewal_policy": "The parties may discuss continuation before expiry, but no automatic renewal is guaranteed by this clause alone.",
@@ -1122,21 +1055,23 @@ ts_utc=2026-04-19T22:30:01Z
     "phases": [
       {
         "name": "Purchase Order",
-        "description": "Reference: S00D35; Commercial Amount: £7,000.00; Quantity: 120; Product / Service: Purchase Order. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears, but no variable pricing or separate fee components are explicitly stated.",
+        "description": "Purchase Order reference S00D35 for Silver Vista Systems. Effective Date: 2026-02-05. Commercial Amount: £7,000.00. Quantity: 120. No explicit phase end date provided. 'see amended terms' appears, but no amendment with revised pricing is present in the provided text.",
         "start_date": "2026-02-05",
+        "phase_type": "order",
         "pricings": [
           {
-            "description": "Commercial amount for the purchase order.",
+            "description": "Commercial Amount listed on the purchase order.",
             "product": {
               "name": "Purchase Order",
               "description": "Product / Service: Purchase Order",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount explicitly stated on Page 1.",
+              "name": "Commercial Amount",
+              "description": "Fixed commercial amount on purchase order.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 7000,
+                "amount": 7000.0,
                 "currency": "GBP"
               }
             }
@@ -1150,9 +1085,10 @@ ts_utc=2026-04-19T22:30:01Z
     }
   },
   "missing_fields": [
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence"
   ]
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:30:01Z
+ended_utc=2026-04-20T05:27:20Z

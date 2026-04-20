@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:23:33Z
+started_utc=2026-04-20T05:20:48Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:23:33Z
+ts_utc=2026-04-20T05:20:48Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,16 +37,16 @@ ts_utc=2026-04-19T22:23:33Z
   "fatal_error": null
 }
 
-2026-04-20T03:53:33 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf
-2026-04-20T03:53:33 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:53:37 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:53:41 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:53:44 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:53:48 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:53:49 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:50:48 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf
+2026-04-20T10:50:48 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:50:54 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:51:01 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:51:05 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:51:12 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:51:13 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:23:49Z
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -64,7 +64,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -84,7 +84,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -94,7 +94,7 @@ ts_utc=2026-04-19T22:23:49Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:23:49Z
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -107,7 +107,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -134,7 +134,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -146,8 +146,8 @@ ts_utc=2026-04-19T22:23:49Z
 }
 
 --------------------------------------------------------------------------------
-STEP: customer
-ts_utc=2026-04-19T22:23:49Z
+STEP: commercial
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -160,7 +160,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -173,7 +173,7 @@ ts_utc=2026-04-19T22:23:49Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "customer": {}
+  "commercial_core": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -187,7 +187,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -196,12 +196,12 @@ ts_utc=2026-04-19T22:23:49Z
   "corpus": "",
   "corpus_meta": "",
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "customer": {}
+  "commercial_core": {}
 }
 
 --------------------------------------------------------------------------------
-STEP: commercial
-ts_utc=2026-04-19T22:23:49Z
+STEP: customer
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -214,7 +214,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -222,13 +222,12 @@ ts_utc=2026-04-19T22:23:49Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "commercial_core": {}
+  "customer": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -242,7 +241,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -250,14 +249,13 @@ ts_utc=2026-04-19T22:23:49Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "commercial_core": {}
+  "customer": {}
 }
 
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:23:49Z
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -270,7 +268,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -278,8 +276,6 @@ ts_utc=2026-04-19T22:23:49Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
@@ -299,7 +295,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -307,15 +303,13 @@ ts_utc=2026-04-19T22:23:49Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
   "phases": []
 }
 
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:23:49Z
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -328,7 +322,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -358,7 +352,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -375,7 +369,7 @@ ts_utc=2026-04-19T22:23:49Z
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:23:49Z
+ts_utc=2026-04-20T05:21:13Z
 
 --- BEFORE (state entering step) ---
 {
@@ -388,7 +382,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -423,7 +417,7 @@ ts_utc=2026-04-19T22:23:49Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0003.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/scanned commercial attachment, not a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This excerpt is primarily an invoice and commercial attachment, not a contract or agreement with binding terms.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\nEast Repair lnc. INVOICE\n1812 Harvest Lane\nSCANNED COMMERCIAL ATTACHMZSNT |\nReterence: 300143\nCounterpsrty: Slue Sloom Holdings\nPrimary Contect: Nine Morris {nina .morris@bluebloeemholdiags.com)\neofective Date: 2026-02-23\nCommerccisl Amount: £12,000.00\nDusmbkity: 120\nProduct / Service: Image Form\nImage-origin text or annotations may modify typed terms. r\n.\n9\n9\nTOTAL $154.06 |\n\n\n--- Page 2 [ocr] ---\neee\nCounterparty: Blue Bloom Holdings |\nCommercial Contact: Mina Morris ining -morris(bluebloomhol dings .com| |\n| Bquivalent fee formate include $10, 000/month, $10000/month, and $10,000.00/mo.\nOther commercis) wording may appear ¢laewhere {py the packet ang Must be |\nreconciled Carefully,\nIf a rezerenced eBxhibit or Schedule ie Missing, its contents should remain\n| unreso... [truncated, 1801 chars total]"
@@ -443,4 +437,4 @@ ts_utc=2026-04-19T22:23:49Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:23:49Z
+ended_utc=2026-04-20T05:21:13Z

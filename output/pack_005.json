@@ -5,54 +5,82 @@
     "customer_name": "Prime Peak Networks",
     "email": "sara.morris@primepeaknetworks.com",
     "phone_number": null,
-    "address": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
     "tax_info": null,
     "custom_attributes": null
   },
   "validated_json": {
     "name": "Master Agreement / Order Form",
-    "description": "Master Agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial and paid phase conversion.",
-    "status": "active",
+    "description": "Master agreement for Prime Peak Networks with Apex Peak Analytics, including a time-limited trial period and paid phase details from the order form.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-26T12:00:00Z",
     "anchor_date": "2026-02-25T12:00:00Z",
     "tags": [
-      "trial",
-      "order form",
+      "master_agreement",
+      "order_form",
       "amendment"
     ],
     "customer": {
       "external_id": "10248",
       "customer_name": "Prime Peak Networks",
-      "email": "sara.morris@primepeaknetworks.com"
+      "email": "sara.morris@primepeaknetworks.com",
+      "address": {}
     },
     "phases": [
       {
         "name": "Trial",
-        "description": "Time-limited trial period before paid services begin. Trial begins 2026-01-26 and converts to paid phase on 2026-02-25.",
+        "description": "Time-limited trial period before paid services begin.",
         "start_date": "2026-01-26",
         "end_date": "2026-02-24",
         "phase_type": "trial",
-        "pricings": []
+        "pricings": [
+          {
+            "description": "Trial period pricing treatment is zero-priced; amendment states paid phase does not inherit zero-priced trial treatment.",
+            "product": {
+              "name": "Services",
+              "description": "Trial services",
+              "type": "product"
+            },
+            "pricing": {
+              "name": "Trial Pricing",
+              "description": "Zero-priced trial treatment referenced by amendment.",
+              "pricing_data": {
+                "pricing_type": "flat_fee",
+                "amount": 0.0,
+                "currency": "GBP"
+              }
+            }
+          }
+        ]
       },
       {
         "name": "Paid Phase",
-        "description": "Converts from trial on 2026-02-25. Amendment 1 states the paid phase does not inherit zero-priced trial treatment.",
+        "description": "Converts from trial to paid phase.",
         "start_date": "2026-02-25",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Commercial amount for paid phase",
+            "description": "Commercial Amount £42,000.00; trial converts to paid phase on 2026-02-25 at £42,000.00/mo. Amendment 1 clarifies the paid phase does not inherit zero-priced trial treatment.",
             "product": {
-              "name": "Paid Services",
-              "description": "Order Form commercial amount",
+              "name": "Services",
+              "description": "Paid services",
               "type": "product"
             },
             "pricing": {
-              "description": "Trial converts to paid phase on 2026-02-25 at £42,000.00/mo.",
+              "name": "Recurring Fee",
+              "description": "Paid phase monthly fee.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -67,7 +95,8 @@
     }
   },
   "missing_fields": [
-    "customer_id"
+    "customer_id",
+    "phases[0].pricings[0].pricing.pricing_data.billing_cadence"
   ],
   "extraction_notes": [
     {
@@ -100,7 +129,7 @@
     },
     {
       "field": "phases[0].name",
-      "quote_or_span": "Trial begins 2026-01-26"
+      "quote_or_span": "trial period"
     },
     {
       "field": "phases[0].description",
@@ -111,36 +140,32 @@
       "quote_or_span": "Trial begins 2026-01-26"
     },
     {
-      "field": "phases[1].name",
-      "quote_or_span": "paid phase"
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
     },
     {
-      "field": "phases[1].description",
-      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
+      "field": "phases[1].name",
+      "quote_or_span": "paid phase"
     },
     {
       "field": "phases[1].start_date",
       "quote_or_span": "converts to 4 paid phase on 2026-02-25"
     },
     {
-      "field": "phases[1].pricings[0].pricing.description",
-      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
-    },
-    {
       "field": "phases[1].pricings[0].pricing.pricing_data.amount",
-      "quote_or_span": "£42,000.00/mo."
-    },
-    {
-      "field": "phases[1].pricings[0].pricing.pricing_data.currency",
-      "quote_or_span": "£42,000.00/mo."
+      "quote_or_span": "at £42,000.00/mo."
     },
     {
       "field": "phases[1].pricings[0].pricing.pricing_data.billing_cadence",
-      "quote_or_span": "/mo."
+      "quote_or_span": "£42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].description",
+      "quote_or_span": "The paid phase does not inherit zero-priced trial treatment."
     },
     {
       "field": "commercial_core.tags[0]",
-      "quote_or_span": "time-limited trial period"
+      "quote_or_span": "Master Agreement"
     },
     {
       "field": "commercial_core.tags[1]",
@@ -151,11 +176,15 @@
       "quote_or_span": "Amendment 1"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Master Agreement\nCustomer: Prime Peak Networks"
+      "field": "customer.email",
+      "quote_or_span": "sara.morris@primepeaknetworks.com"
     },
     {
-      "field": "phases[1].pricings[0].product.description",
+      "field": "commercial_core.description",
+      "quote_or_span": "Trial begins 2026-01-26 and converts to 4 paid phase on 2026-02-25 at £42,000.00/mo."
+    },
+    {
+      "field": "phases[1].pricings[0].pricing.name",
       "quote_or_span": "Commercial Amount: £42,000.00"
     }
   ]

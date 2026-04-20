@@ -33,6 +33,8 @@ COMMERCIAL_CORE_AGENT = (
     "- Dates: normalize to ISO 8601 when the document states a calendar date; use noon UTC if time unknown.\n"
     '- If only "Effective Date" is given, map it to start_date when it clearly starts the agreement.\n'
     "- Prefer missing (null) over guessing currency or dates.\n"
+    '- Set status to "active" if the contract text shows it is signed, executed, or currently in force; '
+    'use "draft" for unsigned templates or agreements with no execution evidence.\n'
 )
 
 PHASES_AGENT = (

@@ -10,13 +10,14 @@
     "custom_attributes": null
   },
   "validated_json": {
-    "name": "COMMERCIAL SCHEDULE",
-    "description": "Commercial schedule for Silver Orbit Analytics referencing SOCLS2; product/service: Mined Form; commercial annual amount stated.",
-    "status": "active",
+    "name": "Commercial Schedule",
+    "description": "Commercial schedule for Silver Orbit Analytics covering Mined Form quantity 1 with stated annual amount and referenced standard SLA.",
+    "status": "draft",
     "currency": "USD",
     "start_date": "2075-02-02T12:00:00Z",
     "tags": [
-      "Commercial Schedule"
+      "Commercial Schedule",
+      "SLA referenced"
     ],
     "customer": {
       "external_id": "SOCLS2",
@@ -25,21 +26,19 @@
     },
     "phases": [
       {
-        "description": "Commercial Schedule reference SOCLS2; no explicit phased structure stated in the provided text.",
+        "description": "Commercial schedule references product/service 'Mined Form'. Effective Date appears as 2075-02-02 on OCR, but pricing terms are largely unresolved. The packet notes the standard SLA applies but is not reproduced. Missing referenced schedules/exhibits remain unresolved. Payment note states fixed platform fees may be billed in advance while variable usage is billed in arrears.",
         "start_date": "2075-02-02",
         "pricings": [
           {
-            "description": "Product / Service: Mined Form. Commercial Amount stated, but pricing model and cadence are not explicitly tied to a phase line.",
+            "description": "Product / Service listed as 'Mined Form'. Commercial Annual value shown as $18,000,600, but this appears inconsistent/possibly OCR-corrupted and is not clearly a line-item price; retained as unresolved description only.",
             "product": {
               "name": "Mined Form",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount: $18,000,600",
+              "description": "Commercial Annual: '$18,000,600' appears in OCR, but explicit pricing model, currency certainty, and line-item applicability are unclear.",
               "pricing_data": {
-                "pricing_type": "custom_pricing",
-                "amount": 18000600,
-                "currency": "USD"
+                "pricing_type": "custom_pricing"
               }
             }
           }
@@ -77,23 +76,35 @@
     },
     {
       "field": "commercial_core.start_date",
-      "quote_or_span": "Effective Date: 2075-02-02"
-    },
-    {
-      "field": "commercial_core.currency",
-      "quote_or_span": "CAnieEoial Annune: $18,000,600"
+      "quote_or_span": "Effective Date: 2075-02-02 |"
     },
     {
       "field": "phases[0].start_date",
-      "quote_or_span": "Effective Date: 2075-02-02"
+      "quote_or_span": "Effective Date: 2075-02-02 |"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Product f Serviee: Mined Form"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
+      "field": "commercial_core.description",
+      "quote_or_span": "The standard SLA applies, but the SLA schedule itself ia not reproduced in this."
+    },
+    {
+      "field": "phases[0].description",
+      "quote_or_span": "Payment mote: Fixed platform fees may be billed in advanee while Variable usage is billed in arrearg."
+    },
+    {
+      "field": "phases[0].pricings[0].description",
       "quote_or_span": "CAnieEoial Annune: $18,000,600"
+    },
+    {
+      "field": "commercial_core.tags[0]",
+      "quote_or_span": "COMMERCIAL SCHEDULE"
+    },
+    {
+      "field": "commercial_core.tags[1]",
+      "quote_or_span": "The standard SLA applies, but the SLA schedule itself ia not reproduced in this."
     }
   ]
 }

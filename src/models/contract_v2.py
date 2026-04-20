@@ -2,12 +2,73 @@
 
 from __future__ import annotations
 
+import logging
 import uuid
 from typing import Annotated, Any
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, ValidationError, field_validator
 
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Pricing type constants
+# ---------------------------------------------------------------------------
+
+_VALID_PRICING_TYPES: frozenset[str] = frozenset({
+    "flat_fee",
+    "per_unit",
+    "tiered",
+    "volume",
+    "percent",
+    "package",
+    "step",
+    "matrix",
+    "bundle",
+    "custom_tiered",
+    "two_dimensional_tiered",
+    "tiered_with_flat_fee",
+    "volume_with_flat_fee",
+    "custom_pricing",
+    "features",
+})
+
+# Pricing types where a numeric amount is expected (used by compute_missing_field_keys)
+_AMOUNT_REQUIRED_TYPES: frozenset[str] = frozenset({
+    "flat_fee",
+    "per_unit",
+    "tiered",
+    "volume",
+    "percent",
+    "package",
+    "step",
+    "matrix",
+    "bundle",
+    "custom_tiered",
+    "two_dimensional_tiered",
+    "tiered_with_flat_fee",
+    "volume_with_flat_fee",
+})
+
+# Pricing types where billing_cadence is expected
+_BILLING_CADENCE_TYPES: frozenset[str] = frozenset({
+    "flat_fee",
+    "per_unit",
+    "tiered",
+    "volume",
+    "package",
+    "step",
+    "tiered_with_flat_fee",
+    "volume_with_flat_fee",
+})
+
+# Sentinel used to distinguish "caller did not pass customer_id" from "caller passed None"
+_UNSET = object()
+
+
+# ---------------------------------------------------------------------------
+# Validation helpers
+# ---------------------------------------------------------------------------
 
 def format_validation_error_paths(exc: ValidationError) -> list[str]:
     """Turn Pydantic errors into dotted paths like phases[0].pricings[1].product.name."""
@@ -27,6 +88,10 @@ def format_validation_error_paths(exc: ValidationError) -> list[str]:
         out.append(f"validation:{path}")
     return out
 
+
+# ---------------------------------------------------------------------------
+# Core models
+# ---------------------------------------------------------------------------
 
 class Address(BaseModel):
     model_config = ConfigDict(extra="allow")
@@ -70,10 +135,41 @@ class PricingData(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     pricing_type: str
-    amount: float | int | None = None
+    amount: float | None = None
     currency: str | None = None
     billing_cadence: str | None = None
-    
+
+    @field_validator("pricing_type", mode="before")
+    @classmethod
+    def _coerce_pricing_type(cls, v: Any) -> str:
+        """Normalize and validate pricing_type; coerce unknown values to 'custom_pricing'."""
+        s = str(v).strip().lower().replace("-", "_").replace(" ", "_") if v else ""
+        if s in _VALID_PRICING_TYPES:
+            return s
+        if s:
+            logger.warning("Unknown pricing_type %r; coercing to 'custom_pricing'", s)
+        return "custom_pricing"
+
+    @field_validator("amount", mode="before")
+    @classmethod
+    def _coerce_amount(cls, v: Any) -> float | None:
+        """Normalize amount to float; discard non-numeric values."""
+        if v is None:
+            return None
+        try:
+            return float(v)
+        except (TypeError, ValueError):
+            logger.warning("Non-numeric amount %r; setting to None", v)
+            return None
+
+    @field_validator("currency", mode="before")
+    @classmethod
+    def _normalize_currency(cls, v: Any) -> str | None:
+        """Uppercase and strip currency strings; reject empty strings."""
+        if v is None or v == "":
+            return None
+        normalized = str(v).strip().upper()
+        return normalized if normalized else None
 
 
 class PhaseLineProduct(BaseModel):
@@ -194,6 +290,14 @@ class CommercialCore(BaseModel):
     custom_attributes: dict[str, Any] | None = None
     contract_link: str | None = None
 
+    @field_validator("currency", mode="before")
+    @classmethod
+    def _normalize_currency(cls, v: Any) -> str | None:
+        if v is None or v == "":
+            return None
+        normalized = str(v).strip().upper()
+        return normalized if normalized else None
+
 
 class ContractV2(CommercialCore):
     """
@@ -221,6 +325,10 @@ class ContractV2(CommercialCore):
         return v
 
 
+# ---------------------------------------------------------------------------
+# Serialization helpers
+# ---------------------------------------------------------------------------
+
 def contract_to_validated_json(contract: ContractV2) -> dict[str, Any]:
     """Serialize for submission JSON (no None values)."""
     return contract.model_dump(mode="json", exclude_none=True)
@@ -237,6 +345,10 @@ def validate_contract_payload(data: dict[str, Any]) -> tuple[ContractV2 | None, 
         return None, format_validation_error_paths(e)
 
 
+# ---------------------------------------------------------------------------
+# Submission envelope
+# ---------------------------------------------------------------------------
+
 class SubmissionEnvelope(BaseModel):
     """
     Final runner output matching the assignment README:
@@ -250,6 +362,10 @@ class SubmissionEnvelope(BaseModel):
     missing_fields: list[str] = Field(default_factory=list)
     extraction_notes: list[dict[str, Any]] = Field(default_factory=list)
 
+
+# ---------------------------------------------------------------------------
+# Assembly helpers
+# ---------------------------------------------------------------------------
 
 def resolve_customer_id_from_extraction(customer: dict[str, Any]) -> UUID | None:
     """Derive customer_id only from document-grounded external_id (length >= 8)."""
@@ -278,11 +394,14 @@ def build_contract_payload_from_extraction(
     phases: list[Any],
     customer: dict[str, Any],
     corpus_meta: str,
+    customer_id: Any = _UNSET,
 ) -> dict[str, Any]:
     """
     Merge customer, commercial_core, and phases node outputs into a dict for ContractV2.model_validate.
+    Pass a precomputed customer_id to avoid resolving it twice; omit to compute it here.
     """
-    customer_id = resolve_customer_id_from_extraction(customer)
+    if customer_id is _UNSET:
+        customer_id = resolve_customer_id_from_extraction(customer)
     core = CommercialCore.model_validate(commercial_core or {})
     payload: dict[str, Any] = core.model_dump(mode="json", exclude_none=False)
     if payload.get("currency") == "":
@@ -305,7 +424,10 @@ def compute_missing_field_keys(
     phases: list[Any],
     customer_id: UUID | None,
 ) -> list[str]:
-    """Heuristic missing_fields from extracted commercial/phases/customer_id."""
+    """
+    Heuristic missing_fields from extracted commercial/phases/customer_id.
+    Inspects nested phase and pricing structures for common absent fields.
+    """
     missing: list[str] = []
     if customer_id is None:
         missing.append("customer_id")
@@ -317,6 +439,31 @@ def compute_missing_field_keys(
         missing.append("phases")
     if commercial_core.get("name") in (None, ""):
         missing.append("name")
+
+    for i, phase in enumerate(phases or []):
+        if not isinstance(phase, dict):
+            continue
+        pricings = phase.get("pricings") or []
+        if not pricings:
+            missing.append(f"phases[{i}].pricings")
+            continue
+        for j, line in enumerate(pricings):
+            if not isinstance(line, dict):
+                continue
+            pricing_block = line.get("pricing") or {}
+            pd = pricing_block.get("pricing_data") or {} if isinstance(pricing_block, dict) else {}
+            if not isinstance(pd, dict):
+                continue
+            ptype = pd.get("pricing_type", "")
+            if ptype in _AMOUNT_REQUIRED_TYPES and pd.get("amount") is None:
+                missing.append(
+                    f"phases[{i}].pricings[{j}].pricing.pricing_data.amount"
+                )
+            if ptype in _BILLING_CADENCE_TYPES and pd.get("billing_cadence") is None:
+                missing.append(
+                    f"phases[{i}].pricings[{j}].pricing.pricing_data.billing_cadence"
+                )
+
     return missing
 
 

@@ -1,5 +1,5 @@
 Zenskar contract agent - step audit log
-started_utc=2026-04-19T22:25:24Z
+started_utc=2026-04-20T05:22:40Z
 ================================================================================
 
 RUN_META
@@ -11,7 +11,7 @@ RUN_META
 
 --------------------------------------------------------------------------------
 STEP: gather
-ts_utc=2026-04-19T22:25:24Z
+ts_utc=2026-04-20T05:22:40Z
 
 --- BEFORE (state entering step) ---
 {
@@ -37,16 +37,16 @@ ts_utc=2026-04-19T22:25:24Z
   "fatal_error": null
 }
 
-2026-04-20T03:55:25 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf
-2026-04-20T03:55:25 | INFO | src.parsers.pdf_parser |   Page 1/4
-2026-04-20T03:55:27 | INFO | src.parsers.pdf_parser |   Page 2/4
-2026-04-20T03:55:30 | INFO | src.parsers.pdf_parser |   Page 3/4
-2026-04-20T03:55:33 | INFO | src.parsers.pdf_parser |   Page 4/4
-2026-04-20T03:55:36 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
-2026-04-20T03:55:37 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-20T10:52:41 | INFO | src.parsers.pdf_parser | Parsing: /Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf
+2026-04-20T10:52:41 | INFO | src.parsers.pdf_parser |   Page 1/4
+2026-04-20T10:52:43 | INFO | src.parsers.pdf_parser |   Page 2/4
+2026-04-20T10:52:48 | INFO | src.parsers.pdf_parser |   Page 3/4
+2026-04-20T10:52:50 | INFO | src.parsers.pdf_parser |   Page 4/4
+2026-04-20T10:52:54 | INFO | src.parsers.pdf_parser | Done: 4 pages | methods={'pdfplumber': 0, 'pdftotext': 0, 'ocr': 4, 'llm_vision': 0, 'empty': 0}
+2026-04-20T10:52:55 | INFO | httpx | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 --------------------------------------------------------------------------------
 STEP: parse
-ts_utc=2026-04-19T22:25:37Z
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -64,7 +64,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -84,7 +84,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -94,7 +94,7 @@ ts_utc=2026-04-19T22:25:37Z
 
 --------------------------------------------------------------------------------
 STEP: merge
-ts_utc=2026-04-19T22:25:37Z
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -107,7 +107,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -134,7 +134,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -146,8 +146,8 @@ ts_utc=2026-04-19T22:25:37Z
 }
 
 --------------------------------------------------------------------------------
-STEP: customer
-ts_utc=2026-04-19T22:25:37Z
+STEP: commercial
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -160,7 +160,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -173,7 +173,7 @@ ts_utc=2026-04-19T22:25:37Z
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "customer": {}
+  "commercial_core": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -187,7 +187,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -196,12 +196,12 @@ ts_utc=2026-04-19T22:25:37Z
   "corpus": "",
   "corpus_meta": "",
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "customer": {}
+  "commercial_core": {}
 }
 
 --------------------------------------------------------------------------------
-STEP: commercial
-ts_utc=2026-04-19T22:25:37Z
+STEP: customer
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -214,7 +214,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -222,13 +222,12 @@ ts_utc=2026-04-19T22:25:37Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
 --- NODE_RETURN (delta merged by LangGraph) ---
 {
-  "commercial_core": {}
+  "customer": {}
 }
 
 --- AFTER (merged state leaving step) ---
@@ -242,7 +241,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -250,14 +249,13 @@ ts_utc=2026-04-19T22:25:37Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
-  "commercial_core": {}
+  "customer": {}
 }
 
 --------------------------------------------------------------------------------
 STEP: phases
-ts_utc=2026-04-19T22:25:37Z
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -270,7 +268,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -278,8 +276,6 @@ ts_utc=2026-04-19T22:25:37Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse."
 }
 
@@ -299,7 +295,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -307,15 +303,13 @@ ts_utc=2026-04-19T22:25:37Z
   ],
   "corpus": "",
   "corpus_meta": "",
-  "customer": {},
-  "commercial_core": {},
   "fatal_error": "All PDFs were rejected as non-contract documents or failed to parse.",
   "phases": []
 }
 
 --------------------------------------------------------------------------------
 STEP: notes
-ts_utc=2026-04-19T22:25:37Z
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -328,7 +322,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -358,7 +352,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -375,7 +369,7 @@ ts_utc=2026-04-19T22:25:37Z
 
 --------------------------------------------------------------------------------
 STEP: assemble
-ts_utc=2026-04-19T22:25:37Z
+ts_utc=2026-04-20T05:22:55Z
 
 --- BEFORE (state entering step) ---
 {
@@ -388,7 +382,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -423,7 +417,7 @@ ts_utc=2026-04-19T22:25:37Z
     {
       "path": "/Users/deepaksharma/Documents/Zenskar_assignment_submission/pdf/standalone/benchmark_0020.pdf",
       "accepted": false,
-      "reject_reason": "This appears to be an invoice/payment document rather than a contract, MSA, amendment, or license agreement.",
+      "reject_reason": "This is an invoice/payment document, not a commercial agreement or license.",
       "page_count": 4,
       "parse_error": null,
       "full_text": "\n--- Page 1 [ocr] ---\ninvetcse Number: 10258\nSuntamar Mame: Frost Handal\nINVOICE |\n| Reference: 300011 |\nCounterparty: North Peak Holdings\nPrimary Contact: Nina Reed (nina. reedQnorthpeakholdings.com)\n| Seeective Date: 2026-01-12\nCommercial Amount: £42,000.00\nQuantity: 120\nProduct / Service: Invoice |\nTotal Due: £5,040,000.00\n|\n|\n|\n\n\n--- Page 2 [ocr] ---\nCountexparty: North Peak Holdings\nCommercial Contact: Hina Reed (nina.reedinorthpeakholdings.com)\nZahlungsziel: netto 30 Tage. Rechnungsstellung im Voraus for recurxing platform\nOther commercial wording may appears ¢laewhere in the packet and must be\nrecenelled carefully. |\nIf a referenced exhibit or schedule is missing, ite ceantenta should remain ,\nunresolved rather than invented.\nPayment note: fixed platform fees may te billed in advanc... [truncated, 1695 chars total]"
@@ -443,4 +437,4 @@ ts_utc=2026-04-19T22:25:37Z
 }
 
 ================================================================================
-ended_utc=2026-04-19T22:25:37Z
+ended_utc=2026-04-20T05:22:55Z

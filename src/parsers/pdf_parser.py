@@ -65,7 +65,6 @@ else:
     Image.MAX_IMAGE_PIXELS = int(_mp)
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
 # Log once if Poppler's pdftoppm is missing (rasterisation for OCR / LLM vision).
 _pdftoppm_missing_logged = False

@@ -3,7 +3,7 @@
     "id": null,
     "external_id": "300127",
     "customer_name": "Vector Anchor Technologies",
-    "email": "zara.miller@vectoranchorrechnala, cam",
+    "email": "zara.miller@vectoranchorrechnala.cam",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -11,34 +11,37 @@
   },
   "validated_json": {
     "name": "Commercial Schedule 300127",
-    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form service, quantity 120, commercial amount 213,000/month.",
-    "status": "active",
+    "description": "Commercial schedule for Vector Anchor Technologies for Fixed Form product/service, quantity 120, commercial amount 213,000/month.",
+    "status": "draft",
     "start_date": "2026-02-07T12:00:00Z",
     "tags": [
-      "Commercial Schedule"
+      "commercial schedule"
     ],
     "customer": {
       "external_id": "300127",
       "customer_name": "Vector Anchor Technologies",
-      "email": "zara.miller@vectoranchorrechnala, cam"
+      "email": "zara.miller@vectoranchorrechnala.cam"
     },
     "phases": [
       {
-        "description": "Commercial Schedule",
+        "description": "Commercial Schedule. This schedule must be reconciled with any later amendments and references.",
         "start_date": "2026-02-07",
+        "phase_type": "commercial_schedule",
         "pricings": [
           {
-            "description": "Commercial Amount: 213,000/month; Quantity: 120; Product / Service: Mixed Form",
+            "description": "Product / Service: Hixed Korn",
             "product": {
-              "name": "Mixed Form",
+              "name": "Hixed Korn",
+              "description": "Product / Service listed in commercial schedule.",
               "type": "product"
             },
             "pricing": {
-              "description": "Commercial Amount listed in schedule. Quantity stated as 120, but per-unit relationship is not explicit.",
+              "description": "Commercial Amount: 213,000/month; Quantity: 120. Payment note indicates fixed platform fees may be billed in advance while variable usage is billed in arrears.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 213000,
-                "billing_cadence": "month"
+                "amount": 213000.0,
+                "billing_cadence": "month",
+                "quantity": 120
               }
             }
           }
@@ -57,7 +60,7 @@
   "extraction_notes": [
     {
       "field": "customer.external_id",
-      "quote_or_span": "Reference: 300127"
+      "quote_or_span": "Reference: 300127 Jo"
     },
     {
       "field": "customer.customer_name",
@@ -66,10 +69,6 @@
     {
       "field": "customer.email",
       "quote_or_span": "Commercial Contact: Zara Miller (zara.millerQvectoranchortechnolo.cam)"
-    },
-    {
-      "field": "commercial_core.name",
-      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127"
     },
     {
       "field": "commercial_core.start_date",
@@ -88,20 +87,24 @@
       "quote_or_span": "Commercial Asount: 213,000/month"
     },
     {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+      "field": "phases[0].pricings[0].pricing.pricing_data.quantity",
+      "quote_or_span": "Quantity: 120"
     },
     {
       "field": "phases[0].pricings[0].product.name",
       "quote_or_span": "Procucet / Service: Hixed Korn"
     },
     {
-      "field": "phases[0].pricings[0].pricing.description",
-      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120"
+      "field": "phases[0].description",
+      "quote_or_span": "This schedule rust ba reconelled wlth ény later amendsents and references."
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Asount: 213,000/month\nQuantity: 120\nProcucet / Service: Hixed Korn"
+      "field": "commercial_core.name",
+      "quote_or_span": "COMCTERCIAL SCHEDULE |\nReference: 300127 Jo"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
+      "quote_or_span": "Payment, nebe+ Fixed platform, fees may be billed in advance while variable usage.\n\nie billed in arrears."
     }
   ]
 }

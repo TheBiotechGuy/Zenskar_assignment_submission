@@ -5,30 +5,57 @@
     "customer_name": "Blue Stream Works",
     "email": "owen.reed@bluestreamworks.com",
     "phone_number": null,
-    "address": null,
+    "address": {
+      "line1": null,
+      "line2": null,
+      "city": null,
+      "state": null,
+      "zipCode": null,
+      "country": null,
+      "country_code": null
+    },
     "tax_info": null,
     "custom_attributes": null
   },
   "validated_json": {
-    "description": "Invoice/commercial attachment for Blue Stream Works reference 300146, product/service Image Form.",
+    "name": "benchmark_0009.pdf",
+    "description": "Scanned commercial attachment/invoice for Blue Stream Works referencing product/service Image Form.",
     "status": "draft",
     "currency": "USD",
     "start_date": "2026-02-26T12:00:00Z",
-    "anchor_date": "2026-03-01T12:00:00Z",
+    "anchor_date": "2026-02-26T12:00:00Z",
     "tags": [
       "invoice",
-      "commercial attachment"
+      "scanned commercial attachment"
     ],
     "customer": {
       "external_id": "300146",
       "customer_name": "Blue Stream Works",
-      "email": "owen.reed@bluestreamworks.com"
+      "email": "owen.reed@bluestreamworks.com",
+      "address": {}
     },
     "phases": [
       {
-        "description": "Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
-        "start_date": "2026-03-01",
-        "pricings": []
+        "name": "Commercial Attachment",
+        "description": "Effective Date: 2026-02-26. Billing begins on the first day of the month following the Effective Date. Payment note: fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+        "start_date": "2026-02-26",
+        "phase_type": "paid",
+        "pricings": [
+          {
+            "description": "Scanned commercial attachment/invoice references Product / Service: Image Form. Commercial Amount is shown as 718,000.00, but page 1 also shows TOTAL $154.06 and the pricing relationship is unclear due to OCR/scanned inconsistencies.",
+            "product": {
+              "name": "Image Form",
+              "description": "Product / Service from scanned attachment",
+              "type": "product"
+            },
+            "pricing": {
+              "description": "Billing begins on the first day of the month following the Effective Date. Fixed platform fees may be billed in advance while variable usage is billed in arrears.",
+              "pricing_data": {
+                "pricing_type": "custom_pricing"
+              }
+            }
+          }
+        ]
       }
     ],
     "source": {
@@ -37,8 +64,7 @@
     }
   },
   "missing_fields": [
-    "customer_id",
-    "name"
+    "customer_id"
   ],
   "extraction_notes": [
     {
@@ -58,32 +84,36 @@
       "quote_or_span": "Effective Date: 2026-02-26"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Product / Service: Image Form"
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "commercial_core.currency",
+      "quote_or_span": "TOTAL\n$154.06"
     },
     {
       "field": "phases[0].start_date",
+      "quote_or_span": "Effective Date: 2026-02-26"
+    },
+    {
+      "field": "phases[0].pricings[0].product.name",
+      "quote_or_span": "Product / Service: Image Form"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "Commercial Amount: 718,000.00"
+    },
+    {
+      "field": "phases[0].pricings[0].description",
+      "quote_or_span": "TOTAL\n$154.06"
+    },
+    {
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Billing begins on the Firat day of fhe month following the Bifective Date."
     },
     {
       "field": "phases[0].description",
-      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage is billed jn AEFeara."
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "East Repair Inc.                                                INVOICE"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "SCANNED COMMERCIAL ATTACHMENT"
-    },
-    {
-      "field": "commercial_core.currency",
-      "quote_or_span": "TOTAL                                               $154.06"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Commercial Amount: 718,000.00"
+      "quote_or_span": "Payment. mote: fixed platrtorm fees may be billed in advance while variable usage\n\nis billed jn AEFeara."
     }
   ]
 }

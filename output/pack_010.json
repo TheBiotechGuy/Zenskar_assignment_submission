@@ -11,13 +11,13 @@
   },
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works",
-    "status": "active",
+    "description": "Master Agreement between Apex Bridge Holdings and Golden Ledger Works with related order form and Amendment 1.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-02-20T12:00:00Z",
     "tags": [
-      "master_agreement",
-      "order_form",
+      "master agreement",
+      "order form",
       "amendment"
     ],
     "customer": {
@@ -26,7 +26,8 @@
     },
     "phases": [
       {
-        "description": "Commercial amount stated in order form. No distinct phased schedule provided in the contract packet; represented as a single ongoing commercial phase. Amendment 1 contains no pricing override.",
+        "name": "Commercial Terms",
+        "description": "Monthly commercial amount from order form. No amendment overrides pricing.",
         "start_date": "2026-02-20",
         "phase_type": "paid",
         "pricings": [
@@ -37,10 +38,10 @@
               "type": "product"
             },
             "pricing": {
-              "description": "Amount appears as equivalent textual monthly formats across documents.",
+              "description": "Commercial Amount: £42,000/month; equivalent monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without changing meaning.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -83,7 +84,7 @@
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
-      "field": "phases[0].pricings[0].product.name",
+      "field": "phases[0].pricings[0].pricing.description",
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
@@ -99,6 +100,14 @@
       "quote_or_span": "Commercial Amount: £42,000/month"
     },
     {
+      "field": "commercial_core.currency",
+      "quote_or_span": "Monthly fee formats may be written as £42,000.00/Mo, £42,000/month, or £42,000.00 without\nchanging meaning."
+    },
+    {
+      "field": "commercial_core.description",
+      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
+    },
+    {
       "field": "commercial_core.tags[0]",
       "quote_or_span": "Master Agreement"
     },
@@ -109,26 +118,6 @@
     {
       "field": "commercial_core.tags[2]",
       "quote_or_span": "Amendment 1"
-    },
-    {
-      "field": "commercial_core.description",
-      "quote_or_span": "Customer: Apex Bridge Holdings\nVendor: Golden Ledger Works"
-    },
-    {
-      "field": "commercial_core.status",
-      "quote_or_span": "Effective Date: 2026-02-20"
-    },
-    {
-      "field": "customer.custom_attributes.finance_contact",
-      "quote_or_span": "Finance Contact: Noah Shah (noah.shah@apaxbridgesholdings.com)"
-    },
-    {
-      "field": "amendment_1.amendment_date",
-      "quote_or_span": "Amendment Date: 2026-04-06"
-    },
-    {
-      "field": "vendor.name",
-      "quote_or_span": "Vendor: Golden Ledger Works"
     }
   ]
 }

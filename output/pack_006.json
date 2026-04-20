@@ -3,7 +3,7 @@
     "id": null,
     "external_id": null,
     "customer_name": "Summit Peak Systems",
-    "email": "zora.miller@summitpeaksystems.com",
+    "email": "zara.miller@summitpeaksystems.com",
     "phone_number": null,
     "address": null,
     "tax_info": null,
@@ -11,39 +11,40 @@
   },
   "validated_json": {
     "name": "Master Agreement",
-    "description": "Master Agreement between Summit Peak Systems and Apex Orbit Analytics; related order form indicates recurring fee and quantity, with service levels referenced in Exhibit B.",
-    "status": "active",
+    "description": "Master agreement between Summit Peak Systems and Apex Orbit Analytics with related order form and amendment.",
+    "status": "draft",
     "currency": "GBP",
     "start_date": "2026-01-31T12:00:00Z",
+    "anchor_date": "2026-03-17T12:00:00Z",
     "tags": [
-      "master_agreement.pdf",
-      "order_form.pdf",
-      "amendment_1.pdf"
+      "master_agreement",
+      "order_form",
+      "amendment"
     ],
     "customer": {
       "customer_name": "Summit Peak Systems",
-      "email": "zora.miller@summitpeaksystems.com"
+      "email": "zara.miller@summitpeaksystems.com"
     },
     "phases": [
       {
-        "name": "Commercial",
-        "description": "Order Form dated after Master Agreement effective date; recurring commercial amount stated.",
+        "name": "Paid Phase",
+        "description": "Commercial terms from Order Form under Master Agreement. Amendment 1 only addresses unresolved SLM details and does not override pricing.",
         "start_date": "2026-01-31",
         "phase_type": "paid",
         "pricings": [
           {
-            "description": "Recurring fee £42,000.00/mo; Quantity: 120",
+            "description": "Recurring fee £42,000.00/mo; quantity stated as 120.",
             "product": {
-              "name": "Commercial Amount",
-              "description": "Recurring service fee",
+              "name": "Apex Orbit Analytics services",
+              "description": "Services under Master Agreement / Order Form",
               "type": "product"
             },
             "pricing": {
               "name": "Recurring fee",
-              "description": "Recurring fee £42,000.00/mo",
+              "description": "Commercial Amount: £42,000.00/mo; Recurring fee £42,000.00/mo. Quantity: 120.",
               "pricing_data": {
                 "pricing_type": "flat_fee",
-                "amount": 42000,
+                "amount": 42000.0,
                 "currency": "GBP",
                 "billing_cadence": "monthly"
               }
@@ -67,7 +68,7 @@
     },
     {
       "field": "customer.email",
-      "quote_or_span": "Primary Contact: Zora Miller (zora.miller@summitpeaksystems.com)"
+      "quote_or_span": "Primary Contact: Zara Miller (zara.miller@summitpeaksystems.com)"
     },
     {
       "field": "commercial_core.name",
@@ -78,20 +79,16 @@
       "quote_or_span": "Effective Date: 2026-01-31"
     },
     {
+      "field": "commercial_core.anchor_date",
+      "quote_or_span": "Amendment Date: 2026-03-17"
+    },
+    {
       "field": "commercial_core.currency",
       "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].start_date",
       "quote_or_span": "Effective Date: 2026-01-31"
-    },
-    {
-      "field": "phases[0].pricings[0].description",
-      "quote_or_span": "Recurring fee £42,000.00/mo."
-    },
-    {
-      "field": "phases[0].pricings[0].product.name",
-      "quote_or_span": "Commercial Amount: £42,000.00/mo"
     },
     {
       "field": "phases[0].pricings[0].pricing.name",
@@ -114,12 +111,12 @@
       "quote_or_span": "Quantity: 120"
     },
     {
-      "field": "commercial_core.description",
-      "quote_or_span": "Vendor: Apex Orbit Analytics"
+      "field": "phases[0].description",
+      "quote_or_span": "If Exhibit B is unavailable, SLM details remain uncesolved and should not be invented,"
     },
     {
       "field": "commercial_core.description",
-      "quote_or_span": "Service levels are governed by Exhibit B."
+      "quote_or_span": "Vendor: Apex Orbit Analytics"
     }
   ]
 }
